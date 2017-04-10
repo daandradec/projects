@@ -1,0 +1,121 @@
+/* CSS Document */
+
+
+	
+	#map {
+		width: 1500px;
+		height: 500px;
+        max-height: 100%;
+		max-width: 100%;
+		display: block;
+		position: fixed;
+      }
+
+	html, body {
+    height: 80%;
+		
+  }
+	body {
+		background: url(../img/chicago.jpg) no-repeat center center fixed ;
+		-webkit-background-size: cover;
+  		-moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+		
+	}
+	
+	.fluid{
+		height: 100%;
+	}
+	*{
+    margin:0;
+    padding:0;
+	}
+	.row{
+		height: 100%; 
+	}
+	
+	.btn-block{
+		
+		background-color: rgba(0,0,0,1.0);
+		font-family: 'Open sans';
+		font-weight: 200;
+		border: none;
+		 border-radius: 6px; 
+		color:white;
+		font-size: 30px;
+	}
+	.btn-block:hover{
+		background-color: rgba(0,30,98,1.0);
+		color:white;
+	}
+	
+	.btn-lg{
+		height: 200px;
+		width: 200px;
+		 max-height: 100%;
+		max-width: 100%;
+		display: block;
+		
+	}
+.btn-brown{
+	background-color: black;
+	color: white;
+	border: 2px solid;
+	border-color: white;
+    margin: 150px -80px; 
+    position:absolute;
+    top:50%; 
+    left:50%;
+	
+}
+
+.btn-brown:hover{
+	background-color: white!important;
+	color: black!important;
+	border-color: black!important;
+}
+.btn-brown:focus{
+	background-color: black!important;
+	color: white!important;
+	border-color: white!important;
+}
+
+	.container{
+		height: 100%;
+	
+	}
+.contenedor_bonito {	
+	background-color: rgba(0,0,0,1.0);
+	font-family: 'Lato', sans-serif;
+	color: white;
+	height: 700px;
+	max-width: 100%;
+	max-height: 100%;
+	
+}
+
+.title {
+	text-align: center;
+	margin-top: 326px;
+	font-size: 50px;
+}
+
+.center-text {
+	text-align: center;
+}
+
+.img_align{
+	display:block;
+	position: absolute;
+	text-align: center;
+	margin-top: auto;
+	margin-left: auto;
+	margin-right: auto;
+	max-height : 30%;
+	max-width: 30%;
+	
+
+	
+	
+}

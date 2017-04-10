@@ -1,0 +1,100 @@
+
+h1 {
+    color:#bab1ff;
+    text-align: center;
+    font-size: 50px;
+    font-family: "Verdana", Verdana, sans-serif;
+    text-shadow: 2px 2px 4px #000000;
+    padding-top:30px;
+    
+}
+#header{
+	padding-right: 200px;
+	color: white;
+	font-family: "Verdana", Verdana, sans-serif;
+	text-align: center;
+}
+#map {
+        width: 50%;
+        height: 400px;
+        background-color: grey;
+     	position: relative;
+     	left:25%;
+     	bottom:200px;
+     	z-index: -1;
+     	
+      }
+p.search{
+	font-family: "Verdana", Verdana, sans-serif;
+	font-size: 30px;
+	color: #5F5F5F;
+	text-align: center;
+	padding-top: 2em;
+}
+body.s{
+	background: url("./Pictures/Chicago1.jpg") no-repeat center fixed;
+	background-size: cover; 
+}
+body.s1{
+	background: url("./Pictures/Chicago2.jpg") no-repeat center fixed;
+	background-size: cover; 
+}
+p.introTitle{
+	font-size: 30px;
+	color: #FFFFFF;
+	text-align: center;
+	font-family: "Verdana", Verdana, sans-serif;
+	text-shadow: 2px 2px 4px #000000;
+	padding-top: 20px;
+
+
+}
+p.descIntro{
+	font-size: 24px;
+	font-family: "Verdana", Verdana, sans-serif;
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-bottom: 100px;
+	padding-top: 20px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #04a7ff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-family:"Verdana" ,Verdana,sans-serif;
+}
+li a:hover {
+    background-color: #5F5F5F;
+}
+footer{
+	text-align: center;
+	background-color: #04a7ff;
+	padding: 1em;
+	color:white;
+	position: fixed;
+	right: 0;
+  	left: 0;
+  	bottom:0;
+  	
+}

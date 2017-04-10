@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    
+
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Welcome to Chicago</title>
+        <meta name="description" content="Data visualization 'I want rent a house or flat in Chicago'">
+        <meta name="keywords" content="chicago,data visualization, ironhacks">
+        
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans|Roboto:300,400|Questrial|Satisfy">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+         
+    </head>
+   
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+            
+    <div class="header">
+        <div class="bg-color">
+            <header id="main-header">
+            <nav class="navbar navbar-default ">
+            <div class="container">
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#lauraMenu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">DeepHouse</a>
+                </div>
+                <div class="collapse navbar-collapse" id="lauraMenu">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#main-header">Welcome</a></li>
+                    <li ><a href="#search.html">Search</a></li>
+                  </ul>
+                </div>
+            </div>
+            </nav>
+            </header>
+            <div class="wrapper">
+                <div class="container">
+                <div class="row">
+                    <div class="col-md-12 delay-05s">
+                    <div class="banner-text">
+                        <h2>Welcome to <span>Chicago!</span> </h2>
+                        
+                    </div>
+                    <div class="overlay-detail text-center">
+                        <a id='search' href="#find-house" class="waves-effect waves-light btn-large">Find your home</a>
+                         
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+        <section id="find-house" class="section-padding delay-05s ">
+            <div id=guardian>
+                
+            </div>
+            <h3 class="text-center cursive">Houses you can rent</h3>
+            <div id='map' class="col-md-12 ">
+                
+            </div>
+            
+            <div id='plot' class="col-md-12">
+               <div class="table-reponsive">
+                    
+	<!--la clase table lo que hace es que me organiza los datos al 100% del screen y la clase table striped alterna los colores de la tabla- , la clase hover sirve para cuando pasas el mouse por encime cambia de color , para ahorrar espacio en la tabla usamos la clase table-condensed-->
+               </div>
+            </div>
+
+            
+        </section>
+        
+        <script async defer
+	        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtlN7Dw4oyfftne6OKKaEqVmol-AywbFo">
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+        <script src="js/retrieveData.js">
+        </script>
+    </body>
+
+</html>
+

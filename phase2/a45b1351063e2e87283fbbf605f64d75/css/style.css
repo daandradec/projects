@@ -1,0 +1,57 @@
+html, body {
+height: 100%;
+margin: 0;
+padding: 10px;
+background: #d5d5d5;
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+#map{
+	position: relative;
+    height: 500px;
+    width: 100%;
+    display: block;
+		border: 10px;
+		border-color: black;
+}
+
+#chart{
+}
+
+#side-menu{
+	margin-top: 10px;
+	width: 50%;
+	display:inherit;
+	height: 90%;
+	padding: 0px;
+
+}
+#h1{
+	font-style: italic;
+	text-align: center;
+}
+
+#side-menu2{
+	margin-top: 0px;
+	width: 50%;
+	display: inherit;
+	height: 90%;
+	padding: 0px;
+}
+
+#floating-panel {
+  position: absolute;
+  top: 10px;
+  left: 25%;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+}

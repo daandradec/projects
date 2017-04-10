@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Rent in Chicago</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/json" href="data.json">
+
+    <!-- icon -->
+    <link rel="icon" type="image/png" href="images/building.png">
+
+    <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 525px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f6f9fb;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #337ab7;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+        
+      #map {
+        width: 100%;
+        height: 525px;    
+      }
+    </style>
+
+    
+</head>
+<body>
+
+<nav class="navbar navbar-inverse" style="background-color: #337ab7;
+    border-color: #337ab7;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+
+      <a class="navbar-brand active" href="index.html" style="color: white"><button type="button" class="btn btn-default" aria-label="Left Align" style="padding: 3px 14px">
+          <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+        </button> 
+        RENT A PLACE</a>
+    </div>
+    <div class="collapse navbar-collapse pull-right" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="criteria.html">Criteria</a></li>
+        <li class="active"><a href="criteria.html">Graphics</a></li>
+        <li class="active"><a href="criteria.html">Compare</a></li>
+        <li class="active"><a href="criteria.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    
+    <div class="col-sm-3  sidenav text-left">
+          <h3>Safe and Affordable</h3>
+          <br/>
+          <p>The idea is to represent, in this criterion of decision, the ratio between security and price.<span><br/><br/></span>The data will be represented by a dispersion diagram that will indicate the places of rent that maximize the above-described relationship, that is, the places with greater security and that are within the student's budget.</p>
+          
+    </div>
+
+
+  
+    <div class="col-sm-9 text-left" style="padding-right: 0px;
+    padding-left: 0px;"> 
+
+        <div id="map"></div>
+        <script type="text/javascript">
+        function initMap() {
+            var mapDiv = document.getElementById('map');
+            var map = new google.maps.Map(mapDiv, {
+                center: {lat: 41.8708, lng: -87.6505},
+                zoom: 15});
+            var marker = new google.maps.Marker({
+                position: {lat: 41.8708, lng: -87.6505},
+                map: map,
+                title: 'Department of Computer Science – University of Illinois'
+            })
+        }
+      </script>
+    
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmIp0O9sjhSst4bVsVPMWB8WxAo4Bef3s&callback=initMap" async defer></script>
+   
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Chicago's lifestyle finder</p>
+</footer>
+
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

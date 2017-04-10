@@ -1,0 +1,8 @@
+#map{
+	margin-top: 10px;
+	position: absolute;
+    height: 700px;
+    width: 150%;
+    padding: 2px;
+    display: block;
+}

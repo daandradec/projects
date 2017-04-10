@@ -1,0 +1,67 @@
+[
+  {
+    "MarketName": "West Lafayette Farmers Market",
+    "lat": 40.461469,
+    "lng": -86.915836
+  },
+  {
+    "MarketName": "Sagamore West Farmers Market",
+    "lat": 40.4445,
+    "lng": -86.9136
+  },
+  {
+    "MarketName": "Purdue Farmers Market",
+    "lat": 40.42583,
+    "lng": -86.914239
+  },
+  {
+    "MarketName": "Historic Lafayette Farmers Market",
+    "lat": 40.417715,
+    "lng": -86.891895
+  },
+  {
+    "MarketName": "Monticello Farmer's Market",
+    "lat": 40.7452318,
+    "lng": -86.7625086
+  },
+  {
+    "MarketName": "Remington Farmers Market",
+    "lat": 40.76,
+    "lng": -87.1514
+  },
+  {
+    "MarketName": "Frankfort Farmers Market",
+    "lat": 40.280691,
+    "lng": -86.511368
+  },
+  {
+    "MarketName": "Crawfordsville Farmers Market",
+    "lat": 40.040589,
+    "lng": -86.901777
+  },
+  {
+    "MarketName": "Rensselaer Farmers Market",
+    "lat": 40.9356403,
+    "lng": -87.1501069
+  },
+  {
+    "MarketName": "Logansport Farmers Market",
+    "lat": 40.752621,
+    "lng": -86.365328
+  },
+  {
+    "MarketName": "Lebanon City Market",
+    "lat": 40.0475885,
+    "lng": -86.4680447
+  },
+  {
+    "MarketName": "Kokomo Downtown Farmers' Market",
+    "lat": 40.488463,
+    "lng": -86.133519
+  },
+  {
+    "MarketName": "Rockville Produce Auction LLC",
+    "lat": 39.8155,
+    "lng": -87.1625
+  }
+]

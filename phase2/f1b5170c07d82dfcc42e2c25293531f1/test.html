@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="tipo_contenido"  content="text/html;" http-equiv="content-type" charset="utf-8">
+    <link rel="stylesheet" href="cs.css">
+    <title></title>
+    <script type="text/javascript">
+      function initMap(){
+  		var mapDiv = document.getElementById('map');
+  		var map = new google.maps.Map(mapDiv, {
+  			center: {lat: 41.8708, lng: -87.6505},
+  			zoom: 12});
+  		var marker = new google.maps.Marker({
+  			position: {lat: 41.8708, lng: -87.6505},
+  			map: map,
+  			title: 'University of Ilinois'
+		});
+	}
+	</script>
+
+  </head>
+
+  <body>
+    <h1>Affordable rental places for students</h1>
+    <div id="map"></div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC4lO1PjOC9xzRaOK86FJoht6VBFYcsB8&callback=initMap">
+    </script>
+  </body>
+
+</html>

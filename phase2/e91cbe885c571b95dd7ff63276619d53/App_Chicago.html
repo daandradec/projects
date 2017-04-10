@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>MyCloseHome</title>
+    <style>
+      #map {
+        width: 100%;
+        height: 400px;
+        background-color: grey; 
+      }
+    </style>
+	
+	<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABJrMhk1R9qT5MPxPnbdi7Lb43EoW1TNo&callback=initMap">
+	</script>
+	
+	<script type="text/javascript">
+	function initMap(){
+		var mapDiv = document.getElementById('map'); //Line 1: Save reference to div element where map would be shown
+		var map = new google.maps.Map(mapDiv, {//Line 2: Create Map object passing element reference, center and zoom as parameters
+			center: {lat: 41.8708, lng: -87.6505}, //This is Purdue University's Location
+			zoom: 12});
+	}
+	</script>
+	
+	<script type="text/javascript">
+	function initMap(){
+		var mapDiv = document.getElementById('map');
+		var map = new google.maps.Map(mapDiv, {
+			center: {lat: 41.8708, lng: -87.6505},
+			zoom: 12});
+		var marker = new google.maps.Marker({ //Line 1
+			position: {lat: 41.8708, lng: -87.6505}, //Line2: Location to be highlighted
+			map: map,//Line 3: Reference to map object
+			title: 'Department of Computer Science – University of Illinois, Chicago' //Line 4: Title to be given
+		})
+	}
+	</script>
+	
+  </head>
+  <body>
+    <h3>MyCloseHome</h3>
+    <div id="map"></div>
+  </body>
+</html>  

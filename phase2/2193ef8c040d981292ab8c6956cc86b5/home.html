@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Google Maps Demo</title>
+        <style>
+          #map {
+            width: 100%;
+            height: 400px;
+            background-color: grey;
+          }
+        </style>
+        
+        <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
+		
+        <script type="text/javascript" src="js/jsInitMap.js"></script>
+        
+    </head>
+    <body>
+        <h3>Google Maps Demo</h3>
+        <button id="initButton">Search</button>
+        <div id="map"></div>
+    </body>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDc9A62-Uv1jmMKWNxTta0TrHFiOnIE9xo&callback=initMap">
+    </script>
+</html>

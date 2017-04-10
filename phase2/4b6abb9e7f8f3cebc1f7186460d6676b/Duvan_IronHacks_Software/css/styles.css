@@ -1,0 +1,88 @@
+html,body{
+    height: 100%;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+.base{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#divZero{
+    background:linear-gradient(rgb(114,71,206),rgb(100,41,200),rgb(94,28,79));
+}
+#divOne{
+    top: 100%;
+    background-image: url('../background_image/moulin.png');
+}
+.spacer{
+    position:absolute;
+    height:100%;
+    width:80%;
+    left:10%;
+}
+#header1{
+    color: whitesmoke;
+    font-size: 72pt;
+    top:26%;
+    left:12%; 
+    position:absolute; 
+}
+#paragraph1{
+    color:#2BE87E;
+    font-size: 12pt;
+    top:48%;
+    left:16%; 
+    position:absolute; 
+}
+#shadowP1{
+    color:#14A653;
+    font-size: 12pt;
+    top:48%;
+    left:16.3%; 
+    position:absolute; 
+}
+#buttn{
+    overflow:hidden;
+    border: none;
+    background:linear-gradient(darkblue,black);
+    color: #f2f2f2;
+    padding: 10px;
+    font-size: 9px;
+    border-radius: 5px;
+    top:60%;
+    left:35%;
+    width: 25%;
+    position: absolute;
+    box-sizing: border-box;
+    transition: all 1s ease;
+}
+#icon{
+    font-size:9px;
+    color:plum;
+}
+#paragraph2{
+  background: -webkit-linear-gradient(yellow,red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: tomato; 
+  top:5%;
+  font-size: 16pt;
+  position:absolute;
+}
+  #divThree{
+    position:absolute !important;
+    width:46% !important;
+    height:21% !important;
+    top: 25% !important;
+    left: 25% !important;
+    /**/
+    border: 15px solid transparent;
+    padding-bottom: 29%;
+    -webkit-border-image: url('../img/border.png') 31 round; /* Safari 3.1-5 */
+    -o-border-image: url('../img/border.png') 31 round; /* Opera 11-12.1 */
+    border-image: url('../img/border.png') 31 round;
+  }
+  li{
+      font-size: 10pt;
+  }

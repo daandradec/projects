@@ -1,0 +1,141 @@
+
+html, body {
+   height: 100%;
+   margin: 0;
+   padding: 0;
+
+ }
+ body{
+   overflow: scroll;
+ }
+/*--------------------------------------Header Section----------------------------------------------------*/
+#panel{
+  display: none;
+}
+ #header{
+   background-image: url("header.jpg");
+   background-attachment: fixed;
+   background-size: cover;
+   background-repeat: no-repeat;
+   height: 700px;
+   width: 100%;
+   margin: 0;
+
+ }
+
+#header h2{
+  font-family: 'Alegreya', serif;
+  color: #ffffff;
+  font-size: 50px;
+  text-align: center;
+}
+
+#header p{
+  font-family: 'Josefin Sans',sans-serif;
+  color: #ffffff;
+  font-size: 25px;
+  text-align: left;
+}
+
+#headerText{
+  background-image: url("headerDes.jpg");
+  background-attachment: fixed;
+  padding: 25px;
+  margin: 100px auto;
+  max-width: 600px;
+  -webkit-box-shadow:  1px 1px 5px 3px rgba(0, 0, 0, 0.2);
+  box-shadow:  1px 1px 5px 3px rgba(0, 0, 0, 0.2);
+
+}
+/*------------------------------------------------Navigation Section-----------------------------------*/
+#navigation{
+  margin-top: 50px;
+  position: relative;
+  height: 250px;
+  padding: 2px;
+  display: block;
+  width: 100%;
+}
+
+#navigation-two{
+  margin-top: 50px;
+  position: relative;
+  height: 200px;
+  padding: 2px;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+#navigation-two-images{
+
+  position: relative;
+  height: 400px;
+  padding: 2px;
+  display: block;
+  width: 100%;
+  text-align: center;
+
+}
+
+
+#navigation p{
+  font-family: 'Josefin Sans', sans-serif;
+  color: #000000;
+  margin: 0 0 0 200px;
+  font-size: 40px
+
+}
+
+#navigation-two p{
+  font-family: 'Josefin Sans',sans-serif;
+  color: #000000;
+  font-size: 40px
+
+}
+
+#navigation-two h2{
+  font-family: 'Alegreya', serif;
+  color: #000000;
+  font-size: 40px
+
+}
+
+/*-------------------------------------Map Section--------------------------------------------------*/
+#mapSection {
+  margin-top: 10px;
+  position: relative;
+  height: 500px;
+  width: 100%;
+  padding: 2px;
+  display: block;
+  text-align: center;
+
+}
+#map {
+  margin-top: 10px;
+  position: relative;
+  height: 500px;
+  width: 90%;
+  padding: 2px;
+  display: none;
+  margin: 0 0 0 100px;
+}
+
+
+
+hr {
+  border-top: 3px solid #2f4f4f;
+  border-bottom: 2px dashed #2f4f4f;
+  border-left:none;
+  border-right:none;
+  height: 6px;
+}
+
+
+#mapSection p{
+  font-family: 'Josefin Sans',sans-serif;
+  color: #000000;
+  margin: 100px 0 0 10px;
+  font-size: 40px
+}

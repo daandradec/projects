@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+	<title>
+		Chicago Rentals
+	</title>
+
+	<script>
+	function initMap(){
+		var mapDiv = document.getElementById('map');
+		var map = new google.maps.Map(mapDiv, {
+			center: {lat: 41.8708, lng: -87.6505},
+			zoom: 12});
+		var marker = new google.maps.Marker({ //Line 1
+			position: {lat: 41.8708, lng: -87.6505}, //Line2: Location to be highlighted
+			map: map,//Line 3: Reference to map object
+			title: 'University of Illinois' //Line 4: Title to be given
+		})
+	}
+	</script>
+</head>
+<body class="s">
+	<ul class="ul">
+  		<li class="li"><a href="welcome.html" class="li a">HOME</a></li>
+  		<li class="li"><a href="search.html" class="li a">SEARCH</a></li>
+  		<li class="li"><a href="#about" class="li a">ABOUT</a></li>
+  		<p id="header">Chicago Rentals</p>
+	</ul>
+	<p class="search">Search places:</p><br>
+	<div style="text-align: center;">
+	<form style="padding-bottom: 290px">
+		<p style="float: top;text-align: center;">Enter keywords to optimize your search...</p>
+  		<input type="text" size="50" name="nombre" style="height: 30px;">
+  		<br><br>
+  		<input type="submit" value="GO">
+	</form>
+	</div>
+	<div id="map">
+		
+	</div>
+	<footer class="footer">
+		Copyright&#169 2017.Chicago Rentals
+	</footer>
+</body>
+<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBx95ZZnY0yeeYECjDjgFMt11wZcJHt0Zw&callback=initMap">
+</script>
+</html>

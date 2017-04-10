@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8" />
+        <title>EnjoyChicago</title>
+        <link rel="stylesheet"  type="text/css" href="estilo" />
+</head>
+<body>
+
+<h1 id="titulo">EnjoyChicago</h1>
+
+<div id="map"></div>
+
+
+<div id="marco1">
+<h2>Choose between 0 and 10, being 0 never and 10 always</h2>
+
+	
+	Running, football, basketball, bicycle riding :<input type="range" name="range7" min="0" max="10" onchange="updateTextInput(this.value,this.name);">
+	<input type="text" id="range7" value="">
+	<br>
+
+	<br>	
+	Eat in restaurant :<input  type="range" name="range6" min="0" max="10" onchange="updateTextInput(this.value,this.name);">
+	<input type="text" id="range6" value="">
+	<br>
+
+	
+	<br>
+	Pray church:<input type="range" name="range5" min="0" max="10" onchange="updateTextInput(this.value,this.name);">
+	<input type="text" id="range5" value="">
+	<br>
+
+
+	<br>
+	Use the Car:<input type="range" name="range4" min="0" max="10" onchange="updateTextInput(this.value,this.name);">
+	<input type="text" id="range4" value="">
+	<br>
+
+	<br>	
+	Gym - Crossfit:<input type="range" name="range3" min="0" max="10" onchange="updateTextInput(this.value,this.name);">
+	<input type="text" id="range3" value="">
+	<br>
+
+	<br>	
+	Buy in Supermarket:<input type="range" name="range2" min="0" max="10" onchange="updateTextInput(this.value,this.name);">
+	<input type="text" id="range2" value="">
+	<br>
+
+	<br>	
+	Bar discoteca :<input  type="range" name="range1" min="0" max="10" onchange="updateTextInput(this.value,this.name);">
+	<input type="text" id="range1" value="">
+	<br>
+
+	<button type="button" onclick="hiddenDiv()">Send </button>
+
+	
+
+</div>
+
+<div class="footer">	
+	<p id="myp">
+		Here in this section I will show data about the recommended area
+	</p>		
+</div>
+
+
+<script>
+function hiddenDiv() {
+    document.getElementById("marco1").style.visibility = "hidden";
+    document.getElementById("marco1").style.height = "1px";
+    document.getElementById("map").style.width = "95%";
+    document.getElementById("map").style.height = "500px";    
+    document.getElementById("map").style.padding = "0px";
+
+    myMap(12)
+}
+</script>
+
+
+
+
+<script >
+		function updateTextInput(val,id) {
+          document.getElementById(id).value=val; 
+        }
+</script>
+
+<script>
+	function myMap(zoomTool) {
+		if (zoomTool!=12) {
+			zoomTool = 10;
+		}
+		
+  var mapCanvas = document.getElementById("map");
+  var myCenter = new google.maps.LatLng(41.8708,-87.6505); 
+  var mapOptions = {center: myCenter, zoom: zoomTool};
+  var map = new google.maps.Map(mapCanvas,mapOptions);
+  var marker = new google.maps.Marker({
+    position: myCenter,
+    animation: google.maps.Animation.BOUNCE
+  });
+
+
+  var infowindow = new google.maps.InfoWindow({
+                            content: ""
+                        });
+    
+    //create a new httprequest for this session
+    var xmlhttp = new XMLHttpRequest();
+    //json format data resource url 
+    var url = "https://data.cityofchicago.org/api/views/s6ha-ppgi/rows.json?accessType=DOWNLOAD";
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+
+    //once the request is accepted, process the fowllowing function to get data and complete the app information
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            //get the text content from the page response
+            var myArr = xmlhttp.responseText;
+            var text = myArr;
+            json = JSON.parse(text);
+
+            //This a test
+            document.getElementById("myp").innerHTML = json.data[5][8];            
+            
+            //get value rent
+            for (var i = 0; i<263; i++) {
+                var dataLine = [];
+                //Community Area Name - 0
+                dataLine.push(json.data[i][8]);
+                //area number - 1
+                dataLine.push(json.data[i][9]);
+                //Property Type - 2
+                dataLine.push(json.data[i][10]);
+                //property name - 3
+                dataLine.push(json.data[i][11]);
+                //address  - 4
+                dataLine.push(json.data[i][12]);
+                //zip code - 5
+                dataLine.push(json.data[i][13]);
+                //phone Number - 6
+                dataLine.push(json.data[i][14]);
+                //management company -7
+                dataLine.push(json.data[i][15]);
+                //units - 8
+                dataLine.push(json.data[i][16]);
+                //Location - 9
+                dataLine.push(json.data[i][21]);
+
+                
+            };
+
+   }
+  }
+}
+</script>
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDomb6EimWqdLB1hJEOFZ3LHbmbpQB7zKg&callback=myMap"></script>
+
+</body>
+</html>

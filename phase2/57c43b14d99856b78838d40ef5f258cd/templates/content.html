@@ -1,0 +1,40 @@
+{%extends "header.html"%}
+
+
+{%block header%}
+<!-- Data tables styles   -->
+<link rel="stylesheet" href="{{url_for('static',filename='css/jquery.dataTables.min.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/content.css')}}">
+{%endblock%}
+
+{%block body%}
+<div class="cont">
+<div id="map_container"></div>
+<div id="map"></div>
+</div>
+
+
+<!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4 id="address"></h4>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+{%endblock%}
+
+
+
+{%block imports%}
+<!-- Datatables: (Print Data) -->
+<script type="text/javascript" charset="utf8" src="{{url_for('static',filename='js/jquery.dataTables.min.js')}}"></script>
+<!-- Google maps; Application Programing Interface -->
+<script defer src="{{url_for('static',filename='logic/map_google.js')}}"></script>
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSaP-yNmxveks9F0c-ylR8R2yXt6356f4&v=3.20&callback=initMap"></script>
+<!-- jQuery: Request API -->
+<script defer src="{{url_for('static',filename='logic/request_datasets.js')}}"></script>
+<script defer src="{{url_for('static',filename='logic/request_api.js')}}"></script>
+<script src="{{url_for('static',filename='js/content.js')}}"></script>
+{%endblock%}

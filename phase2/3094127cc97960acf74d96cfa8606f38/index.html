@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+		<script src="JS/jquery-3.2.0.js"></script>
+		<script type="text/javascript" src="JS/xml2json.js"></script>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+
+
+    <style>
+
+			@font-face {
+				font-family: LoveloLight;
+				src: url(font/LoveloLight.otf);
+			}
+			@font-face {
+				font-family: capsuula;
+				src: url(font/Capsuula.ttf);
+			}
+      #map {
+        height: 80%;
+				width: 90%;
+				margin: 1%;
+				background-color: grey;
+      }
+			#Pre {
+				margin: 1%;
+				background-color: #242f3e;
+				color: White;
+				text-align-last: left;
+			}
+      /* Optional: Makes the sample page fill the window. */
+      HTML, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+				background-color: WHITE;
+				color: #242f3e;
+				text-align-last: center;
+				font-family: capsuula;
+				font-weight: bold;
+
+      }
+			header {
+				height: 6%;
+				font-family: LoveloLight;
+				margin: 10%;
+				background-color: #242f3e;
+				color: White;
+				text-align-last: center;
+				margin: 0%;
+			}
+    </style>
+
+	<title>Welcome! | Windy Places</title>
+
+</head>
+<body>
+
+
+	<header> <H1>  ¡WINDY PLACES!</H1></header>
+
+
+	<div id="other"></div>
+	<p>Thi website was made for all new stutends moving to chicago, here you can find a good place to rent.</p>
+	<div id="option">
+		<input name="updateButton"
+					 type="image"
+					 src="Images/Apartment-icon-2.png"
+					 value="Update"
+					 onclick="updateData()"
+					  width="48" height="48"
+					 />
+		Apartments
+		<input name="updateButton"
+					 type="image"
+					 src="Images/library.png"
+					 value="Update"
+					 onclick="drawLibraries()"
+					  width="48" height="48"
+					 />
+		Click to show/hide Libraries
+	</div>
+
+	<div id="map"></div>
+	<script type="text/javascript" src="JS/Markers.js"></script>
+	<script type="text/javascript" src="JS/Mapa.js"></script>
+	<script src="JS/DataZillow.js"></script>
+		<script src="JS/DataHouses.js"></script>
+		<script src="JS/Libraries.js"></script>
+	<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaO9nwxq9PpGEB4hkm-XLdZg3CCAI9C3Y&callback=initMap" async defer></script>
+
+
+	<div id="Pre">
+
+	</div>
+
+
+		<script src="JS/Data.js"></script>
+
+		<footer>
+	  <p>Posted by: Jimmy Pulido</p>
+	  <p>Contact information: <a href="mailto:jiapulidoar@gmail.com">
+	  jiapulidoar@gmail.com</a>.</p>
+	</footer>
+
+</body>
+</html>

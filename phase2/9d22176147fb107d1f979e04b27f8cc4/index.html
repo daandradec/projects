@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <html lang="en">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body class="container-fluid">
+    <div class="col-sm-12 col-md-7">
+      <h1 class="title">Safe API</h1>
+      <div class="row col-sm-12">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+              <h4 class="panel-title">
+                <a role="button" onclick="crimes();" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  Crimes 2016
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+              <div class="panel-body" id="Crimes2016"></div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+              <h4 class="panel-title">
+                <a class="collapsed" onclick="police();" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Police Stations
+                </a>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+              <div class="panel-body" id="PoliceStation"></div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree">
+              <h4 class="panel-title">
+                <a class="collapsed" onclick="fire();" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Fire Station
+                </a>
+              </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+              <div class="panel-body" id="FireStation"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 class="title">Culture API</h1>
+      <div class="row col-sm-12">
+        <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading4">
+              <h4 class="panel-title">
+                <a class="collapsed" onclick="libraries();" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                  Libraries
+                </a>
+              </h4>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+              <div class="panel-body" id="Libraries"></div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading5">
+              <h4 class="panel-title">
+                <a class="collapsed" onclick="Artworks();" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                  Artworks
+                </a>
+              </h4>
+            </div>
+            <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+              <div class="panel-body" id="Artworks"></div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading6">
+              <h4 class="panel-title">
+                <a class="collapsed" onclick="MoviesInPark();" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                  Movie in park
+                </a>
+              </h4>
+            </div>
+            <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
+              <div class="panel-body" id="MovieInPark"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 class="title">Entertainment API</h1>
+      <div class="row col-sm-12">
+        <div class="panel-group" id="accordion3" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading7">
+              <h4 class="panel-title">
+                <a class="collapsed" onclick="Parks();" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                  Parks
+                </a>
+              </h4>
+            </div>
+            <div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading7">
+              <div class="panel-body" id="Parks"></div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading8">
+              <h4 class="panel-title">
+                <a class="collapsed" onclick="Pedestrian();" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                  Pedestrian
+                </a>
+              </h4>
+            </div>
+            <div id="collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading8">
+              <div class="panel-body" id="Pedestrian"></div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading9">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                  Near Beach
+                </a>
+              </h4>
+            </div>
+            <div id="collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading9">
+              <div class="panel-body" id="NearBeach"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 class="title">Affordable API</h1>
+      <div class="row col-sm-12">
+        <div class="panel-group" id="accordion4" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading10">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                  Average Daily Traffic
+                </a>
+              </h4>
+            </div>
+            <div id="collapse10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading10">
+              <div class="panel-body" id="AverageDailyTraffic"></div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading11">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                  Divvy Bicicly Station
+                </a>
+              </h4>
+            </div>
+            <div id="collapse11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading11">
+              <div class="panel-body" id="DivvyBicicly"></div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading12">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                  Near to U ofI
+                </a>
+              </h4>
+            </div>
+            <div id="collapse12" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading12">
+              <div class="panel-body" id="NearUI"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 class="title">Price</h1>
+      <div class="row col-sm-12">
+        <div class="panel-group" id="accordion5" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading13">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapse13" aria-expanded="false" aria-controls="collapse13">
+                  Price
+                </a>
+              </h4>
+            </div>
+            <div id="collapse13" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading13">
+              <div class="panel-body" id="Price">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="map" class="col-sm-12 col-md-5" style="height: 100vh"></div>
+  </body>
+  <script src="Map.js" type="text/javascript"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC4lO1PjOC9xzRaOK86FJoht6VBFYcsB8&callback=initMap"></script>
+  <script src="SafeAPI.js" type="text/javascript"></script>
+  <script src="CultureAPI.js" type="text/javascript"></script>
+  <script src="EntertainmentAPI.js" type="text/javascript"></script>
+</html>

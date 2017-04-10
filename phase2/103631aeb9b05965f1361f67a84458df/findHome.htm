@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "utf-8"/>
+      <title>Find A Home</title>
+      <link href = "fH.css" type = "text/css" rel = "stylesheet">    
+      <script src = "call.js" type = "text/javascript" ></script>
+      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js" ></script>
+      <script src = "http://code.jquery.com/jquery-1.9.1.js" type="text/javascript"></script>
+      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   </head>
+   <body>
+      <div class = "header"> 
+         <h1>FIND A HOME</h1>
+         <nav>
+            <a href = "#2">Search in map</a>
+            <a href = "#3">Search for prices</a>
+            <a href = "#4">Find a Home</a>  
+            <a href = "#5">Other</a>
+         <nav> 
+      </div>
+      <div id = "cover">
+         <div class = "cover-content">
+            <p>In this page you can find a home in Chicago City depending on your budget and your preferences</p>
+         <div>
+      </div>
+      <h3 id = "1">SEARCH IN MAP</h3>
+      <div class = "contentbox">
+         <div id="map"></div>
+      </div>
+         <div>
+            <select id = "select1" name = "select1" onchange = "populate( this.id )" >
+               <option value = "0" ></option>
+               <option value = "1" >very close</option>
+               <option value = "2" >Nearby</option>
+               <option value = "3" >Remote</option>
+               <option value = "4" >Far</option>
+               <option value = "5" >all</option>
+            </select>
+            <!--<button id = "search" name = "search">Search</button>-->
+            </form>
+         </div>
+   </body>
+   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3h9zs-TSIos-4h644ozowVD_mldN93Bw&callback=initMap"></script>
+</html>

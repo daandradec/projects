@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home Finder</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="bower_components/semantic-ui-calendar/dist/calendar.min.css" />
+    <!-- Local Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/custom-styles.css">
+    <!-- JavaScripts -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/semantic-ui-calendar/dist/calendar.min.js"></script>
+    <!-- Local JavaScripts -->
+  	<script src="semantic/dist/semantic.min.js"></script>
+    <script src="js/vue.js"></script>
+
+  </head>
+  <body>
+    <div class="ui segments">
+
+      <div class="ui inverted segment" id="header">
+        Find Your Home
+      </div>
+
+      <div class="ui stackable streched grid">
+        <div class="eight wide column" style="right-padding: 0;">
+          <div class="ui sticky segments" id="map-container">
+            <div class="ui segment" id="map-menu">
+              <div class="ui stackable labeled icon secondary menu">
+                <div class="header item">
+                  Compare the Area
+                  <h5>Select the map type <i class="small right arrow icon"></i> </h5>
+                </div>
+                <div class="right menu">
+                  <div class="ui map inverted green button" src=>
+                    <i class="dollar icon"></i>
+                    Living cost
+                  </div>
+                  <div class="ui map inverted blue button active">
+                    <i class="road icon"></i>
+                    Distance
+                  </div>
+                  <div class="ui map inverted red button">
+                    <i class="protect icon"></i>
+                    Security
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ui segment" id="map"></div>
+          </div>
+        </div>
+        <div class="eight wide column" style="left-padding: 0 !important;">
+          <div class="ui segments" id="data-container">
+            <div class="ui sticky segment" id="data-menu">
+              <div class="ui stackable labeled icon secondary menu">
+                <div class="header item">
+                  What do you want to know?
+                  <h5>Select the level of data <i class="small right arrow icon"></i> </h5>
+                </div>
+                <div class="right menu">
+                  <div class="ui data basic button" v-bind:class=buttonsList[0].state v-on:click="activateButton(buttonsList[0])">
+                    <i v-bind:class=buttonsList[0].icon></i> {{ buttonsList[0].text }}
+                  </div>
+                  <div class="ui data basic button" v-bind:class=buttonsList[1].state v-on:click="activateButton(buttonsList[1])">
+                    <i v-bind:class=buttonsList[1].icon></i> {{ buttonsList[1].text }}
+                  </div>
+                  <div class="ui data basic button" v-bind:class=buttonsList[2].state v-on:click="activateButton(buttonsList[2])">
+                    <i v-bind:class=buttonsList[2].icon></i> {{ buttonsList[2].text }}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ui segment">
+              <div v-show="content === 'places'">
+                <div class="ui three cards">
+                  <data-item v-for="item in placesList" v-bind:data="item"></data-item>
+                </div>
+              </div>
+              <div v-show="content === 'details'">
+                Details
+              </div>
+              <div v-show="content === 'statistics'">
+                Statistics
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="ui small modal" id="modal">
+      <i class="close icon"></i>
+      <h2 class="ui header">When do you want to go?</h2>
+      <div class="content">
+        <div class="ui relaxed centered grid">
+          <div class="nine wide column" style="display: list-item;">
+            <p class="ui teal message">Double-click to see the weather forecast</p>
+            <div class="ui calendar" id="calendar"></div>
+          </div>
+          <div class="seven wide column">
+            <div class="description">
+              <h3>{{ selectedDateString() }}</h3><br>
+              <p>
+                <b>Actual position: </b> {{ actualPosition }} <br>
+                <b>Destination: </b> {{ destination }} <br>
+                <tt-prediction></tt-prediction>
+                <weather-forecast v-for="item in selectedDayWeather(weatherList)" v-bind:day="item"></weather-forecast>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="js/script.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/map.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDip7CRroRr9Aui972KlJZ2MKr7P-U20PA&callback=initMap"></script>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+FIPS:18 - Indiana
+https://www.ncdc.noaa.gov/cdo-web/api/v2/datasets?stationid=COOP:129430
+{
+  "metadata": {
+    "resultset": {
+      "offset": 1,
+      "count": 2,
+      "limit": 25
+    }
+  },
+  "results": [
+    {
+      "uid": "gov.noaa.ncdc:C00505",
+      "mindate": "1970-05-12",
+      "maxdate": "2014-01-01",
+      "name": "Precipitation 15 Minute",
+      "datacoverage": 0.25,
+      "id": "PRECIP_15"
+    },
+    {
+      "uid": "gov.noaa.ncdc:C00313",
+      "mindate": "1900-01-01",
+      "maxdate": "2014-01-01",
+      "name": "Precipitation Hourly",
+      "datacoverage": 1,
+      "id": "PRECIP_HLY"
+    }
+  ]
+}
+
+https://www.ncdc.noaa.gov/cdo-web/api/v2/datasets?stationid=GHCND:US1INTP0005
+{
+  "metadata": {
+    "resultset": {
+      "offset": 1,
+      "count": 1,
+      "limit": 25
+    }
+  },
+  "results": [
+    {
+      "uid": "gov.noaa.ncdc:C00861",
+      "mindate": "1763-01-01",
+      "maxdate": "2017-04-03",
+      "name": "Daily Summaries",
+      "datacoverage": 1,
+      "id": "GHCND"
+    }
+  ]
+}
+
+https://www.ncdc.noaa.gov/cdo-web/api/v2/datasets?stationid=GHCND:US1INTP0012
+{
+  "metadata": {
+    "resultset": {
+      "offset": 1,
+      "count": 2,
+      "limit": 25
+    }
+  },
+  "results": [
+    {
+      "uid": "gov.noaa.ncdc:C00861",
+      "mindate": "1763-01-01",
+      "maxdate": "2017-04-03",
+      "name": "Daily Summaries",
+      "datacoverage": 1,
+      "id": "GHCND"
+    },
+    {
+      "uid": "gov.noaa.ncdc:C00946",
+      "mindate": "1763-01-01",
+      "maxdate": "2017-01-01",
+      "name": "Global Summary of the Month",
+      "datacoverage": 1,
+      "id": "GSOM"
+    }
+  ]
+}
+
+https://www.ncdc.noaa.gov/cdo-web/api/v2/datasets?stationid=NEXRAD:KILX
+{
+  "metadata": {
+    "resultset": {
+      "offset": 1,
+      "count": 2,
+      "limit": 25
+    }
+  },
+  "results": [
+    {
+      "uid": "gov.noaa.ncdc:C00345",
+      "mindate": "1991-06-05",
+      "maxdate": "2017-04-03",
+      "name": "Weather Radar (Level II)",
+      "datacoverage": 0.95,
+      "id": "NEXRAD2"
+    },
+    {
+      "uid": "gov.noaa.ncdc:C00708",
+      "mindate": "1994-05-20",
+      "maxdate": "2017-03-31",
+      "name": "Weather Radar (Level III)",
+      "datacoverage": 0.95,
+      "id": "NEXRAD3"
+    }
+  ]
+}

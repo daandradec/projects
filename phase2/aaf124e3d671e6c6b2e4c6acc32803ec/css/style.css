@@ -1,0 +1,79 @@
+
+html, body { 
+	height: 100%; margin: 0; padding: 0; 
+	background: #08B257;
+}
+
+#map { 
+	height: 50%; 
+	background: #08B257;
+}
+
+#barprin {
+	background: #08B257;
+	text-align: center; 
+	color: white;
+	font-size: 120px;
+	min-height: 200px;
+	font-family: 'Lobster';
+}
+
+#table1 {
+	background: #08B257;
+	color: white;
+	font-size: 20px;
+	min-height: 250px;
+}
+
+.prop {
+	background: #08B257;
+	margin-left: 0.5cm;
+	color: white;
+	font-size: 20px;
+	min-height: 250px;
+}
+
+.back {
+	background: #08B257;
+}
+
+.cont {
+	width: 500px;
+	height: 200px;
+	overflow: auto;
+	float: left; 
+
+}
+
+
+li.itemA[myvar =  desactive]{
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	cursor: pointer;
+}
+
+li.itemA[myvar =  active]{
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	background: #169599;
+	color: white;
+	border-color:#169599; 
+	cursor: pointer;
+}
+
+.boton {
+	
+}
+
+
+

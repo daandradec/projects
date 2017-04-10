@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <title>Student Place Browser</title>
+    <!-- Bootstrap core CSS     -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--  Material Dashboard CSS    -->
+    <link href="css/material-dashboard.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css">
+    <script src="js/scripts.js" type="text/javascript"></script>
+  </head>
+  <body>
+
+    <div class="wrapper">
+	 <div class="sidebar" data-color="red" data-image="../assets/img/sidebar-1.jpg"
+
+      style="background-color: white;">
+      <div class="logo"> <img src="./img/logo5.png" alt="Logo" style="width:200px;height:120px;margin:0px 10px">
+        <a href="#" class="simple-text"> Find a Place </a> </div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="active"> <a href="index.html"> <i class="mdi mdi-home"></i>
+              <p>Dashboard</p>
+            </a> </li>
+          <li> <a href="map.html"> <i class="mdi mdi-google-maps"></i>
+              <p>Maps</p>
+            </a></li>
+          <li class="logo_fondo"> <a href="#"> <i class="mdi mdi-eye-outline"></i>
+              <p>Site in progress....</p>
+            </a> </li>
+        </ul>
+      </div>
+    </div>
+        <div class="content">
+          <div class="container-fluid">
+	<div class="row">
+    <div class="col-lg-3 col-md-6 col-sm-6" style="margin-left:400px">
+      <div class="card card-stats">
+        <div class="card-header" data-background-color="red">  <i class="mdi mdi-weather-cloudy"></i>
+        </div>
+        <div class="card-content">
+          <p class="category">Current Weather</p>
+          <h3 class="title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3> <div id="weather"></div>
+		  <script>
+		  var xmlhttp = new XMLHttpRequest();
+var url = "http://api.openweathermap.org/data/2.5/weather?q=chicago&appid=6aa0bdb1f586c5630d60b6237dfce45c";
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        var myArr = xmlhttp.responseText;
+        var text = myArr;
+        var json = JSON.parse(text);
+        document.getElementById("weather").innerHTML = "<b>" + json.weather[0].main + "</b>";
+    }
+};
+		  </script>
+        </div>
+        <div class="card-footer">
+          <div class="stats"> Realtime Weather </div>
+        </div>
+      </div>
+    </div>
+	<div class="col-lg-3 col-md-6 col-sm-6" style="margin-left:400px;margin-top:100px">
+      <div class="card card-stats">
+        <div class="card-header" data-background-color="yellow">  <i class="mdi mdi-home"></i>
+        </div>
+        <div class="card-content">
+          <p class="category">Search History</p>
+          <h3 class="title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3> <div id="weather"></div>
+		  <script>
+		  
+		  </script>
+        </div>
+        <div class="card-footer">
+          <div class="stats"> Places seen </div>
+        </div>
+      </div>
+    </div>
+	
+    </div>
+	<div class="col-lg-4 col-md-7 col-sm-7" style="margin-left:800px">
+      <div class="card card-stats">
+        <div class="card-header" data-background-color="blue">  <i class="mdi mdi-av-timer"></i>
+        </div>
+        <div class="card-content">
+          <p class="category">Current Time</p>
+          <h3 class="title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3> <div id="weather"></div>
+		  <iframe src="http://free.timeanddate.com/clock/i5nvobjd/n64/fs30/tt0/tw0/tm1/ts1/tb4" frameborder="0" width="184" height="70"></iframe>
+
+
+        </div>
+        <div class="card-footer">
+          <div class="stats"> Time on Chicago </div>
+        </div>
+      </div>
+    </div>
+   
+        </div>
+        </div>
+        </div>
+  </body>
+</html>

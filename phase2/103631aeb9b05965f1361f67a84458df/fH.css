@@ -1,0 +1,52 @@
+body {
+   background-color : white; 
+   font-family: 'Abel', sans-serif;
+}
+
+a{
+   text-decoration : none; 
+   width : 100%;
+   margin : 16px 20px;
+   color : green;   	
+}
+
+p {
+  color:rgba( 72, 232, 3, 0.5 );
+  font-size: 50px;
+  line-height: 80px;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+#cover {
+  top: -55px;
+  width: 100%;
+}
+
+.cover-content {
+   text-align: center;
+   top: 280px;
+   width: 100%;
+}
+
+.header {
+   background-color: rgba(255, 255, 255, 0.9);
+   overflow-y: auto;
+   position: fixed;
+   left: 0;
+   top: 0;
+   text-align: center;
+   width: 100%;  
+}
+
+#map {
+   width: 100%;
+   height: 1000px;
+   background-color: grey;
+}
+
+.contentbox {
+   overflow : scroll; 
+   height : 600px;
+   width : 49%;    
+}

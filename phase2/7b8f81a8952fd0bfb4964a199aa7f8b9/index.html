@@ -1,0 +1,243 @@
+<!--
+
+The idea here is to have a graphic representation of produce depending mostly on current price and freshness. The size and color of plotted points could also be changed to represent additional variables but right now they are placeholders. I would like to add a dropdown menu so that users can select what month it is and the data will respond accordingly. Additionally, I want users to be able to pick what produce they would like to look at. Checkboxes will allow for specific selections and there will be a check all / check none button to make the experience better. I would also like to add mouseover tooltips when hovering over a produce and furhter information when a produce is clicked. For example, in summer watermelon may appear in the top right indicating that it is cheap and fresh. A user would mouse over to see info about watermelons (how to pick good ones, recipes, etc.) and click to load a Google map showing nearby locations with cheap watermelons. For this visualization I will need to collect the following data as well as additional data for for added features and accuracy:
+
+PRODUCE LIST
+- List of vegetables/produce
+
+COSTS
+- Cost of each produce by month of the year
+
+GAUGING FRESHNESS
+- National production of each produce by month of the year
+- Indiana production of each produce by month of the year
+- Consumption of each produce by month of the year
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>IronHacks Rev2</title>
+		<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+		<style type="text/css">
+			
+			.axis path,
+			.axis line {
+				fill: none;
+				stroke: black;
+				shape-rendering: crispEdges;
+			}
+			
+			.axis text {
+				font-family: sans-serif;
+				font-size: 11px;
+			}
+
+			.title {
+	          font-size: 18px;
+	          font-family: Arial,Helvetica,sans-serif;
+	          font-weight:bold;
+	      }
+
+		    .dropdown {
+			    position: relative;
+			    display: inline-block;
+			}
+
+			.dropdown-content {
+			    display: none;
+			    position: absolute;
+			    background-color: #f9f9f9;
+			    min-width: 160px;
+			    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			    padding: 12px 16px;
+			    z-index: 1;
+			}
+
+			.dropdown:hover .dropdown-content {
+			    display: block;
+			}
+
+			#map {
+	         height: 200px;
+	         width: 100%;
+	        }
+
+		</style>
+	</head>
+	<body>
+
+		<div class="dropdown">
+		  <span>Choose a Month</span>
+		  <div class="dropdown-content">
+		    <p>January</p>
+		    <p>February</p>
+		    <p>March</p>
+		    <p>April</p>
+		    <p>May</p>
+		    <p>June</p>
+		    <p>July</p>
+		    <p>August</p>
+		    <p>September</p>
+		    <p>October</p>
+		    <p>November</p>
+		    <p>December</p>
+		  </div>
+		</div>
+
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var loc = {lat: 40.426308, lng: -86.913041};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: loc
+        });
+        var marker = new google.maps.Marker({
+          position: loc,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnmHHVeYWFpOv1nJpEeXe1CPGJHTyxCS4&callback=initMap">
+    </script>
+  </body>
+</html>
+
+		<script type="text/javascript">
+
+			//Width and height
+			var w = 900;
+			var h = 300;
+			var padding = 30;
+
+			//Labels & Setup
+			var names = ['potato', 'carrot', 'apple', 'pear', 'peach', 'pineapple', 'cucumber'];
+
+			var dataset;
+			d3.csv("data.csv", function(data) {
+			  data.forEach(function(d) {
+			    d.Freshness = +d.Freshness;
+			    d.Price = +d.Price;
+			  dataset = data;
+			});
+
+			console.log(dataset);
+			console.log(d3.max(dataset));
+
+			//Create scale functions
+			var xScale = d3.scale.linear()
+								 .domain([0, d3.max(dataset, function(d) { return d.Freshness; })])
+								 .range([padding, w - padding * 2]);
+
+			var yScale = d3.scale.linear()
+								 .domain([0, d3.max(dataset, function(d) { return d.Price; })])
+								 .range([h - padding, padding]);
+
+			var rScale = d3.scale.linear()
+								 .domain([d3.min(dataset, function(d) { return d.OtherCategory; }), d3.max(dataset, function(d) { return d.OtherCategory; })])
+								 .range([5, 10]);
+
+			var Color = d3.scale.linear()
+								 .domain([d3.min(dataset, function(d) { return d.OtherCategory2; }), d3.max(dataset, function(d) { return d.OtherCategory2; })])
+								 .range([100, 255]);
+
+			//Define X axis
+			var xAxis = d3.svg.axis()
+							  .scale(xScale)
+							  .orient("bottom")
+							  .ticks(5);
+
+			//Define Y axis
+			var yAxis = d3.svg.axis()
+							  .scale(yScale)
+							  .orient("left")
+							  .ticks(5);
+
+			//Create SVG element
+			var svg = d3.select("body")
+						.append("svg")
+						.attr("width", w)
+						.attr("height", h);
+
+			//Create circles
+			svg.selectAll("circle")
+			   .data(dataset)
+			   .enter()
+			   .append("circle")
+			   .attr("cx", function(d) {
+			   		return xScale(d.Freshness);
+			   })
+			   .attr("cy", function(d) {
+			   		return yScale(d.Price);
+			   })
+			   .attr("r", function(d) {
+			   		return rScale(d.OtherCategory);
+			   })
+			   .attr("fill", function(d) {
+			   		return "rgb(0, " + parseInt(Color(d.OtherCategory2), 10) + ", " + "0" + ")";
+			   });
+
+			//-----
+
+			//Labels
+			svg.selectAll("text")
+			   .data(dataset)
+			   .enter()
+			   .append("text")
+			   .text(function(d, i) {
+			   		return names[i];
+			   })
+			   .attr("x", function(d) {
+			   		return xScale(d.Freshness) - 20;
+			   })
+			   .attr("y", function(d) {
+			   		return yScale(d.Price) - 0;
+			   })
+			   .attr("font-family", "sans-serif")
+			   .attr("font-size", "15px")
+			   .attr("fill", "black");
+
+			//Creating X Axis
+			svg.append("g")
+				.attr("class", "axis")
+				.attr("transform", "translate(0," + (h - padding) + ")")
+				.call(xAxis)
+			.append("text")
+		        .attr("class", "label")
+		        .attr("x", w)
+		        .attr("y", -5)
+		        .style("text-anchor", "end")
+		        .text("Freshness (scale of 1 to 10)");
+
+		    svg.append("g")
+				.attr("class", "title")
+				.attr("transform", "translate(0," + (h - padding) + ")")
+		    .append("text")
+		        .attr("class", "label")
+		        .attr("x", w - 400)
+		        .attr("y", - 230)
+		        .style("text-anchor", "end")
+		        .text("Produce Chart");
+
+		    //Creating Y Axis
+			svg.append("g")
+				.attr("class", "axis")
+				.attr("transform", "translate(" + padding + ",0)")
+				.call(yAxis)
+			.append("text")
+		        .attr("class", "label")
+		        .attr("transform", "rotate(-90)")
+		        .attr("y", 6)
+		        .attr("dy", ".71em")
+		        .style("text-anchor", "end")
+		        .text("Price per unit in dollars");
+
+			});
+
+		</script>
+	</body>
+</html>

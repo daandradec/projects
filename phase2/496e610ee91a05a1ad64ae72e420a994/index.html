@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>1
+	<meta charset="utf-8">
+	<meta name="keywords" content="html5, css3, mashup">
+	<meta name="description" content="Mashup App">
+	<title>Find the Best Place to Live</title>
+	<link rel="stylesheet" type="text/css" href="estilos/estilos.css"
+</head>
+<body>
+	<section id="cont">
+		<header>
+			
+		</header>
+		
+		<section id="main">
+		</section>
+		
+		<section id="data">
+			<h1>University of Illinois at Chicago</h1>
+			<h2>Department of Computer Science</h2>
+			
+		</section>
+		
+		<section id="map">
+			<script src="http://maps.googleapis.com/maps/api/js"></script>
+			
+			<script type="text/javascript">
+				var map;
+				var marker;
+				
+				function init() {
+					var image = new google.maps.MarkerImage("https://content.guess.com/GuessUS/Frontend/Common/assets/location.svg", new google.maps.Size(30, 30))
+					var mapOptions = {
+						center: new google.maps.LatLng(41.8708, -87.6505), 
+						zoom: 12,
+						mapTypeId: google.maps.MapTypeId.ROADMAP
+					};
+					map = new google.maps.Map(document.getElementById("map"), mapOptions);
+				
+					var place = new google.maps.LatLng(41.8708, -87.6505);
+					marker = new google.maps.Marker({
+						position: place,
+						map: map,
+						title: "Department of Computer Science",
+						icon: image
+					});	
+					google.maps.event.addListener(marker, "click", showInfo);	
+				}
+				google.maps.event.addDomListener(window, "load", init);
+				
+				function showInfo() {
+					map.setZoom(16);
+					map.setCenter(marker.getPosition());
+					var infowindow = new google.maps.InfoWindow({
+						content: "851 S Morgan St, Chicago, IL 60607, EE. UU."
+					});
+					infowindow.open(map, marker);
+				}
+
+			</script>
+						
+			<div id="map" style="width: 600px; height: 500px; border: solid; border-color: #0AF"></div> 
+			
+
+			</section>
+		
+		<section id="n">
+			<article id="n1"></article>
+			<article id="n2"></article>
+			<article id="n3"></article>
+		</section>
+		
+		<section id="info">
+		</section>
+		
+		<section id="others">
+		</section>
+		
+		<footer>
+		</footer>
+		
+	</section>
+</body>
+</html>

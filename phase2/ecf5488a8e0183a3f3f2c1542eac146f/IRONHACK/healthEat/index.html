@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>healthEat</title>
+	<script type="text/javascript" src="js/d3.js"></script>
+	<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.color-2.1.2.min.js"></script>	
+<link href="css/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <script>
+   /*   function initMap() {
+        var tippecanoeCo = {lat: 40.40, lng: -86.89};
+		 var snapOne = {lat:40.42321, lng: -86.85836};
+        var map = new google.maps.Map(document.getElementById('googleMap'), {
+          zoom: 12,
+          center: tippecanoeCo
+		
+
+        });
+		  		var markZucc = new google.maps.Marker({position: snapOne,map: map, title:"A vendor that accepts SNAP"});
+      } */
+		
+		
+		
+		$(document).ready(function(){
+			
+			var windowH = $(document).innerHeight() - 70;
+			
+			$("#googleMap").css("height", windowH);
+			
+			
+			$("#grocerySearch").click(function(){
+				$("#foodSearchBar").toggle();
+			});
+			
+			
+ 			d3.text("data/IN_SNAP.csv", function(unparsedData)
+  {
+				var dataSet = d3.csvParseRows(unparsedData);
+			
+				console.log(dataSet);
+				
+				initMap(dataSet);
+
+			});
+			
+
+			
+		});
+		
+						      function initMap(dataSet) {
+        var tippecanoeCo = {lat: 40.40, lng: -86.89};			
+		var map = new google.maps.Map(document.getElementById('googleMap'), {
+          zoom: 12,
+          center: tippecanoeCo});		
+			  
+			  
+				for(i=0; i < dataSet.length; i++){
+					
+					new google.maps.Marker({position: {lat:+dataSet[i][2], lng:+dataSet[i][1]}, map: map, title: dataSet[i][0]});
+					
+				}
+				
+			  
+			  
+		  }
+		
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPx-1nL_cljwVGV6Rwz3TT6H9Ml1VGzP8&callback=initMap">
+    </script>
+
+	<div id="topBar">
+	<!--	<img src="img/hamburger.gif" id="hamburger" /> took out hamburger because I don't know what I would need a hamburger for yet -->
+		<h1 id="heroHeader">healthEat</h1>
+		<h1 id="grocerySearch">Search for food prices</h1> <!-- to be replaced w/an icon -->
+	</div>
+	<div id="googleMap" style="width:100%;height:500px;"></div>
+	
+	<div id="foodSearchBar">
+		<form>
+			<input type="text" name="foodSearch" id="foodSearch">
+		</form>
+		<p>Food will show up here, with average prices, so people will know if they are getting ripped off</p>
+	</div>
+	
+</body>
+</html>

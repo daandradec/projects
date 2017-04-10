@@ -1,0 +1,107 @@
+body {
+  font-family: 'Nunito', sans-serif;
+  background: url(../images/back.jpg);
+  color: white;
+}
+h1 {
+  margin: 0 0 20px 0;
+  text-align: center;
+  font-size: 80px;
+  color: white;
+  font-weight: bold;
+}
+h2 {
+  margin: 20px 0 0 20px;
+  color: white;
+}
+h3 {
+  text-align: center;
+  color: white;
+}
+#map {
+  height: 455px;
+  background-color: grey;
+  margin-bottom: 10px;
+  padding: 2px;
+  margin-top: 10px;
+}
+#map_container{
+  float: right;
+  width: 50%;
+}
+#weather{
+  font-family: 'Nunito', sans-serif;
+  color: white;
+  font-size: 20px;
+}
+#side-menu{
+	display: block;
+	height: 90%;
+  float: left;
+  width: 50%;
+}
+
+.nav {
+  list-style-type:none;
+  display:flex;
+  flex-wrap: nowrap;
+  width:100%;
+  background:#222;
+  margin:0px;
+  padding:0px;
+}
+.navItem, .navItem a {
+  display:inline-block;
+  flex-grow: 1;
+}
+.navItem a {
+  width:100%;
+  padding-top:30px;
+  padding-bottom:30px;
+  color:white;
+  text-decoration:none;
+  text-align:center;
+  text-shadow: 1px 1px 2px rgba(34,34,34,0.4);
+  font-weight:600;
+  font-size:25px;
+}
+.navItem:nth-of-type(1) {
+  border-bottom:2px solid #D60F3A;
+}
+.navItem:nth-of-type(1) a:hover {
+  background:#D60F3A;
+}
+.navItem:nth-of-type(2) {
+  border-bottom:2px solid #8317AD;
+}
+.navItem:nth-of-type(2) a:hover {
+  background:#8317AD;
+}
+.navItem:nth-of-type(3) {
+  border-bottom:2px solid #3116DE;
+}
+.navItem:nth-of-type(3) a:hover {
+  background:#3116DE;
+}
+form {
+    float: left;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 1px;
+    height: 90%;
+    margin-bottom: 10px;
+    padding:20px;
+    padding-top: 0px;
+    border: 5px solid rgba(0,0,0,.2);
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background: rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 3px 3px rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 3px 3px rgba(0,0,0,.5);
+    box-shadow: 0 0 3px 3px rgba(0,0,0,.5);
+    overflow: hidden;
+}

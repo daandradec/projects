@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IronHacks Mashup</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <style>
+      #map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+      }
+       /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+    </style>
+  
+  <script src="js/drawMap.jsp" type="text/javascript"></script>
+  </head>
+  <body>
+  
+  <div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav"><br>
+      <h3>Options</h3>
+     
+      <ul class="nav nav-pills nav-stacked">
+        <h4> Select your criteriums</h4><br>
+        <li><label><input type="checkbox" id="cbox1" value="first_checkbox"> Option 1</label></li>
+        <li><label><input type="checkbox" id="cbox2" value="second_checkbox"> Option 2</label></li>
+        <li><label><input type="checkbox" id="cbox3" value="third_checkbox"> Option 3</label></li>  
+        <li><label><input type="checkbox" id="cbox4" value="fourth_checkbox"> Option 4</label></li>  
+        <li><label><input type="checkbox" id="cbox5" value="fifth_checkbox"> Option 5</label></li>  
+        <li><label><input type="checkbox" id="cbox6" value="sixth_checkbox"> Option 6</label></li>    
+      </ul><br>
+       <div class="input-group">
+        <input type="text" class="form-control" placeholder="Insert your budget">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-ok"></span>
+          </button>
+        </span>
+      </div><br>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#section1">Restart</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-9">
+      <h2>Find the best rental option</h2>
+      <hr>
+      <h3>Choose one option</h3>
+      <p id = "zillowP">""</p>
+    <div id="map"></div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC4lO1PjOC9xzRaOK86FJoht6VBFYcsB8&callback=initMap">
+    </script>
+      
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  </body>
+
+</html>

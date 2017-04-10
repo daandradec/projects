@@ -1,0 +1,19 @@
+#map {
+	position: absolute;
+  height: 550px;
+  width: 100%;
+  padding: 2px;
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#list{
+  overflow-y: scroll;
+  height: 200px;
+  width: 100%;
+}

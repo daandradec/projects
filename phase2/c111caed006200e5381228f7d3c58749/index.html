@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Best Chicago Options</title>
+
+  <link href="style.css" rel="stylesheet" type="text/css" media="all" />
+  <!--link rel="icon" type="image/x-icon" href="favicon.ico"-->
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+
+  <script type="text/javascript">
+      var mapDiv;
+      var map;
+   	function initMap(){
+      mapDiv = document.getElementById('map');
+   		map = new google.maps.Map(mapDiv, {
+   			center: {lat: 41.8708 , lng: -87.6505},
+   			zoom: 12});
+        var marker = new google.maps.Marker({ //Line 1
+          position: {lat: 41.8708 , lng: -87.6505}, //Line2: Location to be highlighted
+          map: map,//Line 3: Reference to map object
+          title: 'Department of Computer Science – University of Illinois' //Line 4: Title to be given
+        });
+      }
+
+      function unsafe(){
+        var ctaLayer = new google.maps.KmlLayer({
+        url: 'https://raw.githubusercontent.com/macuestap/maps/master/robbery.kml',
+        map: map
+      });}
+
+      function polubication(){
+        var ctaLayer = new google.maps.KmlLayer({
+        url: 'https://raw.githubusercontent.com/macuestap/maps/master/police.kml',
+        map: map
+      });}
+
+      function clear(){
+        map = new google.maps.Map(mapDiv, {
+     			center: {lat: 41.8708 , lng: -87.6505},
+     			zoom: 12});
+
+      }
+
+   </script>
+
+   <script async defer
+    	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLfcF3ulHs5Obecpc7ur-6DaFiaA-OhDc&callback=initMap">
+    </script>
+</head>
+
+<body style="background-image: url(images/back.jpg)">
+
+  <div class="header-top">
+        <img src="images/banner.png" alt="">
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-*-*">
+            <div id="map" style="position:absolute; left:200px" >
+            </div>
+          </div>
+          <div class="col-*-*" style="position:absolute; right:400px;">
+            <ul>
+              <li><a  class="round black">Climate<span class="round">Click here to check for weather references </span></a></li>
+            </ul>
+            <ul>
+              <li><a onclick="initMap();" class="round red">Avaible Rents<span class="round">Click here to see places avaible for rent</span></a></li>
+            </ul>
+            <ul>
+    	         <li><a onclick="initMap();" class="round black">Nearby Libraries<span class="round">Click here to see near libraries</span></a></li>
+             </ul>
+
+            <ul>
+              <li><a onclick="initMap(); unsafe();" class="round red">Unsafe places<span class="round">Click here to see places where robbery has been commited</span></a></li>
+            </ul>
+            <ul>
+    	         <li><a onclick="initMap(); polubication();" class="round black">Nearby police stations<span class="round">Click here to see near police stations</span></a></li>
+             </ul>
+
+           </div>
+            </div>
+          </div>
+<div class="footer">
+<a href="https://icons8.com/web-app/14986/Thriller" style="font-size:10px">Thriller icon credits</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+body	{
+	font-family: 'Lato',Arial,sans-serif;
+	background-color: #FFe;
+}
+
+h1{
+    text-align: center;
+    }
+
+
+    div{
+        position: relative;;
+    }
+ul	{
+
+
+	background-color:#96C90C;
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+
+}
+#data1{
+   width: 100%;
+   height: 100%;
+}
+#data1 div{
+    width: 100%;
+}
+#map,#map-canvas {
+	width: 60%;
+			height: 400px;
+			background-color: grey;
+}
+#placeinfo {
+             width: 30%;
+            height: 200px;
+            
+            float: right;
+             background: rgba(9, 89, 180, 0.6)
+}
+h3{     text-align: center;
+}
+    
+    #container div{
+    
+         
+           display: inline-block;
+            
+}
+ 
+
+li{
+	 	float: left;
+	  text-align: center;
+
+}
+
+li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 14px 16px 10px;
+    border-bottom: 3px solid #96C90C;
+}
+
+
+
+
+ul:hover {
+    border-color: #000;
+}

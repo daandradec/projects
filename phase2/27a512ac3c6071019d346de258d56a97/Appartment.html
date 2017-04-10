@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Appartment</title>
+    <style>
+      #map {
+		float: left;
+		width: 45%;
+        height: 400px;
+		margin: 10px;
+        background-color: grey;
+      }
+	  
+	  .floating-box {
+		float: left;
+		width: 45%;
+		height: 400px;
+		margin: 10px;
+	  }
+	  b{
+		width: 100%;
+		float: left;
+		margin: 10px;
+		text-align: left;
+	  }
+	  h3{
+		margin: 10px;		
+	  }
+    </style>
+    
+	<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js.js"></script>
+	
+  </head>
+  <body>
+    <h3>Hi!</h3>
+	<b>
+	We are pleased to help you find the best place to live.
+	</b>
+	<b>
+	On the map you can see the available places, if you want a more specific search uses the filters.
+	</b>
+	<div class="floating-box">
+		BUDGET
+		<form>
+		  Min:<br>
+		  <input type="text" name="Min">
+		  <br>
+		  Max:<br>
+		  <input type="text" name="Max"><br>
+		  <br>
+		  MAXIMUM DISTANCE:<br>
+		  <input type="text" name="MaxDistance">
+		</form>		
+		<br></br>
+		<div>Click the "x" button to see the available apartments on the map</div>
+		<br></br>
+		<button id="Submit">Submit</button>
+		
+	</div>
+    <div id="map"></div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDesfNcSNKbr8mGQjNY90P3dRBtmpX8iHY&callback=initMap">
+	</script>
+  </body>
+
+</html>

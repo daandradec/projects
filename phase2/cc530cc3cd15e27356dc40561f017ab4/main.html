@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8"/>
+  	<title>Your best option</title>
+    <link rel="stylesheet" href="./style.css" media="all"/>
+    <script type="text/javascript">
+	function initMap(){
+		var mapDiv = document.getElementById('map');
+		var map = new google.maps.Map(mapDiv, {
+			center: {lat: 41.8708, lng: -87.6505},
+			zoom: 16});
+		var marker = new google.maps.Marker({ 
+			position: {lat: 41.8708, lng: -87.6505}, 
+			map: map,
+			title: 'Department of Computer Science – University of Illinois' 
+		})
+	}
+	</script>
+  </head>
+  <body>
+    <h1 align="center">Your best option</h1>
+    <div id="map" style="width:500px;height:250px;" align="center"></div>
+  </body>
+  <script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyRSkvAPiAt7M2m4iiXE5bGhffyj2Uc2A&callback=initMap">
+</script>
+</html>

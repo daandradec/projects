@@ -1,0 +1,47 @@
+<!-- The home site itself -->
+<div id="side-menu">
+    <h2>Select the checkbox of your interest and if you wanna see more information about anything click it on the map!</h2>
+    <form>
+        <h2>Libraries</h2>
+        <div id = "namelib"></div>
+        <div id = "schedulelib"></div>
+        <div id = "cibernavlib"></div>
+        <div id = "teacherlib"></div>
+        <div id = "addresslib"></div>
+        <div id = "phonelib"></div>
+        <div id = "webpagelib"></div>
+        <p><input type="checkbox" id="librarie" onclick="toggleGroup('libraries')"/>
+        <label>Show me Libraries </label></p>
+        <h2>Park Artworks</h2>
+        <div id = "namepark"></div>
+        <div id = "nopark"></div>
+        <div id = "nameplay"></div>
+        <div id = "artist"></div>
+        <p><input type="checkbox" id="parkart" onclick="toggleGroup('parkarts')"/>
+        <label>Show me Part ArtWorks </label></p>
+        <h2>Police Stations</h2>
+        <div id = "nameps"></div>
+        <div id = "addressps"></div>
+        <div id = "webpageps"></div>
+        <div id = "phoneps"></div>
+        <div id = "faxps"></div>
+        <div id = "ttyps"></div>
+        <p><input type="checkbox" id="policestation" onclick="toggleGroup('policestations')"/>
+        <label>Show me Condom Distribution Sites </label></p>
+        <h2>Fire Stations</h2>
+        <div id = "addressfs"></div>
+        <p><input type="checkbox" id="firestation" onclick="toggleGroup('firestations')"/>
+        <label>Show me Fire Stations </label></p>
+        <h2>Condom Distribution Sites ;)</h2>
+        <div id = "venuetypecds"></div>
+        <div id = "namecds"></div>
+        <div id = "addresscds"></div>
+        <p><input type="checkbox" id="condoms" onclick="toggleGroup('condoms')"/>
+        <label>Show me Condom Distribution Sites </label></p>
+    </form>
+</div>
+<div id="map_container">
+     <div id="map"></div>
+</div>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC4lO1PjOC9xzRaOK86FJoht6VBFYcsB8&callback=initMap">
+</script>

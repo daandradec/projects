@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Adding Boostrap-->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Adding main.css-->
+	<link rel="stylesheet" href="css/main.css">
+
+	<title>Traveler Student Helper Tools</title>
+</head>
+<body>
+	<!-- Full app container -->
+	<div class="container-fluid">
+		<!-- Title row -->	
+		<div class="row">
+			<div class="col-md-offset-4 col-md-4 text-center">
+				<h1>Traveler Student Helper Tools</h1>
+			</div>
+		</div>
+		<!-- Title row end-->
+		<!-- Google Map row -->
+		<div class="row">
+			<div class="col-md-3 map-container">
+				<div id="mapSearchFiltersDiv">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<button class="filter-button" id="librariesButton">
+								<p>Show all libraries</p>	
+							</button>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<button class="filter-button" id="housesButton">
+								<p>Show all Houses</p>	
+							</button>
+						</div>
+					</div>
+					<!--
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<button class="filter-button" id="policeStationButton">
+								<p>Show all police stations</p>	
+							</button>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<button class="filter-button" id="fireStatiosButton">
+								<p>Show all fire stations</p>	
+							</button>
+						</div>
+					</div>
+					-->
+				</div>
+			</div>
+			<div class="col-md-9 map-container">
+				<div id="mapDiv"></div>
+			</div>
+		</div>
+		<!-- Google Map row end-->
+		<!-- Marker Button row -->
+		
+		<!-- Marker Button row end-->
+	</div>
+	<!-- Full app container end-->
+
+  	<!-- Adding custom JavaScript Files-->
+	<script type="text/javascript" src="js/bundle.js"></script>
+
+	<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwWYDB9v1MopiTtPpUXMDaCwAlOQbtn3c&callback=MapExercise.initGoogleMap">
+    </script>
+</body>
+</html>

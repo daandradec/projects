@@ -1,0 +1,125 @@
+*{
+	
+}
+
+/*
+COLORES
+#5C2751
+#6457A6
+#9DACFF
+#76E5FC
+#4BC0D9
+
+*/
+
+html,body {
+    background-color: #76E5FC;     
+    padding: 2%;     
+    height: 100%;
+    align-content: center; 
+
+ }
+
+h1 {
+	font-family: 'Raleway','Roboto';
+	letter-spacing: 5px;
+}
+
+p{
+	font-family: 'Roboto';
+	font-size: 25px;
+}
+
+.nav {
+	background-color: #6457A6;
+	/*
+	overflow-y: auto;
+	position: fixed;
+	*/
+	text-align: center;
+	width: 100%;
+	border-radius: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#map {
+	border: 3px dashed #448AC0;
+	border-radius: 20px;
+	width: 100%;
+	height: 75%;
+	margin-bottom: 30px;
+}
+
+#searching{
+	border: 3px dashed #448AC0;
+	border-radius: 20px;
+	width: 100%;
+	text-align: center;
+	background-color: #9DACFF;
+}
+
+#searching li{
+	display: inline-block;
+	margin: 5px 10px;
+	padding: 10px;
+}
+
+#options {
+	display: inline;
+	align-content: center;
+	
+}
+
+#options li{
+	border: 2px solid #6457A6;
+	border-radius: 15px;
+	background-color: #6457A6;
+}
+
+#title-options{
+	font-family: 'Raleway';
+	font-size: 25px;
+}
+
+.but{
+	font-family: cursive;
+	font-size: 20px;
+	margin: 10px;
+	background-color: #4BC0D9;
+	color: black;
+	height: 50px;
+	width: 180px;
+}
+
+
+#cover {
+	border-radius: 20px;
+	background: url("http://www.noticiasdequeretaro.com.mx/wp-content/uploads/2016/10/chicago.jpg") no-repeat center center;
+	background-size:cover;
+	height: 200px;
+	position: static;
+	top: 55px;
+	width: 100%;
+}
+
+.cover-content {
+  	box-sizing: border-box;
+  	color: white;
+  	margin: 0 auto;
+  	position: relative;
+  	text-align: center;
+  	top: 70px;
+  	width: 70%;
+}
+
+#options{
+	width: 48%;
+	font-family: Verdana;
+	font-size: 20px;
+}
+
+.separate{
+	height: 15px;
+}
+

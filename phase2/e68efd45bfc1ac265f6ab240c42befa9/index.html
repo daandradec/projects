@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset='utf-8' />
+   <title>Find Home</title>
+   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.js'></script>
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.9/semantic.min.js"></script>
+   <script src="https://d3js.org/d3.v3.min.js"></script>
+   <script src="http://code.highcharts.com/highcharts.js"></script>
+   <script src="js/soda.js"></script>
+   <script src="js/c3.js"></script>
+
+   <script src="js/climate.js">
+   </script>
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.9/semantic.min.css">
+   <link href="css/c3.css" rel="stylesheet" type="text/css">
+   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.css' rel='stylesheet' />
+   <link href='css/font-awesome.min.css' rel='stylesheet' />
+
+
+   <link href='css/menu.css' rel='stylesheet' />
+   <link href='css/main.css' rel='stylesheet' />
+</head>
+
+<body>
+   <nav class="main-menu">
+      <ul>
+         <li>
+            <a href="#">
+               <i class="fa fa-home fa-2x"></i>
+               <span class="nav-text">
+                            Dashboard
+                        </span>
+            </a>
+            <div class="menu">
+              <div class="ui test toggle checkbox">
+                <input type="checkbox" checked="checked">
+                <label>Heat map</label>
+              </div>
+            </div>
+         </li>
+         <li>
+            <a href="#">
+               <i class="fa fa-bar-chart-o fa-2x"></i>
+               <span class="nav-text">
+                            Graphs and Statistics
+                        </span>
+            </a>
+
+         </li>
+         <li>
+            <a href="#">
+               <i class="fa fa-map-marker fa-2x"></i>
+               <span class="nav-text">
+                            Maps settings
+                        </span>
+            </a>
+         </li>
+         <li>
+            <a href="#">
+               <i class="fa flaticon-drizzle fa-2x"></i>
+               <span class="nav-text">
+                            Climate
+                        </span>
+            </a>
+            <div class="menu">
+               <p class="chartTitle">Chicago weather: <br>Temperature - last 7 days</p>
+               <div id="tmpChart" class="chart"></div>
+               <p>Don't you like this chart? Ok, <strong> click me!</strong></p>
+               <form class="ui form">
+                  <h4 class="ui dividing header">Choose a chart type</h4>
+                  <div class="two fields">
+                     <div class="field">
+                        <label>Temperature</label>
+                        <select class="ui fluid dropdown" data-chart="tmp">
+                        <option value="line">Line chart</option>
+                        <option value="spline">Spline chart</option>
+                        <option value="bar">Bar chart</option>
+                      </select>
+                     </div>
+                     <div class="field">
+                        <label>Wind speed</label>
+                        <select class="ui fluid dropdown" data-chart="wind">
+                        <option value="line">Line chart</option>
+                        <option value="spline">Spline chart</option>
+                        <option value="bar">Bar chart</option>
+                      </select>
+                     </div>
+                  </div>
+                  <div class="field">
+                     <label></label>
+
+
+                  </div>
+               </form>
+               <div id="prcpChart" class="chart"></div>
+               <!--form class="ui form">
+                  <h4 class="ui dividing header">Choose a chart type</h4>
+                  <div class="two fields">
+                     <div class="field">
+                        <label>Temperature</label>
+                        <select class="ui fluid dropdown">
+                        <option value="line">Line chart</option>
+                        <option value="spline">Spline chart</option>
+                        <option value="bar">Bar chart</option>
+                      </select>
+                     </div>
+                     <div class="field">
+                        <label>Wind speed</label>
+                        <select class="ui fluid dropdown">
+                        <option value="line">Line chart</option>
+                        <option value="spline">Spline chart</option>
+                        <option value="bar">Bar chart</option>
+                      </select>
+                     </div>
+                  </div>
+                  <div class="field">
+                     <label></label>
+
+
+                  </div>
+               </form-->
+               <p>*You can interact with the labels and the graphs</p>
+            </div>
+         </li>
+         <li>
+            <a href="#">
+               <i class="fa fa-info fa-2x"></i>
+               <span class="nav-text">
+                            Information
+                        </span>
+            </a>
+         </li>
+      </ul>
+
+      <ul class="logout">
+
+      </ul>
+   </nav>
+   <div id='map'></div>
+
+   <script>
+      $(".main-menu > ul > li > a").click(function() {
+         $(this).parent().children("div.menu").animate({
+            height: "toggle"
+         }, 500)
+      });
+
+      $(".ui > input").change(function() {
+
+        var visibility = map.getLayoutProperty("unclustered-points", 'visibility');
+
+        if (visibility === 'visible') {
+            map.setLayoutProperty("unclustered-points", 'visibility', 'none');
+            map.setLayoutProperty('cluster-1','visibility', 'none');
+            map.setLayoutProperty('cluster-2','visibility', 'none');
+            map.setLayoutProperty('cluster-0','visibility', 'none');
+            this.className = '';
+        } else {
+            this.className = 'active';
+            map.setLayoutProperty("unclustered-points", 'visibility', 'visible');
+            map.setLayoutProperty('cluster-1','visibility', 'visible');
+            map.setLayoutProperty('cluster-2','visibility', 'visible');
+            map.setLayoutProperty( 'cluster-0','visibility', 'visible');
+        }
+      })
+      $("select.ui").change(function() {
+         var d = this.getAttribute("data-chart");
+         if (d == "tmp") {
+            console.log(this.value);
+            tmpChart.transform(this.value.split(" ")[0].toLowerCase(), ["Minimum temperature", "Maximum temperature", "Average temperature"])
+         } else {
+            tmpChart.transform(this.value.split(" ")[0].toLowerCase(), "Average wind speed")
+         }
+      });
+
+      var sodaConsumer = new soda.Consumer('data.cityofchicago.org');
+
+      mapboxgl.accessToken = 'pk.eyJ1IjoiamVzdXNmY2hhdmFycm8iLCJhIjoiY2owd3JhNTg5MDAyMDMzc2Q5djhheHhleiJ9.gbHmrqcN3ktZBZYQmGNVIg';
+
+      var center = [-87.6505, 41.8708];
+      var dataSets = {};
+
+      function GSONMaker() {
+
+      }
+
+      function HelloWorldControl() {}
+      HelloWorldControl.prototype.onAdd = function(map) {
+         this._map = map;
+         var button = $("<div class=\"mapboxgl-ctrl mapboxgl-ctrl-group\">" +
+            "<button class=\"mapboxgl-ctrl-icon mapboxgl-ctrl-layer\" type=\"button\">" +
+            "<span class=\"flaticon-layers fa-1x \"></span>" +
+            "</div>");
+         var layerMenu = $("<div id=\"layer-menu\" class=\"mapboxgl-ctrl mapboxgl-ctrl-group\">" +
+            "<input name=\"layer\" id=\"basic\" type=\"radio\" value=\"basic\">" +
+            "<label for=\"basic\">basic</label><br>" +
+            "<input name=\"layer\" id=\"streets\" type=\"radio\" value=\"streets\"  checked=\"checked\">" +
+            "<label for=\"streets\">streets</label><br>" +
+            "<input name=\"layer\" id=\"bright\" type=\"radio\" value=\"bright\">" +
+            "<label for=\"bright\">bright</label><br>" +
+            "<input name=\"layer\" id=\"light\" type=\"radio\" value=\"light\">" +
+            "<label for=\"light\">light</label><br>" +
+            "<input name=\"layer\" id=\"dark\" type=\"radio\" value=\"dark\">" +
+            "<label for=\"dark\">dark</label><br>" +
+            "<input name=\"layer\" id=\"satellite\" type=\"radio\" value=\"satellite\">" +
+            "<label for=\"satellite\">satellite</label>" +
+            "</div>");
+
+         var a = button.children().click(function() {
+            layerMenu.animate({
+               opacity: "toggle",
+               height: "toggle"
+            }, 1000);
+         });
+         layerMenu.children("input").click(function() {
+            map.setStyle('mapbox://styles/mapbox/' + this.id + '-v9');
+         });
+
+
+         button.children().click();
+         this._container = button[0];
+         this._container.appendChild(layerMenu[0])
+         return this._container;
+      };
+
+      HelloWorldControl.prototype.onRemove = function() {
+         this._container.parentNode.removeChild(this._container);
+         this._map = undefined;
+      };
+
+      var map = new mapboxgl.Map({
+         container: 'map',
+         style: 'mapbox://styles/mapbox/streets-v9',
+         zoom: 12,
+         center: center
+      });
+
+      map.addControl(new mapboxgl.NavigationControl());
+      map.addControl(new HelloWorldControl());
+
+      var popup = new mapboxgl.Popup({
+            offset: 25
+         })
+         .setText('Department of Computer Science – University of Illinois, Chicago');
+
+      var flag = document.createElement('div');
+      flag.id = "UIC-flag"
+
+      new mapboxgl.Marker(flag, {
+            offset: [-20, -20]
+         })
+         .setLngLat(center)
+         .setPopup(popup) // sets a popup on this marker
+         .addTo(map);
+
+      map.on('load', function() {
+         d3.json("https://data.cityofchicago.org/resource/uahe-iimk.json", function(error, data) {
+            dataSets["AffordableRentalHousing"] = data
+            for (var i = 0; i < data.length; i++) {
+               var point = document.createElement('div');
+               var info = new mapboxgl.Popup({
+                     offset: 25
+                  })
+                  .setHTML("<p>Community Area: " + (data[i].community_area || " ") + "<br>" +
+                     "Address: " + (data[i].address || " ") + "<br>" +
+                     "Property Type: " + (data[i].property_type || " ") + "<br>" +
+                     "Phone Number: " + (data[i].phone_number || " ") + "<br>" +
+                     "Property Name: " + (data[i].property_name || " ") + "<br>" +
+                     "Zip Code: " + (data[i].zip_code || " ") + "<br>");
+
+               point.className = "houses-markers"
+               var coord = [];
+               coord[0] = data[i].longitude;
+               coord[1] = data[i].latitude;
+               if (coord[0] && coord[1]) {
+                  new mapboxgl.Marker(point, {
+                        offset: [-15, -15]
+                     })
+                     .setLngLat(coord)
+                     .setPopup(info) // sets a popup on this marker
+                     .addTo(map);
+               }
+
+
+            }
+         });
+         /*sodaConsumer.query()
+            .withDataset('uahe-iimk')
+            .select("address, community_area, community_area_number, phone_number, property_name, zip_code, latitude, longitude")
+            .where("latitude IS NOT NULL AND longitude IS NOT NULL AND within_circle(location, 41.8708, -87.6505, 35000)")
+            .getRows()
+            .on('success', function(data) {
+               GEOJSONdata = {
+                  "type": "FeatureCollection",
+                  "features": []
+               };
+               GEOJSONdata["features"] = data.map(function(value, i) {
+                  var o = {
+                     "type": "Feature"
+                  };
+                  o.geometry = {
+                     "type": "Point",
+                     "coordinates": [value.longitude, value.latitude]
+                  }
+                  o.properties = value;
+                  return o;
+               });
+               dataSets["AffordableRentalHousing"] = data = GEOJSONdata;
+               map.addLayer({
+                 id : "houses",
+                 type : "symbol",
+                 //'type': 'circle',
+                 source : {
+                   type : "geojson",
+                   data : GEOJSONdata
+                 },
+                 /*'paint': {
+                    'circle-radius': 8,
+                    'circle-color': 'rgba(55,148,179,1)'
+                  }*
+                 layout : {
+                   "icon-image" : "fuel-11",
+                   "icon-offset" : [-15,-15],
+                   "icon-size" : 10
+
+                 }
+               });
+            })
+         .on('error', function(error) {
+            console.error(error);
+         });
+*/
+         sodaConsumer.query()
+            .withDataset('6zsd-86xi')
+            .limit(100000)
+            .select("latitude, longitude")
+            .where("latitude IS NOT NULL AND longitude IS NOT NULL")
+            .getRows()
+            .on('success', function(data) {
+               GEOJSONdata = {
+                  "type": "FeatureCollection",
+                  "features": []
+               };
+               GEOJSONdata["features"] = data.map(function(value, i) {
+                  var o = {
+                     "type": "Feature"
+                  };
+                  o.geometry = {
+                     "type": "Point",
+                     "coordinates": [value.longitude, value.latitude]
+                  }
+                  o.properties = value;
+                  return o;
+               });
+               dataSets["crimes"] = data = GEOJSONdata;
+               console.log(data);
+               map.addSource("crimes", {
+                  type: "geojson",
+                  // Point to GeoJSON data. This example visualizes all M1.0+ earthquakes
+                  // from 12/22/15 to 1/21/16 as logged by USGS' Earthquake hazards program.
+                  data: data,
+                  cluster: true,
+                  clusterMaxZoom: 15, // Max zoom to cluster points on
+                  clusterRadius: 20 // Use small cluster radius for the heatmap look
+               });
+               var layers = [
+                  [0, 'green'],
+                  [80, 'orange'],
+                  [250, 'red']
+               ];
+
+               layers.forEach(function(layer, i) {
+                  map.addLayer({
+                     "id": "cluster-" + i,
+                     "type": "circle",
+                     "source": "crimes",
+                     "paint": {
+                        "circle-color": layer[1],
+                        "circle-radius": 50,
+                        "circle-blur": 1 // blur the circles to get a heatmap look
+                     },
+                     "filter": i === layers.length - 1 ? [">=", "point_count", layer[0]] : ["all", [">=", "point_count", layer[0]],
+                        ["<", "point_count", layers[i + 1][0]]
+                     ]
+                  });
+               });
+
+               map.addLayer({
+                  "id": "unclustered-points",
+                  "type": "circle",
+                  "source": "crimes",
+                  "paint": {
+                     "circle-color": 'rgba(0,255,0,0.5)',
+                     "circle-radius": 20,
+                     "circle-blur": 1
+                  },
+                  "filter": ["!=", "cluster", true]
+               });
+            })
+            .on('error', function(error) {
+               console.error(error);
+            });
+
+      });
+
+
+      getWeather();
+   </script>
+
+</body>
+
+</html>

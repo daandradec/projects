@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Project</title>
+        <meta name="viewport" content="initial-scale=1.0">
+        <meta charset="utf-8">
+
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            
+        <link rel="stylesheet" type="text/css" href="CSS/stylesheet.css">
+    </head>
+
+    <body>
+        <div class="nav">
+            <h1>REFUS</h1>
+            <p>Welcome to REFUS the best search sites for rent, close to your University.</p>
+        </div>
+
+        <div class="separate"></div>
+
+        <div id="cover">
+            <div class="cover-content">
+                <h1>Find the best place according your needs.</h1>
+            </div>
+        </div>
+
+        <div class="separate"></div>
+               
+        <div id="searching">
+            <div id="title-options">
+                <h3>Choose your needs</h3>
+            </div> 
+            <div id="options">
+                <ul>
+                    <li>Cheapest: <input type="checkbox" id="myCheck"></li>
+                    <li>Low Crimes: <input type="checkbox" id="myCheck"></li>
+                    <li>Social: <input type="checkbox" id="myCheck"></li>
+                </ul>
+            </div> 
+            <div>
+                <button class="but" onclick="fun()">Search!</button>
+            </div>
+
+        </div>
+        <div class="separate"></div>
+        <div id="map"> </div>
+
+  <!--AIzaSyCAnPv2vHMLNcvb5wQ_MVXYtElimDDOkP-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAnPv2vHMLNcvb5wQ_MVXYtE1imDDOkPg&callback=initMap" async defer></script>
+    </body>
+
+    <script src="JS/main.js"></script>
+</html>

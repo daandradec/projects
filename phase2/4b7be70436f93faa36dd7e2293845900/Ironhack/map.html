@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="CSS.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+ <script src="Javascript.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=geometry&sensor=false"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.2/bootstrap-slider.js"></script>
+    
+<!--MAP -->
+    <style>
+      #map {
+        position: relative;
+        left: 120px;
+        width: 100%;
+        height: 1000px;
+        background-color: grey;
+      }
+    </style>
+    <script type="text/javascript">
+	function initMap(){
+		var mapDiv = document.getElementById('map');
+		var map = new google.maps.Map(mapDiv, {
+			center: {lat: 41.8708, lng: -87.6505},
+			zoom: 12});
+		var marker = new google.maps.Marker({ //Line 1
+			position: {lat: 41.8708, lng: -87.6505}, //Line2: Location to be highlighted
+			map: map,//Line 3: Reference to map object
+			title: 'UIC' //Line 4: Title to be given
+		});
+        var infoWindow  = new google.maps.InfoWindow({
+            content: "Department of Computer Science – University of Illinois, Chicago</b>"
+        });
+        google.maps.event.addListener(marker, 'click', function(){ infoWindow.open(map, marker);});
+	}
+	</script>
+</head>
+<body id="body-map">
+    <div id="map"></div>
+    <link rel="stylesheet" type="text/css" href="CSS.css">
+    <div id="logo"> <h6 id="Textologo"> ChicagoRent </h6></div>
+    <div id="linea"><hr color="white" size=3>  </div>
+    
+    <div id="rent" class="tooltip" > 
+        <div class="tooltiptext">Show all the places to rent in Chicago</div> 
+        <button onclick="reiniciar_mapa()" style="font-size:24px;background-color:black" ><i class="material-icons" style="font-size:40px;color:white">hotel</i></button>
+    </div>
+    
+    <div id="hospital" class="tooltip">
+        <div class="tooltiptext">Show all the places to rent in Chicago near to hospitals</div> 
+        <button onclick="notAva()" style="font-size:24px;background-color:black" ><i class="material-icons" style="font-size:40px;color:gray">local_hospital</i></button></div>
+    
+    <div id="eat" class="tooltip"> 
+        <div class="tooltiptext">Show all the places to rent in Chicago near to restaurants</div> 
+        <button onclick="notAva()" style="font-size:24px;background-color:black" ><i class="material-icons" style="font-size:40px;color:gray">local_dining</i></button> </div>
+    
+    <div id="secure" class="tooltip"> 
+        <div class="tooltiptext">Show the safest places in chicago</div> 
+        <button onclick="safe()" style="font-size:24px;background-color:black" ><i class="material-icons" style="font-size:40px;color:white">beenhere</i></button>
+    </div>
+    
+    <div id="radius" class="tooltip"> 
+        <div class="tooltiptext">Show places to rent within a radius</div> 
+        <div class="barra"> <input type="range" id="r" value="50"> </div> 
+        <div class="radio"> <p id="demo"></p></div> 
+        <button onclick="radio()" style="font-size:24px;background-color:black" ><i class="material-icons" style="font-size:40px;color:white">edit_location</i></button></div>
+    
+    <div id="verRadio"><button onclick="getRadio()" >Save radius</button></div>
+    
+    <div id="police" class="tooltip"> 
+        <div class="tooltiptext">Show all the places to rent in Chicago near to a police station</div> 
+        <button onclick="notAva()" style="font-size:24px;background-color:black" ><i class="material-icons" style="font-size:40px;color:gray">local_car_wash</i></button> </div>
+    
+    <div id="park" class="tooltip"> 
+        <div class="tooltiptext">Show all the places to rent in Chicago near to parks</div> 
+        <button onclick="notAva()" style="font-size:24px;background-color:black" ><i class="material-icons" style="font-size:40px;color:gray">terrain</i></button> </div>
+    
+    <div id="book" class="tooltip"> 
+        <div class="tooltiptext">Show all the places to rent in Chicago near to libraries</div> 
+        <button onclick="notAva()" style="font-size:24px;background-color:black" ><i class="material-icons" style="font-size:40px;color:gray">local_library</i></button> </div>
+    
+    <div id="budget" class="tooltip"> 
+        <div class="tooltiptext">Show places to rent within a budget.</div> 
+        <button onclick="notAva()" style="font-size:34px;background-color:black" ><i class="fa fa-dollar" style="font-size:40px;color:gray"></i></button>
+    </div>
+    
+    <div id="lineaf"><hr color="white" size=3>  </div>
+    
+</body>
+<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqCkFYZPXJr9VH2RdRg9svw_p88NDXyrE&callback=initMap">
+</script>
+</html>

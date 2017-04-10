@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+  <meta charset ="utf-8" />
+  <link href='main.css' type='text/css' rel='stylesheet' >
+  <link href="https://fonts.googleapis.com/css?family=Lato" type="text/css" rel="stylesheet" >
+  <meta name="author" content="Cesar Ochoa">
+
+
+</head>
+
+<body >
+
+  <div class="html-header">
+      <h1 class="header-text">aPlace2Me</h1>
+    </div>
+    <div class="descriptionContainer">
+      You have choosen
+      <ul class="optionsList">
+      <li id='op1'>
+        Default
+      </li>
+      <pa id='opDef'> The Default option provides you with the 50 Chicago University nearest affordable places to rent. Tip: With this option
+        there are no place filtering, so you can look around.
+      </pa>
+      <li id='op2'>
+        Low Crimes
+      </li>
+      <pa id='opLc'> This option provides you with the 50 Chicago University nearest affordable places to rent. Also, these places are filtered
+        to show you only places that has the lowest crime rates of the city.
+      </pa>
+      <li id='op3'>
+        Good Climate
+      </li>
+      <pa id='opCl'> This option provides you with the 50 Chicago University nearest affordable places to rent. Also, these places are filtered
+        to show you only places that has the lowest climate alterations or natural disasters.
+      </pa>
+      <li id='op4'>
+        Good Traffic
+      </li>
+      <pa id='opTr'> This option provides you with the 50 Chicago University nearest affordable places to rent. Also, these places are filtered
+        to show you only places that offer lowest traffic incidents and best traffic performance.
+      </pa>
+      <li id='op5'>
+        Near Places
+      </li>
+      <pa id='opPl'> This option provides you with the 50 Chicago University nearest affordable places to rent. Also, these places are filtered
+        to show you only places with possibly social interest places nearby, this includes restaurants, police stations, hospitals,fire stations,
+        to save you time and provide you with life quality.
+      </pa>
+      </ul>
+      <pa id='final-paragraph'> You can click one place or another in the map below, just
+      for more information. ¡Best wishes finding the best place to you!</pa>
+    </div>
+    <div class="theContainer">
+  <div id="map">
+      </div>
+        <div class="optionsButton">
+            options </div>
+            <div class="main-menu">
+                <div class="menu-items" >
+        <div class = "o1" >
+          Default
+        </div>
+        <div class="o2">
+           By Low Crimes
+        </div>
+        <div class="o3">
+          By Good Climate
+        </div>
+        <div class="o4">
+          By Good Traffic
+        </div>
+        <div class="o5">
+          By Near Places
+        </div>
+    </div>
+</div>
+  <div class="goButton">
+    go! </div>
+    <div class="routeButton">
+      fastest route
+    </div>
+  </div>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAceL3iw6QPVBzNHfnnd69E2CchCFx4M1E&callback=initMap">
+  </script>
+  <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+  <script src='main.js'></script>
+</body>

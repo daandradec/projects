@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+} 
+<div class="jumbotron">
+    <h1>Road Trip Agent</h1>
+    <p class="lead">Road Trip Agent is an intelligent and experienced road trip advisor. All you have to do is choose the dates, and leave all the trivial stuffs to our agent!</p>
+    <p><p>@Html.ActionLink("Getting Started", "Start", "Home", null, new { @class = "btn btn-default", @style = "font-size:16px" }) </p></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Coming soon</h2>
+        <p>
+            Coming soon
+        </p>
+        <p>@Html.ActionLink("Coming soon >>", "Start", "Home", null, new { @class = "btn btn-default", @style = "font-size:16px" }) </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Coming soon</h2>
+        <p>Coming soon</p>
+        <p>@Html.ActionLink("Coming soon >>", "Start", "Home", null, new { @class = "btn btn-default", @style = "font-size:16px" }) </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Coming soon</h2>
+        <p>Coming soon</p>
+        <p>@Html.ActionLink("Coming soon >>", "Start", "Home", null, new { @class = "btn btn-default", @style = "font-size:16px" }) </p>
+    </div>
+</div>

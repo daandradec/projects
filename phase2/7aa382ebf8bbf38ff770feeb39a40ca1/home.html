@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Just here </title>
+	<link rel="shortcut icon" type='image/x-icon' href='css/images/favicon.ico'>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery-3.2.0.min.js"></script>
+	<script src="js/application.js"></script>
+		
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="container-fluid">
+	<div class="row">
+		<!-- MENU -->
+		<div class="sidebar col-sm-2 sidenav hidden-xs menu">
+			<h2 id="t_menu">JUST HERE</h2>
+			<img src="images/logo.png" alt="Logo" width="100" height="100" >
+			<ul class="nav nav-pills nav-stacked">
+				<li class="active"><a href="#section1">HOME</a></li>
+				<li><a href="#section2">Independent criterion </a></li>
+				<li><a href="#section3">Preference search</a></li>
+				<li><a href="#section4">Weather</a></li>
+				<li><a href="#section5"></a></li>
+			</ul><br>
+		</div>
+		<!-- CONTENT -->
+		<div class="col-sm-10 content">
+			<div class="title">
+				<h3 id="t_con">JUST HERE</h3>
+			</div>
+			<div class="row section1 criteria">
+				<div class="col-sm-3">
+					<div class="well">
+						<h4>Criteria 1: </h4>
+						<p>Safe</p> 
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="well">
+						<h4>Criteria 2: </h4>
+						<p>Price</p> 
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="well">
+						<h4>Criteria 3: </h4>
+						<p>Trading area</p> 
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="well">
+						<h4>Criteria 4:</h4>
+						<p>Transporting</p> 
+					</div>
+				</div>
+			</div>
+			<div class="well section2 preferences">
+				<h4>List criteria</h4>
+				<p> Form list</p>
+			</div>
+			<div class="well section3 weather">
+				<div class="container">
+					<div id="basic-info">
+							<div id="weather"></div>
+					</div>
+					<div id="position-info">
+						<div id="date"></div>
+						<div id="precipitation"></div>
+					</div>
+					<ul class="nav nav-tabs">
+						<li><a href="#">Spring</a></li>
+						<li><a href="#">Summer</a></li>
+						<li><a href="#">Fall</a></li>
+						<li><a href="#">Winter</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row section4 data">
+				<div class="col-sm-4">
+					<div class="well">
+						<p>Text</p> 
+						<p>Text</p> 
+						<p>Text</p> 
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="well">
+						<p>Text</p> 
+						<p>Text</p> 
+						<p>Text</p> 
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="well">
+						<p>Text</p> 
+						<p>Text</p> 
+						<p>Text</p> 
+					</div>
+				</div>
+			</div>
+			<div class="well section5 statístics">
+				<h4>List criteria</h4>
+				<p> Form list</p>
+			</div>
+			<div id="map" alt="Map"> 
+			</div>
+		</div>
+	</div>
+</div>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbX5SopiTaAxhYj9mvBCJBkv8jPBBnhQA&callback=initMap">
+    </script>
+</body>
+</html>

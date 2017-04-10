@@ -1,0 +1,47 @@
+/*My personal stylesheet for desktop*/
+@media (min-width: 768px){
+	#map{
+		margin-top: 100px;
+		position: absolute;
+	    height: calc(100vh - 100px);
+	    width: 65%;
+	    padding: 0px;
+	    display: block;
+	}
+}
+
+@media (max-width: 768px){
+	#map{
+		margin-top: 50px;
+		position: absolute;
+	    height: calc(100vh - 50px);
+	    width: 65%;
+	    padding: 0px;
+	    display: block;
+	}
+}
+
+@media (min-width: 768px){
+	#sidebar{
+		margin-top: 100px;
+		margin-left: 65%;
+		position: absolute;
+	    height: calc(100vh - 100px);
+	    width: 35%;
+	    padding: 0px;
+	    display: block;
+	}
+}
+
+@media (max-width: 768px){
+	#sidebar{
+		margin-top: 50px;
+		margin-left: 65%;
+		position: absolute;
+	    height: calc(100vh - 50px);
+	    width: 35%;
+	    padding: 0px;
+	    display: block;
+	}
+}
+

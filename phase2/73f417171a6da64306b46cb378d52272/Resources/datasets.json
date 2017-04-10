@@ -1,0 +1,41 @@
+{"security" : {
+		"x_policeStations" : {
+			"url" : "https://data.cityofchicago.org/api/views/z8bn-74gv/rows.xml?accessType=DOWNLOAD"
+		}
+	},
+
+"housing" : {
+		"j_avaliableHouses" : {
+			"url" : "http://www.rentrent.org/RENT/Ads.aspx"
+		},
+		"x_avaliableHousesInfo" : {
+			"url" : "http://www.zillow.com/webservice/GetSearchResults.htm?zws-id=",
+			"apiKey" : "X1-ZWz1fqhee76cqz_34dhf"
+		},
+		"x_chicagoOfficial" : {
+			"url" : "https://data.cityofchicago.org/api/views/s6ha-ppgi/rows.xml?accessType=DOWNLOAD"
+		}
+		
+	},
+
+"climate" : {
+			"url" : "https://www.ncdc.noaa.gov/cdo-web/api/v2/data",
+			"token" : "gXgiyVkfdjORImJuQkvQdIFefQTJtYZM",
+			"stationid" : "GHCND:USC00111577",
+			"datasetid" : "GHCND"
+			
+		},
+
+"crime"	  :  {
+		"x_crimes" : {
+				"url" : "https://data.cityofchicago.org/api/views/ijzp-q8t2/rows.xml?accessType=DOWNLOAD"
+		}
+},
+
+"health" : {
+		"x_healthStatistics" : {
+				"url" : "https://data.cityofchicago.org/api/views/iqnk-2tcu/rows.xml?accessType=DOWNLOAD" 
+		}
+	}
+
+}

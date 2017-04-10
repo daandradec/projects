@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>Rent An Apartment</title>
+	<meta name = "viewport" content = "width=device-width,initial-scale=1.0"/>
+	<meta charset="utf-8"/>
+	<meta description = "The easiest way to rent an apartment close to the Illinois university"/>
+	<meta keywords = "rent,apartment,Illinois,university,college,cheap"/>
+
+	<!-- Style to the first Page -->
+
+
+	<!-- Scripts needed -->
+		<!-- Jquery for the google's official Repositories -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<link rel = "stylesheet" href = "Css/mainPage.css"/>
+	<link rel = "stylesheet" href = "Css/resetStyle.css"/>
+
+		<!-- %%%%% -->
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">Chicago Rentals</a>
+	    </div>
+	    <ul class="nav navbar-nav">
+	      <li class="active"><a href="#">Home</a></li>
+	      <li><a href="#">Contact</a></li>
+	    </ul>
+	    <form class="navbar-form navbar-left">
+	      <div class="form-group">
+	        <input type="text" class="form-control" placeholder="Search" align="right">
+	      </div>
+	      <button type="submit" class="btn btn-default">Submit</button>
+	    </form>
+	  </div>
+	</nav>
+
+
+	<div class = "container-fluid">
+		<div class = "row">
+			<div class = "col-md-9" id = "mainMap">
+			</div>
+
+			
+			<div class = "form-group">
+
+				<h2>Select One</h2>
+			  		<p>The Best way to rent an apartment in Chicago</p>
+			  		<form class = "col-md-2">
+			    		<div class="radio">
+			     		 	<label><input type="radio" name="optradio" id = "unv_rad">University</label>
+			    		</div>
+			    		<div class="radio disabled">
+			      			<label><input type="radio" name="optradio">Safety</label>
+			    		</div>
+			    			<div class="radio disabled">
+			      			<label><input type="radio" name="optradio">Medical</label>
+			    		</div>
+			  		</form>
+
+			  		<div class = "Container-fluid">
+			  			<div class="checkbox" id = "selectors">
+						      <label><input type="checkbox" value="" id = "apt-selec">Apartments</label>
+						    </div>
+						    <div class="checkbox">
+						      <label><input type="checkbox" value="" id = "pol-selec">Police Stations</label>
+						    </div>
+						    <div class="checkbox disabled">
+						      <label><input type="checkbox" value="" disabled>Option 3</label>
+						</div>
+			  		</div>
+					
+			</div>
+
+
+			<div  id = "listHousesContainer">
+				<div class="media">
+  					<div class="media-left">
+    					<img src="Resources/Icons/blankHouse.jpeg" class="media-object" style="width:60px">
+  					</div>
+  					<div class="media-body">
+    					<h4 class="media-heading">Choose Criteria</h4>
+    						<p>...</p>
+  					</div>
+				</div>
+
+				<div class="media">
+  					<div class="media-left">
+    					<img src="Resources/Icons/blankHouse.jpeg" class="media-object" style="width:60px">
+  					</div>
+  					<div class="media-body">
+    					<h4 class="media-heading">Choose Criteria</h4>
+    						<p>...</p>
+  					</div>
+				</div>
+
+				<div class="media">
+  					<div class="media-left">
+    					<img src="Resources/Icons/blankHouse.jpeg" class="media-object" style="width:60px">
+  					</div>
+  					<div class="media-body">
+    					<h4 class="media-heading">Choose Criteria</h4>
+    						<p>...</p>
+  					</div>
+				</div>
+
+				<div class="media">
+  					<div class="media-left">
+    					<img src="Resources/Icons/blankHouse.jpeg" class="media-object" style="width:60px">
+  					</div>
+  					<div class="media-body">
+    					<h4 class="media-heading">Choose Criteria</h4>
+    						<p>...</p>
+  					</div>
+				</div>
+
+				<div class="media">
+  					<div class="media-left">
+    					<img src="Resources/Icons/blankHouse.jpeg" class="media-object" style="width:60px">
+  					</div>
+  					<div class="media-body">
+    					<h4 class="media-heading">Choose Criteria</h4>
+    						<p>...</p>
+  					</div>
+				</div>
+
+			
+			</div>
+				
+			
+		</div>
+		<div class = "row">
+
+		</div>
+	</div>
+
+
+ <script src = "Js/Api/interface.js"></script> 
+	<script src = "Js/mapFunctions.js"></script>
+
+	
+  	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiXHk65dTMrprsV_9P3sd-7TH3fzRCfck&libraries=geometry&callback=MainMap.wrapperInit"
+  		type="text/javascript" async defer></script>
+
+  	
+</body>
+
+
+</html>

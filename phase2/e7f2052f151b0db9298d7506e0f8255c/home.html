@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  	<title>LFH University of illinois</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./scripts/map_init.js"></script>
+    <script src="./scripts/test.js"></script>
+  </head>
+  <body>
+    <h3 align=center>Looking for Home, University of illinois</h3>
+    <div class="container">
+  <!--map div-->
+        <div class="half">
+          <div  id="map" class="map"></div>
+          <div class="mini_form">
+            <br>
+            <fieldset>
+            <legend>Choose whatever you want too see on the map! you can click any marker to see aditional information!</legend>
+            <label><input type="checkbox" id="police_check">Show police station</label>
+            <label><input type="checkbox" id="fire_check">Show fire station</label>
+            <label><input type="checkbox" id="librarie_check">Show libraries</label>
+            <label><input type="checkbox" id="clinic_check">Show clinic</label><br>
+          </fieldset>
+            <!--<button type="button" id="boton">Click Me!</button>-->
+          </div>
+          <div id="lawea"></div>
+        </div>
+  <!--form container-->
+        <div class="last">
+        <form class="well form-horizontal" action=" " method="post"  id="filter_form">
+          <fieldset>
+
+          <!-- Form Name -->
+          <legend>Filter by whatever you want, to find your perfect, secure and affordable house!</legend>
+          <legend>It will be filtered by the fields you fill or select, the only field obligatory is the "maximum budget"</legend>
+          <br>
+          <!-- Text input Budget-->
+
+          <div class="form-group">
+            <label class="col-md-4 control-label">Maximum budget</label>
+            <div class="col-md-4 inputGroupContainer">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input  id="budget" placeholder="Maximum budget" class="form-control" min="0" type="number" required>
+              </div>
+            </div>
+          </div>
+          <br>
+
+          <!-- Text input Maximum distance-->
+
+          <div class="form-group">
+            <label class="col-md-4 control-label" >Maximum Distance from the University</label>
+              <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                  <input name="max_dist_home" placeholder="Maximum distance" class="form-control"  type="number"> (mi)
+                </div>
+            </div>
+          </div>
+          <br>
+
+          <!-- radio checks Libraries near-->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Do you want libraries near home?</label>
+              <div class="col-md-4">
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="librarie" value="yes" /> Yes
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="librarie" value="no" /> No
+                  </label>
+                </div>
+              </div>
+          </div>
+
+          <!-- Text input maximum distance librarie-->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Maximum distance from home</label>
+              <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                  <input name="max_dist_lib" placeholder="Maximum distance from home" class="form-control"  type="number">(mi)
+              </div>
+            </div>
+          </div>
+          <br>
+
+          <!-- radio checks clinic near-->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Do you want public health clinic near home?</label>
+              <div class="col-md-4">
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="clinic" value="yes" /> Yes
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="clinic" value="no" /> No
+                  </label>
+                </div>
+              </div>
+          </div>
+
+          <!-- Text input maximum distance clinic-->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Maximum distance from home</label>
+              <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                  <input name="max_dist_clinic" placeholder="Maximum distance from home" class="form-control"  type="number">(mi)
+              </div>
+            </div>
+          </div>
+          <br>
+
+          <!-- radio checks Police station near-->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Do you want police station near home?</label>
+              <div class="col-md-4">
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="police" value="yes" /> Yes
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="police" value="no" /> No
+                  </label>
+                </div>
+              </div>
+          </div>
+
+          <!-- Text input maximum distance librarie-->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Maximum distance from home</label>
+              <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                  <input name="max_dist_police" placeholder="Maximum distance from home" class="form-control"  type="number">(mi)
+              </div>
+            </div>
+          </div>
+          <br>
+
+          <!-- radio checks Fire station near-->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Do you want Fire station near home?</label>
+              <div class="col-md-4">
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="Fire" value="yes" /> Yes
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="Fire" value="no" /> No
+                  </label>
+                </div>
+              </div>
+          </div>
+
+          <!-- Text input maximum distance librarie-->
+          <div class="form-group">
+            <label class="col-md-4 control-label">Maximum distance from home</label>
+              <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                  <input name="max_dist_Fire" placeholder="Maximum distance from home" class="form-control"  type="number">(mi)
+              </div>
+            </div>
+          </div>
+          <br>
+
+          <legend>Press the button to search for the best places for you!</legend>
+
+          <!-- Button -->
+          <div class="form-group">
+            <input type="submit" value="Submit">
+          </div>
+
+          </fieldset>
+          </form>
+      </div>
+    </div><!-- /.container -->
+
+    </div>
+  <!--Scripts-->
+    <script src="./scripts/listener.js"></script>
+  <!--Principal container-->
+  </body>
+    <script async defer
+  	 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLfoGhJhDrHSI-3fXp99dqSNBkMUAoAnY&callback=initMap">
+    </script>
+</html>

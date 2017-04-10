@@ -1,0 +1,3 @@
+clave API : AIzaSyBmSl71nTU6s5qElUNVsGeO45qnL4OqW_c
+DataSet Police : https://data.cityofchicago.org/api/views/gkur-vufi/rows.json?accessType=DOWNLOAD
+ 

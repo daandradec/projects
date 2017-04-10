@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>IronHacks::Fuel Localize::Demo</title>
+    <style>
+      #map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+      }
+    </style>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script type="text/javascript">
+	function initMap(){
+		var mapDiv = document.getElementById('map');
+      var infowindow = new google.maps.InfoWindow({
+    content: 'Purdue University'
+  });
+		var map = new google.maps.Map(mapDiv, {
+			center: {lat: 41.8708, lng: -87.6505},
+			zoom: 12});
+		var marker = new google.maps.Marker({ //Line 1
+			position: {lat: 41.8708, lng: -87.6505}, //Line2: Location to be highlighted
+			map: map,//Line 3: Reference to map object
+			title: 'Purdue University' //Line 4: Title to be given
+		});
+marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+	}
+	</script>
+
+  </head>
+  <body>
+    <h3>Fuel Localize::Demo</h3>
+    <div id="map"></div>
+    <canvas id="altFueling"></canvas>
+
+    <script>
+
+var canvas = document.getElementById("altFueling"),
+    context = canvas.getContext("2d");
+
+var width = canvas.width,
+    height = canvas.height,
+    radius = Math.min(width, height) / 2;
+
+var colors = ["#98abc5", "#8a89a6", "#7b6888"];
+
+var arc = d3.arc()
+    .outerRadius(radius - 10)
+    .innerRadius(0)
+    .context(context);
+
+var labelArc = d3.arc()
+    .outerRadius(radius - 40)
+    .innerRadius(radius - 40)
+    .context(context);
+
+var pie = d3.pie()
+          .sort(null)
+          .value(function(d) {
+            return d.value; 
+          });
+
+context.translate(width / 2, height / 2);
+
+var allData=[
+  {
+    "fuel":"CNG",
+    "value":0
+  },
+  {
+    "fuel":"ELEC",
+    "value":0
+  },
+  {
+    "fuel":"LPG",
+    "value":0
+  }
+];
+
+d3.csv("04232015altfuelstations.csv", function(d) {
+   if (d.ZIP=="60607"){
+        if (d.Fuel_Type_Code=="CNG") {
+          allData[0]["value"]+=20;
+
+        };
+        if (d.Fuel_Type_Code=="ELEC") {
+           allData[1]["value"]+=20;
+        };
+        if (d.Fuel_Type_Code=="LPG") {
+           allData[2]["value"]+=20;
+        };
+        //console.log(allData);
+		return d;
+      }
+}, function(error, data) {
+  if (error) throw error;
+  //console.log(allData);
+  var arcs = pie(allData);
+
+  arcs.forEach(function(d, i) {
+    context.beginPath();
+    arc(d);
+    context.fillStyle = colors[i];
+    context.fill();
+  });
+
+  context.beginPath();
+  arcs.forEach(arc);
+  context.strokeStyle = "#fff";
+  context.stroke();
+
+  context.textAlign = "center";
+  context.textBaseline = "middle";
+  context.fillStyle = "#000";
+  arcs.forEach(function(d) {
+    var c = labelArc.centroid(d);
+   //console.log(d);
+    context.fillText(d.data.fuel, c[0],c[1]);
+  });
+});
+
+
+</script>
+<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM-UbVT51usnqTcE9RomodDXvaKejgaJs&callback=initMap">
+	</script>
+  </body>
+</html>

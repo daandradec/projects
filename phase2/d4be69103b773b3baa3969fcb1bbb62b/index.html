@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>New Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="css/estilos.css" rel="stylesheet">
+    
+    <!--<script src="js/script.js" type="text/javascript">-->
+    <script type="text/javascript">
+      function initMap(){
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+          center: {lat: 41.8708, lng: -87.6505},
+          zoom: 12});
+      }
+    </script>		
+    <script src="js/script.js" type="text/javascript"></script>
+  </head>
+  <body>
+    
+    <div class= "textBoxContainer">
+      <br>
+      <div class= "row">
+        <div class= "col-sm-12">
+          <div class= "col-sm-5">
+            <div id="weather" align="center"></div>
+            <form action="other.html" method="post">
+              <h2>About You</h2>
+
+              <fieldset>
+                <clegend><span class="number">1</span>Safety</clegend><br>
+                <clabel for="name">Do you feel safe around?</clabel><br>
+                <input type="checkbox"><clabel class="light">A Police Station</clabel><br>
+                <input type="checkbox"><clabel class="light">A Fire Station</clabel><br>
+                <input type="checkbox"><clabel class="light">A Hospital</clabel><br>
+                <input type="checkbox"><clabel class="light">A Public Park</clabel><br>
+                <input type="checkbox"><clabel class="light">A Library</clabel><br>
+              </fieldset>
+
+              <fieldset>
+                <clegend><span class="number">2</span>Interests</clegend><br>
+                <clabel for="name">Any hobbies?</clabel><br>
+                <input type="checkbox"><clabel class="light">Working out!</clabel><br>
+                <input type="checkbox"><clabel class="light">Basketball</clabel><br>
+                <input type="checkbox"><clabel class="light">Reading</clabel><br>
+                <input type="checkbox"><clabel class="light">Walking / Running</clabel><br>
+              </fieldset>
+
+              <fieldset>
+              <clabel for="distance">Would You Rather:</clabel>
+              <select id="distance" name="user_job">
+                <optgroup label="Walk">
+                  <option value="walk">Short walk to campus</option>
+                  <option value="run">Long walk to campus</option>
+                </optgroup>
+                <optgroup label="Vehicles">
+                  <option value="bike">Ride a bike</option>
+                  <option value="bus">Take a bus</option>
+                  <option value="uber">Get an Uber</option>
+                </optgroup>
+              </select>
+
+              </fieldset>
+              <button type="submit">Find My New Home!</button>
+            </form>
+          </div>
+          <div class= "col-sm-7">					
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+      <br>
+    </div>
+
+    <br>	
+    <!--Pie de página -->
+    <div class="footNote">
+      <div class="text">
+        <ul class="copyright" align='center'>
+          <li>By: Andrés Felipe Moreno Solano</li>
+          <li>Email: anfmorenoso@unal.edu.co</li>
+          <li>National University of Colombia</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbN669OfKfxj55-aNDtjljpAKhRoMO63A&callback=initMap">
+  </script>		
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+	<meta name = "description" content = "Rent an apartment in Chicago">	
+  	<title>Where To Live - Chicago</title>
+	<link rel="shourcut icon" type="img/icon" href="img/house.ico"> 
+	
+	<link rel = "stylesheet" href = "css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Average+Sans" rel="stylesheet"> 
+    <script type = "text/javascript" src = "js/map.js"></script>
+	
+  </head>
+  
+  <body>
+
+	<div class = "header">
+		<h2>Where To live</h2>
+	</div>
+	
+	<div id = "container">	
+	
+		<div id = "menu">
+			<form>
+				<label for="minPrice">Min Price</label>
+				<input type="text" id="minPrice" name="minprice" placeholder="Min Price">
+
+				<label for="maxPrice">Max Price</label>
+				<input type="text" id="maxPrice" name="maxprice" placeholder="Max Price">
+
+		<!--	<input type="checkbox" name="parks" value="Park"> Parks <br>
+				<input type="checkbox" name="restaurants" value="Restaurant"> Restaurants <br>
+				<input type="checkbox" name="policestation" value="Police"> Police station <br>
+				<input type="checkbox" name="gyms" value="Gym"> Gyms <br>
+				
+				-->
+		  </form>
+		  
+		<center><button class="button" onclick="findPark()">Parks</button></center>	
+		  
+		<center><button class="button" onclick="findSchool()">Schools</button></center>	
+		
+		<img src = "img/Chicago.jpg" alt = "Chicago" >
+		  
+		</div>
+		
+		<div id = "container-map">
+			<div id = "map">
+				<script async defer
+					src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyA3-e15jzvaN6G-qIDCQ9mLhnfDzRWVQf8&callback=initMap">
+				</script>
+			</div>
+		</div>
+		
+	</div>
+	
+  </body>
+  
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>FIND ME HOME!</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		    <div class="container">
+				<div class="navbar-header">
+				    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+				    </button>
+				    <a class="navbar-brand" href="#">FIND ME HOME!</a>
+				</div>
+				<!--<div id="navbar" class="collapse navbar-collapse">
+				    <ul class="nav navbar-nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#contact">Contact</a></li>
+				    </ul>
+				</div>-->
+		    </div>
+		</nav>
+		<section>
+			<div class="jumbotron">
+				<table border=2>
+					<tr>
+						<td>
+							<form name="maptitle">
+								<h2 align="center">THE HOLY MAP OF CHICAGO!</h2>
+								<div id="weather" align="center"></div>
+							</form>
+						</td>
+						<td>
+							<h2 align="center">Search Categories</h2>
+						</td>
+						<td>
+							<h2 align="center">Results</h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26677.547905524716!2d-87.65830412590252!3d41.874053538364265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDUyJzE0LjkiTiA4N8KwMzknMDEuOCJX!5e0!3m2!1ses!2sco!4v1491276336951" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+						</td>
+						<td>
+							<form name="searchform">				
+								<p><strong>How much you have?</strong><input type="number" name="moneyTo"></p>
+								<p><strong>Kilometers to Department?</strong><input type="number" name="kmsTo"></p>
+								<p><strong>With Farmer Markets:</strong><input type="checkbox" name="food" onclick = "farmermarket.style.visibility = (this.checked) ? 'visible' : 'hidden'" /></p>
+								<select id="farmermarket" style="visibility:hidden">
+									<option>All</option>
+								</select>
+								<br><p><strong>With Police Stations:</strong><input type="checkbox" name="security" onclick = "policestation.style.visibility = (this.checked) ? 'visible' : 'hidden'" /></p>
+								<select id="policestation" style="visibility:hidden">
+									<option>All</option>
+								</select>
+								<br><input type="button" class="btn btn-lg btn-primary" value="FIND ME HOME!" onclick="findMeHome();">
+							</form>
+						</td>
+						<td>
+							<form name="resultform">
+								<p><strong>House for you?</strong><input type="text" name="houseTo" disabled><p><br>
+							</form>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</section>
+		<aside></aside>
+		<footer class="footer">
+			<div class="container">
+				<a href="https://s3.amazonaws.com/bsp-ocsit-prod-east-appdata/datagov/wordpress/2017/02/PPFS_2016_dry-bulk.jpg" download>ALL RIGHTS RESERVED!</a>
+				<p class="text-muted">Author: Andrés Ceballos</p>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="http://code.jquery.com/jquery-1.9.1.js" type="text/javascript"></script>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script language="javascript" type="text/javascript" src="js/findMeHome.js"></script>
+		<script language="javascript" type="text/javascript" src="js/connectClimate.js"></script>
+		<script language="javascript" type="text/javascript" src="js/connectPoliceStations.js"></script>
+		<script language="javascript" type="text/javascript" src="js/connectFarmerMarkets.js"></script>
+	<body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Miguel Angel Borja Acevedo">
+	<title>2017-Purdue-UNAL-IronHack-miaborjaac</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/main_modifier.css">
+	<link rel="stylesheet" type="text/css" href="css/specific_modifier.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+  	<script src="js/map.js"></script>
+  	<script src="js/search.js"></script>
+  	<script src="js/readingData.js"></script>
+  	<script src="js/welcomePage.js"></script>
+
+</head>
+<body>
+
+	<div id="welcome">
+		<div id="textWelcome">WELCOME TO <br> <b>Knowing Chicago<b></div>
+		<button id="startBtn">
+			<p id="pStartBtn">START!</p>
+		</button>	
+	</div>
+	
+	<div id="all">
+		<div id="title">
+			<h1>Knowing Chicago</h1>
+		</div>
+		
+		<div id="content">
+			
+			<div id="map"></div>
+			
+			<div id="content_user">
+				<div id="up">
+					<div id="search_description">
+						<div id="search">
+							<div id="title_select_option"><b>SELECT AN OPTION</b></div>
+							<div id="dropdown">
+								<select class="dropbtn"  onchange="select()" name="selector">
+									<option value="hide" style="display: none;">-- Option --</option>
+									<option value="b">Police Stations</option>
+								</select>
+							</div>
+						</div>
+
+						<div id="description">
+							<div id="title_description"><b>DESCRIPTION</b></div>
+							<div id="content_description">
+								<p></p>
+							</div>
+						</div>
+						
+					</div>
+
+					<div id="information">
+						<div id="title_information"><b>INFORMATION</b></div>
+						<div id="content_information">
+							<p id="pInformation"></p>
+						</div>
+					</div>		
+				
+
+				</div>
+
+
+
+				<div id="down">
+					<div id="display">
+						<div id="title_display"><b>DISPLAY</b></div>
+						<div id="content_display"></div>
+					</div>
+
+
+					<div id="conventions">
+						<div id="title_conventions"><b>CONVENTIONS</b></div>
+						<div id="content_conventions">
+							<img src="images/marker university.png"> <p style="font-size: 2vh; display: inline-block;"> University</p>
+							<br>
+							<img src="images/marker police.png"> <p style="font-size: 2vh; display: inline-block;">Police Station </p>
+							<br>
+							<img src="images/zone.png"> <p id="zone" style="font-size: 2vh; display: inline-block;"> --- </p>
+						</div>
+					</div>	
+				</div>
+		
+			</div>
+		</div>
+
+		<div id="credits">
+			<p>Created by Miguel Angel Borja Acevedo. Systems engineering and computing. National University of Colombia.</p>
+		</div>
+
+	</div>
+
+	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJCMNYLXT-TdFkQfZYnBEYGmvGinkGkps&callback=initMap">
+  	</script>
+  	<script src="js/jquery.js"></script>
+  	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" />
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title>Student Place Browser</title>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Bootstrap core CSS     -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--  Material Dashboard CSS    -->
+    <link href="css/material-dashboard.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+	<link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+  <div class="wrapper">
+      <div class="sidebar" data-color="red" data-image="../assets/img/sidebar-1.jpg" style="background-color: white;">
+        <div class="logo"> <img src="./img/logo5.png" alt="Logo" style="width:200px;height:120px;margin:0px 10px"> <a href="#" class="simple-text"> Find a Place </a>
+        </div>
+        <div class="sidebar-wrapper">
+          <ul class="nav">
+            <li> <a href="index.html"> <i class="mdi mdi-home"></i>
+                <p>Dashboard</p>
+              </a> </li>
+            <li class="active"> <a href="#"> <i class="mdi mdi-google-maps"></i>
+                <p>Maps</p>
+              </a></li>
+			  
+			<li class="logo_fondo">
+				<a href="#">
+					<i class="mdi mdi-eye-outline"></i>
+					<p>Site in progress....</p>
+				</a>
+			</li>
+          </ul>
+        </div>
+      </div>
+
+	    
+    <div id="map"></div>
+    <script>
+		function initMap() {
+        var uluru = {lat: 41.8708, lng: -87.6505};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+        });
+		var marker = new google.maps.Marker({
+			position: uluru,
+			map: map,
+			title: 'Hello World!'
+		  });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvbhOy68FUz_H5yOo7GJu9_NvecWymZY0&callback=initMap">
+    </script>
+	</div>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+
+* {margin: 0; padding: 0;}
+
+a {text-decoration: none;}
+
+/* This class is added on scroll */
+.fixed {
+	position: fixed;
+	top: 0;
+	height: 70px;
+	z-index: 1;
+}
+
+body {
+	color: #fff;
+	font-family: 'open-sans-bold', AvenirNext-Medium, sans-serif;
+	font-size: 18px;
+	/*text-align: center;*/
+}
+
+/* Navigation Settings */
+nav {
+	width: 100%;
+	height: 70px;
+	background: #fff;
+}
+
+nav li {
+	display: inline-block;
+	padding: 24px 10px;
+}
+
+nav li a {
+	color: #757575;
+	text-transform: uppercase;
+}
+
+section {
+	height: 100vh;
+}
+
+/* Screens Settings */
+#screen_Home {
+	background: #1E90FF;
+}
+
+
+#screen_Search {
+	background: rgb(50,50,50);
+}
+
+#screen_About {
+	background: #e1793d;
+}
+
+@media only screen and (max-width: 520px) {
+
+	nav li {
+		padding: 24px 4px;
+	}
+
+	nav li a {
+		font-size: 14px;
+	}
+
+}

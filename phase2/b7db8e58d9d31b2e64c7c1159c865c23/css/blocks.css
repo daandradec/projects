@@ -1,0 +1,31 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("fondo_inicio.jpg");
+    background-repeat: repeat;
+}
+
+#map {
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 5%;
+    height: 571px;
+    width: 79%;
+    display: block;
+}
+
+
+#side-menu {
+    position: absolute;
+    margin-top: 108px;
+    margin-left: 50%;
+    height: 571px;
+    width: 50%;
+    display: block;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
