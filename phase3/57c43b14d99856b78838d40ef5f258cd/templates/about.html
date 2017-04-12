@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title> Chicago Point </title>
+      <link rel="shortcut icon" type='image/x-icon' href="{{url_for('static',filename='img/favicon.ico')}}">
+
+      <meta name="viewport" content="width=device-width,  user-scalable=no">
+      <!-- Latest compiled and minified CSS Bootstrap -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap-theme.min.css')}}">
+      <!-- AOS (Fancy transitions) -->
+      <link rel="stylesheet" href="{{url_for('static',filename='css/aos.css')}}" />
+      <!-- Custom theme -->
+      <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+
+
+   </head>
+   <body>
+      <div class="  container-fluid every"  >
+         <div class="hidden-sm hidden-xs left-d col-md-4" style="padding-top:100px">
+
+            <div class="hidden-sm hidden-xs col-md-3">
+                  <img src="{{url_for('static',filename='img/blank.png')}}" alt="" width="60px" height="60px">
+            </div>
+            <div class="hidden-sm hidden-xs d3 col-md-3">
+              <img src="{{url_for('static',filename='img/blank.png')}}" alt="" width="60px" height="60px">
+            </div>
+            <div class="hidden-sm hidden-xs col-md-3" data-aos="fade-left" data-aos-duration="3000">
+                <a href="" data-toggle="modal" data-target="#myModal2">
+                  <div class="image">
+                    <img src="{{url_for('static',filename='img/roller.jpg')}}" alt="" width="80px" height="80px" style="padding-top: 2px;" class="gray">
+                  </div>
+                </a>
+            </div>
+            <div class="hidden-sm hidden-xs col-md-3" data-aos="fade-left" data-aos-duration="3000">
+              <a href="" data-toggle="modal" data-target="#myModal1">
+                <div class="image">
+                  <img src="{{url_for('static',filename='img/bean.jpg')}}" alt="" width="120px" height="120px" class="gray">
+                </div>
+              </a>
+            </div>
+            <!--  -->
+            <div class="hidden-sm hidden-xs col-md-3">
+              <img src="{{url_for('static',filename='img/blank.png')}}" alt="" width="60px" height="60px">
+            </div>
+            <div class="hidden-sm hidden-xs col-md-3 " data-aos="fade-left" data-aos-duration="3000">
+              <a href="" data-toggle="modal" data-target="#myModal3">
+                <div class="image">
+                  <img src="{{url_for('static',filename='img/whale.jpg')}}"  alt="" width="60px" height="60px" class="gray">
+                </div>
+              </a>
+            </div>
+            <div class="hidden-sm hidden-xs col-md-3">
+              <img src="{{url_for('static',filename='img/blank.png')}}" alt="" width="60px" height="60px">
+            </div>
+            <div class="hidden-sm hidden-xs col-md-3">
+              <img src="{{url_for('static',filename='img/blank.png')}}" alt="" width="60px" height="60px">
+            </div>
+            <!--  -->
+            <div class="hidden-sm hidden-xs col-md-3 ">
+              <img src="{{url_for('static',filename='img/blank.png')}}" alt="" width="60px" height="60px">
+            </div>
+            <div class="hidden-sm hidden-xs col-md-3 " data-aos="fade-left" data-aos-duration="3000">
+              <a href="" data-toggle="modal" data-target="#myModal4">
+                <div class="image">
+                  <img src="{{url_for('static',filename='img/rex.jpg')}}" alt="" width="60px" height="60px" class="gray">
+                </div>
+              </a>
+            </div>
+            <div class="hidden-sm hidden-xs col-md-3">
+              <img src="{{url_for('static',filename='img/blank.png')}}" alt="" width="60px" height="60px">
+            </div>
+            <div class="hidden-sm hidden-xs col-md-3">
+              <img src="{{url_for('static',filename='img/blank.png')}}" alt="" width="60px" height="60px">
+            </div>
+            <!--  -->
+            <div class="hidden-sm hidden-xs col-md-3">
+              <img src="{{url_for('static',filename='img/blank.png')}}" alt="" width="60px" height="60px">
+            </div>
+            <div class="hidden-sm hidden-xs col-md-3">
+              <img src="{{url_for('static',filename='img/blank.png')}}" alt="" width="60px" height="60px">
+            </div>
+            <div class="hidden-sm hidden-xs col-md-3 " data-aos="fade-left" data-aos-duration="3000" >
+              <a href="" data-toggle="modal" data-target="#myModal5">
+                <div class="image">
+                  <img src="{{url_for('static',filename='img/lions.jpg')}}" alt="" width="60px" height="60px" class="gray">
+                </div>
+              </a>
+              </div>
+            <div class="hidden-sm hidden-xs col-md-3 " data-aos="fade-left" data-aos-duration="3000">
+              <a href="" data-toggle="modal" data-target="#myModal6">
+                <div class="image">
+                  <img src="{{url_for('static',filename='img/fountain.jpg')}}" alt="" width="60px" height="60px" class="gray">
+                </div>
+              </a>
+            </div>
+
+
+         </div>
+         <div class="hidden-sm hidden-xs" style="padding-bottom:270px;">
+         </div>
+         <div class="center-d col-md-4">
+            <p id="hicago" class="visible-xs visible-sm" >C</p>
+            <p id="hicago">HICAGO</p>
+         </div>
+         <div class="hidden-sm hidden-xs right-d col-md-4" >
+             <div class="col-md-2"><p class="letter">&nbsp;</p></div>
+             <div data-aos="zoom-in-up" data-aos-duration="3000" class="hidden-sm hidden-xs col-md-3"><img src="{{url_for('static',filename='img/marker.png')}}" alt="" width="150px" height="140px"></div>
+             <div class="col-md-2"><p class="letter">&nbsp;</p></div>
+             <div class="col-md-2"><p class="letter">&nbsp;</p></div>
+             <div class="col-md-1"><p class="letter">&nbsp;</p></div>
+             <div class="col-md-2"><p class="letter">&nbsp;</p></div>
+
+
+              <div class="col-md-2"><p class="letter">P</p></div>
+              <div class="col-md-2"><p class="letter">o</p></div>
+              <div class="col-md-3"><p class="letter text-center">I</p></div>
+              <div class="col-md-2"><p class="letter">n</p></div>
+              <div class="col-md-2"><p class="letter">t</p></div>
+              <div class="col-md-1"><p class="letter">.</p></div>
+         </div>
+         <div class="hidden-lg hidden-md">
+             <br><br><br><br><br><p id="hicago">POINT</p>
+         </div>
+         
+      </div>
+
+
+
+      <!-- Modal 1-->
+      <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel1">Cloud gate</h4>
+            </div>
+            <div class="modal-body">
+              <img class="img-responsive "src="{{url_for('static',filename='img/bean.jpg')}}" alt="">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Further Information</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 2-->
+      <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel2">Cloud gate</h4>
+            </div>
+            <div class="modal-body">
+              <img class="img-responsive" src="{{url_for('static',filename='img/roller.jpg')}}" alt="">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Further Information</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Modal 3-->
+      <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel3">Cloud gate</h4>
+            </div>
+            <div class="modal-body">
+              <img class="img-responsive" src="{{url_for('static',filename='img/whale.jpg')}}" alt="">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Further Information</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 4-->
+      <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel4">Cloud gate</h4>
+            </div>
+            <div class="modal-body">
+              <img class="img-responsive" src="{{url_for('static',filename='img/rex.jpg')}}" alt="">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Further Information</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 5-->
+      <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel5">Cloud gate</h4>
+            </div>
+            <div class="modal-body">
+              <img class="img-responsive "src="{{url_for('static',filename='img/lions.jpg')}}" alt="">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Further Information</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Modal 6-->
+      <div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel6">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel6">Cloud gate</h4>
+            </div>
+            <div class="modal-body">
+              <img class="img-responsive "src="{{url_for('static',filename='img/fountain.jpg')}}" alt="">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Further Information</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+      <!-- Latest compiled and minified JavaScript Bootstrap-->
+      <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+      <!-- AOS: (Fancy styles) -->
+      <script src="{{url_for('static',filename='js/aos.js')}}"></script>
+      <!-- Bootstrap:  (Notifications) -->
+      <script src="{{url_for('static',filename='js/bootstrap-notify.min.js')}}"></script>
+      <script src="{{url_for('static',filename='logic/notifications.js')}}"></script>
+      <script>AOS.init();</script>
+   </body>
+</html>

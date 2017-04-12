@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Get an a Apartment</title>
+    <style>
+    header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+    }
+    body{
+    	background-color:white;
+    }
+    h3{
+    	color:white;
+    	text-align:center;
+    }
+      #map {
+        width: 100%;
+        height: 400px;
+        background-color: gray;
+      }
+    </style>
+    <script type="text/javascript">
+	function initMap(){
+		var mapDiv = document.getElementById('map');
+		var map = new google.maps.Map(mapDiv, {
+			center: {lat :41.8708, lng: -87.6505},
+			zoom: 12});  
+		var marker = new google.maps.Marker({ 
+			position: {lat :41.8708, lng: -87.6505},
+			map: map,
+			title: 'University of Illinois'
+		});
+	}
+	</script>
+  </head>
+  <body>
+    <header>
+   <h3>Get an a Apartment close to the University of Illinois</h3>
+    </header>
+    
+    <div id="map"></div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC4lO1PjOC9xzRaOK86FJoht6VBFYcsB8&callback=initMap">
+    </script>
+    
+    <footer>Copyright &copy; Illinois</footer>
+  </body>
+
+</html>

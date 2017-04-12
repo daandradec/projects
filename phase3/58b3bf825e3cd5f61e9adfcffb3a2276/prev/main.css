@@ -1,0 +1,274 @@
+/* Body general appearence */
+body{
+  padding : 0.1em 0.1em 0.1em 0.1em;
+  background-color:  #EEE8AA;
+  zoom : 80%;
+
+}
+
+.theContainer{
+  margin-bottom: 3em;
+}
+/* Appearence of the header that is located in the top of the page */
+.html-header{
+  text-transform: capitalize;
+  display: inline-block;
+  height: 5em;
+  text-align: center;
+  /*background-color: #FFD700;*/
+  background-image:linear-gradient(#EEE8AA,#FFD700,#DAA520,#DAA520);
+  width: 100%;
+  font-style: italic;
+  margin-bottom: 0.5em;
+  text-transform: full-width;
+}
+
+.header-text{
+  font-family:sans-serif;
+}
+/* Appearence of the options main menu */
+.main-menu{
+  height: 22.1em ;
+  width: 6.8em;
+  background-color: #FFD700;
+  float: left;
+  border-style: solid;
+  border-width: thin;
+
+}
+
+/* Appearence of the options button */
+
+
+
+
+.optionsButton{
+
+  background-color:#DAA520;
+  text-align: center;
+  font-style: italic;
+  font-family: Arial, sans-serif;
+  height: 2em;
+  width: 4.5em;
+  font-size: 1.5em;
+  float: left;
+  border-style: groove;
+  text-transform: full-width;
+  border-width: medium;
+  padding-top: 0.3em;
+
+}
+.startButton{
+height: 2em;
+font-size: 4em;
+padding-top: 0.7em;
+background-color:#DAA520;
+text-align: center;
+font-style: italic;
+font-family: Arial, sans-serif;
+border-style: groove;
+text-transform: full-width;
+border-width: medium;
+
+}
+
+.optionsButton:hover, .startButton:hover{
+  background-color: black;
+  color :  	#FFD700;
+  cursor: pointer;
+}
+/*
+.startButton{
+  width: 4em;
+  text-align: center;
+  border-style: groove;
+  border-width: medium;
+  margin-left: 2em;
+
+}
+*/
+/* Appearence of each option button and the option button's container */
+
+.menu-items{
+  float: left;
+  padding-top: 1em;
+  text-transform: capitalize;
+  text-align: center;
+  padding-left: 0.3em;
+  /*background-color: #FFD700;*/
+  font-family:'Lato', sans-serif;
+  font-style: italic;
+  position: relative;
+}
+
+
+.o1, .o2, .o3, .o4, .o5{
+  height: 3em;
+  width: 6em;
+  border-width: thin;
+  border-style: solid;
+  cursor: pointer;
+  margin-top: 0.7em;
+
+}
+
+
+.o1:hover , .o2:hover,
+.o3:hover, .o4:hover,
+.o5:hover{
+  font-weight: bold;
+  background-color: black;
+  color :  	#FFD700;
+}
+
+.active{
+  background-color:#8B4513;
+  color :  	#FFD700;
+  border-style: double;
+  border-color: black;
+}
+/* Appearence of the go button */
+
+.goButton, .routeButton{
+  background-color:#DAA520;
+  text-align: center;
+  font-style: italic;
+  font-family: Arial, sans-serif;
+  height: 2em;
+  width: 4.5em;
+  font-size: 1.5em;
+  border-style: groove;
+  text-transform: full-width;
+  border-width: medium;
+  margin-top: 0.5em;
+  padding-top: 0.3em;
+  float:left;
+}
+
+.goButton:hover, .routeButton:hover{
+  background-color: black;
+  color :  	#FFD700;
+  cursor: pointer;
+}
+
+.routeButton{
+  padding-top: 0;
+  height: 2em;
+  width: 4.5em;
+  text-align: center;
+  line-height: 0.9em;
+}
+
+/* Appearence of map's container */
+
+#map{
+  width: 91%;
+  height: 30em;
+  float: right;
+
+  /*padding-left: 1em;*/
+  border-width: thick;
+  border-style: groove;
+  border-color:	 	#F0E68C;
+
+
+}
+
+.descriptionContainer{
+  width: 99.4%;
+  float: left;
+  border-width: thick;
+  border-style: groove;
+  border-color:	 	#F0E68C;
+  font-family: sans-serif;
+  margin-bottom: 0.4em;
+  font-weight: bold;
+  text-align: center;
+
+}
+.optionsList{
+  text-align: justify;
+  padding-right: 1em;
+}
+
+pa{
+  font-weight: normal;
+}
+#final-paragraph{
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#Home{
+
+  width: 100%;
+  height: 140em;
+  position: relative;
+  /*background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/97/Chicago_Theatre_2.jpg") ;*/
+  background-image: url('icons/Chicago.jpg');
+  background-size: cover;
+
+}
+#home_container{
+  margin: 0 auto;
+  position: sticky;
+  background-color: #EEE8AA;
+  border: 1px solid black;
+  opacity: 0.1;
+  filter: alpha(opacity=80); /* For IE8 and earlier */
+  top: 5em;
+  left: 25em;
+  box-sizing: border-box;
+  width: 54%;
+  margin-bottom: 5em;
+
+}
+#home_content, #features, #developer{
+
+
+  text-shadow: 0.03em 0 0	#FFD700, -0.03em 0 0	#FFD700, 0 0.03em 0 	#FFD700, 0 -0.03em 0 	#FFD700, 0.03em 0.03em 	#FFD700, -0.03em -0.03em 0 	#FFD700, 0.03em -0.03em 0 	#FFD700, -0.03em 0.03em 0 #FFD700;
+  position: relative;
+  font-style: italic;
+  font-family: Arial, sans-serif;
+  text-transform: full-width;
+  font-size: 10em;
+  padding-right: 0.2em;
+  text-align: center;
+
+}
+#features{
+  text-align: center;
+  font-size: 7em;
+}
+.features{
+  font-size: 0.2em;
+}
+
+#developer{
+  font-size: 1.5em;
+}
+
+#animated{
+  position: fixed;
+  background-color: #EEE8AA;
+
+  border-radius: 2px;
+
+  opacity: 0.0;
+font-size: 3em;
+
+
+
+
+}
+#text_it{
+
+
+  text-align: center;
+  font-style: italic;
+  font-family: Arial, sans-serif;
+  text-transform: full-width;
+
+  text-shadow: 0.03em 0 0	#FFD700, -0.03em 0 0	#FFD700, 0 0.03em 0 	#FFD700, 0 -0.03em 0 	#FFD700, 0.03em 0.03em 	#FFD700, -0.03em -0.03em 0 	#FFD700, 0.03em -0.03em 0 	#FFD700, -0.03em 0.03em 0 #FFD700;
+
+}

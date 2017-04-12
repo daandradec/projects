@@ -1,0 +1,159 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@{
+    ViewBag.Title = "Road Trip Agent";
+} 
+<h3>@ViewBag.Message</h3>
+@Styles.Render("~/Content/datepicker")
+<p></p>
+<title>jQuery UI Datepicker - Select a Date Range</title>
+
+<div><label for="from">From</label>
+<input type="text" id="from" name="from">
+<label for="to">to</label>
+<input type="text" id="to" name="to"> </div> 
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<div>
+    Total Distance: <label id="total"></label>
+</div> 
+<div id="map"></div> 
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /> 
+<div id="container"></div>
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+@section Scripts {
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/charts")
+    <script>
+      $( function() {
+        var dateFormat = "mm/dd/yy",
+          from = $( "#from" )
+            .datepicker({
+                defaultDate: "+1w",
+              changeMonth: true,
+              numberOfMonths: 1
+            })
+            .on( "change", function() {
+              to.datepicker( "option", "minDate", getDate( this ) );
+            }),
+          to = $( "#to" ).datepicker({
+            defaultDate: "+1w",
+            changeMonth: true,
+            numberOfMonths: 1
+          })
+          .on( "change", function() {
+            from.datepicker( "option", "maxDate", getDate( this ) );
+          });
+
+        function getDate( element ) {
+          var date;
+          try {
+            date = $.datepicker.parseDate( dateFormat, element.value );
+          } catch( error ) {
+            date = null;
+          }
+
+          return date;
+        }
+      } );
+    </script>
+<script>
+  function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 4,
+    center: {lat: -24.345, lng: 134.46}  // Australia.
+  });
+
+  var directionsService = new google.maps.DirectionsService;
+  var directionsDisplay = new google.maps.DirectionsRenderer({
+    draggable: true,
+    map: map,
+    panel: document.getElementById('right-panel')
+  });
+
+  directionsDisplay.addListener('directions_changed', function() {
+    computeTotalDistance(directionsDisplay.getDirections());
+  });
+
+  displayRoute('San Francisco, CA', 'Las Vegas, NV', directionsService,
+      directionsDisplay);
+}
+
+function displayRoute(origin, destination, service, display) {
+  service.route({
+    origin: origin,
+    destination: destination,
+    waypoints: [{ location: 'Los Angeles, CA' }, { location: 'Death Valley National Park, CA' }],
+    travelMode: google.maps.TravelMode.DRIVING,
+    avoidTolls: true
+  }, function(response, status) {
+    if (status === google.maps.DirectionsStatus.OK) {
+      display.setDirections(response);
+    } else {
+      alert('Could not display directions due to: ' + status);
+    }
+  });
+}
+
+function computeTotalDistance(result) {
+  var total = 0;
+  var myroute = result.routes[0];
+  for (var i = 0; i < myroute.legs.length; i++) {
+      total += myroute.legs[i].distance.value;
+  }
+  total = total / 1000;
+  document.getElementById('total').innerHTML = total + ' km';
+}
+</script>
+<script  async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAF8o5_3JsImMXMAL4Xv7yH1wfIyqlRx-A&callback=initMap">
+
+    </script>
+
+
+    <script>
+        var dom = document.getElementById("container");
+        var myChart = echarts.init(dom);
+        var app = {};
+        option = null;
+        option = {
+            title: {
+                text: 'Prediction vs. History Analysis'
+            },
+            tooltip: {},
+            legend: {
+                data: ['Prediction', 'History']
+            },
+            radar: {
+                // shape: 'circle',
+                indicator: [
+                   { name: 'temperature', max: 100 },
+                   { name: 'wind', max: 100 },
+                   { name: 'moisture', max: 100 },
+                   { name: 'drought', max: 100 },
+                   { name: 'cloudage', max: 100 },
+                   { name: 'air quality', max: 100 }
+                ]
+            },
+            series: [{
+                name: 'Prediction vs. History',
+                type: 'radar',
+                // areaStyle: {normal: {}},
+                data: [
+                    {
+                        value: [68, 60, 80, 76, 80, 77],
+                        name: 'Prediction'
+                    },
+                     {
+                         value: [72, 80, 66, 79, 70, 87],
+                         name: 'History'
+                     }
+                ]
+            }]
+        };;
+        if (option && typeof option === "object") {
+            myChart.setOption(option, true);
+        }
+    </script>
+}

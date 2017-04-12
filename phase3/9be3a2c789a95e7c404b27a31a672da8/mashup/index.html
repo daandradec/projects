@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <style>
+      #map {
+        width: 200%;
+        height: 400px;
+        background-color: grey;
+      }
+    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Find your home near the university</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+     <script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtt3H1jKt3s0QoXVEj99WHj7052TRSCPg&callback=initMap">
+	</script>
+	<script type="text/javascript">
+	function initMap(){
+		var mapDiv = document.getElementById('map');
+		var map = new google.maps.Map(mapDiv, {
+			center: {lat: 41.8708, lng: -87.6505},
+			zoom: 12});
+		var marker = new google.maps.Marker({ //Line 1sip
+			position: {lat: 41.8708, lng: -87.6505}, //Line2: Location to be highlighted
+			map: map,//Line 3: Reference to map object
+			title: 'Purdue University' //Line 4: Title to be given
+		})
+	}
+</script>
+
+</head>
+
+<body>
+
+    
+   <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1>Welcome to the University of Illinois</h1>
+            <h3>Find in this page a safe and affordable place to rent near Department of Computer Science - University of Illinois, Chicago</h3>
+            <br>
+            	<a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+            <a href=http://illinois.edu/ class="btn btn-dark btn-lg">Visit your university</a>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Do you want to live in a safe and affordable area?</h2>
+                    <p class="lead">Here you can find it quickly. Ubicate on the map 
+                    	
+                    	<a href="#mapsec">Map</a>.</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Services -->
+    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+    <section id="services" class="services bg-primary">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2>Information that may affect your decision</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>     
+                                <i class="fa fa-shield fa-stack-1x text-primary"></i>                          
+                            </span>
+                                <h4>
+                                    <strong>Crime rates and types</strong>
+                                </h4>
+                                <p>Criminal / offender registry. Your safety is important to us</p>
+                                <a href="#" class="btn btn-light">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                            </span>
+                                <h4>
+                                    <strong>Real estate prices</strong>
+                                </h4>
+                                <p>Check your pocket.</p>
+                                <a href="#" class="btn btn-light">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                            </span>
+                                <h4>
+                                    <strong>closeness to police/fire stations schools and universities</strong>
+                                </h4>
+                                <p>Know the city.</p>
+                                <a href="#" class="btn btn-light">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                       
+                            </span>
+                                <h4>
+                                    <strong> modes of transportation</strong>
+                                </h4>
+                                <p>Move quickly around the city.</p>
+                                <a href="#" class="btn btn-light">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+  
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h2>You choose how to live</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    
+    <!-- Map -->
+        <section id="mapsec" class="about">
+	<div class="col-sm-7 col-md-7" id="map_container">
+				<div id="map"></div>
+			</div>
+	    </section>
+   
+   
+
+</body>
+
+</html>

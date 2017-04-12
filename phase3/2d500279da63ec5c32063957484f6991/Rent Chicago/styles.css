@@ -1,0 +1,154 @@
+/*
+verde claro: #D0E5DE
+*/
+
+/*menu*/
+
+#menu{
+	padding: 0;
+	width: 100%; 
+	height: 50px;
+	margin: -8px 0px 5px; 
+	background: #D0E5DE;
+	border-width: 3px 0px; 
+	border-color: #809A91;
+	border-style: solid;
+}
+#tittle, #menu h1{
+	text-decoration: none;
+	margin: 0px;
+	color: #809A91;	
+	font-size: 40px;
+	float: left;
+}
+#menu a{
+	float: right;	
+	margin: auto;
+}
+#profileBut, #homeBut{
+	margin: 3px 4px;	
+}
+#profileBut{
+	margin-top: 5px;	
+}
+
+/*search*/
+
+#search{
+	width: 30%;
+	margin: 10% 70px 5px 5px;
+	padding: 5px; 	
+	float: right;	
+}
+#inUno{
+	float: right;
+	margin: 0px;
+	background: url(images/img09.gif) repeat-x;
+	font: normal 1em/normal "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #809A91;
+	text-decoration: none;
+	width:65%;	
+	border: 1px #809A91 solid;
+}
+#inDos{
+	float: right;
+	margin: 0px;
+	background: #D0E5DE;
+	font: normal 1em/normal "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #809A91;
+	text-decoration: none;
+	width: 30%;	
+	border: 1px #809A91 solid;
+}
+
+/*Map*/
+
+#map{
+	float: left;
+	margin: 5px 5px 5px 200px;
+}
+#info-box {
+	display: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+	background-color: #ffffff;
+	border: 2px solid #BF0A30;
+	border-radius: 5px;
+	padding: 5px;
+	font-family: arial;
+}
+path:hover, circle:hover{ 
+	stroke: #000000;
+	stroke-width:3px;
+	stroke-linejoin: round;
+	fill: #DD2868;
+}
+
+/*path*/
+
+#path{
+	height: 20px;	
+	padding: 0px;
+	margin: 5px;	
+}
+
+.floating{
+	float: left;	
+	margin: 0px;
+}
+
+#homeIcon{
+	margin-top: -1px;		
+}
+
+/*login box*/
+
+#loginBoxOne{
+	background: #D0E5DE;
+	border-width: 3px 3px 0px;
+	border-color: #809A91;
+	border-style: solid;
+	height: 360px;
+	width: 400px;
+	margin: 50px 100px 0px;	
+	opacity: 0.5;	
+}
+#loginBoxTwo{
+	background: #D0E5DE;
+	border-width: 0px 3px 3px;
+	border-color: #809A91;
+	border-style: solid;
+	height: 40px;
+	width: 400px;
+	margin: 0px;	
+	opacity: 0.5;	
+}
+
+#inTres, #inCuatro{
+	background: url(images/img09.gif) repeat-x;
+	font: normal 1em/normal "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #809A91;
+	text-decoration: none;
+	width: 50%;	
+	border: 1px #809A91 solid;
+	height: 20px;
+}
+
+#signIn, #signUp{
+	float:left;
+	width: 50%;
+	background: #D0E5DE;
+	margin:0px;	
+	height:40px;
+}
+
+#signInForm{
+	margin-top: 20%;
+	line-height: 2;	
+}
+#signUpForm{
+	margin-top: 10%;
+	line-height: 1.5;	
+}

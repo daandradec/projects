@@ -1,0 +1,23 @@
+#map {
+        width: 70%;
+        height: 450px;
+        float: right;
+      }
+body{
+
+	background: #0D152E;
+	color: #fff;
+}
+/*html, body {
+        height: 100%;
+        margin-left:150px;
+        padding: 0;
+      }*/
+#info{
+	width: 300px;
+    height: 100%;
+    float: left;
+
+    
+}
+

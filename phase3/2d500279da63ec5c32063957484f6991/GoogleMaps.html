@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<body>
+
+		<div id="googleMap1" style="width:400px;height:300px;"></div>
+		<br>
+		<div id="googleMap2" style="width:400px;height:300px;"></div>
+		<br>
+		<div id="googleMap3" style="width:400px;height:300px;"></div>
+		<br>
+		<div id="googleMap4" style="width:400px;height:300px;"></div>
+		<br>
+		<div id="googleMap5" style="width:400px;height:300px;"></div>
+		<br>
+		<div id="googleMap6" style="width:400px;height:300px;"></div>
+		
+		<script>
+			function myMap() {
+	  
+				var stavanger = new google.maps.LatLng(58.983991,5.734863);
+				var amsterdam = new google.maps.LatLng(52.395715,4.888916);
+				var london = new google.maps.LatLng(51.508742,-0.120850);
+				
+				var mapOptions1 = {
+					center: london,
+					zoom:9,
+					mapTypeId: google.maps.MapTypeId.ROADMAP,
+					disableDefaultUI: true
+				};
+				var mapOptions2 = {
+					center: london,
+					zoom:9,
+					mapTypeId: google.maps.MapTypeId.SATELLITE
+				};
+				var mapOptions3 = {
+					center: london,
+					zoom:9,
+					mapTypeId: google.maps.MapTypeId.HYBRID,
+					panControl: true,
+					zoomControl: true,
+					mapTypeControl: true,
+					scaleControl: true,
+					streetViewControl: true,
+					overviewMapControl: true,
+					rotateControl: true
+				};
+				var mapOptions4 = {
+					center: london,
+					zoom:9,
+					mapTypeId: google.maps.MapTypeId.TERRAIN
+				};
+				var mapOptions5 = {
+					center: amsterdam,
+					zoom:4,
+					mapTypeId: google.maps.MapTypeId.SATELLITE
+				};
+				var mapOptions6 = {
+					center: amsterdam,
+					zoom:4,
+					mapTypeId: google.maps.MapTypeId.TERRAIN,
+					mapTypeControlOptions: {
+					style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+						position: google.maps.ControlPosition.TOP_CENTER
+					}
+				};
+				
+			    var map1 = new google.maps.Map(document.getElementById("googleMap1"),mapOptions1);
+				var map2 = new google.maps.Map(document.getElementById("googleMap2"),mapOptions2);
+				var map3 = new google.maps.Map(document.getElementById("googleMap3"),mapOptions3);
+				map3.setTilt(0);
+				var map4 = new google.maps.Map(document.getElementById("googleMap4"),mapOptions4);
+				var map5 = new google.maps.Map(document.getElementById("googleMap5"),mapOptions5);
+				var map6 = new google.maps.Map(document.getElementById("googleMap6"),mapOptions6);
+				
+				var marker1 = new google.maps.Marker({position:london});
+				marker1.setMap(map1);
+				var marker2 = new google.maps.Marker({
+					position: london,
+					animation: google.maps.Animation.BOUNCE
+				});
+				marker2.setMap(map2);
+				var marker3 = new google.maps.Marker({
+					position: london,
+					icon: "MapMarker.png"
+				});
+				marker3.setMap(map3);
+				var marker4 = new google.maps.Circle({
+					center:london,
+					radius:20000,
+					strokeColor:"#0000FF",
+					strokeOpacity:0.8,
+					strokeWeight:2,
+					fillColor:"#0000FF",
+					fillOpacity:0.4,
+					editable: true
+				});
+				marker4.setMap(map4);
+				var marker5 = new google.maps.Polyline({
+					path: [stavanger, amsterdam, london],
+					strokeColor: "#0000FF",
+					strokeOpacity: 0.8,
+					strokeWeight: 2,
+					editable: true
+				});
+				marker5.setMap(map5);
+				var myTrip = [stavanger,amsterdam,london,stavanger];
+				var marker6 = new google.maps.Polygon({
+					path:myTrip,
+					strokeColor:"#0000FF",
+					strokeOpacity:0.8,
+					strokeWeight:2,
+					fillColor:"#0000FF",
+					fillOpacity:0.4,
+					editable: true
+				});
+				marker6.setMap(map6);
+				
+				google.maps.event.addListener(marker1,'click',function() {
+					var infowindow = new google.maps.InfoWindow({
+						content:"Hello World!"
+					});
+					infowindow.open(map1,marker1);
+				});
+				google.maps.event.addListener(marker2,'click',function() {
+					var pos = map2.getZoom();
+					map2.setZoom(15);
+					map2.setCenter(marker2.getPosition());
+					window.setTimeout(function() {map2.setZoom(pos);},3000);
+				});
+				google.maps.event.addListener(marker3,'click',function() {
+					map3.setZoom(14);
+					map3.setCenter(marker3.getPosition());
+				});
+				google.maps.event.addListener(map4, 'click', function(event) {
+					placeMarker(map4, event.latLng);
+				});
+			}
+			function placeMarker(map, location) {
+				var marker = new google.maps.Marker({
+					position: location,
+					map: map
+				});
+				var infowindow = new google.maps.InfoWindow({
+					content: 'Latitude: ' + location.lat() + '<br>Longitude: ' + location.lng()
+				});
+				infowindow.open(map,marker);
+			}
+
+		</script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAe2VMlQr4rPqXqOqxU-j0_4w3MjnXODjI&callback=myMap"></script>
+
+	</body>
+</html>

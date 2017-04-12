@@ -1,0 +1,355 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.map {
+    z-index: 1;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: #2D3142;
+}
+
+.sideNavR {
+    height: 100%;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    color: white;
+    opacity: .95;
+    z-index: 0;
+}
+
+.divSideNavR {
+    height: 100%;
+    color: white;
+    overflow: auto;
+}
+
+.bar {
+    display: block;
+    height: 5px;
+    width: 15px;
+    background-color: white;
+    margin: 3px auto;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.closeBtnR {
+    z-index: 0;
+    cursor: pointer;
+    width: auto;
+    margin: 0 auto;
+    right: 33%;
+    top: 0;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+    position: fixed;
+}
+
+.closeBtnR.active .top {
+    -webkit-transform: translateY(8px) rotateZ(45deg);
+    -moz-transform: translateY(8px) rotateZ(45deg);
+    -ms-transform: translateY(8px) rotateZ(45deg);
+    -o-transform: translateY(8px) rotateZ(45deg);
+    transform: translateY(8px) rotateZ(45deg);
+}
+
+.closeBtnR.active .bottom {
+    -webkit-transform: translateY(-8px) rotateZ(-45deg);
+    -moz-transform: translateY(-8px) rotateZ(-45deg);
+    -ms-transform: translateY(-8px) rotateZ(-45deg);
+    -o-transform: translateY(-8px) rotateZ(-45deg);
+    transform: translateY(-8px) rotateZ(-45deg);
+}
+
+.closeBtnR.active .middle {
+    width: 0;
+}
+
+.contextMenu {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    color: white;
+    opacity: .95;
+    border-radius: 3%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5), 0 9px 100px 0 rgba(0, 0, 0, 0.19);
+    display: none;
+}
+
+.contextMenu .contextMenuContent {
+    margin: 10px;
+}
+
+.contextMenu .contextMenuContent a {
+    color: white;
+}
+
+.infoPopUp {
+    width: 25%;
+    height: auto;
+    background-color: #111;
+    color: white;
+    border-radius: 15px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 50;
+    margin-left: -80px;
+    opacity: .95;
+    display: table;
+    display: none;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5), 0 9px 100px 0 rgba(0, 0, 0, 0.19);
+}
+
+.infoPopUp::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 9px;
+    border-style: solid;
+    border-color: #111 transparent transparent transparent;
+}
+
+.infoPopUp div {
+    margin: 0px;
+}
+
+.closeBtnIP {
+    cursor: pointer;
+    right: 0%;
+    top: 0%;
+    position: absolute;
+    background-color: #111;
+    -webkit-transform: translateY(-10px) translateX(10px);
+    -moz-transform: translateY(-10px) translateX(10px);
+    -ms-transform: translateY(-10px) translateX(10px);
+    -o-transform: translateY(-10px) translateX(10px);
+    transform: translateY(-10px) translateX(10px);
+    border: 1px solid gray;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.closeBtnIP .top {
+    -webkit-transform: translateY(2px) rotateZ(45deg);
+    -moz-transform: translateY(2px) rotateZ(45deg);
+    -ms-transform: translateY(2px) rotateZ(45deg);
+    -o-transform: translateY(2px) rotateZ(45deg);
+    transform: translateY(2px) rotateZ(45deg);
+    height: 4px;
+    width: 10px;
+}
+
+.closeBtnIP .bottom {
+    -webkit-transform: translateY(-2px) rotateZ(-45deg);
+    -moz-transform: translateY(-2px) rotateZ(-45deg);
+    -ms-transform: translateY(-2px) rotateZ(-45deg);
+    -o-transform: translateY(-2px) rotateZ(-45deg);
+    transform: translateY(-2px) rotateZ(-45deg);
+    height: 4px;
+    width: 10px;
+}
+
+.sideNavL {
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    color: white;
+    opacity: .92;
+    z-index: 2;
+}
+
+.sideNavL .divSideNavL {
+    margin: 10% 2% 0 0;
+    height: 60%;
+    color: white;
+}
+
+.closeBtnL {
+    z-index: 2;
+    cursor: pointer;
+    padding: 0.3%;
+    width: auto;
+    margin: 0 auto;
+    left: 20%;
+    top: 1%;
+    position: fixed;
+    background-color: #111;
+    border-radius: 0 8% 8% 0;
+    opacity: 0.92;
+}
+
+.closeBtnL.active .top {
+    -webkit-transform: translateY(8px) rotateZ(45deg);
+    -moz-transform: translateY(8px) rotateZ(45deg);
+    -ms-transform: translateY(8px) rotateZ(45deg);
+    -o-transform: translateY(8px) rotateZ(45deg);
+    transform: translateY(8px)rotateZ(45deg);
+    border-color: #111;
+}
+
+.closeBtnL.active .bottom {
+    -webkit-transform: translateY(-8px) rotateZ(-45deg);
+    -moz-transform: translateY(-8px) rotateZ(-45deg);
+    -ms-transform: translateY(-8px) rotateZ(-45deg);
+    -o-transform: translateY(-8px) rotateZ(-45deg);
+    transform: translateY(-8px) rotateZ(-45deg);
+    border-color: #111;
+}
+
+.closeBtnL.active .middle {
+    width: 0;
+}
+
+.barL {
+    display: block;
+    height: 5px;
+    width: 15px;
+    background-color: white;
+    margin: 3px auto;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.tabContent {
+    height: 100%;
+    margin-left: 0%;
+    display: none;
+}
+
+.divPanorama {
+    left: 1% !important;
+    top: 6% !important;
+    height: 93% !important;
+    width: 98%;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.95);
+}
+
+.divMapInfo {
+    position: absolute;
+    margin: 1% !important;
+    bottom: 0 !important;
+    height: 40% !important;
+    width: 98%;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.95);
+}
+
+.weatherToday {
+    height: 80%;
+    text-align: center !important;
+    font-size: 25pt;
+}
+
+.weatherPrev {
+    height: 100% !important;
+    width: 20% !important;
+    font-size: 8pt;
+    padding: 1% !important;
+    text-align: center !important;
+}
+
+.divDistanceText {
+    font-size: 8pt;
+    text-align: center !important;
+}
+
+.tabInfoSideBar {
+    position: fixed;
+    z-index: 3;
+    right: 0%;
+    top: 6%;
+    width: 35px;
+}
+
+.tabInfo {
+    width: 100%;
+    background-color: rgba(7, 7, 7, 0.9);
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 15% 0 0 15%;
+    border: 1px solid rgba(50, 50, 50, 0.9);
+}
+
+.tabInfo.over {
+    background-color: rgba(50, 50, 50, 0.9);
+}
+
+.tabInfo.active {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.svgWeather {
+    margin: 6% 1% 0 1%;
+    border: 1px solid #fff;
+    background-color: rgba(50, 50, 50, 0.5);
+}
+
+.circleWeather {
+    fill: rgba(255, 255, 255, 0.9);
+    stroke: rgba(0, 0, 255, 0.8);
+    stroke-width: 2px;
+}
+
+.domain {
+    stroke: rgba(255, 255, 255, 0.9);
+}
+
+.tick line,
+.tick text {
+    fill: rgba(255, 255, 255, 0.9);
+}
+
+.tick line {
+    stroke: rgba(255, 255, 255, 0.9);
+}
+
+.policeRow {
+    width: 100%;
+    color: white;
+}
+
+
+::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+	background-color: #333;
+}
+
+::-webkit-scrollbar
+{
+	width: 5px;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #444;
+}

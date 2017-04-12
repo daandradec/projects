@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Getting your place</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="dataSets/choose_room.js"></script>
+    <script src="dataSets/showCrimes.js"></script>
+    <style>
+      #map {
+        height: 70%;
+        width: 70%;
+        position: absolute;
+        z-index: -1;
+      }
+      .w3-lobster {
+        font-family: "Lobster", serif;
+      }
+      body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+    </style>
+  </head>
+  <body class="w3-light-grey">
+    <div class="w3-container w3-border w3-lobster  w3-center w3-cyan w3-text-white">
+      <p class="w3-xxxlarge w3-wide w3-opacity ">Getting your place</p>
+      <hr class="w3-opacity ">
+    </div>
+  <button onclick="choose_room(map)" class="w3-button w3-hover-lime w3-wide w3-black  w3-padding-large" style="width:70%"
+   >Click me for visualization of all rents!!!</button>
+
+    <div id="map" > </div>
+
+    <div class="w3-dropdown-click">
+    <button onclick="showMe()" class="w3-button w3-lime w3-xlarge" >Also show me...</button>
+      <div id="ShowMeBar" class=" w3-dropdown-content w3-bar-block w3-border w3-xlarge" >
+        <button onclick="showCrimes(map)" class="w3-button w3-bar-item fa fa-child"
+        > Parks</button>
+        <button onclick="showCrimes(map)" class="w3-button w3-bar-item fa fa-exclamation-circle"
+        > Crimes</button>
+        <button onclick="showCrimes(map)" class="w3-button w3-bar-item fa fa-cutlery"
+        > Restaurants </button>
+      </div>
+    </div>
+
+    <script>
+    function showMe() {
+        var x = document.getElementById("ShowMeBar");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+    </script>
+    <script>
+      var map;
+      var service;
+      function initMap() {
+          var pyrmont = new google.maps.LatLng(41.870439,-87.66692);
+          map = new google.maps.Map(document.getElementById('map'), {
+          center: pyrmont,
+          zoom: 15,
+          scrollwheel: false
+        });
+        var marker = new google.maps.Marker({
+                            position: new google.maps.LatLng(41.870439,-87.66692),
+                            map: map,
+                            icon: 'images/Icon1.png',
+                            optimized:false
+                         });
+                         marker.addListener('click', function() {
+                           map.setZoom(17);
+                           map.setCenter(marker.getPosition());
+                         });
+      }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJNjyC81KDBVWaR1PlgUfa4v5VD74XHz8&callback=initMap&libraries=places,visualization"
+    async defer></script>
+  </div>
+</html>

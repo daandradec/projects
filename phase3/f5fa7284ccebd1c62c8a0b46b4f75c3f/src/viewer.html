@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <style>
+      #map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+      }
+    </style>
+    <style>
+
+        body {
+          font: 10px sans-serif;
+        }
+
+        .axis path,
+        .axis line {
+          fill: none;
+          stroke: #000;
+          shape-rendering: crispEdges;
+        }
+
+        .bar {
+          fill: orange;
+        }
+
+        .bar:hover {
+          fill: orangered ;
+        }
+
+        .x.axis path {
+          display: none;
+        }
+
+        .d3-tip {
+          line-height: 1;
+          font-weight: bold;
+          padding: 12px;
+          background: rgba(0, 0, 0, 0.8);
+          color: #fff;
+          border-radius: 2px;
+        }
+
+        /* Creates a small triangle extender for the tooltip */
+        .d3-tip:after {
+          box-sizing: border-box;
+          display: inline;
+          font-size: 10px;
+          width: 100%;
+          line-height: 1;
+          color: rgba(0, 0, 0, 0.8);
+          content: "\25BC";
+          position: absolute;
+          text-align: center;
+        }
+
+        /* Style northward tooltips differently */
+        .d3-tip.n:after {
+          margin: -1px 0 0 0;
+          top: 100%;
+          left: 0;
+        }
+    </style>
+    <script
+  src="http://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+    <script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCI5CH9brXCtJ8onQYA_IMsbLwZlopSXHY&callback=initMap"></script>
+    <script type="text/javascript">
+        function initMap(){
+            var mapDiv = document.getElementById('map'); //Line 1: Save reference to div element where map would be shown
+            var map = new google.maps.Map(mapDiv, {//Line 2: Create Map object passing element reference, center and zoom as parameters
+                center: {lat: 40.4237, lng: -86.9212}, //This is Purdue University's Location
+                zoom: 12});
+        }
+
+        function readFile() {
+        $.ajax({
+            type: "GET",
+            url: "result.csv",
+            dataType: "text",
+            success: function(data) {processData(data);}
+         });
+         }
+
+        function processData(allText) {
+            document.getElementById("status").innerHTML = "Farmer's market updated";
+            var mapDiv = document.getElementById('map'); //Line 1: Save reference to div element where map would be shown
+            var map = new google.maps.Map(mapDiv, {//Line 2: Create Map object passing element reference, center and zoom as parameters
+                center: {lat: 40.4237, lng: -86.9212}, //This is Purdue University's Location
+                zoom: 12});
+
+            var allRows = allText.split(/\r?\n|\r/);
+
+            var markers = [];
+            var infowindows = [];
+
+            for (var singleRow = 0; singleRow < allRows.length - 1; singleRow++) {
+                var rowCells = allRows[singleRow].split(',');
+                var myLatLng = new google.maps.LatLng(rowCells[1],rowCells[2]);
+
+                markers[singleRow] = new google.maps.Marker({ //Line 1
+                    position: myLatLng, //Line2: Location to be highlighted
+                    map: map,//Line 3: Reference to map object
+                    title: rowCells[0], //Line 4: Title to be given
+                    animation: google.maps.Animation.DROP
+                })
+
+                infowindows[singleRow] = new google.maps.InfoWindow({
+                    content: rowCells[0]
+                });
+
+                google.maps.event.addListener(markers[singleRow], 'click', function(innerkey) {
+                    return function() {
+                    infowindows[innerkey].open(map, markers[innerkey]);
+                    }
+                }(singleRow));
+            }
+        }
+
+    </script>
+
+    <title>Title</title>
+</head>
+<body style="background:#E6E6E6">
+<div id="map"></div>
+<button id="farmers" onclick="readFile()")>Locate farmers markets</button>
+<p id="status"></p>
+<p id="opt"></p>
+
+<br>
+<center><h1>Monthly average temperature from 1997 to 2017 in West Lafayette area<br>
+    Put the cursor on the bar to find recommended local vegetables in that month</h1><br></center>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+<script>
+var margin = {top: 40, right: 20, bottom: 30, left: 40},
+    width = 800 - margin.left - margin.right,
+    height = 300 - margin.top - margin.bottom;
+
+var formatPercent = d3.format("00");
+
+var x = d3.scale.ordinal()
+    .rangeRoundBands([0, width], .1);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left")
+    .tickFormat(formatPercent);
+
+var tip = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d) {
+    return "<strong>Recommended:</strong> <span style='color:red'><h1>" + d.vegetables + "</h1></span>";
+  })
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+svg.call(tip);
+
+d3.tsv("climate.tsv", type, function(error, data) {
+  x.domain(data.map(function(d) { return d.yearmonth; }));
+  y.domain([0, d3.max(data, function(d) { return d.maxtemp; })]);
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis);
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+    .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("Temperature");
+
+  svg.selectAll(".bar")
+      .data(data)
+    .enter().append("rect")
+      .attr("class", "bar")
+      .attr("x", function(d) { return x(d.yearmonth); })
+      .attr("width", x.rangeBand())
+      .attr("y", function(d) { return y(d.maxtemp); })
+      .attr("height", function(d) { return height - y(d.maxtemp); })
+      .on('mouseover', tip.show)
+      .on('mouseout', tip.hide)
+
+});
+
+function type(d) {
+  d.frequency = +d.frequency;
+  return d;
+}
+
+</script>
+
+</body>
+</html>

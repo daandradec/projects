@@ -1,0 +1,61 @@
+/*Title css*/
+h1 {
+	color : black;
+	opacity: 0.5;
+}
+/*Title css* - end*/
+
+/* Filter box css*/
+
+#mapSearchFiltersDiv {
+	background-color: gray;
+	height: 500px;
+}
+
+/* Filter box css - end*/
+
+/*Map container css*/
+.map-container{
+	color : black;
+	height: 500px;
+}
+
+#mapDiv {
+	height: 100%;
+}
+/*Map container css - end*/
+
+.filter-button {
+    height: 30px;
+    width: 80%;
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    line-height: 28px;
+    background-color: black;
+    border: none;
+    border-radius: 20px;
+    opacity: 0.5;
+    transition: color 300ms ease;
+}
+
+.filter-button:hover {
+    color: lightgreen;
+}
+
+.filter-button:active {
+    color: black;
+}
+
+/*
+	css rules order
+
+	1 - display rules.
+	2 - flex box.
+	3 - posicionamiento.
+	4 - tamaño width height.
+	5 - ubicación (margin, top, left bla bla bla, pading).
+	6 - texto (font, color, line-high, etc).
+	7 - elemente styling (borders, color, background, decorations).
+	8 - transicions and transformation.
+*/

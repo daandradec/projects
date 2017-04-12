@@ -1,0 +1,163 @@
+<!DOCTYPE>
+<html>
+<head>
+<link rel="stylesheet" href="main.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- my JavaScript file-->
+<script src="js1.js"> </script>
+
+<!-- Style map-->
+<style type="text/css">
+#map {
+   width: 100%;
+   height: 400px;
+   background-color: grey;
+ }
+</style>
+
+<title>ironhacks</title>
+</head>
+
+<body>
+<div class="barra w3-white w3-large">
+  <a href="#" class="barra-item item-azul"><i class="fa fa-map-marker"></i>Home</a>
+  <a href="#filter" class="barra-item">Filter</a>
+  <a href="#options" class="barra-item ">Option</a>
+  <a href="#information" class="barra-item">Information</a>
+  <a href="#mapm" class="barra-item ">Map</a>
+</div>
+
+<!-- Header -->
+<header class="contenedorimage">
+  <p>Find the best residence for your needs!!</p>
+</header>
+
+<!-- Page content -->
+<div class="contenido">
+  <div class="contenidoob" id="filter">
+    <h3>Filter</h3>
+    <p>Select the options you want to search</p>
+  
+  
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-8">
+       <label class="labele" for="price">Price</label>
+       <br>
+       <select class="selectt" name="optionp">
+    		<option value="" disabled selected></option>
+    		<option value="1">Option 1</option>
+    		<option value="2">Option 2</option>
+    		<option value="3">Option 3</option>
+  		</select>
+        <label class="labele" for="distance">Distance to university</label>
+       <br>
+       <select class="selectt" name="optiond">
+    		<option value="" disabled selected></option>
+    		<option value="1">Option 1</option>
+    		<option value="2">Option 2</option>
+    		<option value="3">Option 3</option>
+  		</select>
+        <br>
+        
+        <div class="btn-group" data-toggle="buttons">
+        jaoiaj
+  			<label class="btn btn-primary">
+				<input type="checkbox" autocomplete="off">
+				<span class="glyphicon glyphicon-ok"></span>
+			</label>
+            	
+		
+        </div>
+        <br>
+        <button class="botonp">Search</button>
+    </div>
+  </div>
+  </div>
+  
+  <!-- -->
+  <div class="contenidoob" id="options">
+    <h3>Options</h3>
+    <p>Options found:</p>
+  
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-8">
+       
+  </div>
+  </div>
+  
+  <!-- -->
+  
+  <div class="contenidoob" id="information">
+    <h3>Information</h3>
+    <p></p>
+  
+  </div>
+  <!-- -->
+
+<div class="contenidoob" id="mapm">
+ <h3>Map</h3>
+ 	<div class="row">
+ 		<div class="col-sm-5 col-md-5"> 
+    		<p>lalalal</p>
+            <p><button class="botonp" id="id_btnt" >test</button></p>
+            <p></p>
+            <button class="botonp" id="id_btnt2" >test2</button>
+    	</div>
+    	<div class="col-sm-7 col-md-7">
+    		<div id="map" ></div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footerd">
+  <h5>Find Us On</h5>
+  <div class="">
+    <i class="fa fa-facebook-official "></i>
+    <i class="fa fa-instagram "></i>
+    <i class="fa fa-snapchat "></i>
+    <i class="fa fa-pinterest-p "></i>
+    <i class="fa fa-twitter "></i>
+    <i class="fa fa-linkedin "></i>
+  </div>
+</footer>
+
+    <script>
+      function initMap() {
+        var uluru = {lat: 41.870800, lng: -87.650500 };
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+		
+		map.data.loadGeoJson('https://data.cityofchicago.org/api/geospatial/kdt9-s6vu?method=export&format=GeoJSON');
+		
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC4lO1PjOC9xzRaOK86FJoht6VBFYcsB8&callback=initMap">
+    </script>
+     
+</body>
+</html>

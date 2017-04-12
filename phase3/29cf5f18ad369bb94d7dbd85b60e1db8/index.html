@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<title>For Rent - Chicago</title>
+
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/body.css">
+<link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+
+
+<head>
+
+</head>
+
+<body>
+
+	<div id="header">
+		<h1 id="welcome"> APARTAMENTS FOR RENT IN CHICAGO</h1>
+	</div>	
+
+	<div id="description">
+	 	<h1  id="descripctionmap"> Apartments near Department of Computer Science - University of Illinois, Chicago</h1>
+	</div>
+
+	<div id="app">
+
+	<div id="map">
+	    <script type="text/javascript">
+			
+//init the google map in the webpage
+function initMap() {
+
+		
+    //create the google map
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 41.85081542, lng: -87.69123528},
+        zoom: 12
+    });
+
+    var marker = new google.maps.Marker({ 
+				position: new google.maps.LatLng(41.870750,-87.650086), 
+				map: map,
+				title: 'Department of Computer Science - University of Illinois, Chicago'});
+
+			var script = document.createElement('script');
+	        script.src = 'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';
+	        document.getElementsByTagName('head')[0].appendChild(script);
+
+	        var trafficLayer = new google.maps.TrafficLayer();
+ 			trafficLayer.setMap(map);
+
+
+    	}  
+
+		</script>
+
+		<script async defer 
+		  	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC4lO1PjOC9xzRaOK86FJoht6VBFYcsB8&callback=initMap">
+		</script>
+	</div>
+
+ <h4 id="piepagina"> &#169 jufcontrerasco </h4>
+
+</body>
+</html>

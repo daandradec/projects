@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="js/jmalvarezd.js" type="text/javascript" ></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/jmalvarezd.css" type="text/css"/>
+</head>
+<body>
+	<div class="container">
+		<div class = "row">
+			<div class="col-md-8">
+				<h1>Bedroom Rent Prices and Crime Map!</h1>
+			</div>
+			<div class="col-md-4">
+				<img src="img/purdue-ironhacks.png" alt="icon">
+			</div>
+		</div>
+		<div class = "row">
+			<div class= col-md-3>
+				<button class="btn btn-default" type="submit" onclick="drawCrimeHeatmap(map)">Draw Crime Heatmap</button>
+				<button class="btn btn-default" type="submit" onclick="drawRentMarkers(map)">Draw Rental Places</button>
+
+				<ul class="nav nav-tabs">
+					<li class="active"> <a data-toggle="tab" href="#search">Search</a></li>
+					<!-- <li><a data-toggle="tab" href="#compare">Compare</a></li> -->
+				</ul>
+
+				<div class="tab-content">
+					<div id="search" class="tab-pane fade in active">
+						<form name="searchform" onSubmit="return searchFunction()">
+							<div class="form-group">
+								<label for="search">Address:</label>
+								<input type="text" class="form-control" id="searchInput" placeholder="Senior Suites of Central Station">
+							</div>
+						</form>
+						<div id="community-area"></div>
+						<div id="property-type"></div>
+						<div id="address"></div>
+						<div id="phone-number"></div>
+						<div id="management-company"></div>
+						<div id="price"></div>
+					</div>
+					<div id="compare" class="tab-pane fade">
+						<p> to do </p>
+						<div id="community-area"></div>
+						<div id="property-type"></div>
+						<div id="address"></div>
+						<div id="phone-number"></div>
+						<div id="management-company"></div>
+
+						<br>
+
+						<div id="community-area-history"></div>
+						<div id="property-type-history"></div>
+						<div id="address-history"></div>
+						<div id="phone-number-history"></div>
+						<div id="management-company-history"></div>
+					</div>
+				</div>
+				<button class="btn btn-default" type="submit" onclick="outputWeather()">Update Weather</button>
+				<div id="weather"></div>
+
+			</div>
+			<div class="col-md-9">
+				<div id="map"></div>
+			</div>
+		</div>
+	</div>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCytx1GMCie6x5nj5maSCTxW5M4pZdxkXI&callback=initMap&libraries=visualization">
+	</script>
+	<script>outputWeather()</script>
+<!--     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCytx1GMCie6x5nj5maSCTxW5M4pZdxkXI &callback=initMap">
+</script> -->
+</body>
+
+</html>

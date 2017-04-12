@@ -1,0 +1,426 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<!--	Recomended for Bootstrap responsive function.-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--	Linkin Bootstrap JS - CSS and stylesheet.-->
+	<link rel="stylesheet" href="js/bootstrap.js">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/styles.css">
+   	<link rel="stylesheet" href="css/tables.css">
+    
+	<title> Rent your place </title>
+	<script type="text/javascript" src="js/googleMaps.js"></script>
+
+    
+</head>
+
+<body>
+	<div class="container-fluid">
+		<header>
+	
+		<div class="nav-logo">
+			<a class="logo"><img width="70px" height="70px" src="images/logo.png"></a>
+		</div>
+				
+	
+        <nav class="site-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Testimonials</a></li>
+
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+			
+		
+				
+				<div class="row">
+					<div class="col-md-12">
+						<h1 class="header_title">Find your <span style="color: #D3A881">own</span> <span style="display: block; margin-top: 0.35em">place now </span></h1>
+					</div>
+				</div>
+		
+				<div class="row">
+				  <div class="col-xs-6 col-sm-4  col-sm-offset-4 col-xs-offset-3 col-md-4 col-md-offset-4 col-lg-2 col-lg-offset-5"> 
+					
+						 <a class="btn btn-sm animated-button victoria-three" href="#">Getting started</a>
+			
+					</div>
+				</div>	
+			
+		</header>
+			<div class="row top-padding">
+				<div class="col-md-2 col-md-offset-2 header-img-block">
+					<img class="header-img" src="images/header_park.png">
+					<h2 class="titles">recreative zones</h2>
+					<p class="description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos officia laudantium, magnam aspernatur perferendis consequuntur nam excepturi repellendus deserunt esse, praesentium ea, cumque dolore. Aliquam, nostrum quidem. Eius laborum, totam.
+					</p>
+				</div>
+				<div class="col-md-2 col-md-offset-1 header-img-block">
+					<img src="images/header_city.png" alt="" class="header-img">
+					<h2 class="titles">the best places in the city</h2>
+					<p class="description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos officia laudantium, magnam aspernatur perferendis consequuntur nam excepturi repellendus deserunt esse, praesentium ea, cumque dolore. Aliquam, nostrum quidem. Eius laborum, totam.
+					</p>
+				</div>
+				<div class="col-md-2 col-md-offset-1 header-img-block">
+					<img src="images/header_traffic.png" alt="" class="header-img">
+					<h2 class="titles">low traffic</h2>
+					<p class="description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos officia laudantium, magnam aspernatur perferendis consequuntur nam excepturi repellendus deserunt esse, praesentium ea, cumque dolore. Aliquam, nostrum quidem. Eius laborum, totam.
+					</p>
+				</div>
+			</div>
+
+	  <div class="row top-padding">
+				<div class="col-md-2 col-md-offset-2">
+				  <h1 style="display: inline"> find the best options based in what you want</h1>
+				  <p> The current map will show you zones of interests.</p>
+				</div>
+				<div class="col-md-4 col-md-offset-6">
+					<div id="map" class="fluid-content"></div>
+				</div>
+	  </div>
+			
+			
+			<div class="row top-padding">
+			 <div class="col-md-4 col-md-offset-4">
+			 	 <table class="table-fill" style="max-height: 700px !important; overflow: scroll">
+					<thead>
+					<tr>
+						<th class="text-left">Property Name</th>
+						<th class="text-left">Address</th>
+					</tr>
+					</thead>
+					<tbody id="tabla">
+
+					</tbody>
+			   </table>
+			 </div>
+				
+			</div>
+			
+			<footer>
+		
+			</footer>
+	</div>
+		
+
+		<script type="text/javascript">
+			
+		var styles = [
+  {
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#ebe3cd"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#523735"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#f5f1e6"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#c9b2a6"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#dcd2be"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#ae9e90"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.neighborhood",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "landscape.natural",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#dfd2ae"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#dfd2ae"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels",
+    "stylers": [
+      {
+        "color": "#e75457"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#93817c"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#a5b076"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#447530"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#f5f1e6"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "labels",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#fdfcf8"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#f8c967"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#e9bc62"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway.controlled_access",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#e98d58"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway.controlled_access",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#db8555"
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#806b63"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.line",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#dfd2ae"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.line",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#8f7d77"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.line",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#ebe3cd"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.station",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#dfd2ae"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#b9d3c2"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#92998d"
+      }
+    ]
+  }
+];
+		var map;
+		function initMap() {
+			
+		var markerImage = 'images/custom_marker.png';
+		var location = new google.maps.LatLng(41.8708, -87.6505);
+			
+
+		  map = new google.maps.Map(document.getElementById('map'), {
+			center: {lat: 41.8708, lng: -87.6505},
+			zoom: 13
+		  });
+			
+			var marker = new google.maps.Marker({
+			position: location,
+			icon: markerImage,
+			map: map
+		});
+		
+			map.set('styles', styles);
+			
+		}
+
+    </script>
+
+<!--	JavaScript and jQuery start up.-->
+	<script src="js/jquery-3.2.0.js"></script>
+	<script src="js/dataSet.js"></script>
+	<script src="js/bootstrap.js"></script>
+<!--	Google maps script-->
+<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBFKLEgMvNIBl3ypCtZ2X7KWTP2eFKQrc&callback=initMap">
+    </script>
+</body>
+</html>

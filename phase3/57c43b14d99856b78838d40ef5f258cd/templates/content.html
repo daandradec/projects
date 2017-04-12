@@ -1,0 +1,34 @@
+{%extends "header.html"%}
+
+
+{%block header%}
+  <link rel="stylesheet" href="{{url_for('static',filename='css/content.css')}}">
+{%endblock%}
+
+{%block body%}
+  <div class="cont">
+  <div id="map_container"></div>
+  <div id="map"></div>
+  </div>
+
+ <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <p id="address"></p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+{%endblock%}
+
+
+
+{%block imports%}
+<!-- Google maps; Application Programing Interface -->
+<script defer src="{{url_for('static',filename='logic/map_google.js')}}"></script>
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSaP-yNmxveks9F0c-ylR8R2yXt6356f4&v=3.20&callback=initMap"></script>
+<!-- jQuery: Request API -->
+<script defer src="{{url_for('static',filename='logic/request_houses.js')}}"></script>
+<script src="{{url_for('static',filename='js/content.js')}}"></script>
+{%endblock%}

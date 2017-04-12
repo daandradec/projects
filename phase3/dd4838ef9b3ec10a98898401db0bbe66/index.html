@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>Knowless</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+      <style>
+        #map {
+          width: 100%;
+          height: 400px;
+          background-color: grey;
+        }
+      </style>
+
+      <script type="text/javascript" src="js/main.js"></script>
+    </head>
+
+    <body>
+      <div class="container" style="background-color: #aaa">
+        <h3>Knowless</h3>
+        <p>New here? Don't panic, we help you to know the place</p>
+      </div>
+      <span style="height: 10px" ></span>
+      <div class="container" >
+        <div class="col-md-4" >
+          <div id="data-container" >
+            Chicago, IN Weather</br>
+            <span id="prcp" ></span></br>
+            <span id="tmax" ></span></br>
+          </div>
+          <div id="param-container" style="background-color: #ddd; padding: 2%">
+            <form>  
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Crime rate
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> 
+                </label>
+              </div>
+              <button type="submit" class="btn btn-default" onclick="">Submit</button>
+            </form>
+          </div>
+          <span style="height: 50px"></span>
+          <div id="info-marker-container" style="background-color: #ddd; padding: 2%" >
+            
+          </div>
+        </div>
+        <div class="col-md-8" >
+          <div id="map"></div>
+        </div>
+      </div>
+    </body>
+
+    <script async defer
+  	 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUdjEA_NFZ2fbT_mmqF3ifqVO6fONMOLY&callback=initMap">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+</html>

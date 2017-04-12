@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- meta information -->
+      <meta charset="utf-8">
+      <link rel="shortcut icon" type='image/x-icon' href="{{url_for('static',filename='img/favicon.ico')}}">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link href="http://fonts.googleapis.com/icon?family=material+icons" rel="stylesheet">
+      <!--import materialize.css-->
+      <link rel="stylesheet" href="{{url_for('static',filename='css/materialize.min.css')}}">
+      <link rel="stylesheet" href="{{url_for('static',filename='css/browser.css')}}">
+    <style>
+      @import "https://fonts.googleapis.com/css?family=Roboto";
+    </style>
+      <title>chicago point.</title>
+   </head>
+   <body >
+
+      <div class="container">
+
+       <video autoplay>
+         <source src="{{url_for('static',filename='video/one_day.webm')}}" type="video/webm" /> your browser does not support the video tag.
+       </video>
+
+      <center> <h1>Chicago point</h1></center>
+
+       <div class="carousel" style="padding-top:-10px">
+          <a class="carousel-item " href="/content/"> <img src="{{url_for('static',filename='img/map.png')}}"> <center> find a place </center> </a>
+          <a class="carousel-item" href="/charts/">  <img src="{{url_for('static',filename='img/stats2.png')}}"> <center>  charts </center>   </a>
+          <a class="carousel-item" href="/about/">   <img src="{{url_for('static',filename='img/about2.png')}}"><center> about chicago </center> </a>
+       </div>
+
+      </div>
+
+      <!-- jquery: (necessary for bootstrap's javascript plugins) -->
+      <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+      <!-- materialize: -->
+      <script src="{{url_for('static',filename='js/materialize.min.js')}}"></script>
+      <script src="{{url_for('static',filename='js/browser.js')}}"></script>
+
+   </body>
+</html>

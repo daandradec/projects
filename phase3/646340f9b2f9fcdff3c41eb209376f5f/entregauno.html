@@ -1,0 +1,52 @@
+<html>
+        <head>
+        <title>Search</title>
+        </head>
+
+	<body bgcolor="lightsteelblue">
+		<table border = "2" width = "100%" bordercolor = "teal">
+			<tr>
+				<td width = "150px"> <font size="9" color="white" face="Arial"><P Align = center> :) </p> </font> </td>
+				<td> <marquee bahavior = "altarnate"> <font size="9" color="white" face="Arial" > Looking for a home? Let's help you </font></marque></td>
+				<td width = "150px"> <font size="9" color="white" face="Arial"><P Align = center> (: </p> </font> </td>
+	
+			</tr>
+		</table>
+		
+		<script src="http://maps.googleapis.com/maps/api/js"></script>
+		<script type="text/javascript">
+
+			var map;
+			var marker;
+			
+			function init() {
+				
+				var mapOptions = {
+					center: new google.maps.LatLng(41.8708, -87.6505), 
+					zoom: 13,
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				};
+				map = new google.maps.Map(document.getElementById("map"), mapOptions);
+			
+				var place = new google.maps.LatLng(41.8708, -87.6505);
+				marker = new google.maps.Marker({
+					map: map,
+					position: place,
+					title: "...",
+				});	
+				google.maps.event.addListener(marker, "click", showInfo);	
+			}
+			google.maps.event.addDomListener(window, "load", init);
+			
+			function showInfo() {
+				map.setZoom(15);
+				map.setCenter(marker.getPosition("center"));
+				var infowindow = new google.maps.InfoWindow({
+					content: "..."
+				});
+			infowindow.open(map, marker);
+			}
+		</script>
+		<div id="map" style="width: 500px; height: 400px; border: solid; border-color: bluedark"></div>			
+	</body>
+</html>

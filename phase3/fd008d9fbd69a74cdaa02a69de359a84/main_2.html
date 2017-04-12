@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Harsha Deshmukh</title>
+<style>
+.logo {
+    font-size: 200px;
+}
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
+}
+</style>
+<style>
+
+.bar rect {
+  fill: steelblue;
+}
+
+.bar text {
+  fill: #fff;
+  font: 10px sans-serif;
+}
+
+
+
+<div class="container">
+  <h3>Basic Navbar Example</h3>
+  <p>A navigation bar is a navigation header that is placed at the top of the page.</p>
+</div>
+</style>
+<link rel="stylesheet" href="my_css_file.css" type="text/css"/>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+</head>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Freshness Amplified!</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">All markets</a></li>
+      <li><a href="#">Seasonal vegetables</a></li>
+      <li><a href="#">Want to go to a specific store?</a></li>
+       <li><a href="#">Contact us</a></li>
+    </ul>
+  </div>
+</nav>
+<body>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<div class="my-container my-teal">
+  <p>Purdue Ironhack 2017 Competition! - Harsha Deshmukh</p>
+</div>
+<div class="my-container">
+
+<div class="jumbotron text-center">
+  <h2><span> Want to buy fresh vegetables at the best deal ? </span></h2>
+  <p> Click on the location and explore the best places in your region !!</p>
+</div>
+  
+<div class="container">
+  <div class="container">
+  <h2>Choose your mode of transportation!</h2>
+                                           
+  <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">My Choice
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Walk</a></li>
+      <li><a href="#">Bicycle</a></li>
+      <li><a href="#">Car</a></li>
+      <li><a href="#">City Bus</a></li>
+    </ul>
+  </div>
+  <br>
+  
+
+<button id="id_btn1">Data set</button>
+  <br>
+  <br>
+  
+</div>
+    <div class="col-sm-5 col-md-5">
+	<button onclick="display_markets()" >Display all markets</button>
+      <p id="demo"></p>
+    </div>
+
+	</br>
+	 <div class="col-sm-5 col-md-5">
+		<p id="demo"></p>
+    </div>
+    
+	<div class="col-sm-7 col-md-7" id="map_container">
+				<div id="map"></div>
+				
+			</div>
+  </div>
+  
+</div>
+
+
+ 
+
+</style>
+
+
+
+
+
+
+
+ <style>
+      #map {
+        width: 100%;
+        height: 500px;
+        background-color: grey;
+      }
+    </style>
+
+    <script type="text/javascript">
+	
+
+		function initMap(){
+		var locations = [
+      ['Fresh City Market,open seven days a week',  40.4325432, -86.9104479, 4],
+      ['Lafayette Farmers market,open seven days a week', 40.4179591,-86.9107255, 5],
+      ['Fresh Thyme Farmers Market- Lafayette,open seven days a week', 40.4126307,-86.8396189, 5],
+      ['West Lafayette Farmers Market- Lafayette',40.4433664,-86.947915, 5],
+   
+     
+    ];
+		var mapDiv = document.getElementById('map');
+		var map = new google.maps.Map(mapDiv, {
+			center: {lat:40.4237054, lng:-86.9233833},
+			zoom: 12});
+	var infowindow = new google.maps.InfoWindow();
+			    var marker, i;
+		 for (i = 0; i < locations.length; i++) {  
+		 
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+		   
+          infowindow.open(map, marker);
+document.getElementById("demo").innerHTML = locations[i][0];
+        }
+      })(marker, i));
+    }
+	}
+	function display_markets(){
+	var locations1 = [
+      ['Fresh City Market,open seven days a week',  40.4325432, -86.9104479, 4],
+      ['Lafayette Farmers market,open seven days a week', 40.4179591,-86.9107255, 5],
+      ['Fresh Thyme Farmers Market- Lafayette,open seven days a week', 40.4126307,-86.8396189, 5],
+      ['West Lafayette Farmers Market- Lafayette',40.4433664,-86.947915, 5],
+   
+     
+    ];
+	
+	loc_Len = locations1.length;
+text = "<ul>";
+for (i = 0; i < loc_Len; i++) {
+    text += "<li>" + locations1[i][0] + "</li>";
+}
+
+document.getElementById("demo").innerHTML = text;
+}
+
+	
+</script>
+
+
+		</script>
+		<script>
+		$(document).ready(function(){
+
+	$("Data Set").click(function(){
+		alert("HELLO WORLD: select by type");
+	});
+
+
+	
+
+});
+
+ 
+		$(document).ready(function(){
+
+	$("#id_btn1").click(function(){
+		$.ajax({
+			type:"GET",
+			url: "https://www.ncdc.noaa.gov/cdo-web/api/v2/datacategories?locationid=CITY:US390029&locationid=FIPS:37",
+			headers: {token:"jhNKEIOTqbfOiBcSMGiXynmthaSDZVdx"},
+			dataType: 'json',
+			success :function(data){console.log(data.results)}
+		});
+	});
+});
+
+
+	
+		</script>
+		
+<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDR9ueAbVQVC9xrMnNuJcj8j4wD1mFwcE&callback=initMap">
+</script>
+
+<p> 
+
+
+ </p>
+<p> 
+ </p>
+
+
+
+
+
+</script>
+
+
+<div class="my-container my-teal">
+  <p>For more details Contact <br> <br>Phone: +1 7657758408 <br> Email: hdeshmuk@purdue.edu</p>
+</div>
+</div>
+
+</body>
+
+</html>
+

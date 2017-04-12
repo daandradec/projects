@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/styles.css">   
+    <link rel="stylesheet" href="css/blocks.css" type="text/css" />
+
+    
+    <meta charset="UTF-8">
+    <meta name="description" content="Place to Eat">
+    <meta name="author" content="Priyank Jain">
+    <title>Find a home</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/tutorial.css" type="text/css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js" type="text/javascript"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="js/RadarChart.js"></script>
+    <script src="js/tutorial.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+
+
+</head>
+<body>
+
+    <FONT FACE="impact" SIZE=6 COLOR="grey" ><p align="center">Find a home</p>        
+    </FONT>
+    
+    
+    <!--Navigation Bar-->
+    <div id='menu-nav'>
+        <div id='navigation-bar'>
+            <ul>
+                <li class='menu-sub-nav current-item'><a href='/'><i class='fa fa-home'></i><span>Home</span></a></li>
+                <li class='menu-sub-nav'><a href='#'><i class='fa fa-user'></i><span>About</span></a></li>
+                <li class='menu-sub-nav'><a href='#'><i class='fa fa-book'></i><span>Contact</span></a></li>
+            </ul>
+        </div>
+        <div id='search-bar'>
+            <form action='nothing'>
+                <input type='text' name='search' id='searchfld' placeholder='Enter your query and hit enter' />
+            </form>
+        </div>
+    </div>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6bmMsRVNBeJl2QiE45alUmxW4AV70zeQ&callback=initMap">
+    </script>
+
+    <div class="row">
+        <div id="side-menu" class="col-sm-5 col-md-5">
+            <div class="jumbotron">
+                <div id="menu-cover">
+                    <div id="basic-info">
+                        <div id="weather"></div>
+                    </div>
+                    <div id="position-info">
+                        <div id="market-name"></div>
+                        <div id="website"></div>
+                        <div id="street-name"></div>
+                        <div id="open-status"></div>
+                    </div>
+                    <div id="chart">
+                    </div>
+                    <div id="scores"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-7 col-md-7" id="map_container">
+            <div id="map"></div>
+        </div>
+
+
+    </div>
+
+    
+    
+    <!--Google Maps-->
+    
+
+    <script src="js/barra.js"></script>
+
+
+</body>
+
+</html>

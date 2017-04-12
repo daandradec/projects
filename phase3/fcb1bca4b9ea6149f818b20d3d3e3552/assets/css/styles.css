@@ -1,0 +1,73 @@
+#rightPanel{
+  /*height: 100vh;*/
+  opacity: 50;
+}
+
+#main-map{
+  height: 90vh;
+}
+
+
+.btn-move-up{
+  position: relative;
+  top: -45px;
+  right: -18px;
+  margin-right: 10px !important;
+}
+
+
+.card-reveal-transparent{
+  background-color: rgba(255,255,255,0.9) !important;
+}
+
+
+.card-content-overlay{
+  background-color: rgba(255,255,255,0.9);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20vh;
+}
+
+#top-nav-logo{
+  height: 52px;
+  width: 52px;
+  display: block;
+  margin: 2px;
+  margin-top: 5px;
+}
+
+.top-nav-bar{
+  background-color: rgba(255,255,255,1);
+}
+
+i.icon-gray{
+  color: gray;
+}
+
+.container{
+  padding: 0 .5rem !important;
+  margin: 0 auto;
+  max-width: 100% !important;
+  width: 93%
+}
+
+.container .row{
+  margin-bottom: 0;
+}
+
+
+#left-sidebar-nav{
+  position: fixed;
+  width: 200px;
+  left: 180px;
+  z-index: 999;
+  height: auto;
+}
+
+
+ul.side-nav.leftside-navigation{
+  overflow: hidden;
+  top: 70px;
+}
+

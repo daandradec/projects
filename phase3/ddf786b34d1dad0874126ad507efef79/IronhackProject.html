@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Farmer's Market Produce</title>
+		<!--
+		<script
+		  src="https://code.jquery.com/jquery-3.2.1.js"
+		  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+		  crossorigin="anonymous">
+		</script>
+		-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="IronhackJS.js"></script>
+		<style>
+      		 #fmMap {
+       		 height: 400px;
+      		 width: 50%;
+      		 }
+    	</style>
+    	<script async defer
+	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBU_8RxaAG-ZyX21XDQRCBN4Wsi_k7wCr0&callback=initMap">
+	    </script>
+	</head>
+
+	<body>
+
+		<h1 id="id_header">Farmer's Market Data</h1>
+		<button id="WestLafayetteBTN">West Lafayette Farmer's Market Data</button>
+		<button id="LafayetteBTN">Lafayette Farmer's Market Data</button>
+		<button id="NCDCdata">NCDC Data Test</button>
+		<!--<button onclick="fun1()">test2</button>-->
+		<div id= "divTable"></div>
+
+		<h3>Farmer's Market Locations</h3>
+   		<div id="fmMap"></div>
+   		<script>
+	      function initMap() {
+	      	//eventually want to have lat/long as function parameters.
+	      	var maplat = 40.489698
+	      	var maplong = -86.8878868
+	        var lafMap = {lat: maplat, lng: maplong};
+	        var map = new google.maps.Map(document.getElementById('fmMap'), {
+	          zoom: 12,
+	          center: lafMap
+	        });
+	        var marker = new google.maps.Marker({
+	          position: lafMap,
+	          map: map
+	        });
+	      }
+	    </script>
+	    
+	    <!--Attempting to add in Geocoding feature to get map coordinates based on Farmer's Market Name-->
+	    <!--<script scr="https://maps.googleapis.com/maps/api/geocode/json?address=3.6+West+Lafayette+Farmers+Market&key=AIzaSyBU_8RxaAG-ZyX21XDQRCBN4Wsi_k7wCr0&callback=initMap"
+	    </script>-->
+
+		
+	</body>
+</html>

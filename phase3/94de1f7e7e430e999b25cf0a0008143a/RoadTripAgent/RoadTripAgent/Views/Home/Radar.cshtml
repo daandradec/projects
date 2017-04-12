@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Radar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Radar</h2>
+
+<div id="container"></div> 
+
+
+@section Scripts { 
+    @Scripts.Render("~/bundles/charts")
+  @Styles.Render("~/Content/datepicker")
+    <script>
+        var dom = document.getElementById("container");
+        var myChart = echarts.init(dom);
+        var app = {};
+        option = null;
+        option = {
+            title: {
+                text: 'Prediction vs. History Analysis'
+            },
+            tooltip: {},
+            legend: {
+                data: ['Prediction', 'History']
+            },
+            radar: {
+                // shape: 'circle',
+                indicator: [
+                   { name: 'temperature', max: 100 },
+                   { name: 'wind', max: 100 },
+                   { name: 'moisture', max: 100 },
+                   { name: 'drought', max: 100 },
+                   { name: 'cloudage', max: 100 },
+                   { name: 'air quality', max: 100 }
+                ]
+            },
+            series: [{
+                name: 'Prediction vs. History',
+                type: 'radar',
+                // areaStyle: {normal: {}},
+                data: [
+                    {
+                        value: [68, 60, 80, 76, 80, 77],
+                        name: 'Prediction'
+                    },
+                     {
+                         value: [72, 80, 66, 79, 70, 87],
+                         name: 'History'
+                     }
+                ]
+            }]
+        };;
+        if (option && typeof option === "object") {
+            myChart.setOption(option, true);
+        }
+    </script>
+}

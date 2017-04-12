@@ -1,0 +1,1414 @@
+{
+  "meta" : {
+    "view" : {
+      "id" : "cpc6-pxmp",
+      "name" : "Libraries - 2016 Visitors by Location",
+      "averageRating" : 0,
+      "createdAt" : 1455225847,
+      "description" : "The Chicago Public Library has more than 70 locations. The Chicago Public Library consists of the Harold Washington Library Center, Sulzer and Woodson regional libraries and over 70 neighborhood branches. Many locations experience sporadic emergency closures due to heating or air conditioning issues, or area power outages. Independence Branch closed due to a fire on 10/30/15.\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n* Count does not reflect the total building visitor count due to location of traffic counter. Community room and program traffic are not included in totals.",
+      "displayType" : "table",
+      "downloadCount" : 509,
+      "hideFromCatalog" : false,
+      "hideFromDataJson" : false,
+      "indexUpdatedAt" : 1484327799,
+      "newBackend" : false,
+      "numberOfComments" : 0,
+      "oid" : 25271604,
+      "provenance" : "official",
+      "publicationAppendEnabled" : false,
+      "publicationDate" : 1484327709,
+      "publicationGroup" : 7977428,
+      "publicationStage" : "published",
+      "rowsUpdatedAt" : 1484327644,
+      "rowsUpdatedBy" : "vedk-n2zt",
+      "tableId" : 13997372,
+      "totalTimesRated" : 0,
+      "viewCount" : 495,
+      "viewLastModified" : 1484327709,
+      "viewType" : "tabular",
+      "columns" : [ {
+        "id" : -1,
+        "name" : "sid",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":sid",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "id",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":id",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "position",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":position",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "created_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "created_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "updated_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "updated_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : 286119506,
+        "name" : "LOCATION",
+        "dataTypeName" : "text",
+        "fieldName" : "location",
+        "position" : 1,
+        "renderTypeName" : "text",
+        "tableColumnId" : 34347688,
+        "width" : 196,
+        "cachedContents" : {
+          "largest" : "Wrightwood-Ashburn*",
+          "non_null" : 79,
+          "null" : 1,
+          "top" : [ {
+            "item" : "Lincoln Park ",
+            "count" : 20
+          }, {
+            "item" : "Little Village*",
+            "count" : 19
+          }, {
+            "item" : "Logan Square*",
+            "count" : 18
+          }, {
+            "item" : "Lozano",
+            "count" : 17
+          }, {
+            "item" : "Manning*",
+            "count" : 16
+          }, {
+            "item" : "Mayfair  ",
+            "count" : 15
+          }, {
+            "item" : "McKinley Park*",
+            "count" : 14
+          }, {
+            "item" : "Merlo",
+            "count" : 13
+          }, {
+            "item" : "Mount Greenwood*",
+            "count" : 12
+          }, {
+            "item" : "Near North*",
+            "count" : 11
+          }, {
+            "item" : "North Austin  ",
+            "count" : 10
+          }, {
+            "item" : "North Pulaski  ",
+            "count" : 9
+          }, {
+            "item" : "Northtown ",
+            "count" : 8
+          }, {
+            "item" : "Oriole Park*",
+            "count" : 7
+          }, {
+            "item" : "Portage-Cragin ",
+            "count" : 6
+          }, {
+            "item" : "Pullman ",
+            "count" : 5
+          }, {
+            "item" : "Roden",
+            "count" : 4
+          }, {
+            "item" : "Rogers Park ",
+            "count" : 3
+          }, {
+            "item" : "Roosevelt*",
+            "count" : 2
+          }, {
+            "item" : "Scottsdale  ",
+            "count" : 1
+          } ],
+          "smallest" : "Albany Park  "
+        },
+        "format" : { }
+      }, {
+        "id" : 286119507,
+        "name" : "JANUARY",
+        "dataTypeName" : "number",
+        "fieldName" : "january",
+        "position" : 2,
+        "renderTypeName" : "number",
+        "tableColumnId" : 34347689,
+        "width" : 184,
+        "cachedContents" : {
+          "largest" : "119814",
+          "non_null" : 79,
+          "average" : "9208.354430379747",
+          "null" : 1,
+          "top" : [ {
+            "item" : "8992",
+            "count" : 20
+          }, {
+            "item" : "10489",
+            "count" : 19
+          }, {
+            "item" : "11350",
+            "count" : 18
+          }, {
+            "item" : "11737",
+            "count" : 17
+          }, {
+            "item" : "8734",
+            "count" : 16
+          }, {
+            "item" : "5123",
+            "count" : 15
+          }, {
+            "item" : "6617",
+            "count" : 14
+          }, {
+            "item" : "8530",
+            "count" : 13
+          }, {
+            "item" : "5777",
+            "count" : 12
+          }, {
+            "item" : "10714",
+            "count" : 11
+          }, {
+            "item" : "4964",
+            "count" : 10
+          }, {
+            "item" : "4822",
+            "count" : 9
+          }, {
+            "item" : "8749",
+            "count" : 8
+          }, {
+            "item" : "6462",
+            "count" : 7
+          }, {
+            "item" : "6126",
+            "count" : 6
+          }, {
+            "item" : "4754",
+            "count" : 5
+          }, {
+            "item" : "4543",
+            "count" : 4
+          }, {
+            "item" : "12062",
+            "count" : 3
+          }, {
+            "item" : "5162",
+            "count" : 2
+          }, {
+            "item" : "4696",
+            "count" : 1
+          } ],
+          "smallest" : "0",
+          "sum" : "727460"
+        },
+        "format" : {
+          "precisionStyle" : "standard",
+          "noCommas" : "false",
+          "align" : "right",
+          "aggregate" : "sum"
+        }
+      }, {
+        "id" : 286119508,
+        "name" : "FEBRUARY",
+        "dataTypeName" : "number",
+        "fieldName" : "february",
+        "position" : 3,
+        "renderTypeName" : "number",
+        "tableColumnId" : 34347690,
+        "width" : 196,
+        "cachedContents" : {
+          "largest" : "115243",
+          "non_null" : 79,
+          "average" : "9016.303797468354",
+          "null" : 1,
+          "top" : [ {
+            "item" : "9707",
+            "count" : 20
+          }, {
+            "item" : "10162",
+            "count" : 19
+          }, {
+            "item" : "11340",
+            "count" : 18
+          }, {
+            "item" : "11462",
+            "count" : 17
+          }, {
+            "item" : "8949",
+            "count" : 16
+          }, {
+            "item" : "5167",
+            "count" : 15
+          }, {
+            "item" : "5459",
+            "count" : 14
+          }, {
+            "item" : "8636",
+            "count" : 13
+          }, {
+            "item" : "6277",
+            "count" : 12
+          }, {
+            "item" : "10689",
+            "count" : 11
+          }, {
+            "item" : "5036",
+            "count" : 10
+          }, {
+            "item" : "4904",
+            "count" : 9
+          }, {
+            "item" : "8959",
+            "count" : 8
+          }, {
+            "item" : "6909",
+            "count" : 7
+          }, {
+            "item" : "6972",
+            "count" : 6
+          }, {
+            "item" : "4711",
+            "count" : 5
+          }, {
+            "item" : "4930",
+            "count" : 4
+          }, {
+            "item" : "13147",
+            "count" : 3
+          }, {
+            "item" : "6118",
+            "count" : 2
+          }, {
+            "item" : "4680",
+            "count" : 1
+          } ],
+          "smallest" : "0",
+          "sum" : "712288"
+        },
+        "format" : {
+          "precisionStyle" : "standard",
+          "noCommas" : "false",
+          "align" : "right",
+          "aggregate" : "sum"
+        }
+      }, {
+        "id" : 286119509,
+        "name" : "MARCH",
+        "dataTypeName" : "number",
+        "fieldName" : "march",
+        "position" : 4,
+        "renderTypeName" : "number",
+        "tableColumnId" : 34347691,
+        "width" : 160,
+        "cachedContents" : {
+          "largest" : "132169",
+          "non_null" : 79,
+          "average" : "10592.79746835443",
+          "null" : 1,
+          "top" : [ {
+            "item" : "15502",
+            "count" : 20
+          }, {
+            "item" : "10106",
+            "count" : 19
+          }, {
+            "item" : "12123",
+            "count" : 18
+          }, {
+            "item" : "13686",
+            "count" : 17
+          }, {
+            "item" : "7679",
+            "count" : 16
+          }, {
+            "item" : "5896",
+            "count" : 15
+          }, {
+            "item" : "6036",
+            "count" : 14
+          }, {
+            "item" : "12464",
+            "count" : 13
+          }, {
+            "item" : "6474",
+            "count" : 12
+          }, {
+            "item" : "11376",
+            "count" : 11
+          }, {
+            "item" : "5035",
+            "count" : 10
+          }, {
+            "item" : "4822",
+            "count" : 9
+          }, {
+            "item" : "10343",
+            "count" : 8
+          }, {
+            "item" : "7305",
+            "count" : 7
+          }, {
+            "item" : "9789",
+            "count" : 6
+          }, {
+            "item" : "5472",
+            "count" : 5
+          }, {
+            "item" : "11517",
+            "count" : 4
+          }, {
+            "item" : "15392",
+            "count" : 3
+          }, {
+            "item" : "7187",
+            "count" : 2
+          }, {
+            "item" : "5368",
+            "count" : 1
+          } ],
+          "smallest" : "0",
+          "sum" : "836831"
+        },
+        "format" : {
+          "precisionStyle" : "standard",
+          "noCommas" : "false",
+          "align" : "right",
+          "aggregate" : "sum"
+        }
+      }, {
+        "id" : 286119510,
+        "name" : "APRIL",
+        "dataTypeName" : "number",
+        "fieldName" : "april",
+        "position" : 5,
+        "renderTypeName" : "number",
+        "tableColumnId" : 34347692,
+        "width" : 160,
+        "cachedContents" : {
+          "largest" : "124196",
+          "non_null" : 79,
+          "average" : "9926.291139240506",
+          "null" : 1,
+          "top" : [ {
+            "item" : "10141",
+            "count" : 20
+          }, {
+            "item" : "11208",
+            "count" : 19
+          }, {
+            "item" : "12851",
+            "count" : 18
+          }, {
+            "item" : "12609",
+            "count" : 17
+          }, {
+            "item" : "7928",
+            "count" : 16
+          }, {
+            "item" : "5454",
+            "count" : 15
+          }, {
+            "item" : "6206",
+            "count" : 14
+          }, {
+            "item" : "9988",
+            "count" : 13
+          }, {
+            "item" : "7216",
+            "count" : 12
+          }, {
+            "item" : "12596",
+            "count" : 11
+          }, {
+            "item" : "6487",
+            "count" : 10
+          }, {
+            "item" : "5433",
+            "count" : 9
+          }, {
+            "item" : "10243",
+            "count" : 8
+          }, {
+            "item" : "6646",
+            "count" : 7
+          }, {
+            "item" : "7206",
+            "count" : 6
+          }, {
+            "item" : "7741",
+            "count" : 5
+          }, {
+            "item" : "4934",
+            "count" : 4
+          }, {
+            "item" : "14903",
+            "count" : 3
+          }, {
+            "item" : "7285",
+            "count" : 2
+          }, {
+            "item" : "5078",
+            "count" : 1
+          } ],
+          "smallest" : "0",
+          "sum" : "784177"
+        },
+        "format" : {
+          "precisionStyle" : "standard",
+          "noCommas" : "false",
+          "align" : "right",
+          "aggregate" : "sum"
+        }
+      }, {
+        "id" : 286119511,
+        "name" : "MAY",
+        "dataTypeName" : "number",
+        "fieldName" : "may",
+        "position" : 6,
+        "renderTypeName" : "number",
+        "tableColumnId" : 34347693,
+        "width" : 136,
+        "cachedContents" : {
+          "largest" : "108962",
+          "non_null" : 79,
+          "average" : "8838.759493670886",
+          "null" : 1,
+          "top" : [ {
+            "item" : "8842",
+            "count" : 20
+          }, {
+            "item" : "9613",
+            "count" : 19
+          }, {
+            "item" : "10875",
+            "count" : 18
+          }, {
+            "item" : "10865",
+            "count" : 17
+          }, {
+            "item" : "7603",
+            "count" : 16
+          }, {
+            "item" : "4903",
+            "count" : 15
+          }, {
+            "item" : "5717",
+            "count" : 14
+          }, {
+            "item" : "7972",
+            "count" : 13
+          }, {
+            "item" : "6166",
+            "count" : 12
+          }, {
+            "item" : "11040",
+            "count" : 11
+          }, {
+            "item" : "4499",
+            "count" : 10
+          }, {
+            "item" : "4736",
+            "count" : 9
+          }, {
+            "item" : "9896",
+            "count" : 8
+          }, {
+            "item" : "6279",
+            "count" : 7
+          }, {
+            "item" : "6160",
+            "count" : 6
+          }, {
+            "item" : "6802",
+            "count" : 5
+          }, {
+            "item" : "4497",
+            "count" : 4
+          }, {
+            "item" : "12221",
+            "count" : 3
+          }, {
+            "item" : "6525",
+            "count" : 2
+          }, {
+            "item" : "4508",
+            "count" : 1
+          } ],
+          "smallest" : "0",
+          "sum" : "698262"
+        },
+        "format" : {
+          "precisionStyle" : "standard",
+          "noCommas" : "false",
+          "align" : "right",
+          "aggregate" : "sum"
+        }
+      }, {
+        "id" : 286119512,
+        "name" : "JUNE",
+        "dataTypeName" : "number",
+        "fieldName" : "june",
+        "position" : 7,
+        "renderTypeName" : "number",
+        "tableColumnId" : 34347694,
+        "width" : 148,
+        "cachedContents" : {
+          "largest" : "103942",
+          "non_null" : 79,
+          "average" : "9996.164556962025",
+          "null" : 1,
+          "top" : [ {
+            "item" : "10700",
+            "count" : 20
+          }, {
+            "item" : "11352",
+            "count" : 19
+          }, {
+            "item" : "12681",
+            "count" : 18
+          }, {
+            "item" : "13198",
+            "count" : 17
+          }, {
+            "item" : "8412",
+            "count" : 16
+          }, {
+            "item" : "5243",
+            "count" : 15
+          }, {
+            "item" : "6757",
+            "count" : 14
+          }, {
+            "item" : "9093",
+            "count" : 13
+          }, {
+            "item" : "7073",
+            "count" : 12
+          }, {
+            "item" : "12556",
+            "count" : 11
+          }, {
+            "item" : "5330",
+            "count" : 10
+          }, {
+            "item" : "6276",
+            "count" : 9
+          }, {
+            "item" : "9580",
+            "count" : 8
+          }, {
+            "item" : "7198",
+            "count" : 7
+          }, {
+            "item" : "7016",
+            "count" : 6
+          }, {
+            "item" : "5463",
+            "count" : 5
+          }, {
+            "item" : "6092",
+            "count" : 4
+          }, {
+            "item" : "16718",
+            "count" : 3
+          }, {
+            "item" : "8479",
+            "count" : 2
+          }, {
+            "item" : "5288",
+            "count" : 1
+          } ],
+          "smallest" : "0",
+          "sum" : "789697"
+        },
+        "format" : {
+          "precisionStyle" : "standard",
+          "noCommas" : "false",
+          "align" : "right",
+          "aggregate" : "sum"
+        }
+      }, {
+        "id" : 286119513,
+        "name" : "JULY",
+        "dataTypeName" : "number",
+        "fieldName" : "july",
+        "position" : 8,
+        "renderTypeName" : "number",
+        "tableColumnId" : 34347695,
+        "width" : 148,
+        "cachedContents" : {
+          "largest" : "129580",
+          "non_null" : 79,
+          "average" : "10766.48101265823",
+          "null" : 1,
+          "top" : [ {
+            "item" : "11631",
+            "count" : 20
+          }, {
+            "item" : "12143",
+            "count" : 19
+          }, {
+            "item" : "13041",
+            "count" : 18
+          }, {
+            "item" : "11414",
+            "count" : 17
+          }, {
+            "item" : "8894",
+            "count" : 16
+          }, {
+            "item" : "6067",
+            "count" : 15
+          }, {
+            "item" : "7013",
+            "count" : 14
+          }, {
+            "item" : "8791",
+            "count" : 13
+          }, {
+            "item" : "7876",
+            "count" : 12
+          }, {
+            "item" : "13497",
+            "count" : 11
+          }, {
+            "item" : "6150",
+            "count" : 10
+          }, {
+            "item" : "6114",
+            "count" : 9
+          }, {
+            "item" : "12957",
+            "count" : 8
+          }, {
+            "item" : "7648",
+            "count" : 7
+          }, {
+            "item" : "7112",
+            "count" : 6
+          }, {
+            "item" : "6185",
+            "count" : 5
+          }, {
+            "item" : "6503",
+            "count" : 4
+          }, {
+            "item" : "19433",
+            "count" : 3
+          }, {
+            "item" : "8256",
+            "count" : 2
+          }, {
+            "item" : "4856",
+            "count" : 1
+          } ],
+          "smallest" : "0",
+          "sum" : "850552"
+        },
+        "format" : {
+          "precisionStyle" : "standard",
+          "noCommas" : "false",
+          "align" : "right",
+          "aggregate" : "sum"
+        }
+      }, {
+        "id" : 286119514,
+        "name" : "AUGUST",
+        "dataTypeName" : "number",
+        "fieldName" : "august",
+        "position" : 9,
+        "renderTypeName" : "number",
+        "tableColumnId" : 34347696,
+        "width" : 172,
+        "cachedContents" : {
+          "largest" : "124409",
+          "non_null" : 79,
+          "average" : "10847.91139240506",
+          "null" : 1,
+          "top" : [ {
+            "item" : "11298",
+            "count" : 20
+          }, {
+            "item" : "12212",
+            "count" : 19
+          }, {
+            "item" : "13581",
+            "count" : 18
+          }, {
+            "item" : "12059",
+            "count" : 17
+          }, {
+            "item" : "8550",
+            "count" : 16
+          }, {
+            "item" : "6483",
+            "count" : 15
+          }, {
+            "item" : "8868",
+            "count" : 14
+          }, {
+            "item" : "9399",
+            "count" : 13
+          }, {
+            "item" : "7072",
+            "count" : 12
+          }, {
+            "item" : "12530",
+            "count" : 11
+          }, {
+            "item" : "6209",
+            "count" : 10
+          }, {
+            "item" : "6719",
+            "count" : 9
+          }, {
+            "item" : "12370",
+            "count" : 8
+          }, {
+            "item" : "8151",
+            "count" : 7
+          }, {
+            "item" : "7563",
+            "count" : 6
+          }, {
+            "item" : "6588",
+            "count" : 5
+          }, {
+            "item" : "5949",
+            "count" : 4
+          }, {
+            "item" : "16053",
+            "count" : 3
+          }, {
+            "item" : "8280",
+            "count" : 2
+          }, {
+            "item" : "5047",
+            "count" : 1
+          } ],
+          "smallest" : "0",
+          "sum" : "856985"
+        },
+        "format" : {
+          "precisionStyle" : "standard",
+          "noCommas" : "false",
+          "align" : "right",
+          "aggregate" : "sum"
+        }
+      }, {
+        "id" : 286119515,
+        "name" : "SEPTEMBER",
+        "dataTypeName" : "number",
+        "fieldName" : "september",
+        "position" : 10,
+        "renderTypeName" : "number",
+        "tableColumnId" : 34347697,
+        "width" : 208,
+        "cachedContents" : {
+          "largest" : "104590",
+          "non_null" : 79,
+          "average" : "9670.101265822785",
+          "null" : 1,
+          "top" : [ {
+            "item" : "10217",
+            "count" : 20
+          }, {
+            "item" : "10730",
+            "count" : 19
+          }, {
+            "item" : "11597",
+            "count" : 18
+          }, {
+            "item" : "11576",
+            "count" : 17
+          }, {
+            "item" : "7175",
+            "count" : 16
+          }, {
+            "item" : "5239",
+            "count" : 15
+          }, {
+            "item" : "8364",
+            "count" : 14
+          }, {
+            "item" : "8391",
+            "count" : 13
+          }, {
+            "item" : "6157",
+            "count" : 12
+          }, {
+            "item" : "12060",
+            "count" : 11
+          }, {
+            "item" : "4965",
+            "count" : 10
+          }, {
+            "item" : "5482",
+            "count" : 9
+          }, {
+            "item" : "10882",
+            "count" : 8
+          }, {
+            "item" : "7341",
+            "count" : 7
+          }, {
+            "item" : "6831",
+            "count" : 6
+          }, {
+            "item" : "4496",
+            "count" : 5
+          }, {
+            "item" : "5165",
+            "count" : 4
+          }, {
+            "item" : "13922",
+            "count" : 3
+          }, {
+            "item" : "7664",
+            "count" : 2
+          }, {
+            "item" : "5221",
+            "count" : 1
+          } ],
+          "smallest" : "0",
+          "sum" : "763938"
+        },
+        "format" : {
+          "precisionStyle" : "standard",
+          "noCommas" : "false",
+          "align" : "right",
+          "aggregate" : "sum"
+        }
+      }, {
+        "id" : 286119516,
+        "name" : "OCTOBER",
+        "dataTypeName" : "number",
+        "fieldName" : "october",
+        "position" : 11,
+        "renderTypeName" : "number",
+        "tableColumnId" : 34347698,
+        "width" : 184,
+        "cachedContents" : {
+          "largest" : "106236",
+          "non_null" : 79,
+          "average" : "10386.58227848101",
+          "null" : 1,
+          "top" : [ {
+            "item" : "3603",
+            "count" : 20
+          }, {
+            "item" : "10592",
+            "count" : 19
+          }, {
+            "item" : "11999",
+            "count" : 18
+          }, {
+            "item" : "11403",
+            "count" : 17
+          }, {
+            "item" : "7696",
+            "count" : 16
+          }, {
+            "item" : "5467",
+            "count" : 15
+          }, {
+            "item" : "9161",
+            "count" : 14
+          }, {
+            "item" : "13849",
+            "count" : 13
+          }, {
+            "item" : "7077",
+            "count" : 12
+          }, {
+            "item" : "14565",
+            "count" : 11
+          }, {
+            "item" : "5074",
+            "count" : 10
+          }, {
+            "item" : "6064",
+            "count" : 9
+          }, {
+            "item" : "11289",
+            "count" : 8
+          }, {
+            "item" : "7530",
+            "count" : 7
+          }, {
+            "item" : "9420",
+            "count" : 6
+          }, {
+            "item" : "5276",
+            "count" : 5
+          }, {
+            "item" : "9507",
+            "count" : 4
+          }, {
+            "item" : "14398",
+            "count" : 3
+          }, {
+            "item" : "8238",
+            "count" : 2
+          }, {
+            "item" : "5102",
+            "count" : 1
+          } ],
+          "smallest" : "0",
+          "sum" : "820540"
+        },
+        "format" : {
+          "precisionStyle" : "standard",
+          "noCommas" : "false",
+          "align" : "right",
+          "aggregate" : "sum"
+        }
+      }, {
+        "id" : 286119517,
+        "name" : "NOVEMBER",
+        "dataTypeName" : "number",
+        "fieldName" : "november",
+        "position" : 12,
+        "renderTypeName" : "number",
+        "tableColumnId" : 34347699,
+        "width" : 196,
+        "cachedContents" : {
+          "largest" : "95583",
+          "non_null" : 79,
+          "average" : "10126.75949367089",
+          "null" : 1,
+          "top" : [ {
+            "item" : "8400",
+            "count" : 20
+          }, {
+            "item" : "6807",
+            "count" : 19
+          }, {
+            "item" : "11506",
+            "count" : 18
+          }, {
+            "item" : "14151",
+            "count" : 17
+          }, {
+            "item" : "6972",
+            "count" : 16
+          }, {
+            "item" : "4798",
+            "count" : 15
+          }, {
+            "item" : "8587",
+            "count" : 14
+          }, {
+            "item" : "15086",
+            "count" : 13
+          }, {
+            "item" : "5904",
+            "count" : 12
+          }, {
+            "item" : "14178",
+            "count" : 11
+          }, {
+            "item" : "4533",
+            "count" : 10
+          }, {
+            "item" : "4521",
+            "count" : 9
+          }, {
+            "item" : "10047",
+            "count" : 8
+          }, {
+            "item" : "6471",
+            "count" : 7
+          }, {
+            "item" : "11230",
+            "count" : 6
+          }, {
+            "item" : "4832",
+            "count" : 5
+          }, {
+            "item" : "12892",
+            "count" : 4
+          }, {
+            "item" : "13730",
+            "count" : 3
+          }, {
+            "item" : "7338",
+            "count" : 2
+          }, {
+            "item" : "5279",
+            "count" : 1
+          } ],
+          "smallest" : "0",
+          "sum" : "800014"
+        },
+        "format" : {
+          "precisionStyle" : "standard",
+          "noCommas" : "false",
+          "align" : "right",
+          "aggregate" : "sum"
+        }
+      }, {
+        "id" : 286119518,
+        "name" : "DECEMBER",
+        "dataTypeName" : "number",
+        "fieldName" : "december",
+        "position" : 13,
+        "renderTypeName" : "number",
+        "tableColumnId" : 34347700,
+        "width" : 196,
+        "cachedContents" : {
+          "largest" : "88587",
+          "non_null" : 79,
+          "average" : "8019.759493670886",
+          "null" : 1,
+          "top" : [ {
+            "item" : "9313",
+            "count" : 20
+          }, {
+            "item" : "8295",
+            "count" : 19
+          }, {
+            "item" : "10740",
+            "count" : 18
+          }, {
+            "item" : "11579",
+            "count" : 17
+          }, {
+            "item" : "7144",
+            "count" : 16
+          }, {
+            "item" : "4355",
+            "count" : 15
+          }, {
+            "item" : "7693",
+            "count" : 14
+          }, {
+            "item" : "7583",
+            "count" : 13
+          }, {
+            "item" : "4823",
+            "count" : 12
+          }, {
+            "item" : "10521",
+            "count" : 11
+          }, {
+            "item" : "3850",
+            "count" : 10
+          }, {
+            "item" : "4358",
+            "count" : 9
+          }, {
+            "item" : "8593",
+            "count" : 8
+          }, {
+            "item" : "5730",
+            "count" : 7
+          }, {
+            "item" : "5906",
+            "count" : 6
+          }, {
+            "item" : "4562",
+            "count" : 5
+          }, {
+            "item" : "4174",
+            "count" : 4
+          }, {
+            "item" : "12436",
+            "count" : 3
+          }, {
+            "item" : "8136",
+            "count" : 2
+          }, {
+            "item" : "3731",
+            "count" : 1
+          } ],
+          "smallest" : "0",
+          "sum" : "633561"
+        },
+        "format" : {
+          "precisionStyle" : "standard",
+          "noCommas" : "false",
+          "align" : "right",
+          "aggregate" : "sum"
+        }
+      }, {
+        "id" : 286119519,
+        "name" : "YTD",
+        "dataTypeName" : "number",
+        "fieldName" : "ytd",
+        "position" : 14,
+        "renderTypeName" : "number",
+        "tableColumnId" : 34347701,
+        "width" : 136,
+        "cachedContents" : {
+          "largest" : "1353311",
+          "non_null" : 79,
+          "average" : "117396.2658227848",
+          "null" : 1,
+          "top" : [ {
+            "item" : "139486",
+            "count" : 20
+          }, {
+            "item" : "126527",
+            "count" : 19
+          }, {
+            "item" : "143684",
+            "count" : 18
+          }, {
+            "item" : "145739",
+            "count" : 17
+          }, {
+            "item" : "95736",
+            "count" : 16
+          }, {
+            "item" : "64195",
+            "count" : 15
+          }, {
+            "item" : "86478",
+            "count" : 14
+          }, {
+            "item" : "119782",
+            "count" : 13
+          }, {
+            "item" : "77892",
+            "count" : 12
+          }, {
+            "item" : "146322",
+            "count" : 11
+          }, {
+            "item" : "62132",
+            "count" : 10
+          }, {
+            "item" : "64251",
+            "count" : 9
+          }, {
+            "item" : "123908",
+            "count" : 8
+          }, {
+            "item" : "83670",
+            "count" : 7
+          }, {
+            "item" : "91331",
+            "count" : 6
+          }, {
+            "item" : "66882",
+            "count" : 5
+          }, {
+            "item" : "80703",
+            "count" : 4
+          }, {
+            "item" : "174415",
+            "count" : 3
+          }, {
+            "item" : "88668",
+            "count" : 2
+          }, {
+            "item" : "58854",
+            "count" : 1
+          } ],
+          "smallest" : "0",
+          "sum" : "9274305"
+        },
+        "format" : {
+          "precisionStyle" : "standard",
+          "noCommas" : "false",
+          "align" : "right",
+          "aggregate" : "sum"
+        }
+      } ],
+      "grants" : [ {
+        "inherited" : false,
+        "type" : "viewer",
+        "flags" : [ "public" ]
+      } ],
+      "metadata" : {
+        "jsonQuery" : {
+          "order" : [ {
+            "columnFieldName" : "location",
+            "ascending" : true
+          } ]
+        },
+        "custom_fields" : {
+          "Metadata" : {
+            "Last Updated Date via Automated Load" : "",
+            "Time Period" : "",
+            "Frequency" : "",
+            "Data Owner" : "Chicago Public Library"
+          }
+        },
+        "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+        "rowLabel" : "Row",
+        "renderTypeConfig" : {
+          "visible" : {
+            "table" : true
+          }
+        }
+      },
+      "owner" : {
+        "id" : "vedk-n2zt",
+        "displayName" : "Marie E. Hardy",
+        "profileImageUrlLarge" : "/api/users/vedk-n2zt/profile_images/LARGE",
+        "profileImageUrlMedium" : "/api/users/vedk-n2zt/profile_images/THUMB",
+        "profileImageUrlSmall" : "/api/users/vedk-n2zt/profile_images/TINY",
+        "roleName" : "editor",
+        "screenName" : "Marie E. Hardy",
+        "rights" : [ "create_datasets", "view_domain", "create_pages", "view_goals", "view_dashboards", "view_story", "view_unpublished_story" ]
+      },
+      "query" : {
+        "orderBys" : [ {
+          "ascending" : true,
+          "expression" : {
+            "columnId" : 286119506,
+            "type" : "column"
+          }
+        } ]
+      },
+      "rights" : [ "read" ],
+      "tableAuthor" : {
+        "id" : "vedk-n2zt",
+        "displayName" : "Marie E. Hardy",
+        "profileImageUrlLarge" : "/api/users/vedk-n2zt/profile_images/LARGE",
+        "profileImageUrlMedium" : "/api/users/vedk-n2zt/profile_images/THUMB",
+        "profileImageUrlSmall" : "/api/users/vedk-n2zt/profile_images/TINY",
+        "roleName" : "editor",
+        "screenName" : "Marie E. Hardy",
+        "rights" : [ "create_datasets", "view_domain", "create_pages", "view_goals", "view_dashboards", "view_story", "view_unpublished_story" ]
+      },
+      "tags" : [ "libraries", "visitors" ],
+      "flags" : [ "default", "restorable", "restorePossibleForType" ]
+    }
+  },
+  "data" : [ [ 1, "ACF28F44-F632-4353-8D7E-7FA4A653DEFC", 1, 1484327637, "885709", 1484327637, "885709", null, "Albany Park  ", "11735", "10593", "12368", "12556", "10915", "15341", "14151", "13907", "14119", "16460", "14463", "12789", "159397" ]
+, [ 2, "E0577C9B-F468-4D1E-9B69-0076D92CCB1D", 2, 1484327637, "885709", 1484327637, "885709", null, "Altgeld  ", "5335", "5034", "4529", "4471", "3880", "4431", "5526", "5867", "5433", "5064", "4584", "3325", "57479" ]
+, [ 3, "4B9676B1-FF61-46E3-8308-E65FE60C7477", 3, 1484327637, "885709", 1484327637, "885709", null, "Archer Heights*", "8375", "9079", "10522", "9747", "8714", "9567", "9514", "8831", "8611", "9209", "8400", "6754", "107323" ]
+, [ 4, "89770EDF-4A90-42F4-8952-0134208C273C", 4, 1484327637, "885709", 1484327637, "885709", null, "Austin ", "5849", "5190", "5691", "6313", "6092", "7489", "9012", "8202", "7521", "7257", "6395", "6632", "81643" ]
+, [ 5, "AA4E1AA1-07CA-4C7A-AEF8-CFCFB559C097", 5, 1484327637, "885709", 1484327637, "885709", null, "Austin-Irving  ", "8726", "9201", "10017", "10010", "8346", "9571", "9567", "9386", "9110", "10505", "10540", "9913", "114892" ]
+, [ 6, "BB5DAB22-EF72-4853-817D-B8CB2FD473AF", 6, 1484327637, "885709", 1484327637, "885709", null, "Avalon*", "8835", "8984", "8993", "9729", "9201", "9755", "10089", "9860", "9053", "9772", "10110", "8970", "113351" ]
+, [ 7, "9F17CE91-B4A1-48CC-837B-C58D621C3AE2", 7, 1484327637, "885709", 1484327637, "885709", null, "Back of the Yards", "4871", "5896", "5552", "6453", "5713", "5487", "5694", "6857", "5719", "5223", "4421", "3863", "65749" ]
+, [ 8, "AE49ADF7-4A59-4DB4-88D5-F4991B9CB9FE", 8, 1484327637, "885709", 1484327637, "885709", null, "Beverly*", "6813", "7666", "7943", "7639", "7568", "7814", "9243", "8953", "7615", "7971", "10466", "9545", "99236" ]
+, [ 9, "75001524-B322-4D79-8B3E-0B21124C059F", 9, 1484327637, "885709", 1484327637, "885709", null, "Bezazian ", "10658", "10329", "11799", "11849", "9770", "11750", "12560", "13404", "11076", "11920", "10424", "9317", "134856" ]
+, [ 10, "D869E2B7-1FB8-4228-93F3-232351EEAC3B", 10, 1484327637, "885709", 1484327637, "885709", null, "Blackstone ", "8355", "7777", "8607", "9328", "7925", "9337", "10983", "10176", "8849", "9178", "8333", "7691", "106539" ]
+, [ 11, "34206E07-F850-4E14-AC27-53E4FEFB8255", 11, 1484327637, "885709", 1484327637, "885709", null, "Brainerd*", "3224", "3254", "4858", "3887", "3518", "4131", "6901", "4983", "3713", "3849", "3668", "3637", "49623" ]
+, [ 12, "2215D88B-A4FA-4E56-84CE-BE9050852A76", 12, 1484327637, "885709", 1484327637, "885709", null, "Brighton Park ", "5393", "5511", "6932", "5978", "5377", "8074", "8768", "7742", "7100", "6120", "5982", "4822", "77799" ]
+, [ 13, "557D2973-D06A-48D0-B9A1-2B2590D6CD1E", 13, 1484327637, "885709", 1484327637, "885709", null, "Bucktown-Wicker Park ", "9091", "9391", "14279", "10746", "8926", "9676", "10111", "11587", "9185", "13587", "17832", "8447", "132858" ]
+, [ 14, "36E67192-2940-47D5-8C1A-F56DFFC768DC", 14, 1484327637, "885709", 1484327637, "885709", null, "Budlong Woods*", "9835", "9606", "12417", "9918", "9437", "10484", "11114", "10837", "9871", "12323", "14176", "8197", "128215" ]
+, [ 15, "42DB2BF7-2CB3-4FD8-8DD6-C6841EDEA32F", 15, 1484327637, "885709", 1484327637, "885709", null, "Canaryville ", "3108", "2930", "3357", "3228", "3246", "3993", "3838", "4261", "3619", "3603", "2951", "2764", "40898" ]
+, [ 16, "7A9EFAE6-E7CD-4585-A29B-0F4DE899BFE8", 16, 1484327637, "885709", 1484327637, "885709", null, "Chicago Bee*", "5885", "6277", "7171", "5845", "5440", "7285", "5125", "5154", "4665", "7320", "6807", "3849", "70823" ]
+, [ 17, "34BD2ED0-E4BC-4A4A-9300-5A78ADAA8E58", 17, 1484327637, "885709", 1484327637, "885709", null, "Chicago Lawn  ", "4911", "5402", "5998", "5886", "5150", "5562", "6693", "8132", "5686", "6062", "5735", "5354", "70571" ]
+, [ 18, "7211DC76-82CC-4766-A1F3-FEB2A71F7F11", 18, 1484327637, "885709", 1484327637, "885709", null, "Chinatown ", "20813", "21456", "26759", "24998", "23675", "27176", "27982", "26895", "24078", "27063", "27052", "19176", "297123" ]
+, [ 19, "1942E8B8-E7CA-4F19-A7B9-408F262A7910", 19, 1484327637, "885709", 1484327637, "885709", null, "Clearing*", "5654", "6284", "7152", "6088", "5401", "6105", "6281", "6051", "5563", "6777", "7094", "5195", "73645" ]
+, [ 20, "4796197F-CE97-4BE9-9059-9CF1782A3996", 20, 1484327637, "885709", 1484327637, "885709", null, "Coleman*", "4561", "4506", "7124", "6613", "6502", "8381", "8824", "9587", "8475", "8422", "10873", "7793", "91661" ]
+, [ 21, "1A7584E5-02F4-4AA7-A5C3-B9FE7E53C6F4", 21, 1484327637, "885709", 1484327637, "885709", null, "Daley, Richard J.-Bridgeport", "6451", "6408", "7087", "6683", "5968", "6915", "7848", "7268", "6774", "7179", "7398", "5862", "81841" ]
+, [ 22, "1079EB0B-4E99-45EC-89F8-6C702A1B6FB8", 22, 1484327637, "885709", 1484327637, "885709", null, "Daley, Richard M.-W Humboldt*", "9432", "7359", "8116", "7239", "7027", "8511", "9735", "10382", "8803", "8202", "7842", "9310", "101958" ]
+, [ 23, "6B0055BA-5F19-4FBC-90EC-130EE60562EB", 23, 1484327637, "885709", 1484327637, "885709", null, "Douglass  ", "7879", "690", "8413", "7481", "6717", "7861", "7875", "8519", "6557", "7252", "9313", "8058", "86615" ]
+, [ 24, "E6AA2B4B-B60F-4C88-87FB-01DF46996387", 24, 1484327637, "885709", 1484327637, "885709", null, "Dunning*", "9014", "9866", "11584", "9999", "11549", "13243", "9776", "10800", "11450", "12545", "10480", "9071", "129377" ]
+, [ 25, "E485B242-0DB3-4E4A-A12A-E812067C77BE", 25, 1484327637, "885709", 1484327637, "885709", null, "Edgebrook ", "7207", "7613", "8594", "7921", "7102", "9140", "9871", "8902", "7912", "7840", "8409", "6899", "97410" ]
+, [ 26, "7793EB53-E64F-4523-830C-3685C5DCCA09", 26, 1484327637, "885709", 1484327637, "885709", null, "Edgewater  ", "15728", "15687", "21129", "16645", "15729", "18888", "18989", "18887", "17616", "23141", "24398", "14487", "221324" ]
+, [ 27, "243443FB-5FDB-4EE3-8CE4-1C99EF76743A", 27, 1484327637, "885709", 1484327637, "885709", null, "Gage Park ", "3050", "3077", "3335", "3441", "3050", "3661", "3645", "3633", "3226", "3603", "3337", "2917", "39975" ]
+, [ 28, "1CDE61FB-3ACD-49C6-93C5-44100ECF7AEE", 28, 1484327637, "885709", 1484327637, "885709", null, "Galewood-Mont Clare ", "1742", "1704", "1789", "1892", "1694", "2005", "2033", "1909", "1467", "1461", "1467", "1244", "20407" ]
+, [ 29, "CC13D0D8-92D6-4319-AC4D-737862E1190E", 29, 1484327637, "885709", 1484327637, "885709", null, "Garfield Ridge*", "5446", "5707", "7949", "6199", "5410", "7203", "8353", "8220", "6249", "7115", "6000", "5231", "79082" ]
+, [ 30, "144A5118-3E1C-43C5-B4D7-AA6027247DEC", 30, 1484327637, "885709", 1484327637, "885709", null, "Greater Grand Crossing*", "3350", "3225", "3264", "3220", "2799", "2911", "2726", "2956", "2982", "2742", "2515", "2474", "35164" ]
+, [ 31, "C001F529-7640-4A15-89D0-BA86F71C4E67", 31, 1484327637, "885709", 1484327637, "885709", null, "Hall ", "5059", "4888", "4780", "5185", "4842", "5070", "5271", "6491", "6359", "5322", "6412", "6171", "65850" ]
+, [ 32, "CF0CE65D-D983-4885-B43C-82FCC8D27595", 32, 1484327637, "885709", 1484327637, "885709", null, "Harold Washington Library Center*", "119814", "115243", "132169", "124196", "108962", "103942", "129580", "124409", "104590", "106236", "95583", "88587", "1353311" ]
+, [ 33, "B163227A-41AF-45E1-8660-72EE54E1B254", 33, 1484327637, "885709", 1484327637, "885709", null, "Hegewisch*", "4318", "4354", "4738", "4747", "4316", "5287", "5507", "5058", "5020", "5068", "4278", "3561", "56252" ]
+, [ 34, "D2D3A51C-3F9E-4D28-8089-A065E9ADCCB0", 34, 1484327637, "885709", 1484327637, "885709", null, "Humboldt Park*", "6229", "7246", "10364", "7671", "6750", "8053", "8321", "9161", "8798", "12572", "11979", "6154", "103298" ]
+, [ 35, "8A4144C0-5749-4810-A847-52E9CBBD08D9", 35, 1484327637, "885709", 1484327637, "885709", null, "Independence ", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ]
+, [ 36, "E0E4FDD8-E64F-40B0-8AFE-ABF0ECC5EBE8", 36, 1484327637, "885709", 1484327637, "885709", null, "Jefferson Park ", "6882", "7316", "7587", "8056", "7300", "9050", "9403", "9220", "7771", "7833", "8006", "6096", "94520" ]
+, [ 37, "BB96A6B9-12AD-485D-8294-E22AB7F0CB17", 37, 1484327637, "885709", 1484327637, "885709", null, "Jeffery Manor*", "5704", "5566", "6606", "4906", "5219", "5603", "5412", "5180", "6493", "9358", "6807", "5634", "72488" ]
+, [ 38, "9C17CFE1-A633-422D-A7D5-C0879455C68B", 38, 1484327637, "885709", 1484327637, "885709", null, "Kelly*", "4723", "4485", "4636", "4975", "4674", "7989", "6012", "6536", "5165", "5577", "5472", "5156", "65400" ]
+, [ 39, "F437ED36-E68F-43B0-A34D-5DE0F2810567", 39, 1484327637, "885709", 1484327637, "885709", null, "King", "5693", "5542", "6687", "5649", "5315", "6532", "6530", "6825", "6648", "6017", "7759", "5225", "74422" ]
+, [ 40, "C773665D-1B47-4A86-A7FD-53DA0CAD5155", 40, 1484327637, "885709", 1484327637, "885709", null, "Legler ", "7306", "7487", "8923", "6840", "6565", "7386", "8690", "8948", "8935", "8127", "8400", "7197", "94804" ]
+, [ 41, "D6AAA5F6-C7D3-40E6-A4DF-3F849F21342A", 41, 1484327637, "885709", 1484327637, "885709", null, "Lincoln Belmont*", "12315", "11279", "13391", "13033", "10985", "14724", "15262", "15584", "13351", "13237", "12873", "11837", "157871" ]
+, [ 42, "3CD877F1-9158-4E62-B80B-645AD734C82A", 42, 1484327637, "885709", 1484327637, "885709", null, "Lincoln Park ", "8992", "9707", "15502", "10141", "8842", "10700", "11631", "11298", "10217", "14714", "18429", "9313", "139486" ]
+, [ 43, "C6C6C8DA-ED17-4954-B348-68C6542FCED2", 43, 1484327637, "885709", 1484327637, "885709", null, "Little Village*", "10489", "10162", "10106", "11208", "9613", "11352", "12143", "12212", "10730", "10592", "9625", "8295", "126527" ]
+, [ 44, "B8A37BEA-2ACC-4708-8343-E60FDEC694BF", 44, 1484327637, "885709", 1484327637, "885709", null, "Logan Square*", "11350", "11340", "12123", "12851", "10875", "12681", "13041", "13581", "11597", "11999", "11506", "10740", "143684" ]
+, [ 45, "7DF4ECA3-F76C-47CB-B500-876FD6CCDF74", 45, 1484327637, "885709", 1484327637, "885709", null, "Lozano", "11737", "11462", "13686", "12609", "10865", "13198", "11414", "12059", "11576", "11403", "14151", "11579", "145739" ]
+, [ 46, "33B6BE6E-341C-4EF9-9C50-CCC5D4BF0445", 46, 1484327637, "885709", 1484327637, "885709", null, "Manning*", "8734", "8949", "7679", "7928", "7603", "8412", "8894", "8550", "7175", "7696", "6972", "7144", "95736" ]
+, [ 47, "462F6376-BB80-42B8-96C2-A71DD593E58C", 47, 1484327637, "885709", 1484327637, "885709", null, "Mayfair  ", "5123", "5167", "5896", "5454", "4903", "5243", "6067", "6483", "5239", "5467", "4798", "4355", "64195" ]
+, [ 48, "303AF36E-65B8-48A5-912D-A2B6BAE8259C", 48, 1484327637, "885709", 1484327637, "885709", null, "McKinley Park*", "6617", "5459", "6036", "6206", "5717", "6757", "7013", "8868", "8364", "9161", "8587", "7693", "86478" ]
+, [ 49, "0BF6AC22-7FB8-4BA5-B432-30FBDE9011D0", 49, 1484327637, "885709", 1484327637, "885709", null, "Merlo", "8530", "8636", "12464", "9988", "7972", "9093", "8791", "9399", "8391", "13849", "15086", "7583", "119782" ]
+, [ 50, "6CA05716-5C67-4B9C-93C7-78FB7B304957", 50, 1484327637, "885709", 1484327637, "885709", null, "Mount Greenwood*", "5777", "6277", "6474", "7216", "6166", "7073", "7876", "7072", "6157", "7077", "5904", "4823", "77892" ]
+, [ 51, "E45E0A8D-6FA7-4FC8-90E1-3F7D519B0332", 51, 1484327637, "885709", 1484327637, "885709", null, "Near North*", "10714", "10689", "11376", "12596", "11040", "12556", "13497", "12530", "12060", "14565", "14178", "10521", "146322" ]
+, [ 52, "E3145F5D-2B28-4025-A03F-15D4F748BF5C", 52, 1484327637, "885709", 1484327637, "885709", null, "North Austin  ", "4964", "5036", "5035", "6487", "4499", "5330", "6150", "6209", "4965", "5074", "4533", "3850", "62132" ]
+, [ 53, "85BA191C-845D-47D2-89FC-8DD51E02436E", 53, 1484327637, "885709", 1484327637, "885709", null, "North Pulaski  ", "4822", "4904", "4822", "5433", "4736", "6276", "6114", "6719", "5482", "6064", "4521", "4358", "64251" ]
+, [ 54, "AA82703C-C55C-4EAA-9A6F-A5AA78649259", 54, 1484327637, "885709", 1484327637, "885709", null, "Northtown ", "8749", "8959", "10343", "10243", "9896", "9580", "12957", "12370", "10882", "11289", "10047", "8593", "123908" ]
+, [ 55, "EC1C48F7-1679-4BC5-9515-CCC07BF84F3B", 55, 1484327637, "885709", 1484327637, "885709", null, "Oriole Park*", "6462", "6909", "7305", "6646", "6279", "7198", "7648", "8151", "7341", "7530", "6471", "5730", "83670" ]
+, [ 56, "CD1D5909-1BDC-4029-A055-290BBD561566", 56, 1484327637, "885709", 1484327637, "885709", null, "Portage-Cragin ", "6126", "6972", "9789", "7206", "6160", "7016", "7112", "7563", "6831", "9420", "11230", "5906", "91331" ]
+, [ 57, "C73A5DE3-58A7-4E19-8B83-DCB1985BBC98", 57, 1484327637, "885709", 1484327637, "885709", null, "Pullman ", "4754", "4711", "5472", "7741", "6802", "5463", "6185", "6588", "4496", "5276", "4832", "4562", "66882" ]
+, [ 58, "EB5C7B3A-1708-4297-8ED5-3A893E7DAD08", 58, 1484327637, "885709", 1484327637, "885709", null, "Roden", "4543", "4930", "11517", "4934", "4497", "6092", "6503", "5949", "5165", "9507", "12892", "4174", "80703" ]
+, [ 59, "80580A29-A9A9-4A3E-BAA3-35BE8B7A0EBA", 59, 1484327637, "885709", 1484327637, "885709", null, "Rogers Park ", "12062", "13147", "15392", "14903", "12221", "16718", "19433", "16053", "13922", "14398", "13730", "12436", "174415" ]
+, [ 60, "82915F26-82EF-4C76-9EF2-3D8FA4974477", 60, 1484327637, "885709", 1484327637, "885709", null, "Roosevelt*", "5162", "6118", "7187", "7285", "6525", "8479", "8256", "8280", "7664", "8238", "7338", "8136", "88668" ]
+, [ 61, "FADD0F3D-4B49-42D5-A297-7DCF3B6A2D66", 61, 1484327637, "885709", 1484327637, "885709", null, "Scottsdale  ", "4696", "4680", "5368", "5078", "4508", "5288", "4856", "5047", "5221", "5102", "5279", "3731", "58854" ]
+, [ 62, "9EA2BDAD-11A2-4954-8883-E09BE2912137", 62, 1484327637, "885709", 1484327637, "885709", null, "Sherman Park ", "4691", "4303", "4869", "5179", "5045", "5551", "6234", "7907", "5886", "5706", "5524", "4731", "65626" ]
+, [ 63, "16BEADFE-43BB-4A90-B163-193AA8DB37FB", 63, 1484327637, "885709", 1484327637, "885709", null, "South Chicago ", "8120", "7580", "8453", "8093", "7378", "6077", "9277", "11029", "10484", "10879", "8627", "6784", "102781" ]
+, [ 64, "F69A031C-7A20-42C0-9C47-0087639E6511", 64, 1484327637, "885709", 1484327637, "885709", null, "South Shore  ", "6934", "7285", "9158", "8948", "8341", "9815", "8855", "9620", "8396", "8802", "9033", "6898", "102085" ]
+, [ 65, "45DF8544-6C82-4F84-B589-67F80D1F389B", 65, 1484327637, "885709", 1484327637, "885709", null, "Sulzer Regional*", "36296", "31982", "34038", "35273", "30836", "35731", "37894", "36168", "31240", "14763", "24355", "24513", "373089" ]
+, [ 66, "368E346F-327C-4030-AE67-9774DFB1FE10", 66, 1484327637, "885709", 1484327637, "885709", null, "Thurgood Marshall*", "7517", "7635", "7766", "8433", "6798", "8478", "9336", "10440", "8610", "9098", "8076", "6742", "98929" ]
+, [ 67, "222574BA-8FAB-405B-A667-37FAF2A41E85", 67, 1484327637, "885709", 1484327637, "885709", null, "Toman* ", "8042", "7657", "9049", "9196", "7505", "9911", "11759", "11381", "9831", "10727", "10731", "7314", "113103" ]
+, [ 68, "1B252386-48B1-4A81-9508-5BB0E9BFE273", 68, 1484327637, "885709", 1484327637, "885709", null, "Uptown*", "10794", "10730", "11686", "11822", "10520", "11260", "10916", "11335", "15468", "11916", "11049", "10702", "138198" ]
+, [ 69, "0727B78C-6408-43E0-A4F1-CCE572B25FE4", 69, 1484327637, "885709", 1484327637, "885709", null, "Vodak-East Side*", "5816", "6545", "7578", "6469", "5746", "6894", "7073", "6973", "7545", "8597", "7886", "5694", "82816" ]
+, [ 70, "6D7B6605-9B29-4038-B96E-AA8E685D6709", 70, 1484327637, "885709", 1484327637, "885709", null, "Walker ", "5086", "4462", "5888", "5600", "4999", "4657", "5025", "4195", "4525", "4604", "4611", "3811", "57463" ]
+, [ 71, "C7DD4262-677B-467D-A2B6-3EB8EF8608B5", 71, 1484327637, "885709", 1484327637, "885709", null, "West Belmont ", "7710", "8273", "11287", "8034", "6784", "8069", "8901", "9246", "8086", "10306", "14128", "6289", "107113" ]
+, [ 72, "59EED36D-4021-48BE-9B7A-1E4215DAF8BC", 72, 1484327637, "885709", 1484327637, "885709", null, "West Chicago Avenue*", "6488", "2993", "2486", "2227", "2220", "2851", "2876", "3007", "2798", "3463", "4748", "2171", "38328" ]
+, [ 73, "67645B54-CA5E-4991-A242-432139237829", 73, 1484327637, "885709", 1484327637, "885709", null, "West Englewood*", "9417", "8036", "9812", "9876", "9026", "9027", "11154", "12337", "9728", "9755", "8213", "7795", "114176" ]
+, [ 74, "58E874A5-BF24-40D7-B944-5D6C142818E8", 74, 1484327637, "885709", 1484327637, "885709", null, "West Lawn ", "5930", "6227", "7947", "6491", "5492", "6957", "7218", "7155", "6844", "7179", "6431", "5409", "79280" ]
+, [ 75, "48F45D7C-8EFD-4FEB-BE26-C443EE86E085", 75, 1484327637, "885709", 1484327637, "885709", null, "West Pullman*", "6766", "6344", "7757", "6950", "5677", "6636", "6771", "7727", "6776", "8808", "10155", "9957", "90324" ]
+, [ 76, "5FC5630C-45A2-4EDE-9CFE-97C40575E3E2", 76, 1484327637, "885709", 1484327637, "885709", null, "West Town", "10505", "10322", "11844", "10361", "8949", "10115", "10694", "10826", "10246", "11161", "10548", "9300", "124871" ]
+, [ 77, "AB6F1860-DD03-4E78-97BF-F6EFECF3D841", 77, 1484327637, "885709", 1484327637, "885709", null, "Whitney M. Young, Jr. ", "6080", "7600", "7670", "9486", "6658", "7350", "8037", "8366", "7333", "7914", "7751", "6689", "90934" ]
+, [ 78, "B45C9FE8-0A4B-458A-97DC-B3E131EEE176", 78, 1484327637, "885709", 1484327637, "885709", null, "Woodson Regional", "27542", "25959", "29356", "27623", "24923", "25565", "23540", "28379", "25323", "33245", "12156", "0", "283611" ]
+, [ 79, "725C344B-2080-44B7-836D-E996C05DEB2F", 79, 1484327637, "885709", 1484327637, "885709", null, "Wrightwood-Ashburn*", "3954", "5033", "3406", "4703", "4877", "4865", "6596", "6353", "6117", "7084", "6849", "6036", "65873" ]
+, [ 80, "CA882301-5FC4-4208-9A00-61AEDB8A2118", 80, 1484327637, "885709", 1484327637, "885709", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ]
+ ]
+}

@@ -1,0 +1,105 @@
+#map {
+        width: 100%;
+        height: 450px;
+        background-color: grey;
+      }
+
+.navbar{
+	background-color: #FA6300;
+}
+
+.navbar, .navbar-default{
+	margin-bottom: 0px!important;
+	border-color: #FA6300;
+	border-radius: 0px;
+}
+
+.navbar-default .navbar-toggle{
+	border-color: #FA6300;	
+}
+.navbar-default .navbar-toggle .icon-bar{
+	color: white;
+	background-color: white!important;
+}
+
+.navbar-default .navbar-nav>li>a{
+	color: #FFFFFF;
+	font-family: "PlutoSansCondLight"!important;
+
+}
+.navbar-default .navbar-nav>li>a:hover{
+	color: #e2c455;
+	background-color: #FA6300;
+	border-radius: 4px 4px 4px 4px;
+}
+.navbar-default .navbar-collapse{
+	border-color: #FA6300;
+	border-radius: 0px;
+}
+.navbar{
+	text-align: center;
+	background-color:#FA6300;
+	color:#FFFFFF!important;
+}
+.navbar-collapse{
+	text-align: center;
+	background-color:#FA6300;
+	color:#FFFFFF;
+
+}
+
+.navbar-collapse ul li a{
+	color: #FFFFFF!importants;
+}
+
+.navbar-toggle {
+    z-index:3;
+}
+
+/* EXAMPLE 8 - Center on mobile*/
+@media only screen and (max-width : 768px){
+  .menu-iron .navbar-brand {
+  padding: 0px;
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
+}
+.menu-iron .navbar-brand>img {
+  height: 100%;
+  width: auto;
+  padding: 7px 14px; 
+}
+}
+
+
+/* EXAMPLE 8 - Center Background */
+.menu-iron .navbar-brand {
+  background: url(../img/logo-illinois.png) center / contain no-repeat;
+  width: 200px;
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
+}
+
+
+
+footer{
+	margin-top:32px;
+	color:#F2590D;
+
+	background-color:rgb(19, 31, 51);
+}
+
+.contacto{
+	margin-top:32px;
+}
+
+.contacto-desktop{
+	text-align: 
+}
+
+.contactocolum1{
+
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}

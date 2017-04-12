@@ -1,0 +1,12 @@
+.sidebar .nav > li.logo_fondo{
+    position: absolute;
+    width: 100%;
+    bottom: 120px;
+}
+
+#map{
+    position:absolute;
+    width:79%;
+    height: calc(100%);
+    margin-left: 260px;
+}

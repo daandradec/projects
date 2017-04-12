@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" />
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title>Student Place Browser</title>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap core CSS     -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--  Material Dashboard CSS    -->
+    <link href="css/material-dashboard.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+	<link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+  <div class="wrapper">
+      <div class="sidebar" data-color="red" data-image="../assets/img/sidebar-1.jpg" style="background-color: white;">
+        <div class="logo"> <img src="./img/logo5.png" alt="Logo" style="width:200px;height:120px;margin:0px 10px"> <a href="#" class="simple-text"> Find a Place </a>
+        </div>
+        <div class="sidebar-wrapper">
+          <ul class="nav">
+            <li> <a href="index.html"> <i class="mdi mdi-home"></i>
+                <p>Dashboard</p>
+              </a> </li>
+            <li class="active"> <a href="#"> <i class="mdi mdi-google-maps"></i>
+                <p>Maps</p>
+              </a></li>
+			  <li> <a>
+                <hr aling = CENTER><p>List of Places: <br>1)<br>2)<br>3)<br>4)<br>5)<br>6)</p></HR>
+              </a> </li>
+			  
+			<li class="logo_fondo">
+				<a href="#">
+					<i class="mdi mdi-eye-outline"></i>
+					<p>Site in progress....</p>
+				</a>
+			</li>
+          </ul>
+        </div>
+		
+      </div>
+
+	    <div class="main-panel">
+			<nav class="navbar navbar-transparent navbar-absolute">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">Google Maps - Available Rent Places</a>
+					</div>
+					<div class="collapse navbar-collapse">
+
+						<form class="navbar-form navbar-right" role="search">
+							<div class="form-group  is-empty">
+	                        	<input type="text" class="form-control" placeholder="Search">
+	                        	<span class="material-input"></span>
+							</div>
+							<button type="submit" class="btn btn-white btn-round btn-just-icon">
+								<i class="material-icons">search</i><div class="ripple-container"></div>
+							</button>
+	                    </form>
+					</div>
+				</div>
+			</nav>
+
+	    </div>
+    <div id="map" style="margin-top:70px;"></div>
+    <script>
+		function initMap() {
+        var uluru = {lat: 41.8708, lng: -87.6505};
+		
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+		var marker = new google.maps.Marker({
+			position: uluru,
+			map: map,
+			title: 'Punto de Inicio'
+		  });
+
+      /*marker =  new google.maps.Marker({
+        position: new google.maps.LatLng(41.8708, -87.6505),
+        map: map
+      });
+	  marker =  new google.maps.Marker({
+        position: new google.maps.LatLng(41.8708, -87.6595),
+        map: map
+      });
+	  marker =  new google.maps.Marker({
+        position: new google.maps.LatLng(41.8708, -87.6705),
+        map: map
+      });
+	  marker =  new google.maps.Marker({
+        position: new google.maps.LatLng( 41.8608, -87.6505),
+        map: map
+      });*/
+	  $.ajax({
+	    url: "https://data.cityofchicago.org/resource/uahe-iimk.json",
+	    type: "GET",
+	    data: {
+	      "$limit" : 5000,
+	      "$$app_token" : "1jumf4djvTZZqT8lU1oqHesP1"//laweadatoken
+	    }
+	}).done(function(data) {
+	  var map_mark = new Array();
+	  console.log(data);
+	  var mark;
+	  var id_act;
+
+	  for(var i=0;i<data.length;i++){
+
+	  	
+	  	if(data[i].latitude!=undefined && data[i].longitude!=undefined ){		
+			console.log(data[i].latitude+"  "+data[i].longitude+ " "+data[i].status);
+
+			marker = new google.maps.Marker({
+				                position: new google.maps.LatLng(data[i].latitude,data[i].longitude),
+				                map: map,
+				                optimized:false
+				             });
+			
+				marker.setMap(map);
+			}
+			}
+			})
+		
+	  }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvbhOy68FUz_H5yOo7GJu9_NvecWymZY0&callback=initMap">
+    </script>
+	</div>
+  </body>
+</html>

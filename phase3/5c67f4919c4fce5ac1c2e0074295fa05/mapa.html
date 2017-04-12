@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Getting your place</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="dataSets/choose_room.js"></script>
+    <script src="dataSets/showCrimes.js"></script>
+    <style>
+      #map {
+        height: 70%;
+        width: 100%;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .w3-lobster {
+        font-family: "Lobster", serif;
+      }
+      body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+    </style>
+  </head>
+  <body class="w3-light-grey">
+    <div class="w3-container w3-border w3-lobster  w3-center w3-cyan w3-text-white">
+      <p class="w3-xxxlarge w3-wide w3-opacity ">Getting your place</p>
+      <hr class="w3-opacity ">
+    </div>
+    <div id="map" ></div>
+    <script>
+      var map;
+      var service;
+      function initMap() {
+          var pyrmont = new google.maps.LatLng(41.870439,-87.66692);
+          map = new google.maps.Map(document.getElementById('map'), {
+          center: pyrmont,
+          zoom: 15,
+          scrollwheel: false
+        });
+      /* var request = {
+        location: pyrmont,
+        radius: '500',
+        types: ['store']
+      };
+      service = new google.maps.places.PlacesService(map);
+            service.nearbySearch(request, callback); */
+      }
+    function callback(results, status) {
+      if (status == google.maps.places.PlacesServiceStatus.OK) {
+        console.log("ok");
+        console.log(results.length);
+        for (var i = 0; i < results.length; i++) {
+
+          var place = results[i];
+          var marker = new google.maps.Marker({
+            map: map,
+            position: place.geometry.location });
+        }
+      }
+    }
+    //google.maps.event.addDomListener(window, 'load', initmap);
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJNjyC81KDBVWaR1PlgUfa4v5VD74XHz8&callback=initMap&libraries=places,visualization"
+    async defer></script>
+
+    <div class="w3-third w3-margin-bottom">
+      <img src="http://www.port.ac.uk/media/why-portsmouth/accommodation/trafalgar-hall-studio-flats-bedroom-960x627.jpg" alt="StudentRoom" style="width:100%">
+      <div class="w3-container w3-white">
+        <h3>Room Types</h3>
+        <h6 class="w3-opacity">Look for something special, acording to your budget</h6>
+        <p>C</p>
+        <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-cutlery"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i> <i class="fa fa-dollar"></i></p>
+        <a href="choose_room.html" target="_self"> <input type="button" name="button1" value="Find places" class="w3-button w3-block w3-black w3-margin-bottom"/> </a>
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom">
+      <img src="http://image.vanguardia.com.mx/sites/default/files/google-maps-lugares_qyq8.jpg" alt="Location" style="width:100% ">
+      <div class="w3-container w3-white">
+        <h3>Locations</h3>
+        <h6 class="w3-opacity">What you're looking for just where
+        you want</h6>
+        <p>c</p>
+        <p class="w3-large"><i class="fa fa-bath"></i> </i> <i class="fa fa-		wifi"></i> <i class="fa fa-tv"></i></p>
+        <button class="w3-button w3-block w3-black w3-margin-bottom"  >Choose Room</button>
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom">
+      <img src="/w3images/room_deluxe.jpg" alt="Norway" style="width:100%">
+      <div class="w3-container w3-white">
+        <h3>Deluxe Room</h3>
+        <h6 class="w3-opacity">From $199</h6>
+        <p>King-size bed</p>
+        <p>40m<sup>2</sup></p>
+        <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i> <i class="fa fa-glass"></i> <i class="fa fa-cutlery"></i></p>
+        <button class="w3-button w3-block w3-black w3-margin-bottom">Choose Room</button>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>

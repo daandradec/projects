@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Map - University</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Helvetica, Arial, sans-serif;
+            color: #666;
+            background: #f2f2f2;
+            line-height: 1.5em;
+        }
+
+        #map {
+            height: 60%;
+        }
+
+        h1{
+          font-size: 4em;
+          line-height: 1.3em;
+          margin: 15px 0;
+          text-align: center;
+          font-weight: 400;
+        }
+
+        h2{
+          font-size: 1em;
+          line-height: 1.3em;
+          margin: 15px 0;
+          text-align: center;
+          font-weight: 400;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Security Map </h1>
+    <div id="map"></div>
+    <h2>In this map you can find the exact location of the University, and circles that represent indices of insecurity.
+       We hope you can make the best decision, by proximity and security.</h2>
+    <script>
+        var map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                mapTypeId: google.maps.MapTypeId.HIBRID,
+                center: {
+                    lat: 41.870800,
+                    lng: -87.650500
+                }
+
+            });
+            var trafficLayer = new google.maps.TrafficLayer();
+            //Inicio Mapa Crimenes
+            map.data.loadGeoJson('https://data.cityofchicago.org/resource/6zsd-86xi.geojson');
+
+            map.data.setStyle({
+                icon: {
+                    fillOpacity: 0.3,
+                    fillColor: 'rgba(205, 21, 21, 0.78)',
+                    strokeColor: 'rgba(56, 20, 24, 0)',
+                    path: google.maps.SymbolPath.CIRCLE,
+                    scale: 45
+                }
+            }); //Fin mapa Crimenes
+            // Mapa renta
+            //   map.data.loadGeoJson('https://data.cityofchicago.org/resource/uahe-iimk.geojson');
+            /*  map.data.setStyle({
+                fillColor: 'green',
+                strokeWeight: 1
+              });*/
+            // Marker Universidad
+            var marker_latlng = new google.maps.LatLng(41.870800, -87.650500);
+
+            var marker = new google.maps.Marker({
+                position: marker_latlng,
+                map: map,
+                title: "University of Illinois, Chicago"
+            });
+
+            var contentString = 'info <Universit></Universit>y of Illinois, Chicago';
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.open(map, marker);
+            });
+
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABqgVxGd9o58Ia99csm5uSp_O8MvpC3mU&callback=initMap"></script>
+</body>
+
+</html>

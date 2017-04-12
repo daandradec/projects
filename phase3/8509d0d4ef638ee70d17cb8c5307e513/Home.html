@@ -1,0 +1,154 @@
+<!DOCTYPE>
+<html lang="en-US">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    	<title>Home</title>   	
+    	<script src="https://d3js.org/d3.v4.min.js"></script>
+    	<link rel="stylesheet" href="css/Style_bar.css">
+    	<link href="StyleSheet.css" rel="stylesheet" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    	<link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+    	<script src="js/script.js" type="text/javascript" ></script>
+    	<script src="js/Script_map.js" type="text/javascript" ></script>   	   	
+	    <style type="text/css">
+	    h1 {
+			font-family: "Bitter", "serif", serif;
+			font-size: 2.2em;
+			font-weight: bold;
+		}
+		h2 {
+			
+			font-family: "Bitter", "serif", serif;
+			font-size: 2em;
+			font-weight: bold;	
+		}
+		button{
+			font-family: "Bitter", "serif", serif;
+			font-size: 1.5em;
+			float:left; 
+			margin-left:200px; 
+			height:50px;
+			width:100px			
+		}
+
+		p {
+			margin:30px;
+			font-family: "Bitter", "serif", serif;
+			font-size: 1.3em;
+			font-weight: bold;
+		}
+		* {
+				margin:0px;
+				padding:0px;
+			}			
+		table {
+                border-collapse: collapse;
+                border: 2px black solid;
+                font: 12px sans-serif;
+            }
+
+            td {
+                border: 1px black solid;
+                padding: 5px;
+            }
+		#map {
+			float:left;
+	        width: 700px;
+	        height: 500px;
+	        background-color: grey;
+
+	        margin-top: 50px;
+      	}
+      	
+			
+				
+	    </style>
+	    
+			
+  </head>
+	
+<body style="background-color:#000000;color:white;padding:20px;">
+
+	<section id="screen_Home">		
+			<h1 style="text-align: center">Find me a home!</h1>
+			<nav>
+			 <ul  style="text-align: center">
+	   			<li><a href="#Home">Home</a></li>
+			 	  <li><a href="#screen_Search">Search</a></li>
+			 	  <li><a href="#screen_About">About</a></li>
+
+			 	</ul>
+			</nav>	
+			
+			<img src="https://chicagodowntowntheloop.place.hyatt.com/content/dam/PropertyWebsites/place/chizp/Media/All/Hyatt-Place-Chicago-Downtown-The-Loop-P014-Skyline-North-Lakeshore.masthead-feature-panel-medium.masthead-feature-panel-medium.jpg" alt="Chicago_picturet" style="width:100%;height:50%;">
+			<p title="Description"> Find me a home is an application web where you can search for a place to live near to the Department of Computer Science in the University of Illinois. In your search you can include parameters like max distance to the university, max cost, security level, etc. All this with the objective to facilitate your new life in Chicago.</p>
+		
+	</section>
+	
+	<section id="screen_Search">
+		<div style="float:left">
+			<h2 style="text-align: left; margin-left: 200px">Search</h2>
+			<p style="text-align: left; font-size:12px">choose the importance of security(10 is the highest) </p>		
+			<select name="Secuity" style="margin-left:50px">
+			   <option value="0">--</option> 
+			   <option value="1">1</option> 
+			   <option value="2">2</option> 
+			   <option value="3">3</option>
+			   <option value="4">4</option> 
+			   <option value="5">5</option> 
+			   <option value="6">6</option> 
+			   <option value="7">7</option> 
+			   <option value="8">8</option> 
+			   <option value="9">9</option> 
+			   <option value="10">10</option> 
+			</select>
+			<p style="text-align: left; font-size:12px">choose the max acceptable distance between your new home and the university(in km) </p>		
+			<select name="nearnest" id="SelcNear" style="margin-left:50px">
+			   <option value="0">--</option> 
+			   <option value="1">1</option>
+			   <option value="2">2</option> 
+			   <option value="5">5</option> 
+			   <option value="8">8</option>
+			   <option value="10">10</option>
+			   <option value="12">12</option>
+			   <option value="15">15</option>  
+			   <option value="17">17</option>
+			   <option value="20">20</option> 
+			   <option value="0">doesn't mind</option> 
+			</select>
+			<p style="text-align: left; font-size:12px">choose the max rent price for your home</p>		
+			<select name="price" style="margin-left:50px">
+			   <option value="0">--</option>
+			   <option value="200">$200</option> 
+			   <option value="400">$400</option> 
+			   <option value="600">$600</option> 
+			   <option value="800">$800</option>
+			   <option value="1000">$1000</option> 
+			   <option value="1200">$1200</option> 
+			   <option value="1500">$1500</option> 
+			   <option value="1800">$1800</option> 
+			   <option value="1900">>$1900</option> 
+			</select>
+		</div>
+		
+		<div id="map"></div>		
+	    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC4lO1PjOC9xzRaOK86FJoht6VBFYcsB8&callback=initMap"></script>	
+		<button onclick="search()" class="button">search</button>
+		<p id="demo"></p>	
+	</section>
+	
+	
+	<section id="screen_About">
+		<h2>About Us</h2>
+		<div style="margin-top: 450px; ">
+			<p title="About Us" style="text-align: right""> Develop by Kevin Mendez</p>
+			<p title="About Us" style="text-align: right"> contact using kmendezp@unal.edu.co</p>			
+		</div>	
+		
+
+	</section>
+
+		
+</body>
+<script src="js/bar.js"></script>
+</html>

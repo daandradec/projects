@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>dsgantivac</title>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script src="js/food.js"></script>
+  <script src="js/rents.js"></script>
+  <script src="js/crimes.js"></script>
+  <script src="js/bicycle station.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+    <style type="text/css">
+      html, body { height: 100%; margin: 0; padding: 0; }
+      #map { height: 60%; width: 60%}
+    </style>
+  </head>
+  <style type="text/css">
+  body{
+  	background-color: #b3c0a5;
+  }
+
+  	h1{
+  		color: white;
+  		font-family: "Monospace","Courier New";
+  		font-size: 300%;
+  		font-style: oblique;
+		text-align: center; 
+		text-decoration:underline;
+		
+		background-color: #7575a3;
+		border-width: thin;
+		border-style: ridge;
+		}
+	p{
+		text-align: center;
+		color:white;
+	}
+	a{
+		text-align: center;
+	}
+  </style>
+  <body>
+  <h1>Purdue-UNAL IronHacks Project</h1>
+
+  <button onclick="rent_place(map)"><img src="imagenes/icon2.png">rent places</button>
+  <button onclick="crimenes(map)"><img src="imagenes/icon4.png">crimenes</button>  
+  <button onclick="bicycle(map)"><img src="imagenes/icon5.png">bicycle stations</button>
+  <button onclick="food(map)"><img src="imagenes/icon1.png">food places</button>
+
+  <button onclick="hide()">delete markers</button>
+    
+
+
+
+  <div id="map"></div>
+
+	<script type="text/javascript">
+
+		var map;
+		var marker;
+		function initMap() {
+		  map = new google.maps.Map(document.getElementById('map'), {
+			    center: {lat: 41.8708, lng: -87.6505},
+			    zoom: 18
+			  });
+		marker1=new google.maps.Marker({
+			                position: map.getCenter(),
+			                map: map,
+			                //se copia el url de la imagen que se desea utilizar                           
+			                icon: 'imagenes/start.png',
+			                optimized:false
+			             });
+			var infowindow1 = new google.maps.InfoWindow({
+			content: '<a href="http://www.uic.edu/">Department of Computer Science</a>'
+			});
+			 
+			// Añadimos un evento de clic al marcador
+			 
+			google.maps.event.addListener(marker1, 'click', function() {
+			 
+			// Llamamos el método open del InfoWindow
+			infowindow1.open(map, marker1);
+			});
+
+		}
+    function hide(){
+       rent_marker(null);
+       rent_off();
+       crimenes_off();
+       bycicle_off();
+       food_off();
+    }
+
+    </script>
+
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZHjebtAtTAiwqFeFw0-ta7EqxFRyCHLg&callback=initMap">
+    </script>
+
+    <center >Created by David Gantiva</center>
+    <center>Email: dsgantivac@unal.edu.co</center>
+    <p>dataset to use: <a href="https://www.data.gov/">data.gov</a>, <a href="http://openweathermap.org/current"> openweathermap.org</a> </p>
+
+  </body>
+
+</html>

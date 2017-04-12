@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Looking for a home</title>
+    <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+	<link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+      #map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+      }
+    </style>
+    <script type="text/javascript">
+	function initMap(){
+		var mapDiv = document.getElementById('map');
+		var map = new google.maps.Map(mapDiv, {
+			center: {lat: 41.8708, lng: -87.6505},
+			zoom: 12});
+		var marker = new google.maps.Marker({ //Line 1
+			position: {lat: 41.8708, lng: -87.6505}, //Line2: Location to be highlighted
+			map: map,//Line 3: Reference to map object
+			title: 'Purdue University' //Line 4: Title to be given
+		})
+	}
+	</script>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+  </head>
+  <body>
+    
+    <!-- Start Top Bar -->
+    <div class="top-bar">
+      <div class="row">
+        <div class="top-bar-left">
+          <ul class="dropdown menu" data-dropdown-menu>
+            <li class="menu-text">Looking for a home</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Top Bar -->
+    <br>
+    <div class="row">
+      <div class="medium-6 columns">
+	    <div id="map"></div>
+        <div class="row small-up-4">
+          <div class="column">
+			<!-- Trigger the modal with a button -->
+			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Police search</button>
+			<img src="images/police.jpg" alt="police" width="150" height="100">
+			<!-- Modal -->
+			<div id="myModal" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Police Stations in Chicago</h4>
+				  </div>
+				  <div class="modal-body">
+					<div><p style="margin-bottom:3px"><a href="https://data.cityofchicago.org/Public-Safety/Police-Stations/z8bn-74gv" target="_blank" style="font-size:12px;font-weight:bold;text-decoration:none;color:#333333;font-family:arial;"></a></p><iframe width="1000px" title="Police Stations" height="425px" src="https://data.cityofchicago.org/w/z8bn-74gv/3q3f-6823?cur=2El7DxLmwVf&from=root" frameborder="0"scrolling="no"><a href="https://data.cityofchicago.org/Public-Safety/Police-Stations/z8bn-74gv" title="Police Stations" target="_blank"></a></iframe><p><a href="http://www.socrata.com/" target="_blank">Powered by Socrata</a></p></div>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				  </div>
+				</div>
+
+			  </div>
+			</div>
+		  </div>
+          <div class="column">
+		    <a href="https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Transportation/eaff-5ff2" target="_blank" style="font-size:12px;font-weight:bold;text-decoration:none;color:#333333;font-family:arial;" >Transport <img src="images/transport.png" alt="transport" width="150" height="100"></a>
+          </div>
+          <div class="column">
+		    <a href="https://data.cityofchicago.org/Health-Human-Services/Hospitals-Chicago/ucpz-2r55" target="_blank" style="font-size:12px;font-weight:bold;text-decoration:none;color:#333333;font-family:arial;" >Hospitals <img src="images/hospital.png" alt="hospital" width="150" height="100"></a>
+          </div>
+          <div class="column">
+		    <a href="https://data.cityofchicago.org/Education/Libraries-Locations-Hours-and-Contact-Information/x8fc-8rcq" target="_blank" style="font-size:12px;font-weight:bold;text-decoration:none;color:#333333;font-family:arial;" >Entertainment <img src="images/entertainment.png" alt="entertainment" width="150" height="100"></a>
+          </div>
+        </div>
+      </div>
+      <div class="medium-6 large-5 columns">
+        <h3>Looking for a home</h3>
+        <h4>Filter by</h4>
+        <label>Transport
+        <select>
+          <option value="husker">Bike</option>
+          <option value="starbuck">Autobus</option>
+          <option value="hotdog">Train</option>
+          <option value="apollo">Car</option>
+		  <option value="apollo">Walk</option>
+        </select>
+        </label>
+		<label>Entertainment
+        <select>
+          <option value="husker">Very important</option>
+          <option value="starbuck">Less important</option>
+          <option value="hotdog">Not important</option>
+        </select>
+        </label>
+		<label>Nearby health center 
+        <select>
+          <option value="husker">Very important</option>
+          <option value="starbuck">Less important</option>
+          <option value="hotdog">Not important</option>
+        </select>
+        </label>
+
+        <a href="#" class="button large expanded">Search</a>
+
+        <div class="small secondary expanded button-group">
+            <a class="button">First option</a>
+            <a class="button">Second option</a>
+            <a class="button">Third option</a>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+	<div>
+</div>
+  </body>
+  <script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtAC253A1YNp1cFj7uBF3Tsucq__0hn4g&callback=initMap">
+</script>
+</html>

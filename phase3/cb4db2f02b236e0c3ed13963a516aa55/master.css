@@ -1,0 +1,31 @@
+#map {
+  width: 50%;
+  height: 800px;
+  background-color: grey;
+  display: block;
+  float: right;
+}
+
+#vis1 {
+  width: 50%;
+  height: 400px;
+  background-color: #586994;
+  display: block;
+  float: left;
+}
+
+#vis2 {
+  width: 25%;
+  height: 400px;
+  background-color: #7D869C;
+  display: block;
+  float: left;
+}
+
+#vis3 {
+  width: 25%;
+  height: 400px;
+  background-color: #A2ABAB;
+  display: block;
+  float: left;
+}

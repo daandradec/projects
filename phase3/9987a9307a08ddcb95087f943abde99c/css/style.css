@@ -1,0 +1,14 @@
+/**
+Author: Anni Piragauta
+**/
+@charset="UTF-8";
+
+h1{
+	font-color: #fff,
+}
+
+#map {
+	width: 100%;
+	height: 400px;
+	background-color: grey;
+}

@@ -1,0 +1,200 @@
+
+#boton{
+    position: relative;
+    top: 30px;
+	text-align: center;
+    
+}
+
+#body-map{
+    
+    background-color: black;
+    background-image: url("imagenes/chicago2.jpg");
+   
+    
+    
+}
+
+#logo{
+    position: relative;
+    top: -1020px;
+    width: 90px;
+}
+
+#Textologo{
+    font-size: 100%;
+    color: aliceblue;
+    font-family:courier;
+}
+
+#linea{
+    position: relative;
+    top:-1040px;
+    width: 110px;
+}
+
+
+#rent{
+    position: relative;
+    top:-1000px;
+    left: 20px;
+    width: 60px;
+}
+
+.message{
+    display:none;
+    color:white;
+    background:#999;
+    position:absolute;
+    top:10px;
+}
+
+
+#hospital{
+    position: relative;
+    top:-950px;
+    left: 20px;
+    width: 60px;
+}
+
+#eat{
+    position: relative;
+    top:-900px;
+    left: 20px;
+    width: 60px;
+    color:red
+}
+
+#secure{
+    position: relative;
+    top:-850px;
+    left: 20px;
+    width: 60px;
+}
+
+#radius{
+    position: relative;
+    top:-800px;
+    left: 20px;
+    width: 60px;
+}
+
+#verRadio{
+    position: relative;
+    top:-800px;
+    left: 22px;
+    width: 50px;
+}
+
+#police{
+    position: relative;
+    top:-750px;
+    left: 20px;
+    width: 60px;
+}
+
+#park{
+    position: relative;
+    top:-700px;
+    left: 20px;
+    width: 60px;
+}
+
+#book{
+    position: relative;
+    top:-650px;
+    left: 20px;
+    width: 60px;
+}
+
+#budget{
+    position: relative;
+    top:-600px;
+    left: 30px;
+    width: 60px;
+}
+
+#lineaf{
+    position: relative;
+    top:-580px;
+    width: 110px;
+}
+
+/*Tool tip*/
+
+.tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.barra{
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    left: 200%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip:hover .barra{
+    visibility: visible;
+    opacity: 1;
+}
+
+.radio{
+    visibility: hidden;
+    width: 120px;
+    height: 30px; 
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    left: 200%;
+    top: 90%; 
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip:hover .radio{
+    visibility: visible;
+    opacity: 1;
+}

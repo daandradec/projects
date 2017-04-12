@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+ <!-- Token : nRpmYzhkcrweuVXxRmEMMGcfkVUvXgTi //Token CDO  --> 
+ <!-- key : AIzaSyBmOLIj7g82PSVjg2jui5vx6fjjgFhYlJo // Google Maps Api Key -->
+ <!-- Zillow Web Services Identification (ZWSID): X1-ZWz1fqksq45r7v_5jgqp -->
+<html>
+
+<head>
+    <link rel="stylesheet" type ="text/css" href="CSS/style.css"> <!-- comment me-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ZKRentAPP </title>
+    <!-- Script Sources-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>  <!-- //jquery -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmOLIj7g82PSVjg2jui5vx6fjjgFhYlJo&callback=initMap" async defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script id="ConnectCDO">//Climate Data Online
+        $(document).ready(function () {
+            $("#button1").click(function () {
+                $.ajax({
+                    beforeSend: function (request) {
+                        request.setRequestHeader("token", "nRpmYzhkcrweuVXxRmEMMGcfkVUvXgTi");
+                    },
+                    url: "https://www.ncdc.noaa.gov/cdo-web/api/v2/datasets",
+                    method: "GET",
+                    data: "datatypeid=TOBS",
+                    datatype: "json",
+                    success: function (result) {
+                        var collectedData = result;
+                        //Metadata
+                        var metaData = collectedData.metadata;
+                        var mdResultSet = metaData.resultset;
+                        var mdOffSet = mdResultSet.offset;
+                        var mdCount = mdResultSet.count;
+                        var mdLimit = mdResultSet.limit;
+                        //Results
+                       var dataResults = collectedData.results; // object array (data)
+                       $("#p1").html(mdLimit+ " (connected)");
+                       
+                    }});
+            });
+        });
+    </script> 
+  
+    <script id ="GoogleMap" >
+        var map;
+        function initMap() {
+            
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 41.8708, lng: -87.6505},
+                zoom: 15
+                
+            });
+            var marker = new google.maps.Marker({
+                position: {lat: 41.8708, lng: -87.6505},
+                map: map,
+                title: 'Department of Computer Science – University of Illinois, Chicago'
+            });
+
+        }
+    </script>
+    
+    <script id="connectARHD">  // Affordable Rental Housing Developments
+        $(document).ready(function(){
+            $(button2).click(function () {
+                $.ajax({
+                    url: "https://data.cityofchicago.org/api/views/s6ha-ppgi/rows.json",
+                    method: "GET",
+                    data:"accessType=DOWNLOAD",
+                    datatype: "json",
+                    
+                    success: function(result){
+                        var collectedData = result;
+                        //Metadata
+                        var metaData = collectedData.meta.view;
+                        var mdID = metaData.id;
+                        $("#p2").html(mdID + " (connected)");
+                    }
+                });
+            });
+        });
+    </script>
+    <script id="ShowPoliceStations">
+        $(document).ready(function(){
+            $(btnShowPoliceStations).click(function(){
+               $.ajax({
+                    url: "https://data.cityofchicago.org/api/views/z8bn-74gv/rows.json",
+                    method: "GET",
+                    data:"accessType=DOWNLOAD",
+                    datatype: "json",
+   
+                    success: function(result){
+                        var collectedData = result;
+                        //Metadata
+                        var metaData = collectedData.meta.view;
+                        var dataResults = collectedData.data;
+                        
+                        for(i=0 ; i<dataResults.length ; i++){
+                            var marker = new google.maps.Marker({
+                                position: {lat:parseFloat(dataResults[i][20]) ,
+                                            lng:parseFloat(dataResults[i][21])},
+                                map:map,
+                                title: dataResults[i][9],
+                                label: "PS"
+                            });
+                          
+                        }
+                    }
+               }); 
+            });
+        });
+        
+    </script>
+    <script id="ResetMap">
+        $(document).ready(function(){
+            $(btnResetMap).click(function(){
+                initMap();
+                
+            });
+        });
+        
+    </script>
+    
+    <script id="ShowCommunityAreas"> 
+        $(document).ready(function(){
+            $(btnShowCommunityAreas).click(function() {
+                var ctaLayer = new google.maps.KmlLayer({
+                    url: 'https://data.cityofchicago.org/api/geospatial/cauq-8yn6?method=export&format=KML',
+                    map: map
+                });
+                
+            });
+        });
+        
+           
+    </script>
+</head>
+<body>
+    
+    <div class ="container">
+        <div class="jumbotron">
+            <h1>ZK RentApp</h1>
+        </div>
+    </div>
+    <div class="panel panel-default" id="map"></div>
+    
+    <div id="panelcalc" class="panel panel-default">
+        <div class="panel-heading">Calculate</div>
+        <div class="panel-body">
+            <button class="btn btn-default" id="button2">Connect ARHD</button>
+            <button class="btn btn-default" id="button1">Connect CDO</button>
+            <p id="p1">CDO Test Connection</p>
+            <p id = "p2">ARHD Test Connection</p>
+            <button id="button3" class ="btn btn-default">Find Cheapest</button>
+            <button id="button4" class ="btn btn-default">Find Safest</button>
+        </div>
+    </div>
+    <br>
+    <div id="panelOptions" class="panel panel-default">
+        <div class="panel panel-heading">Options</div>
+        <div class="panel panel-body">
+            <button id="btnShowPoliceStations" class="btn btn-default">Show Police Stations </button>
+            <button id="btnShowCommunityAreas" class ="btn btn-default">Show Community Areas</button>
+            <button id="btnResetMap" class ="btn btn-default">Reset Map</button>
+        </div>
+    </div>
+    <br>
+    
+    
+    <div class="well well" id="divfooter">
+        <footer>© Zillow, Inc., 2006-2016. Use is subject to <a href="https://www.zillow.com/corp/Terms.htm">Terms of Use</a>
+        <a href="https://www.zillow.com/wikipages/What-is-a-Zestimate/">What's a Zestimate?</a> </footer>
+        <footer> <a href="http://www.zillow.com/"> <img id="zillowLogo"  src="https://www.zillow.com/widgets/GetVersionedResource.htm?path=/static/logos/Zillowlogo_200x50.gif" alt="Provided by: Zillow">  </a></footer>
+    </div>
+</body>
+</html>

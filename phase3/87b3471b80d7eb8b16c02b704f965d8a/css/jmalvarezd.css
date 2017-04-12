@@ -1,0 +1,14 @@
+html, body { 
+	height: 100%; 
+	margin: 0; 
+	padding: 0; 
+}
+#map { 
+    height: 700px;
+    width: 100%;
+    padding: 2px;
+}
+img{
+	height: 100%;
+	width: 100%;
+}

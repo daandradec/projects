@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      #map {
+        width: 100%;
+        margin: 30;
+        height: 400px;
+        background-color: LIGHTCORAL;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/tutorial.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+  <body bgcolor=INDIANRED>
+    <div id="map"></div>
+    <script type="text/javascript">
+
+      function initMap() {
+        var mapDiv = document.getElementById( 'map' );
+        var map = new google.maps.Map(mapDiv, {
+          center: {lat: 41.8708, lng: -87.6505},
+    			zoom: 15});
+        var marker = new google.maps.Marker({ //Line 1
+      			position: {lat: 41.8708, lng: -87.6505}, //Line2: Location to be highlighted
+      			map: map,//Line 3: Reference to map object
+      			title: 'Purdue University' //Line 4: Title to be given
+      		})
+    }
+    </script>
+  </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIFzmMkZ1AiIje0jx1jVPXn_gOjAdT1uk&callback=initMap">
+    </script>
+  </body>
+</html>

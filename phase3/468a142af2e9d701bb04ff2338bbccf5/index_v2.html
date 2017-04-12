@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<header>
+	<title>My first proyect in ironhack</title>
+	<meta charset="utf-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script> 
+    <script src="js/implementation.js" type="text/javascript" ></script>
+	</header>
+	<body>
+
+
+		<nav class="navbar navbar-inverse">
+  			<div class="container-fluid">
+    			<div class="navbar-header">
+      				<a class="navbar-brand" href="#">LIC</a>
+    			</div>
+			    <ul class="nav navbar-nav">
+			      <li class="active"><a href="#">Home</a></li>
+			      <li><a href="#">About us</a></li>
+			      <li><a href="#">Services</a></li>
+			    </ul>
+		  	</div>
+		</nav>
+
+		<div class="container">
+			<h1>Find your ideal home that fits your budget</h1>
+			<hr>
+			<p>
+				LIC is an application that helps you to find your place idea in a personalized way
+			</p>
+			<a href="#about" class="btn btn-primary btn-xl page-scroll">Star now!</a>
+		</div> 
+
+		<section class="bg-primary" id="about">
+			<div class="container">
+
+				<div class="row">
+
+					<div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">We give you the option for you to choose</h2>
+                    <hr class="light">
+                    <p class="text-faded">LIC helps you find the safest and most comfortable place based on your budget and according to your needs as
+                    </p>
+                    <ul>
+                    	<li>
+                    		Close to a relative
+                    	</li>
+                    	<li>
+                    		Close to your studies
+                    	</li>
+                    	<li>
+                    		Close to your work
+                    	</li>
+                    </ul>
+                    <p>And many other options</p>
+                    <a class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
+                	</div>
+
+				</div>
+
+			</div>
+
+		</section>
+
+		<section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="map" style="width:100%;height:400px;"></div>
+						<script src="js/implementation.js">	</script>
+						<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAilwFXFvJuxk1vV8KKdXdo0ve6Ymhi7zY&callback=myMap"></script>
+						
+               	 </div >
+               	 <div class="col-md-6">
+					<button onclick="function("GOD")">Data farmer</button>
+				</div>
+            </div>
+        </div>
+        </section>
+	</body>	
+</html>

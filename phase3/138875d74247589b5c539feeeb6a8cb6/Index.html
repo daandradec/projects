@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Landi Zhao">
+	<title>Gold IronHacks 2017</title>
+	 <style>
+   
+    #map{
+	position: absolute;
+   float:right;
+    padding: 2px;
+   margin-top:600px;
+   display:block;
+}
+	  #side-menu{
+	margin-top: 10px;
+
+	height:0px
+}
+	  #menu1{
+	margin-top: 10px;
+	width:260px;
+	background-color:yellow;
+border: 1px solid black; 
+	height:250px
+}
+	  #menu2{
+	margin-top: 10px;
+	width:260px;
+	background-color:pink;
+border: 1px solid black; 
+	height:250px
+}
+html, body { 
+height: 100%; 
+margin: 0; 
+padding: 0; 
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+    </style>
+
+  </head>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  <body>
+  	<div class="container">
+  		<div class="row">
+  				<h3>Gold IronHacks 2017 Spring</h3>
+  		</div>
+  		<div class="row">			
+			<div id="side-menu"  >
+		
+				<div class="jumbotron">
+		
+					<div id="menu1">
+                      info for market sells vegetables 
+						<div id="basic-info">
+				
+							<div id="weather"></div>
+						</div>
+						<div id="position-info">
+							
+						</div>
+						<div id="chart">
+						</div>
+						<div id="scores"></div>
+					</div>
+					<div id="menu2"> place for speicific price compare using graph </div>
+				</div>
+			</div>
+			<div class="col-sm-7 col-md-7" id="map_container">
+				<div id="map">
+				
+				<iframe src="https://www.google.com/maps/d/embed?mid=1NY1QvgXCCA36kLvP5jxhNc0SSfI" width="1640" height="480"></iframe>
+				</div>
+			</div>
+			
+			
+		</div>
+	
+
+
+<script type="text/javascript">
+	$(document).ready(function() {
+			$.ajax({
+				url: "https://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=ZIP:47906&startdate=2017-01-01&enddate=2017-01-01",
+				headers: {token: 'asWyCdsAIEbXHoJWiEclgQsuMcOmdOcw'},
+				success: function(result) {
+					show(result);
+				}
+			});
+		});
+
+		function show(result) {
+			var p = $("<p>The date is <b>" + result.results[0].date + "</b>" + " attributes is: <b>" + result.results[0].attributes + "</b></p>");
+			$('#menu1').append(p);
+		};
+	//function initMap(){
+		var mapDiv = document.getElementById('map');
+		var map = new google.maps.Map(mapDiv, {
+			center: {lat: 40.4237, lng: -86.9212},
+			zoom: 12});
+		var marker = new google.maps.Marker({ //Line 1
+			position: {lat: 40.4237, lng: -86.9212}, //Line2: Location to be highlighted
+			map: map,//Line 3: Reference to map object
+			title: 'Purdue University' //Line 4: Title to be given
+		})
+	
+</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD11L5aH11-xDhP_v20Q9NlUUwuqok2IYM&callback=initMap"></script>
+</div>	
+  </body>
+</html>

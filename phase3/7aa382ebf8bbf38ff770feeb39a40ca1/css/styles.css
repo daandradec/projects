@@ -1,0 +1,58 @@
+/* Title */
+.title {
+	padding:0%;
+	animation:opac 0.8s}@keyframes opac{from{opacity:0} to{opacity:1}
+}
+#t_con{
+	color:black;
+	text-align:center;
+	font-size:40px;
+	margin: 1% 25% 1% 25%;
+	letter-spacing: 4px;
+    text-shadow: 2px 2px 10px rgb(120,120,255);
+	width: 50%;
+    height: 50px;
+    background-color: rgba(0,0,0,0.3);
+    -webkit-transition: width 2s, height 4s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s, height 4s;
+}
+#t_con:hover {
+    width: 300px;
+}
+/* MENU */
+.menu {
+	background-color:#080808;
+	opacity: 0.9;
+}
+.sidebar{
+	width:16.66666667%;
+	height:100%;
+	position:fixed!important;
+	z-index:1;
+	overflow:auto
+}
+img {
+	margin: 10% 25% 10% 25%;
+}
+#t_menu{
+	color: white;
+	text-align:center;
+	font-size: 150%;
+}
+/* Content */ 
+.content {
+	background-image: url("images/bkground.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin: 0% 0% 0% 16.66666667%;
+}
+.section1, .section2, .section4, .section5 {
+	display:none;
+}
+/* Msp */
+#map {
+	height:600px;
+	background-color: grey;
+	margin: 3% 15% 3% 15%;
+	border-radius:5%
+}

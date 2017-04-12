@@ -1,0 +1,162 @@
+/*body*/
+@font-face{
+	font-family: "1";
+	src:url(../Fuentes/1.otf);
+}
+@font-face{
+	font-family: "2";
+	src:url(../Fuentes/2.otf);
+}
+
+body {
+	background:#575a5b;
+	margin: 0; padding: 0;
+	font-family: "1";
+}
+/*Encabezado*/
+
+/*colores
+verde oscuro 476b40
+verde claro 94b43a
+rojo a71c32
+gris 575a5b
+*/
+header{
+	background: #94b43a;
+	height: 60px;
+	margin: 0px;
+	position: relative;
+	-moz-user-select: none;
+  	-webkit-user-select: none;
+  	-ms-user-select: none;
+	user-select: none;
+}
+header div{
+	display: inline-block;
+}
+
+header ul{
+	position: relative;
+	margin: 0px;
+	padding: 12px 40px 4px 40px;
+}
+header nav li{
+	display: inline-block;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+header nav ul a{
+	text-decoration: none;
+	padding: 5px 20px;
+	color: #a71c32;
+}
+header nav ul a:visited{
+	color: #a71c32;
+}
+
+header nav ul a:hover{
+	border: 10px #fff;
+	box-shadow: 0px 2px 0px #fff;
+	color: #fff;
+}
+
+.ing{
+	
+}
+
+.reg{
+	
+}
+
+.logo{
+	position: relative;
+	background: url(../Imagenes/Etxea.png);
+	padding: 30px 100px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	left: 80px;
+	top: 7px;
+	float: left;
+}
+
+.ingreso{
+	float: right;
+	padding: 0px;
+	font-size: 30px;
+	position: relative;
+}
+
+.busq{
+	clear: both;
+	margin: 0px;
+	padding: 20px;
+	background: url(../Imagenes/Chicago.jpg);
+	background-size: 105%;
+	background-position: center 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 33em;
+	position: relative;
+	box-shadow: 0px 5px 0px #a71c32;	
+}
+.formulario{
+}
+
+h2{
+	margin: 20px 0px;
+	color: #a71c32;
+	font-size: 40px;
+	font-weight: normal;
+}
+
+section .busq input{
+	display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    position: relative;
+	text-align: center;
+}
+
+section .busq .dat{
+	width: 20%;
+    padding: 12px 20px;
+    margin: 15px 0px;
+    font-size: 15px;
+}
+section .busq input:focus {
+    border: 1px solid green;
+    border-radius: 30px;
+}
+
+.consulta {
+	width: 23%;
+    background-color: rgba(167,28,50,.75);
+    color: white;
+    cursor: pointer;
+    padding: 12px 0px;
+    margin: 8px 0px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.MH{
+	background: #a71c32;
+}
+
+.mapa{
+	position: relative;
+	padding: 20px;
+	box-shadow: 0px 5px 0px #94b43a, 0px -5px 0px #94b43a;
+	background: url(../Imagenes/LogoUnal3.png);
+	background-size: 50%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: -110px -30px;
+}
+
+footer{
+	color: #fff;
+}
+
+
+/*comentarios*/

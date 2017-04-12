@@ -1,0 +1,92 @@
+html, body{
+    height: 100%; margin: 0; padding: 0;
+}
+ #map{
+    height: 100%;
+ }
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: -moz-linear-gradient(
+        left,
+        rgba(50, 102, 205, 0.7) 0%,
+        rgba(193, 209, 240,0.3) 100%
+        );
+    background: -webkit-linear-gradient(
+        left,
+        rgba(50, 102, 205, 0.7) 0%,
+        rgba(193, 209, 240,0.3) 100%
+        );
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 5px;
+}
+.sidenav:hover{
+    background: -moz-linear-gradient(
+        left,
+        rgb(50, 102, 205) 0%,
+        rgb(193, 209, 240) 100%
+        );
+    background: -webkit-linear-gradient(
+        left,
+        rgb(50, 102, 205) 0%,
+        rgb(193, 209, 240) 100%
+        );
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 1.3s
+}
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+.sidenav .closebtn {
+    position: absolute;
+    height: 50%;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.sidenav h1 {
+    font-family: Tahoma, Geneva, sans-serif;
+    padding-top: 5px;
+    margin-left: 52px;
+}
+.sidenav p{
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: 700;
+    margin-left: 32px;
+}
+.sidenav .input{
+  text-align:center;
+}
+nav {
+
+    padding-top: 5px;
+    padding-left: 16px;
+}
+header{
+    background: -moz-linear-gradient(
+        left,
+        rgba(50, 102, 205, 0.7) 0%,
+        rgba(193, 209, 240,0.3) 100%
+        );
+    background: -webkit-linear-gradient(
+        left,
+        rgba(50, 102, 205, 0.7) 0%,
+        rgba(193, 209, 240,0.3) 100%
+        );
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+

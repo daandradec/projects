@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	 <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <script src="https://d3js.org/d3.v4.min.js"></script>
+  
+    <style>
+      #map {
+        height: 400px;
+        width: 75%;
+        margin: auto;
+       }
+	   
+
+    </style>
+  </head>
+  <body>
+    
+  <div class="jumbotron text-center">
+      <h1>Fresh Produce in Greater Lafayette</h1>
+      <p>Lettuce go find it! </p> 
+  </div>
+
+    <div id="map"></div>
+    <script type="text/javascript">
+
+    var locations = [
+  		['LaFiesta', 40.423, -86.858, 9],
+  		['Cooley Family Farm Inc', 40.419, -86.733, 8],
+  		['Meijer', 40.469, -86.956, 7],
+  		['Meijer', 40.416, -86.813, 6],
+  		['Payless Super Market', 40.454, -86.917, 5],
+  		['Payless Super Market', 40.386, -86.902, 4],
+  		['Lafayette Farmers Market', 40.420, -86.891, 3],
+  		['City Foods', 40.419, -86.889, 2],
+  		['Fresh Thyme Farmers Market', 40.414, -86.840, 1]
+  		];
+  		
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: new google.maps.LatLng(40.416, -86.875),
+		  mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+        
+		var infowindow = new google.maps.InfoWindow();
+		
+		var marker, i;
+		
+		for (i = 0; i < locations.length; i++) {  
+        marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'mouseover', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+		}
+
+
+
+    <div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Pie Chart</h3>
+      <p>This columm will show a pie chart about different 
+      kinds of ethinicity produce stores</p>
+     
+
+    var w = 300,                        
+    h = 300,                          
+    r = 100,                            
+    color = d3.scale.category20c();     
+    data = [{"label":"one", "value":20}, 
+            {"label":"two", "value":50}, 
+            {"label":"three", "value":30}];
+    
+    var vis = d3.select("body")
+        .append("svg:svg")             
+        .data([data])                   
+            .attr("width", w)           
+            .attr("height", h)
+        .append("svg:g")               
+            .attr("transform", "translate(" + r + "," + r + ")")    
+    var arc = d3.svg.arc()              
+        .outerRadius(r);
+    var pie = d3.layout.pie()          
+        .value(function(d) { return d.value; });    
+    var arcs = vis.selectAll("g.slice")    
+        .data(pie)                         
+        .enter()                            
+            .append("svg:g")              
+                .attr("class", "slice");    
+        arcs.append("svg:path")
+                .attr("fill", function(d, i) { return color(i); } )  
+                .attr("d", arc);                                   
+        arcs.append("svg:text")                                    
+                .attr("transform", function(d) {                   
+                d.innerRadius = 0;
+                d.outerRadius = r;
+                return "translate(" + arc.centroid(d) + ")";        
+            })
+            .attr("text-anchor", "middle")                         
+            .text(function(d, i) { return data[i].label; });       
+    </script>
+      
+    </div>
+    <div class="col-sm-4">
+      <h3>Weather Graph</h3>
+      <p>This column will show a graph relating to the climate data</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Other mandatory dataset</h3>        
+      <p>This column will show a visualization regarding the 
+      other mandatory dataset we are supposed to use</p>
+    </div>
+  </div>
+</div>
+   
+  </body>
+</html>
