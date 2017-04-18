@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+    </style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>    
+  </head>
+    
+  <body onload="initialize()">
+      
+    <div id="map_canvas" style="width:500px; height:500px"></div>
+      
+    <script type="text/javascript">
+        
+        var map;
+        function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(41.8708, -87.6505),
+          zoom: 13,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        map = new google.maps.Map(document.getElementById("map_canvas"),
+            mapOptions);
+        }
+        
+        
+        var casas = new Object;
+        $.get( "https://data.cityofchicago.org/api/views/s6ha-ppgi/rows.json?accessType=DOWNLOAD", function( datos ) {
+            console.log(datos);
+            for(var i = 0 ; i < datos.data.length ; i++ ){
+                casas[i]=datos.data[i];
+                var myLatlng = new google.maps.LatLng(datos.data[i][19],datos.data[i][20]);
+                var name = datos.data[i][12];
+                mark = new google.maps.Marker(
+	    		{
+	    			position: myLatlng,
+	    			title: name,
+	    			map: map
+	    		})
+            }
+            
+        });
+        var nearest = new Object;
+        var nearer = new Object;
+        nearest = casas[0];
+        nearer = casas[1];
+        for( var i = 1 ; i < casas.length; i++){
+
+        }
+        
+    </script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCAnPv2vHMLNcvb5wQ_MVXYtE1imDDOkPg&sensor=true">
+    </script>
+  </body>
+</html>

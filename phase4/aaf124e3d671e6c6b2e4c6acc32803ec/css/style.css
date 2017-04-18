@@ -1,0 +1,104 @@
+
+html, body { 
+	height: 100%; margin: 0; padding: 0; 
+	background: #08B257;
+}
+
+#map { 
+	height: 50%; 
+	background: #08B257;
+}
+
+#barprin {
+	background: #08B257;
+	text-align: center; 
+	color: white;
+	font-size: 120px;
+	min-height: 200px;
+	font-family: 'Lobster';
+}
+
+#table1 {
+	background: #08B257;
+	color: white;
+	font-size: 20px;
+	min-height: 200px;
+	min-width: 75%;
+	border-radius: 6px;
+    padding: 5px 0;
+    border-style: solid;
+    border-color: white;
+}
+
+.prop {
+	background: #08B257;
+	margin-left: 0.5cm;
+	color: white;
+	font-size: 20px;
+	min-height: 250px;
+}
+
+.back {
+	background: #08B257;
+}
+
+.cont {
+	width: 500px;
+	height: 200px;
+	overflow: auto;
+
+}
+
+
+li.itemA[myvar =  desactive]{
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	cursor: pointer;
+}
+
+li.itemA[myvar =  active]{
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	background: #169599;
+	color: white;
+	border-color:#169599; 
+	cursor: pointer;
+}
+
+.btn .tooltiptext {
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.btn:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.boton {
+	margin-left: 0.5cm;
+    float: left; 
+}
+
+	

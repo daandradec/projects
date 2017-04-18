@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Etxea</title>
+	<link rel="stylesheet" type="text/css" href="Estilos/estilos.css">
+	<link rel="icon" type="image/x-icon" href="Imagenes/ET-icon.ico"/>
+</head>
+<body>
+	<header>
+		<a href="index.html">
+			<div class="logo">
+				
+			</div>
+		</a>
+		<nav>
+			<div class="ingreso">
+				<ul>
+					<li><a href="#">login</a></li>
+					<li><a href="#">Sign in</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<section>
+		<div class="busq" align="center">
+			<form name="formulario" action="mapa/Mapa.html" methos="post">
+				<h2>Find the most comfortable place to stay in chicago</h2>
+				<br>
+				<input class="dat" type="number" placeholder="Enter your maximum budget">
+				<br>
+				<input class="dat" type="date" placeholder="arrival date" name="fecha" min="2017-03-30">
+				<br>
+				<input class="dat" type="date" placeholder="departure date" >
+				<br>
+				<input class="consulta" type="submit" value="Check">
+			</form>
+		</div>
+	</section>
+	<section >
+		<div class="MH">
+			<div class="mapa" id="mapa" align="center" >
+				<div class="gl" id="gl"></div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<p>Christian Sanabria Rodriguez - IronHacks 2017</p>
+	</footer>
+	<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key= AIzaSyBzPWi1SXRpYaf7DjCoRsb7cDQhziVmxPQ &callback=initMap">
+	</script>
+	<script src="js/Etxea.js" type="text/javascript"></script>
+</body>
+</html>

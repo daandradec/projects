@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="APP WEB FOR ">
+    <meta name="author" content="CHRISTIAN CAMILO TORRES RODRIGUEZ">
+    <title>Appartment</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+	
+	
+    <style>
+      #map {
+		float: left;
+		width: 100%;
+        height: 400px;
+		margin: 10px;
+        background-color: grey;
+      }
+    </style>
+    
+	<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js.js"></script>
+	
+  </head>
+  <body>
+  
+	<nav class="navbar navbar-inverse navbar-fixed-top" id="top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Appartment</a>
+        </div>
+      </div>
+    </nav>
+	
+	<div class="jumbotron" id="jumbo">
+      <div class="container">
+        <h1>Hi!</h1>
+        <p>We are pleased to help you find the best place to live. On the map you can see 
+		the available places. Click the next button to see the available apartments on the map.</p>
+		<p><button class="btn btn-primary btn-lg" id="Submit" onclick="hide()">Submit</button></p>
+      </div>
+    </div>
+	
+	<div class="jumbotron" id="jumbo2" style='display:none;'>
+      <div class="container">
+        <h1>More information<h1>
+        <p>Click on the star to get more information about the site you want.</p>
+        
+		
+      </div>
+    </div>
+	
+	<div class="container">
+		<div class="row">
+		
+		<div id="map"></div>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDesfNcSNKbr8mGQjNY90P3dRBtmpX8iHY&callback=initMap">
+		</script>
+        
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>Produced by CHRISTIAN CAMILO TORRES RODRÍGUEZ</p>
+      </footer>
+    </div>
+	
+  </body>
+
+</html>

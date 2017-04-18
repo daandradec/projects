@@ -1,0 +1,45 @@
+/* index style */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            
+        }
+       
+        h1{
+            text-align: center;
+          
+        }
+        p{
+            
+        }
+        [class*="jumbotron"] {
+            height: 150px;
+        }
+        
+        [class*="btn"] {
+            margin-left : 2%;
+            margin-top:  0.25%;
+        }
+        #panelcalc{
+            margin-left: 9.5%;
+            margin-right: 9.5%;
+           
+        }
+        #panelOptions{
+            margin-left: 9.5%;
+            margin-right: 9.5%;
+            
+        }
+       
+        #map {
+            height: 55%;
+            width: 85%;
+            margin-left: 7.5%;
+            
+            
+        }
+        #divfooter {
+            text-align: center;
+            float: end;
+        }

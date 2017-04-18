@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CAMARIYH</title>
+
+    <meta charset="UTF-8">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <h1 class="navbar-brand">Make a room in your home. CA edition.</h1>
+        </div>
+
+    </nav>
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Welcome to CAMARIYH</h4>
+        </div>
+        <div class="modal-body">
+          <p>This app helps to search a good room to living in Chicago</p>
+          <ul style="list-style-type:none">
+            <li><img src="icons/house.png" width="30px" height="30px"/> Represents houses for rent.
+              <p>Move the mouse over them to get more information and click to get a route<img src="icons/example.png" width="140px" height="auto"/> </p></li>
+            <li><img src="icons/peligro.png" width="25px" height="25px"/> Represents reports of crimes.<p>
+              Move the mouse over them to get more information. This object is grouped in <img src="icons/m3.png" />
+            </p></li>
+            <li><img src="icons/greenRoof.png" width="18px" height="18px"/> Represents buildings whose roofs have gardens or plants.</li>
+            <li><img src="icons/library.png" width="20px" height="20px"/> Represent libraries.<p>Move the mouse over them to get more information.</p></li>
+          </ul>
+          <p>
+            Additionally find the weather information on the buttons on the left or on the bottom and top of the map.To hide or show the different icons use the buttons on the right.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12  col-xs-12  hidden-md hidden-lg">
+                <div class="btn-toolbar ">
+                    <div class="btn-group center" role="group">
+                        <button type="button" class="btn btn-secondary  fa fa-cloud fa-lg" id="cloud" data-toggle="tooltip" data-placement="right" title="Cloudiness">Cloudiness:</button>
+                        <button type="button" class="btn btn-secondary fa fa-thermometer-half fa-lg" id="tem" data-toggle="tooltip" data-placement="right" title="Temperature">Temperature:</button>
+                        <button type="button" class="btn btn-secondary fa fa-thermometer-empty fa-lg" id="temL" data-toggle="tooltip" data-placement="right" title="Min Temperature">   temp_min</button>
+                        <button type="button" class="btn btn-secondary fa fa-thermometer-full  fa-lg" id="temH" data-toggle="tooltip" data-placement="right" title="Max Temperature">   temp_max</button>
+                        <button type="button" class="btn btn-secondary fa fa-spinner fa-lg" id="wind" data-toggle="tooltip" data-placement="right" title="Wind speed">Wind speed </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="btn-toolbar hidden-xs hidden-sm">
+                    <div class="btn-group-vertical pull-right" role="group">
+                        <button type="button" class="btn btn-secondary fa fa-cloud fa-lg" id="cloud1" data-toggle="tooltip" data-placement="right" title="Cloudiness">Cloudiness:</button>
+                        <button type="button" class="btn btn-secondary fa fa-thermometer-half fa-lg" id="tem1" data-toggle="tooltip" data-placement="right" title="Temperature">Temperature:</button>
+                        <button type="button" class="btn btn-secondary fa fa-thermometer-empty fa-lg" id="temL1" data-toggle="tooltip" data-placement="right" title="Min Temperature">   temp_min:</button>
+                        <button type="button" class="btn btn-secondary fa fa-thermometer-full  fa-lg" id="temH1" data-toggle="tooltip" data-placement="right" title="Max Temperature">   temp_max:</button>
+                        <button type="button" class="btn btn-secondary fa fa-spinner fa-lg" id="wind1" data-toggle="tooltip" data-placement="right" title="Wind speed">Wind speed: </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8 ">
+                <div id="weather" class="bg-info"><img id="iconW" /></div>
+                <div id="map"></div>
+                <div id="warnings-panel" class="label-warning"></div>
+            </div>
+            <div class="col-sm-2">
+                <div class="btn-toolbar hidden-xs hidden-sm">
+                    <div class="btn-group-vertical pull-left" role="group">
+                        <button type="button" class="btn btn-secondary" onclick="toggleMarkers(greenRoofs,greenRoofsBool);">green roofs</button>
+                        <button type="button" class="btn btn-secondary" onclick="toggleMarkers(rent,rentBool);">rental housing</button>
+                        <button type="button" class="btn btn-secondary" onclick="toggleMarkers(libraries,librariesBool);">libraries</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12  col-xs-12  hidden-md hidden-lg">
+                <div class="btn-toolbar ">
+                    <div class="btn-group center" role="group">
+                      <button type="button" class="btn btn-secondary" onclick="toggleMarkers(greenRoofs,greenRoofsBool);">green roofs</button>
+                      <button type="button" class="btn btn-secondary" onclick="toggleMarkers(rent,rentBool);">rental housing</button>
+                      <button type="button" class="btn btn-secondary" onclick="toggleMarkers(libraries,librariesBool);">libraries</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="row">
+            <div style="height: 10px" class="panel-footer" >
+                Icons maps based on work was created by Matt Gentile from http://www.icondeposit.com/ and it is licensed under a Creative Commons Attribution 3.0
+            </div>
+         </div>-->
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+      <div class="alert-info">
+        <center>
+          <br />
+          <h2>NOAA climate Report </h2>
+
+        <div id="NOAA">
+
+        </div>
+        </center>
+      </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!---  Latest compiled and minified JavaScript -->
+    <script src="js/map.js"></script>
+
+    <script src="js/markerclusterer.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQbIjkStnlCpkfdEnNtat7Xq_Tp70gSFQ&callback=initMap">
+    </script>
+
+    <script src="js/wheather.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="./css/Aux.css">
+</body>
+
+</html>

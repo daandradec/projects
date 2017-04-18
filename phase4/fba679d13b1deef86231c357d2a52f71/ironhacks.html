@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>dsgantivac</title>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script src="js/food.js"></script>
+  <script src="js/opciones.js"></script>
+  <script src="js/rents.js"></script>
+  <script src="js/crimes.js"></script>
+  <script src="js/bicycle station.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+    <style type="text/css">
+      html, body { height: 100%; margin: 0; padding: 0; }
+      #map { height: 70%; width: 65%;float: left;margin-right: 2%;margin-bottom: 1%;}
+    </style>
+  </head>
+  <style type="text/css">
+  body{
+  	background-color: lightgray;
+  }
+
+  	h1{
+  		color: white;
+  		font-family: "Monospace","Courier New";
+  		font-size: 300%;
+  		font-style: oblique;
+		  text-align: center; 
+		  text-decoration:underline;
+		  margin-top: 0px;
+	 	  background-color: #688b8a;
+		  border-width: thin;
+		  
+		}
+	p{
+		text-align: center;
+		color:white;
+	}
+	a{
+		text-align: center;
+	}
+  button{
+  -moz-box-shadow: 0px 10px 14px -7px #276873;
+	-webkit-box-shadow: 0px 10px 14px -7px #276873;
+	box-shadow: 0px 10px 14px -7px #276873;
+	background-color:#599bb3;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+	background-color:#408c99;
+	position:relative;
+	top:1px;
+  }
+
+  .fondo{
+    clear:left;
+  }
+  .opcion{
+  	height: 20%;
+  	width: 20%;
+  	margin-left: 7%;
+  	margin-bottom: 2%;
+  }
+  .direccion{
+  	color: black;
+	font-family: "Monospace","Courier New";
+	font-size: 100%;
+	text-align: center; 
+	margin-top: 0px;
+	background-color: lightgray;
+	border-width: thin;
+
+  }
+
+
+  </style>
+  <body>
+  <h1>Purdue-UNAL IronHacks Project</h1>
+
+  <button onclick="rent_place(map)"><img src="imagenes/icon2.png"> rent places</button>
+  <button onclick="crimenes(map)"><img src="imagenes/icon4.png"> crimenes</button>  
+  <button onclick="bicycle(map)"><img src="imagenes/icon5.png"> bicycle stations</button>
+  <button onclick="food(map)"><img src="imagenes/icon1.png"> food places</button>
+
+  <button onclick="hide()">delete markers</button>
+    
+
+
+  <p>   </p>
+  <div id="map"></div>
+
+  <div> 
+  		<button class="opcion" onclick="option1(map)"> first option</button><p class="direccion">ADDRESS: 1519 W. Warren Blvd.<BR>
+  		PHONE NUMBER: 312-660-1354 <BR>
+  		COMMUNITY AREA:Near West Side</p>
+  		<button class="opcion" onclick="option2(map)"> second option</button><p class="direccion">ADDREESS:1401 W. Roosevelt Road <BR>
+  		PHONE NUMBER: 312-733-2436 <BR>
+  		COMMUNITY AREA: Near West Side</p>
+  		<button class="opcion" onclick="option3(map)"> third option</button><p class="direccion">ADDRESS:1712 W. 17th St. <BR>
+  		PHONE NUMBER: 312-666-1323 <BR>
+  		COMMUNITY AREA: Lower West Side</p>
+
+  </div>
+
+
+	<script type="text/javascript">
+
+		var map;
+		var marker1;
+		function initMap() {
+		  map = new google.maps.Map(document.getElementById('map'), {
+			    center: {lat: 41.8708, lng: -87.6505},
+			    zoom: 18
+			  });
+		marker1=new google.maps.Marker({
+			                position: map.getCenter(),
+			                map: map,
+			                //se copia el url de la imagen que se desea utilizar                           
+			                icon: 'imagenes/start.png',
+			                optimized:false
+			             });
+			var infowindow1 = new google.maps.InfoWindow({
+			content: '<a href="http://www.uic.edu/">Department of Computer Science</a>'
+			});
+			 
+			// Añadimos un evento de clic al marcador
+			 
+			google.maps.event.addListener(marker1, 'click', function() {
+			 
+			// Llamamos el método open del InfoWindow
+			infowindow1.open(map, marker1);
+			});
+
+		}
+
+    function hide(){
+       rent_marker(null);
+       rent_off();
+       crimenes_off();
+       bycicle_off();
+       food_off();
+       option1_off(null);
+
+    }
+
+    </script>
+
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZHjebtAtTAiwqFeFw0-ta7EqxFRyCHLg&callback=initMap">
+    </script>
+      <div class="fondo">
+      <center >Created by David Gantiva</center>
+      <center>Email: dsgantivac@unal.edu.co</center>
+      <center>dataset to use: <a href="https://www.data.gov/">data.gov</a>, <a href="http://openweathermap.org/current"> openweathermap.org</a> </center>
+  
+    </div>
+    
+  </body>
+
+</html>

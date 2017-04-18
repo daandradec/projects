@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>IronHacks</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <script src="js/dataMap.js" type="text/javascript"></script>
+    <script src="js/biker.js" type="text/javascript"></script>
+    <script src="js/dataCrime.js" type="text/javascript"></script>
+    <script src="js/weather.js" type="text/javascript"></script>
+
+
+</head>
+
+<body>
+    <div id="header" class="container">
+        <div class="row">
+            <div id="head">
+                <h1>Affordable Rental Housing Developments</h1>
+            </div>
+        </div>
+        <div class="row">
+
+            <div id="map_container">
+                <div id="map"></div>
+            </div>
+
+
+            <div id="all-menu">
+
+            <div id="side-menu">
+                <h2>Weather</h2>
+                <div class="jumbotron">
+                <div id="menu-cover">
+                  <div id="description"></div>
+                  <div id="temp"></div>
+                  <div id="humidity"></div>
+                  <div id="temp_min"></div>
+                  <div id="temp_max"></div>
+                </div>
+              </div>
+            </div>
+
+
+            <div id="side-menu2">
+                <h2>Data House</h2>
+                <div class="jumbotron">
+                    <div id="menu-cover2">
+                        <div id="area-name"></div>
+                        <div id="area-number"></div>
+                        <div id="property-type"></div>
+                        <div id="property-name"></div>
+                        <div id="phone-number"></div>
+                        <div id="company"></div>
+                        <div id="units"></div>
+                        <div id="chart"></div>
+                        <div id="scores"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="side-menu3">
+                <h2>General information</h2>
+                <div class="jumbotron">
+                    <div id="menu-cover3">
+                        <div id="crimes"></div>
+                        <div id="distance"></div>
+                        <div id="bike"></div>
+                        
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="side-menu4">
+                <h2>Options</h2>
+                <div class="jumbotron">
+                    <div id="menu-cover4">
+                        <div> <input type="checkbox" id="myCheck1"> Best option for distance</div>
+                        <div> <input type="checkbox" id="myCheck2"> Best option for crimes</div>
+                        <div> <input type="checkbox" id="myCheck3"> Best option for bike</div>
+                        <div> <input type="checkbox" id="myCheck4"> Best option for all</div>
+                        <button id="button" value="myvalue" onclick="myFunctionB()"> OK </button>
+
+                    </div>
+                </div>
+            </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC4lO1PjOC9xzRaOK86FJoht6VBFYcsB8&callback=initMap"></script>
+
+</body>
+
+</html>

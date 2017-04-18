@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--- Head Base -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Search Awesome Place</title>
+    <base href="/">
+    
+    <!-- BootstrapCDN Complete CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Bootstrap Theme: Solar -->
+    <link rel="stylesheet" href="https://bootswatch.com/solar/bootstrap.min.css">
+    
+    <style>
+        #map {
+            width: 100%;
+            height: 400px;
+            background-color: grey;
+        }
+        #STitle {
+            font-size: 20px;
+            text-align: center;
+        }
+        
+    </style>
+    
+  </head>
+  
+  <body>    
+    <!-- Navbar -->
+    <div class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand">Search Awesome Place</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            
+            <li>
+              <a href="../basic/">Basic Search</a>
+            </li>
+            <li>
+              <a href="../aditional/">Additional Decision Criteria</a>
+            </li>
+            <li>
+              <a href="../visualizations/">Visualizations</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://uic.edu/" target="_blank">University</a></li>
+            <li><a href="https://www.cs.uic.edu/" target="_blank">Department</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+    <!-- Second Title -->
+    <h1 id="STitle">Department of Computer Science - University of Illinois, Chicago</h1>
+    
+    <!-- Google Map -->
+    <div id="map"></div>
+    
+    <!-- Footer -->
+    <footer class="footer-distributed">
+
+    <div class="footer-left">
+      <ul class="nav navbar-nav">
+        <li>
+          <a routerLink="home">Home</a>
+        </li>
+        <li>
+          <a routerLink="contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+    </footer>
+
+  </body>
+  
+  <!-- jQuery CDN -->
+  <script
+    src="https://code.jquery.com/jquery-1.12.4.js"
+    integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+    crossorigin="anonymous"></script>
+
+  <!-- BootstrapCDN Complete JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+  </script>
+  
+  <!-- Google Maps script -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrkQO_xt5wMyLE6vBVXZgaexY575okhqo&callback=initMap">
+  </script>
+  
+  <!-- JavaScript initMap -->
+  <script type="text/javascript">
+    function initMap(){
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+            center: {lat: 41.870916, lng: -87.650489},
+            zoom: 12});
+        var marker = new google.maps.Marker({
+            position: {lat: 41.870916, lng: -87.650489},
+            map: map,
+            title: 'UIC'})
+    }
+    </script>
+</html>

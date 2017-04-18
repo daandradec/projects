@@ -1,0 +1,25 @@
+
+
+	curl -H "token:<skpAGcMYftuebduNbGrXvUmWPMozeUtg>" "https://www.ncdc.noaa.gov/cdo-web/api/v2/datasets"
+$.ajax({ url:<https://www.ncdc.noaa.gov/cdo-web/api/v2/datasets>, data:{<data>}, headers:{ token:<skpAGcMYftuebduNbGrXvUmWPMozeUtg> } })
+
+{ 
+	"Id": "GSOY", 
+	"name": "Resumen Global del Año", 
+	"datacoverage": 1, 
+	"MinDate": "01/01/1763", 
+	"MaxDate": "01/01/2015" 
+}
+
+	curl -H "token:<token>" "url"
+$.ajax({ url:<url>, data:{<data>}, headers:{ token:<token> } })
+
+
+
+ var DPolice = [];            //for (var j = 0; j < numMarkers; j++)
+                        //{   
+                            var x = 110.56*(PoliStation[1][0]-AptData[1][0]);
+                            var y = 84.8*(PoliStation[1][1]-AptData[1][1]);
+                            DPolice.push(Math.sqrt((x*x)+(y*y));
+                            document.getElementById("demo").innerHTML = DPolice[0][0];
+                        //}

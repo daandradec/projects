@@ -1,0 +1,38 @@
+html,body{
+    height: 100%;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+body{ 
+    background-image: url('../background_image/congruent_pentagon.png') !important;
+}
+circle,
+path {
+  fill: none;
+  stroke: #123;
+  stroke-opacity: .1;
+}
+
+circle {
+  stroke-width: 2px;
+}
+svg{
+    position:absolute;
+}
+canvas{
+    position:absolute;
+}
+#svg2{
+    top:140%;
+    background-image: url('../img/cuadricule.jpg');
+}
+#header1{
+    position:absolute;
+    top:125%;
+    left:38%;
+    background-color: darkorange;
+}
+#headerOne,#headerTwo,#headerThree,#headerFour,#headerFive,#headerSix,#headerSeven{
+    position:absolute;
+    font-size: 24pt;
+}

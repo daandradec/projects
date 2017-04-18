@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+	<meta name = "description" content = "Rent an apartment in Chicago">	
+  	<title>Where To Live - Chicago</title>
+	<link rel="shourcut icon" type="img/icon" href="img/house.ico"> 
+	
+	<link rel = "stylesheet" href = "css/style.css">
+	<link rel = "stylesheet" href = "css/c3.css">
+	
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Average+Sans" rel="stylesheet"> 
+	
+    <script type = "text/javascript" src = "js/main.js"></script>
+	<script type = "text/javascript" src = "js/map.js"></script>
+	<script type = "text/javascript" src = "js/weather.js"></script>
+	<script type = "text/javascript" src = "js/c3.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	
+  </head>
+  
+  <body>
+
+	<div class = "header">
+		<h2>Where To live</h2>
+		<p>The best website for new students at University of Illinois</p>
+		<!-- <img id = "header_img" src = "img/chicago.jpg" alt = "Chi" > -->
+	</div>
+	
+	<div class = "container">	
+	
+		<div id = "menu">
+			<div id = "options">
+			<!--	<form>
+					<label for="minPrice">Min Price</label>
+					<input type="text" id="minPrice" name="minprice" placeholder="Min Price">
+
+					<label for="maxPrice">Max Price</label>
+					<input type="text" id="maxPrice" name="maxprice" placeholder="Max Price">
+
+			<!--	<input type="checkbox" name="parks" value="Park"> Parks <br>
+					<input type="checkbox" name="restaurants" value="Restaurant"> Restaurants <br>
+					<input type="checkbox" name="policestation" value="Police"> Police station <br>
+					<input type="checkbox" name="gyms" value="Gym"> Gyms <br>
+					
+					
+			  </form>-->
+			  
+			<center><button class="button" onclick="findPark()">Parks</button></center>	
+			  
+			<center><button class="button" onclick="findSchool()">Schools</button></center>	
+			
+			<center><button class="button" onclick="findPoliceS()">Police Stations</button></center>
+			
+			<center><button class="button" onclick="findLibrary()">Libraries</button></center> <br>
+			
+			<center><button class="button" onclick="show()">Search</button></center>
+
+			<br><p>Do you want to to know the Chicago climate?<p>
+			
+			<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#10004; Yes</span>
+			
+			<!-- <img src = "img/Chicago.jpg" alt = "Chicago" > -->
+			  
+			</div>
+			
+			<div id = "results" >
+				<div class = "card">
+				  <img src = "img/apart.jpg" style = "width:100%">
+				  <div><h4>Rental information with Zillow information, soon. Please bring the pointer to the image</h4></div>
+				</div>
+				<div class = "card">
+					<div class = "contenedor-img ani-img"> 
+						<center>
+							<img src = "img/apart.jpg" style = "width:100%">
+						</center>
+						<div class="mask">  
+							<h4>Price: $1,795 Per month </h4>  
+							<p>Address: 2251-2253 W Cornelia</p>
+							<p>Phone: (847) 608-0261 </p>
+						</div>    
+					</div>   
+				</div>
+				<button class="button" onclick="show()">Return</button>
+			</div>
+			
+			<div id = "container-map">
+				<div id = "map">
+					<script async defer
+						src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyA3-e15jzvaN6G-qIDCQ9mLhnfDzRWVQf8&callback=initMap">
+					</script>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<p>Chart</p>
+		<p>Chicago Climate with data from Climate Data Online. Comming soon. </p>	
+		<div id = "chart"></div>
+	</div>
+
+	<script>	
+	
+	var chart = c3.generate({
+		size: {
+			width: 445,
+            height: 300
+            },
+		data: {
+        columns: [
+            ['data1', 30, 200, 100, 400, 150, 250],
+            ['data2', 50, 20, 10, 40, 15, 25]
+        ]
+    }
+	});
+
+    </script>
+	
+  </body>
+  
+</html>

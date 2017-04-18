@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Project</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0">    
+    <!-- files css bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    
+
+      
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js"></script>   
+  
+    <!-- files js bootstrap-->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPprU4LY3A_RHTCrupAHS8XVKJ5Eiuwuw&callback=initMap&libraries=geometry"
+       ></script>
+
+     
+    <script src="js/raphael-2.1.4.min.js"></script>
+    <script src="js/justgage.js"></script>
+
+
+
+    
+
+  </head>
+
+  <body>
+    
+    <div id="info">
+
+      <div id="wet"></div>
+      <div id="weather"></div>
+      <script src="js/maps.js"></script>
+
+
+      </li>
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Community Area Name
+              </a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">          
+              <div id="market-name"></div>                  
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingTwo">
+            <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Address
+              </a>
+            </h4>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div class="panel-body">
+              <div id="street-name"></div>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingThree">
+            <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Phone Number
+              </a>
+            </h4>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div class="panel-body">
+              <div id="phone"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div id="position-info">              
+        
+      </div>
+      
+      
+    </div>
+
+    <div id="floating-panel">
+    <b>Mode of Travel: </b>
+    <select id="mode">
+      <option value="DRIVING">Driving</option>
+      <option value="WALKING">Walking</option>
+      <option value="BICYCLING">Bicycling</option>
+      <option value="TRANSIT">Transit</option>
+    </select>
+    </div>
+    <div id="map"></div>
+
+    <div id="footer">
+      <main>
+        <div id="gauge" class="100x50px"></div>
+        <div id="gauge1" class="100x50px"></div>
+        <div id="gauge2" class="100x50px"></div>
+        <div id="gauge3" class="100x50px"></div>
+      </main>
+      
+    </div>
+        
+    
+    
+    
+
+    
+  </body>
+</html>

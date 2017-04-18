@@ -1,0 +1,285 @@
+FIPS:18 - Indiana
+https://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=ZIP:47906&units=standard&startdate=2017-04-15&enddate=2017-04-17
+&limit=110
+https://www.ncdc.noaa.gov/cdo-web/api/v2/datasets?stationid=COOP:129430
+{
+  "metadata": {
+    "resultset": {
+      "offset": 1,
+      "count": 2,
+      "limit": 25
+    }
+  },
+  "results": [
+    {
+      "uid": "gov.noaa.ncdc:C00505",
+      "mindate": "1970-05-12",
+      "maxdate": "2014-01-01",
+      "name": "Precipitation 15 Minute",
+      "datacoverage": 0.25,
+      "id": "PRECIP_15"
+    },
+    {
+      "uid": "gov.noaa.ncdc:C00313",
+      "mindate": "1900-01-01",
+      "maxdate": "2014-01-01",
+      "name": "Precipitation Hourly",
+      "datacoverage": 1,
+      "id": "PRECIP_HLY"
+    }
+  ]
+}
+
+https://www.ncdc.noaa.gov/cdo-web/api/v2/datasets?stationid=GHCND:US1INTP0005
+{
+  "metadata": {
+    "resultset": {
+      "offset": 1,
+      "count": 1,
+      "limit": 25
+    }
+  },
+  "results": [
+    {
+      "uid": "gov.noaa.ncdc:C00861",
+      "mindate": "1763-01-01",
+      "maxdate": "2017-04-03",
+      "name": "Daily Summaries",
+      "datacoverage": 1,
+      "id": "GHCND"
+    }
+  ]
+}
+
+https://www.ncdc.noaa.gov/cdo-web/api/v2/datasets?stationid=GHCND:US1INTP0012
+{
+  "metadata": {
+    "resultset": {
+      "offset": 1,
+      "count": 2,
+      "limit": 25
+    }
+  },
+  "results": [
+    {
+      "uid": "gov.noaa.ncdc:C00861",
+      "mindate": "1763-01-01",
+      "maxdate": "2017-04-03",
+      "name": "Daily Summaries",
+      "datacoverage": 1,
+      "id": "GHCND"
+    },
+    {
+      "uid": "gov.noaa.ncdc:C00946",
+      "mindate": "1763-01-01",
+      "maxdate": "2017-01-01",
+      "name": "Global Summary of the Month",
+      "datacoverage": 1,
+      "id": "GSOM"
+    }
+  ]
+}
+
+https://www.ncdc.noaa.gov/cdo-web/api/v2/datasets?stationid=NEXRAD:KILX
+{
+  "metadata": {
+    "resultset": {
+      "offset": 1,
+      "count": 2,
+      "limit": 25
+    }
+  },
+  "results": [
+    {
+      "uid": "gov.noaa.ncdc:C00345",
+      "mindate": "1991-06-05",
+      "maxdate": "2017-04-03",
+      "name": "Weather Radar (Level II)",
+      "datacoverage": 0.95,
+      "id": "NEXRAD2"
+    },
+    {
+      "uid": "gov.noaa.ncdc:C00708",
+      "mindate": "1994-05-20",
+      "maxdate": "2017-03-31",
+      "name": "Weather Radar (Level III)",
+      "datacoverage": 0.95,
+      "id": "NEXRAD3"
+    }
+  ]
+}
+
+https://www.ncdc.noaa.gov/cdo-web/api/v2/datacategories?locationid=ZIP:47906&limit=40
+{
+  "metadata": {
+    "resultset": {
+      "offset": 1,
+      "count": 40,
+      "limit": 40
+    }
+  },
+  "results": [
+    {
+      "name": "Annual Agricultural",
+      "id": "ANNAGR"
+    },
+    {
+      "name": "Annual Degree Days",
+      "id": "ANNDD"
+    },
+    {
+      "name": "Annual Precipitation",
+      "id": "ANNPRCP"
+    },
+    {
+      "name": "Annual Temperature",
+      "id": "ANNTEMP"
+    },
+    {
+      "name": "Autumn Agricultural",
+      "id": "AUAGR"
+    },
+    {
+      "name": "Autumn Degree Days",
+      "id": "AUDD"
+    },
+    {
+      "name": "Autumn Precipitation",
+      "id": "AUPRCP"
+    },
+    {
+      "name": "Autumn Temperature",
+      "id": "AUTEMP"
+    },
+    {
+      "name": "Computed",
+      "id": "COMP"
+    },
+    {
+      "name": "Computed Agricultural",
+      "id": "COMPAGR"
+    },
+    {
+      "name": "Degree Days",
+      "id": "DD"
+    },
+    {
+      "name": "Dual-Pol Moments",
+      "id": "DUALPOLMOMENT"
+    },
+    {
+      "name": "Echo Tops",
+      "id": "ECHOTOP"
+    },
+    {
+      "name": "Evaporation",
+      "id": "EVAP"
+    },
+    {
+      "name": "Hydrometeor Type",
+      "id": "HYDROMETEOR"
+    },
+    {
+      "name": "Land",
+      "id": "LAND"
+    },
+    {
+      "name": "Miscellany",
+      "id": "MISC"
+    },
+    {
+      "name": "Other",
+      "id": "OTHER"
+    },
+    {
+      "name": "Overlay",
+      "id": "OVERLAY"
+    },
+    {
+      "name": "Precipitation",
+      "id": "PRCP"
+    },
+    {
+      "name": "Reflectivity",
+      "id": "REFLECTIVITY"
+    },
+    {
+      "name": "Spring Agricultural",
+      "id": "SPAGR"
+    },
+    {
+      "name": "Spring Degree Days",
+      "id": "SPDD"
+    },
+    {
+      "name": "Spring Precipitation",
+      "id": "SPPRCP"
+    },
+    {
+      "name": "Spring Temperature",
+      "id": "SPTEMP"
+    },
+    {
+      "name": "Summer Agricultural",
+      "id": "SUAGR"
+    },
+    {
+      "name": "Summer Degree Days",
+      "id": "SUDD"
+    },
+    {
+      "name": "Sunshine",
+      "id": "SUN"
+    },
+    {
+      "name": "Summer Precipitation",
+      "id": "SUPRCP"
+    },
+    {
+      "name": "Summer Temperature",
+      "id": "SUTEMP"
+    },
+    {
+      "name": "Air Temperature",
+      "id": "TEMP"
+    },
+    {
+      "name": "Velocity",
+      "id": "VELOCITY"
+    },
+    {
+      "name": "Vertical Integrated Liquid",
+      "id": "VERTINTLIQUID"
+    },
+    {
+      "name": "Water",
+      "id": "WATER"
+    },
+    {
+      "name": "Winter Agricultural",
+      "id": "WIAGR"
+    },
+    {
+      "name": "Winter Degree Days",
+      "id": "WIDD"
+    },
+    {
+      "name": "Wind",
+      "id": "WIND"
+    },
+    {
+      "name": "Winter Precipitation",
+      "id": "WIPRCP"
+    },
+    {
+      "name": "Winter Temperature",
+      "id": "WITEMP"
+    },
+    {
+      "name": "Weather Type",
+      "id": "WXTYPE"
+    }
+  ]
+}
+
+https://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=ZIP:47906&units=standard&startdate=2017-04-01&enddate=2017-04-05&datatypeid=PRCP

@@ -1,0 +1,101 @@
+/* Title */
+.title {
+	padding:0%;
+	animation:opac 0.8s}@keyframes opac{from{opacity:0} to{opacity:1}
+}
+#t_con{
+	color:black;
+	text-align:center;
+	font-size:40px;
+	margin: 1% 25% 1% 25%;
+	letter-spacing: 4px;
+    text-shadow: 2px 2px 10px rgb(120,120,255);
+	width: 50%;
+    height: 50px;
+    background-color: rgba(0,0,0,0.3);
+    -webkit-transition: width 2s, height 4s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s, height 4s;
+}
+#t_con:hover {
+    width: 300px;
+}
+/* MENU */
+.menu {
+	background-color:#080808;
+	opacity: 0.9;
+}
+.sidebar{
+	width:16.66666667%;
+	height:100%;
+	position:fixed!important;
+	z-index:1;
+	overflow:auto
+}
+img {
+	margin: 10% 25% 10% 25%;
+}
+#t_menu{
+	color: white;
+	text-align:center;
+	font-size: 150%;
+}
+/* Content */ 
+.content {
+	background-image: url("images/bkground.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin: 0% 0% 0% 16.66666667%;
+}
+.section2, .section3, .section4 {
+	display:none;
+}
+/* WindowInfo */ 
+#info, #menu_preference {
+	font-family: "Lucida Console";
+	font-size: 20px;
+	text-align: center;
+	background-color: rgba(0,0,0,0.7);
+	margin: 5% 2% 2% 64%;
+	color: white;
+	display:none;
+}
+
+.window {
+	font-family: "Lucida Console";
+	font-size: 20px;
+	text-align: center;
+	background-color: rgba(0,0,0,0.7);
+	color: white;
+}
+.sta {
+	float: left;
+	width: 90%;
+	height:600px;
+	background-color: grey;
+	margin: 2% 5% 2% 5%;
+	border-radius:0%;
+}
+p{
+	text-align: left;
+	margin: 2% 5% 2% 5%;
+}
+
+.info_pre {
+	font-size: 20px;
+	background-color: rgba(0,0,0,0.7);
+	color: white;
+	background: #BABABA;
+	margin:1% 1% 1% 25%;
+	width: 60%;
+}
+
+/* Map */
+#map {
+	float: left;
+	width: 60%;
+	height:600px;
+	margin-left:20%;
+	margin-top:1%;
+	border-radius:5%;
+	background: grey;
+}

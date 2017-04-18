@@ -1,0 +1,81 @@
+{%extends "header.html"%}
+
+
+{%block header%}
+  <link rel="stylesheet" href="{{url_for('static',filename='css/content.css')}}">
+  <style>
+    .modal { width: 30% !important;}
+    .map-control {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
+        font-family: 'Roboto','sans-serif';
+        margin: 10px;
+        padding-right: 5px;
+        /* Hide the control initially, to prevent it from appearing
+           before the map loads. */
+        display: none;
+      }
+      /* Display the control once it is inside the map. */
+      #map .map-control { display: block; }
+
+      .selector-control {
+        font-size: 14px;
+        line-height: 30px;
+        vertical-align: baseline;
+      }
+  </style>
+{%endblock%}
+
+{%block body%}
+  <div class="cont">
+  <div id="map_container"></div>
+  <div id="style-selector-control" class="map-control">
+      <input type="checkbox" name="show-hide" id="hide-poi"
+          class="selector-control" checked="checked">
+      <label for="hide-poi">Police stations</label>
+      <input type="checkbox" name="show-hide" id="show-poi"
+          class="selector-control" checked="checked">
+      <label for="show-poi">Parks</label>
+      <!--  Not yet --coming soon =)
+      <input type="checkbox" name="show-hide" id="show-hosp"
+          class="selector-control" checked="checked">
+      <label for="show-hosp">Hospitals</label>
+      <input type="checkbox" name="show-hide" id="show-clust"
+          class="selector-control" checked="checked">
+      <label for="show-clust">Clustering</label>
+      -->
+  </div>
+  <div id="map"></div>
+  </div>
+
+ <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <p id="address"></p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+{%endblock%}
+
+
+{%block imports%}
+<!-- Google maps; Application Programing Interface -->
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+<!-- Send a request for the weather -->
+<script defer src="{{url_for('static',filename='logic/request_weather.js')}}"></script>
+<!--  Functions in the map: use functions in request_weather.js-->
+<script defer src="{{url_for('static',filename='logic/map_google.js')}}"></script>
+<!--  Create markers: use variables in map_google_js-->
+<script defer src="{{url_for('static',filename='logic/create_marquers.js')}}"></script>
+
+<!--  Google maps: Fetche the map and trigger initMap-->
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSaP-yNmxveks9F0c-ylR8R2yXt6356f4&libraries=places&callback=initMap"></script>
+<!-- jQuery: Request API -->
+<script defer  src="{{url_for('static',filename='logic/request_location_houses.js')}}"></script>
+<script defer src="{{url_for('static',filename='logic/request_locations_police_stations.js')}}"></script>
+<script defer src="{{url_for('static',filename='logic/request_parks.js')}}"></script>
+<script src="{{url_for('static',filename='js/content.js')}}"></script>
+{%endblock%}

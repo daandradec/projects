@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>WEACTM</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="js/distanceFunc.js"></script>
+  <script src="js/getDataJson.js"></script>
+  <style>
+  table, th, td {
+    border: 1px solid black;
+  }
+  </style>
+</head>
+<body>
+  <!-- schools -->
+  <script>dispDataSchools("https://data.cityofchicago.org/api/views/75e5-35kf/rows.json?accessType=DOWNLOAD",'#schools')</script>
+  <table id="schools">
+    <tr>
+      <th colspan="3">Nearby Schools</th>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Km to University of Illinois</th>
+    </tr>
+  </table>
+  <!-- fire stations -->
+  <script>dispDataFStation("https://data.cityofchicago.org/api/views/28km-gtjn/rows.json?accessType=DOWNLOAD",'#fireS')</script>
+  <table id="fireS">
+    <tr>
+      <th colspan="2">Nearby Fire Stations</th>
+    </tr>
+    <tr>
+      <th>Street</th>
+      <th>Km to University of Illinois</th>
+    </tr>
+  </table>
+  <!-- public health clinics -->
+  <script>dispDataHClinics("https://data.cityofchicago.org/api/views/kcki-hnch/rows.json?accessType=DOWNLOAD",'#healthC')</script>
+  <table id="healthC">
+    <tr>
+      <th colspan="5">Nearby Health Clinics</th>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <th>Speciality</th>
+      <th>Schendule</th>
+      <th>Address</th>
+      <th>Km to University of Illinois</th>
+    </tr>
+  </table>
+  <!-- libraries -->
+  <script>dispDataLibs("https://data.cityofchicago.org/api/views/x8fc-8rcq/rows.json?accessType=DOWNLOAD",'#libra')</script>
+  <table id="libra">
+    <tr>
+      <th colspan="4">Nearby Libraries</th>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Schendule</th>
+      <th>Km to University of Illinois</th>
+    </tr>
+  </table>
+  <!-- police stations -->
+  <script>dispPolSt("https://data.cityofchicago.org/api/views/z8bn-74gv/rows.json?accessType=DOWNLOAD",'#polSt')</script>
+  <table id="polSt">
+    <tr>
+      <th colspan="3">Nearby Police Stations</th>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Km to University of Illinois</th>
+    </tr>
+  </table>
+</body>
+</html>

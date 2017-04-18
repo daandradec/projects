@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="All Things Fresh and Frugal" content="">
+    <meta name="Niveah Abraham" content="">
+    <title>Search- Freshtables</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+     <link href="css/freshtables.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/business-casual.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+
+
+   
+     
+</head>
+
+<body>
+	  <div class="tagline-upper text-center text-heading text-shadow text-white mt-4 hidden-md-down">Freshtables!!</div>
+    <div class="tagline-lower text-center text-expanded text-shadow text-uppercase text-white mb-4 hidden-md-down">Niveah Abraham</div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-toggleable-md navbar-light navbar-custom bg-faded py-lg-4">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container">
+            <a class="navbar-brand text-uppercase text-expanded font-weight-bold hidden-lg-up" href="#">Freshtables</a>
+            <div class="collapse navbar-collapse" id="navbarExample">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="index.html">Home </a>
+                    </li>
+                     <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="search.html">Search<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<div class="bg-faded p-4 my-4">
+            <hr class="divider">
+            <h2 class="text-center text-lg text-uppercase my-0">Vegetables Available<strong> During each month</strong></h2>
+            <hr class="divider">
+            <div class="wrapper">
+           
+            </div>
+<div>
+            <?php
+          //  $csv = array_map('str_getcsv', file('http://web.ics.purdue.edu/~nabraham/2017-Purdue-IronHack-NTAbraham/dev/Data/vegetables1.csv'));
+          //  echo $csv;
+
+            $csv = array_map('str_getcsv', file('http://web.ics.purdue.edu/~nabraham/2017-Purdue-IronHack-NTAbraham/dev/Data/vegetables.csv')); 
+            $header = array_shift($csv); 
+            // Seperate the header from data
+            echo $header;
+
+            $col = array_search('Vegetables', $header); 
+             foreach ($csv as $row) {      
+             $array[] = $row[$col]; 
+             echo $array;
+            }
+
+            $off_id=$_GET["Kale"];
+            echo $off_id;
+            ?>
+            <script>
+             var myForm = document.getElementById("myForm");
+    //Extract Each Element Value
+    for (var i = 0; i < myForm.elements.length; i++) {
+    console.log(myForm.elements[i].value);
+    }
+            </script>
+ </div>
+    </div>
+</body
+</html>

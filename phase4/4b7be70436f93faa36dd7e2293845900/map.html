@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<head>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="CSS.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+ <script src="Javascript.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=geometry&sensor=false"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.2/bootstrap-slider.js"></script>
+<script src="https://d3js.org/d3.v4.js"></script>    
+    
+<!--MAP -->
+    <style>
+      #map {
+        position: fixed;
+        left: 120px;
+        width: 100%;
+        height: 1000px;
+        background-color: grey;
+      }
+    </style>
+    <script type="text/javascript">
+	function initMap(){
+		var mapDiv = document.getElementById('map');
+		var map = new google.maps.Map(mapDiv, {
+			center: {lat: 41.8708, lng: -87.6505},
+			zoom: 12});
+		var marker = new google.maps.Marker({ //Line 1
+			position: {lat: 41.8708, lng: -87.6505}, //Line2: Location to be highlighted
+			map: map,//Line 3: Reference to map object
+			title: 'UIC' //Line 4: Title to be given
+		});
+        var infoWindow  = new google.maps.InfoWindow({
+            content: "Department of Computer Science – University of Illinois, Chicago</b>"
+        });
+        google.maps.event.addListener(marker, 'click', function(){ infoWindow.open(map, marker);});
+	}
+	</script>
+</head>
+<body id="body-map">
+    <div id="map"></div>
+    
+    <div><img class="pj" id="yo" src="imagenes/phome.png"></div>
+    <img class="pd" src="imagenes/dialogo.png">
+    <div class="texto">
+            <p id="parrafo">Hello new student of UIC<br>My name is Brayan and<br> I am going to help you to find<br> a place to rent near to the<br> university. <br>Please choose an option</p>
+            
+    </div>
+    <div class="texto2">
+        <p id="parrafo2"></p>
+    </div>
+    
+    <link rel="stylesheet" type="text/css" href="CSS.css">
+    <div id="logo"> <h6 id="Textologo"> ChicagoRent </h6></div>
+    <div id="linea"><hr color="white" size=3>  </div>
+    
+    <div id="weather" class="tooltip" > 
+        <div class="tooltiptext">Current Weather on Chicago</div> 
+        <button onclick="weather()" style="font-size:24px;background-color:black" ><i id="botonW" class="material-icons" style="font-size:40px;color:beige">ac_unit</i></button>
+    </div>
+    <div id="stats" class="tooltip" > 
+        <div class="tooltiptext">Stadistics about the places.</div> 
+        <button onclick="stats()" style="font-size:24px;background-color:black" ><i id="botonS" class="material-icons" style="font-size:40px;color:beige">apps</i></button>
+    </div>
+    
+    <div id="grafico">
+        <img src="imagenes/rent.png" alt="Rent" height="42" width="42" onclick="hideStats(); change(-5);">
+        <p id="return">Return</p>
+        <h1 id="ShowName"></h1>
+        <div id="textoChart"><p>Chart of crimes in the community area<p></div>
+        <div id="primeraColumna"><p>Edison Park<br>5670</p></div>
+        <div id="segundaColumna"><p>Austin<br>394000</p></div>
+        <div id="terceraColumna"><p>Average<br>81763</p></div>
+        <div id="cuartaColumna"><p id="pca"></p></div>
+        <div id="points"><p id="poi"></p></div>
+        <div id="gra"></div>
+         <img id="imgsafe" src="imagenes/safe1.png" alt="Rent" height="60" width="60">
+        <div id="psafe"><p id="psaf"></p></div>
+        <img id="imgnear" src="imagenes/near1.png" alt="Rent" height="60" width="60">
+        <div id="pnear"><p id="pnea">test</p></div>
+		<img id="imgcheap" src="imagenes/cheap.png" alt="Rent" height="60" width="60">
+        <div id="pcheap"><p id="pchea">test</p></div>
+        
+    </div>
+    
+    <div id="rent" class="tooltip" > 
+        <div class="tooltiptext">Show all the places to rent in Chicago</div> 
+        <button onclick="reiniciar_mapa()" style="font-size:24px;background-color:black" ><i id="boton1" class="material-icons" style="font-size:40px;color:white">hotel</i></button>
+    </div>
+    
+    <div id="hospital" class="tooltip">
+        <div class="tooltiptext">Show condom distribution sites in Chicago</div> 
+        <button onclick="mainCondoms()" style="font-size:24px;background-color:black" ><i id="buttonCondoms" class="material-icons" style="font-size:40px;color:linen">local_hospital</i></button></div>
+    
+    <div id="eat" class="tooltip"> 
+        <div class="tooltiptext">Show grocery store chains</div> 
+        <button onclick="mainGS()" style="font-size:24px;background-color:black" ><i id="buttonGS" class="material-icons" style="font-size:40px;color:linen">local_dining</i></button> </div>
+    
+    <div id="secure" class="tooltip"> 
+        <div class="tooltiptext">Show the safest places in chicago</div> 
+        <button onclick="safe()" style="font-size:24px;background-color:black" ><i id="boton4" class="material-icons" style="font-size:40px;color:white">beenhere</i></button>
+    </div>
+    
+    <div id="crime" class="tooltip"> 
+        <div class="tooltiptext">Show localitation of 500 crimes.</div> 
+        <button onclick="mainCrimes()" style="font-size:24px;background-color:black" ><i id="buttonCrimes" class="material-icons" style="font-size:40px;color:linen">place</i></button>
+    </div>
+    
+    <div id="safest" class="tooltip"> 
+        <div class="tooltiptext">Show the safest place on Chicago.</div> 
+        <button onclick="notAva()" style="font-size:24px;background-color:black" ><i class="material-icons" style="font-size:40px;color:white">near_me</i></button>
+    </div>
+    
+    
+    
+    <div id="radius" class="tooltip"> 
+        <div class="tooltiptext">Show places to rent within a radius</div> 
+        <div class="barra"> <input type="range" id="r" value="50" onchange="getRadio()"> </div> 
+        <div class="radio"> <p id="demo"></p></div> 
+        <button onclick="radio()" style="font-size:24px;background-color:black" ><i id="boton2" class="material-icons" style="font-size:40px;color:white">edit_location</i></button></div>
+    
+    <div id="places" class="tooltip"> 
+        <div class="tooltiptext">See places near to the houses</div> 
+        <button onclick="mapPlaces()" style="font-size:24px;background-color:black" ><i id="boton6" class="material-icons" style="font-size:40px;color:white">terrain</i></button> </div>
+    
+    <div id="police" class="tooltip"> 
+        <div class="tooltiptext">Show police stations in Chicago</div> 
+        <button onclick="mainPS()" style="font-size:24px;background-color:black" ><i id=buttonPS class="material-icons" style="font-size:40px;color:linen">local_car_wash</i></button> </div>
+    
+    <div id="park"   class="tooltip"> 
+        <div class="tooltiptext">Show parks in Chicago</div> 
+        <button onclick="mainParks()" style="font-size:24px;background-color:black" ><i id="buttonParks" class="material-icons" style="font-size:40px;color:linen">directions_run</i></button> </div>
+    
+    <div id="book"  class="tooltip"> 
+        <div class="tooltiptext">Show libraries in Chicago</div> 
+        <button  onclick="mainLibraries()" style="font-size:24px;background-color:black" ><i id="buttonLibraries" class="material-icons" style="font-size:40px;color:linen">local_library</i></button> </div>
+    
+    <div id="barrio" class="tooltip"> 
+        <div class="tooltiptext">Show all the places to rent in a Community Area</div> 
+        <div class="scroll">        <div id="div_list">
+  <ul id="ul_list">
+    <button class="li_list" onclick="test('Near North Side')">Near North Side</button>
+    <button class="li_list" onclick="test('Loop')">Loop</button>
+    <button class="li_list" onclick="test('Near South Side')">Near South Side</button>
+    <button class="li_list" onclick="test('North Center')">North Center</button>
+    <button class="li_list" onclick="test('Lake View')">Lake View</button>
+    <button class="li_list" onclick="test('Lincoln Park')">Lincoln Park</button>
+    <button class="li_list" onclick="test('Avondale')">Avondale</button>
+    <button class="li_list" onclick="test('Logan Square')">Logan Square</button> 
+    <button class="li_list" onclick="test('Rogers Park')">Rogers Park</button> 
+    <button class="li_list" onclick="test('West Ridge')">West Ridge</button> 
+    <button class="li_list" onclick="test('Uptown')">Uptown</button> 
+    <button class="li_list" onclick="test('Lincoln Square')">Lincoln Square</button> 
+    <button class="li_list" onclick="test('Edison Park')">Edison Park</button>
+    <button class="li_list" onclick="test('Norwood Park')">Norwood Park</button>
+    <button class="li_list" onclick="test('Jefferson Park')">Jefferson Park</button>
+    <button class="li_list" onclick="test('Forest Glen')">Forest Glen</button>
+    <button class="li_list" onclick="test('North Park')">North Park</button>
+    <button class="li_list" onclick="test('Albany Park')">Albany Park</button>
+    <button class="li_list" onclick="test('OHare')">O'Hare</button>
+    <button class="li_list" onclick="test('Edgewater')">Edgewater</button>
+    <button class="li_list" onclick="test('Portage Park')">Portage Park</button>
+    <button class="li_list" onclick="test('Irving Park')">Irving Park</button>
+    <button class="li_list" onclick="test('Dunning')">Dunning</button>
+    <button class="li_list" onclick="test('Montclare')">Montclare</button>
+    <button class="li_list" onclick="test('Belmont Cragin')">Belmont Cragin</button>
+    <button class="li_list" onclick="test('Hermosa')">Hermosa</button>
+    <button class="li_list" onclick="test('Humboldt Park')">Humboldt Park</button>
+    <button class="li_list" onclick="test('West Town')">West Town</button>
+    <button class="li_list" onclick="test('Austin')">Austin</button>
+    <button class="li_list" onclick="test('West Garfield Park')">West Garfield Park</button>
+    <button class="li_list" onclick="test('East Garfield Park')">East Garfield Park</button>
+    <button class="li_list" onclick="test('Near West Side')">Near West Side</button>
+    <button class="li_list" onclick="test('North Lawndale')">North Lawndale</button>
+    <button class="li_list" onclick="test('South Lawndale')">South Lawndale</button>
+    <button class="li_list" onclick="test('Lower West Side')">Lower West Side</button>
+    <button class="li_list" onclick="test('Armour Square')">Armour Square</button>
+    <button class="li_list" onclick="test('Douglas')">Douglas</button>
+    <button class="li_list" onclick="test('Oakland')">Oakland</button>
+    <button class="li_list" onclick="test('Fuller Park')">Fuller Park</button>
+    <button class="li_list" onclick="test('Grand Boulevard')">Grand Boulevard</button>
+    <button class="li_list" onclick="test('Kenwood')">Kenwood</button>
+    <button class="li_list" onclick="test('Washington Park')">Washington Park</button>
+    <button class="li_list" onclick="test('Hyde Park')">Hyde Park</button>
+    <button class="li_list" onclick="test('Woodlawn')">Woodlawn</button>
+    <button class="li_list" onclick="test('South Shore')">South Shore</button>
+    <button class="li_list" onclick="test('Bridgeport')">Bridgeport</button>
+    <button class="li_list" onclick="test('Greater Grand Crossing')">Greater Grand Crossing</button>
+    <button class="li_list" onclick="test('Garfield Ridge')">Garfield Ridge</button>
+    <button class="li_list" onclick="test('Archer Heights')">Archer Heights</button>
+    <button class="li_list" onclick="test('Brighton Park')">Brighton Park</button>
+    <button class="li_list" onclick="test('McKinley Park')">McKinley Park</button>
+    <button class="li_list" onclick="test('New City')">New City</button>
+    <button class="li_list" onclick="test('West Elsdon')">West Elsdon</button>
+    <button class="li_list" onclick="test('Gage Park')">Gage Park</button>
+    <button class="li_list" onclick="test('Clearing')">Clearing</button>
+    <button class="li_list" onclick="test('West Lawn')">West Lawn</button>
+    <button class="li_list" onclick="test('Chicago Lawn')">Chicago Lawn</button>
+    <button class="li_list" onclick="test('West Englewood')">West Englewood</button>
+    <button class="li_list" onclick="test('Englewood')">Englewood</button>
+    <button class="li_list" onclick="test('Chatham')">Chatham</button>
+    <button class="li_list" onclick="test('Avalon Park')">Avalon Park</button>
+    <button class="li_list" onclick="test('South Chicago')">South Chicago</button>
+    <button class="li_list" onclick="test('Burnside')">Burnside</button>
+    <button class="li_list" onclick="test('Calumet Heights')">Calumet Heights</button>
+    <button class="li_list" onclick="test('Roseland')">Roseland</button>
+    <button class="li_list" onclick="test('Pullman')">Pullman</button>
+    <button class="li_list" onclick="test('South Deering')">South Deering</button>
+    <button class="li_list" onclick="test('East Side')">East Side</button>
+    <button class="li_list" onclick="test('West Pullman')">West Pullman</button>
+    <button class="li_list" onclick="test('Riverdale')">Riverdale</button>
+    <button class="li_list" onclick="test('Hegewisch')">Hegewisch</button>
+    <button class="li_list" onclick="test('Ashburn')">Ashburn</button>
+    <button class="li_list" onclick="test('Auburn Gresham')">Auburn Gresham</button>
+    <button class="li_list" onclick="test('Beverly')">Beverly</button>
+    <button class="li_list" onclick="test('Washington Heights')">Washington Heights</button>
+    <button class="li_list" onclick="test('Mount Greenwood')">Mount Greenwood</button>
+    <button class="li_list" onclick="test('Morgan Park')">Morgan Park</button>  
+  </ul>
+</div></div>
+
+        <button onclick="ca()" style="font-size:24px;background-color:black" ><i id="boton5" class="material-icons" style="font-size:40px;color:white">my_location</i></button> </div>
+    
+    <div id="budget" class="tooltip"> 
+        <div class="tooltiptext">Show places to rent within a budget.</div> 
+        <button onclick="budget()" style="font-size:34px;background-color:black" ><i id="boton3" class="fa fa-dollar" style="font-size:40px;color:white"></i></button>
+    </div>
+    
+    <div id="lineaf"><hr color="white" size=3>  </div>
+    
+    <div id="ShowMore">
+        <img src="imagenes/rent.png" alt="Rent" height="42" width="42" onclick="hide()">
+        <p id="return">Return</p>
+        <h1 id="ShowName2"></h1>
+        <p class="one"><b>Community Area Name:</b></p><p id="CAN" class="two"></p>
+        <p class="one"><b>Property Type:</b></p><p id="PT" class="two"></p>
+        <p class="one"><b>Address:</b></p><p id="AD" class="two"></p>
+        <p class="one"><b>Estimated Price:</b></p><p id="ZC" class="two"></p>
+        <p class="one"><b>Phone Number:</b></p><p id="PN" class="two"></p>
+         <p class="one"><b>Management Company:</b></p><p id="MC" class="two"></p>
+        <div id="image"></div> 
+    </div>
+    
+</body>
+<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqCkFYZPXJr9VH2RdRg9svw_p88NDXyrE&callback=initMap">
+</script>
+</html>

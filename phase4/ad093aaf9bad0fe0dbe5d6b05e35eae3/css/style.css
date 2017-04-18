@@ -1,0 +1,647 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.map {
+    z-index: 1;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: #2D3142;
+}
+
+.sideNavR {
+    height: 100%;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    color: white;
+    opacity: .95;
+    z-index: 0;
+}
+
+.divSideNavR {
+    height: 100%;
+    color: white;
+    overflow: auto;
+}
+
+.bar {
+    display: block;
+    height: 5px;
+    width: 15px;
+    background-color: white;
+    margin: 3px auto;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.closeBtnR {
+    z-index: 0;
+    cursor: pointer;
+    width: auto;
+    margin: 0 auto;
+    right: 33%;
+    top: 0;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+    position: fixed;
+}
+
+.closeBtnR.active .top {
+    -webkit-transform: translateY(8px) rotateZ(45deg);
+    -moz-transform: translateY(8px) rotateZ(45deg);
+    -ms-transform: translateY(8px) rotateZ(45deg);
+    -o-transform: translateY(8px) rotateZ(45deg);
+    transform: translateY(8px) rotateZ(45deg);
+}
+
+.closeBtnR.active .bottom {
+    -webkit-transform: translateY(-8px) rotateZ(-45deg);
+    -moz-transform: translateY(-8px) rotateZ(-45deg);
+    -ms-transform: translateY(-8px) rotateZ(-45deg);
+    -o-transform: translateY(-8px) rotateZ(-45deg);
+    transform: translateY(-8px) rotateZ(-45deg);
+}
+
+.closeBtnR.active .middle {
+    width: 0;
+}
+
+.contextMenu {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    color: white;
+    opacity: .95;
+    border-radius: 3%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5), 0 9px 100px 0 rgba(0, 0, 0, 0.19);
+    display: none;
+}
+
+.contextMenu .contextMenuContent {
+    margin: 10px;
+}
+
+.contextMenu .contextMenuContent a {
+    color: white;
+}
+
+.infoPopUp {
+    width: 25%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.9);
+    padding: 8px 0;
+    position: absolute;
+    z-index: 3;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5), 0 9px 100px 0 rgba(0, 0, 0, 0.19);
+    display: none;
+}
+
+.infoPopUp::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 9px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.9) transparent transparent transparent;
+}
+
+.infoPopUp div {
+    margin: 0px;
+}
+
+.closeBtnIP {
+    cursor: pointer;
+    right: 0%;
+    top: 0%;
+    position: absolute;
+    background-color: #111;
+    -webkit-transform: translateY(-5px) translateX(5px);
+    -moz-transform: translateY(-5px) translateX(5px);
+    -ms-transform: translateY(-5px) translateX(5px);
+    -o-transform: translateY(-5px) translateX(5px);
+    transform: translateY(-5px) translateX(5px);
+    border: 1px solid gray;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.closeBtnIP .top {
+    -webkit-transform: translateY(2px) rotateZ(45deg);
+    -moz-transform: translateY(2px) rotateZ(45deg);
+    -ms-transform: translateY(2px) rotateZ(45deg);
+    -o-transform: translateY(2px) rotateZ(45deg);
+    transform: translateY(2px) rotateZ(45deg);
+    height: 4px;
+    width: 10px;
+}
+
+.closeBtnIP .bottom {
+    -webkit-transform: translateY(-2px) rotateZ(-45deg);
+    -moz-transform: translateY(-2px) rotateZ(-45deg);
+    -ms-transform: translateY(-2px) rotateZ(-45deg);
+    -o-transform: translateY(-2px) rotateZ(-45deg);
+    transform: translateY(-2px) rotateZ(-45deg);
+    height: 4px;
+    width: 10px;
+}
+
+.sideNavL {
+    height: 100%;
+    width: 25%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    color: white;
+    opacity: .92;
+    z-index: 2;
+}
+
+.sideNavL .divSideNavL {
+    margin: 10% 2% 0 0;
+    height: 60%;
+    color: white;
+}
+
+.closeBtnL {
+    z-index: 2;
+    cursor: pointer;
+    padding: 0.3%;
+    width: auto;
+    margin: 0 auto;
+    left: 25%;
+    top: 1%;
+    position: fixed;
+    background-color: #111;
+    border-radius: 0 8% 8% 0;
+    opacity: 0.92;
+}
+
+.closeBtnL.active .top {
+    -webkit-transform: translateY(8px) rotateZ(45deg);
+    -moz-transform: translateY(8px) rotateZ(45deg);
+    -ms-transform: translateY(8px) rotateZ(45deg);
+    -o-transform: translateY(8px) rotateZ(45deg);
+    transform: translateY(8px)rotateZ(45deg);
+    border-color: #111;
+}
+
+.closeBtnL.active .bottom {
+    -webkit-transform: translateY(-8px) rotateZ(-45deg);
+    -moz-transform: translateY(-8px) rotateZ(-45deg);
+    -ms-transform: translateY(-8px) rotateZ(-45deg);
+    -o-transform: translateY(-8px) rotateZ(-45deg);
+    transform: translateY(-8px) rotateZ(-45deg);
+    border-color: #111;
+}
+
+.closeBtnL.active .middle {
+    width: 0;
+}
+
+.barL {
+    display: block;
+    height: 5px;
+    width: 15px;
+    background-color: white;
+    margin: 3px auto;
+    -webkit-transition: all .6s ease;
+    -moz-transition: all .6s ease;
+    -ms-transition: all .6s ease;
+    -o-transition: all .6s ease;
+    transition: all .6s ease;
+}
+
+.tabContent {
+    height: 100%;
+    margin-left: 0%;
+    display: none;
+    text-align: center;
+}
+
+.divPanorama {
+    left: 1% !important;
+    bottom: 0% !important;
+    height: 93% !important;
+    width: 98%;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    position: relative;
+}
+
+.divMapInfo {
+    position: absolute;
+    margin: 1% !important;
+    bottom: 0 !important;
+    height: 40% !important;
+    width: 98%;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.95);
+}
+
+.weatherToday {
+    position: relative;
+    height: 41%;
+    text-align: center !important;
+    font-size: 25pt;
+}
+
+.weatherPrev {
+    width: 98% !important;
+}
+
+.weatherPrevContent {
+    height: 100% !important;
+    width: 20% !important;
+    font-size: 8pt;
+    padding: 1% !important;
+    text-align: center !important;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.divDistanceText {
+    font-size: 8pt;
+    text-align: center !important;
+}
+
+.tabInfoSideBar {
+    position: fixed;
+    z-index: 4;
+    right: 0%;
+    top: 6%;
+    width: 35px;
+}
+
+.tabInfo {
+    width: 100%;
+    background-color: rgba(7, 7, 7, 0.9);
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 15% 0 0 15%;
+    border: 1px solid rgba(50, 50, 50, 0.9);
+}
+
+.tabInfo.over {
+    background-color: rgba(50, 50, 50, 0.9);
+}
+
+.tabInfo.active {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.svgWeather {
+    margin: 6% 1% 0 1%;
+    border: 1px solid #fff;
+    background-color: rgba(50, 50, 50, 0.5);
+}
+
+.circleWeather {
+    fill: rgba(255, 255, 255, 0.9);
+    stroke: rgba(0, 0, 255, 0.8);
+    stroke-width: 2px;
+    color: rgba(0, 0, 255, 0.8);
+    font-size: 24pt;
+}
+
+.domain {
+    stroke: rgba(255, 255, 255, 0.9);
+}
+
+.tick line,
+.tick text {
+    fill: rgba(255, 255, 255, 0.9);
+}
+
+.tick line {
+    stroke: rgba(255, 255, 255, 0.9);
+}
+
+.locationDiv {
+    top: 6%;
+    width: 100%;
+    height: 58%;
+    position: absolute;
+    text-align: left;
+}
+
+.infoDiv {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    overflow: auto;
+}
+
+.policeRow {
+    width: 96%;
+    /*height: 96%;*/
+    color: white;
+    margin: 2%;
+}
+
+.policeCircle {
+    fill: transparent;
+    stroke: rgba(255, 255, 255, 0.05);
+    stroke-width: 2px;
+}
+
+.policeCircle.over {
+    fill: rgba(0, 0, 255, 0.05);
+}
+
+.policeCircle.active {
+    fill: rgba(0, 0, 255, 0.1);
+}
+
+.policeRow.over {
+    background-color: rgba(0, 0, 255, 0.05);
+}
+
+.policeRow.active {
+    background-color: rgba(0, 0, 255, 0.1);
+}
+
+.fireRow {
+    width: 96%;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin: 2%;
+    padding: 1%;
+}
+
+.fireRow.over {
+    background-color: rgba(255, 0, 0, 0.05);
+}
+
+.fireRow.active {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #333;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #999;
+}
+
+#steps-fivepercent-slider .ui-slider-tip {
+    visibility: visible;
+    opacity: 1;
+    top: -30px;
+}
+
+.row {
+    margin-right: 1% !important;
+    margin-left: 1% !important;
+}
+
+.houseRow {
+    width: 98%;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin: 1%;
+}
+
+.houseRow.over {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.clinicRow {
+    width: 96%;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin: 2%;
+    padding: 1%;
+}
+
+.clinicRow.over {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.clinicRow.active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.parkRow {
+    width: 96%;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin: 2%;
+    padding: 1%;
+}
+
+.parkRow.over {
+    background-color: rgba(0, 255, 0, 0.05);
+}
+
+.parkRow.active {
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+.farmerMarketRow {
+    width: 96%;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin: 2%;
+    padding: 1%;
+}
+
+.farmerMarketRow.over {
+    background-color: rgba(0, 255, 0, 0.05);
+}
+
+.farmerMarketRow.active {
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+.groceryStoresRow {
+    width: 96%;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin: 2%;
+    padding: 1%;
+}
+
+.groceryStoresRow.over {
+    background-color: rgba(210, 105, 30, 0.05);
+}
+
+.groceryStoresRow.active {
+    background-color: rgba(210, 105, 30, 0.1);
+}
+
+.schoolRow {
+    width: 96%;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin: 2%;
+    padding: 1%;
+}
+
+.schoolRow.over {
+    background-color: rgba(255, 255, 0, 0.05);
+}
+
+.schoolRow.active {
+    background-color: rgba(255, 255, 0, 0.1);
+}
+
+.libraryRow {
+    width: 96%;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin: 2%;
+    padding: 1%;
+}
+
+.libraryRow.over {
+    background-color: rgba(138, 43, 226, 0.05);
+}
+
+.libraryRow.active {
+    background-color: rgba(138, 43, 226, 0.1);
+}
+
+.crimeEvalRow {
+    width: 96%;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin: 1%;
+    margin-top: 0;
+    font-size: 9pt;
+    padding: 1%;
+}
+
+.crimeEvalRow.over {
+    background-color: rgba(0, 255, 0, 0.05);
+}
+
+.crimeEvalRow.active {
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+.priceEvalRow {
+    width: 96%;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin: 1%;
+    margin-top: 0;
+    font-size: 9pt;
+    padding: 1%;
+}
+
+.priceEvalRow.over {
+    background-color: rgba(255, 255, 0, 0.05);
+}
+
+.priceEvalRow.active {
+    background-color: rgba(255, 255, 0, 0.1);
+}
+
+.distanceEvalRow {
+    width: 96%;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin: 1%;
+    margin-top: 0;
+    font-size: 9pt;
+    padding: 1%;
+}
+
+.distanceEvalRow.over {
+    background-color: rgba(138, 43, 226, 0.05);
+}
+
+.distanceEvalRow.active {
+    background-color: rgba(138, 43, 226, 0.1);
+}
+
+.recDiv {
+    position: absolute;
+    margin: 1% !important;
+    bottom: 0 !important;
+    width: 98%;
+    color: white;
+}
+
+.buttom {
+    right: 7%;
+    position: absolute;
+    top: 40%;
+    border-radius: 15px;
+    background-color: black;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.checkSecurity {
+    padding: 4% !important;
+    position: absolute !important;
+    left: 31% !important;
+}
+
+.crimeDeg {
+    height: 3px;
+    left: 3% !important;
+    background: rgba(204, 97, 166, 1);
+    background: -moz-linear-gradient(left, rgba(0, 255, 255, 0) 0%, rgba(0, 255, 255, 1) 7.14%, rgba(0, 191, 255, 1) 14.29%, rgba(0, 127, 255, 1) 21.43%, rgba(0, 63, 255, 1) 35.71%, rgba(0, 0, 255, 1)42.86%, rgba(0, 0, 223, 1) 50%, rgba(0, 0, 191, 1) 57.14%, rgba(0, 0, 159, 1) 64.29%, rgba(0, 0, 127, 1) 71.43%, rgba(63, 0, 91, 1) 78.57%, rgba(127, 0, 63, 1) 85.71%, rgba(191, 0, 31, 1) 92.86%, rgba(255, 0, 0, 1) 100%);
+    background: -webkit-linear-gradient(left, rgba(0, 255, 255, 0) 0%, rgba(0, 255, 255, 1) 7.14%, rgba(0, 191, 255, 1) 14.29%, rgba(0, 127, 255, 1) 21.43%, rgba(0, 63, 255, 1) 35.71%, rgba(0, 0, 255, 1)42.86%, rgba(0, 0, 223, 1) 50%, rgba(0, 0, 191, 1) 57.14%, rgba(0, 0, 159, 1) 64.29%, rgba(0, 0, 127, 1) 71.43%, rgba(63, 0, 91, 1) 78.57%, rgba(127, 0, 63, 1) 85.71%, rgba(191, 0, 31, 1) 92.86%, rgba(255, 0, 0, 1) 100%);
+    background: -o-linear-gradient(left, rgba(0, 255, 255, 0) 0%, rgba(0, 255, 255, 1) 7.14%, rgba(0, 191, 255, 1) 14.29%, rgba(0, 127, 255, 1) 21.43%, rgba(0, 63, 255, 1) 35.71%, rgba(0, 0, 255, 1)42.86%, rgba(0, 0, 223, 1) 50%, rgba(0, 0, 191, 1) 57.14%, rgba(0, 0, 159, 1) 64.29%, rgba(0, 0, 127, 1) 71.43%, rgba(63, 0, 91, 1) 78.57%, rgba(127, 0, 63, 1) 85.71%, rgba(191, 0, 31, 1) 92.86%, rgba(255, 0, 0, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(0, 255, 255, 0) 0%, rgba(0, 255, 255, 1) 7.14%, rgba(0, 191, 255, 1) 14.29%, rgba(0, 127, 255, 1) 21.43%, rgba(0, 63, 255, 1) 35.71%, rgba(0, 0, 255, 1)42.86%, rgba(0, 0, 223, 1) 50%, rgba(0, 0, 191, 1) 57.14%, rgba(0, 0, 159, 1) 64.29%, rgba(0, 0, 127, 1) 71.43%, rgba(63, 0, 91, 1) 78.57%, rgba(127, 0, 63, 1) 85.71%, rgba(191, 0, 31, 1) 92.86%, rgba(255, 0, 0, 1) 100%);
+    background: linear-gradient(to right, rgba(0, 255, 255, 0) 0%, rgba(0, 255, 255, 1) 7.14%, rgba(0, 191, 255, 1) 14.29%, rgba(0, 127, 255, 1) 21.43%, rgba(0, 63, 255, 1) 35.71%, rgba(0, 0, 255, 1)42.86%, rgba(0, 0, 223, 1) 50%, rgba(0, 0, 191, 1) 57.14%, rgba(0, 0, 159, 1) 64.29%, rgba(0, 0, 127, 1) 71.43%, rgba(63, 0, 91, 1) 78.57%, rgba(127, 0, 63, 1) 85.71%, rgba(191, 0, 31, 1) 92.86%, rgba(255, 0, 0, 1) 100%);
+}
+
+.tabRoutes {
+    background-color: transparent;
+    height: 20px;
+    position: absolute;
+    bottom: 41%;
+    right: 3%;
+}
+
+.tabRoutesItem {
+    border: 1px solid rgba(200, 200, 200, 0.9);
+    height: 22px;
+    border-radius: 5px 5px 0 0;
+    float: left;
+}
+
+.tabRoutesItem.over {
+    background-color: rgba(138, 43, 226, 0.3);
+}
+
+.tabRoutesItem.active {
+    background-color: rgba(138, 43, 226, 0.5);
+}
+
+.c3-zoom-rect {
+    fill: rgba(255, 255, 255, 0.05);
+}

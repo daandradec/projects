@@ -1,0 +1,184 @@
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\ApplicationInsights.config
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\roslyn\csc.exe
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\roslyn\vbc.exe
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\roslyn\VBCSCompiler.exe
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\RoadTripAgent.dll.config
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\RoadTripAgent.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\RoadTripAgent.pdb
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Antlr3.Runtime.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\EntityFramework.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\EntityFramework.SqlServer.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.AI.Web.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.Owin.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.Owin.Security.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Newtonsoft.Json.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Owin.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\System.Web.Helpers.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\System.Web.Mvc.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\System.Web.Optimization.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\System.Web.Razor.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\System.Web.WebPages.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\System.Web.WebPages.Razor.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\WebGrease.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.AI.Web.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\System.Web.Helpers.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\System.Web.Mvc.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\System.Web.Optimization.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\System.Web.Razor.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\System.Web.WebPages.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\System.Web.WebPages.Razor.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Antlr3.Runtime.pdb
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Newtonsoft.Json.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\EntityFramework.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\EntityFramework.SqlServer.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.Owin.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.Owin.Security.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\obj\Debug\RoadTripAgent.csprojResolveAssemblyReference.cache
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\obj\Debug\RoadTripAgent.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\obj\Debug\RoadTripAgent.pdb
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\zh-Hans\System.Web.Helpers.resources.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\zh-Hans\System.Web.Razor.resources.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\zh-Hans\System.Web.WebPages.resources.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\MySql.Data.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\MySql.Data.Entity.EF6.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\MySql.Data.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent\RoadTripAgent\bin\MySql.Data.Entity.EF6.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\ApplicationInsights.config
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\roslyn\csc.exe
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\roslyn\vbc.exe
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\roslyn\VBCSCompiler.exe
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\RoadTripAgent.dll.config
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\RoadTripAgent.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\RoadTripAgent.pdb
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Antlr3.Runtime.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\EntityFramework.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\EntityFramework.SqlServer.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.AI.Web.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.Owin.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.Owin.Security.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\MySql.Data.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\MySql.Data.Entity.EF6.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Newtonsoft.Json.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Owin.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\System.Web.Helpers.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\System.Web.Mvc.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\System.Web.Optimization.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\System.Web.Razor.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\System.Web.WebPages.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\System.Web.WebPages.Razor.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\WebGrease.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\EntityFramework.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\EntityFramework.SqlServer.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.AI.Web.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\MySql.Data.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\MySql.Data.Entity.EF6.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\System.Web.Helpers.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\System.Web.Mvc.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\System.Web.Optimization.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\System.Web.Razor.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\System.Web.WebPages.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\System.Web.WebPages.Razor.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Antlr3.Runtime.pdb
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Newtonsoft.Json.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.Owin.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.Owin.Security.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\zh-Hans\System.Web.Helpers.resources.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\zh-Hans\System.Web.Razor.resources.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\zh-Hans\System.Web.WebPages.resources.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\obj\Debug\RoadTripAgent.csprojResolveAssemblyReference.cache
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\obj\Debug\RoadTripAgent.dll
+C:\Users\Yining\Documents\Visual Studio 2015\Projects\RoadTripAgent - 副本\RoadTripAgent\obj\Debug\RoadTripAgent.pdb

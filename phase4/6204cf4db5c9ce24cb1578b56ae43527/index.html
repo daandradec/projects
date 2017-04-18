@@ -1,0 +1,107 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>UIC home finder</title>
+  <meta name="Mashup for IronHacks Competition" content="UIC home finder">
+  <meta name="Santiago Pena Sanabria" content="SitePoint">
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<link href="https://fonts.googleapis.com/css?family=Arvo|Lato|Open+Sans" rel="stylesheet"> 
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="/maps/documentation/javascript/demos/demos.css">
+  <link rel="stylesheet"  href="css/styles.css">
+ 
+<style>
+	
+	</style>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+</head>
+
+<body>
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPctjLcwmnYO6XxxU-PgdiEeMLRYks1GU&callback=initMap"
+    async defer></script>
+	<script src="js/scripts.js"></script>
+	<script>function letsgo() {
+    window.scrollTo(1000, 0);
+}</script> 
+    
+
+
+ 
+  <div class="fluid-container" >
+  
+  
+    
+ <div class="row">
+ 	<div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 contenedor_bonito">
+		 	<img src="img/uiclogo2.PNG" class="img_align" >
+ 		 	<h1 class="title">Find your room at University of Illinois Chicago</h1>
+ 		 	
+
+ 	<p class="center-text" style="font-size: 20px;">A university with oportunities gives you places to dream.</p>
+	 	<button onClick="letsgo()" type="button" class="btn btn-brown" style="">let's  go!</button>
+ 	 	
+
+ 	 	</div>
+	 </div>
+ <div class="row"  style=" margin-top: 100px; background-color: rgba(0,0,0,0.75)">
+ 
+ <div class="col-sm-2 col-md-2 col-lg-2">
+			<button type="button" class="btn btn-block btn-lg "  >Custom Search</button>
+	 </div>
+			<div class="col-sm-2 col-md-2 col-lg-2">
+			<button type="button" class="btn btn-block btn-lg" >Interesting Places</button>
+			</div>
+ <div class="col-sm-2 col-md-2 col-lg-2">
+			<button type="button" class="btn btn-block btn-lg " >Safety</button>
+	 </div>
+			<div class="col-sm-2 col-md-2 col-lg-2">
+			<button type="button" class="btn btn-block btn-lg " >Transportation</button>
+	 		</div>
+	 		<div class="col-sm-2 col-md-2 col-lg-2">
+			<button type="button" class="btn btn-block btn-lg " >Nearest to UIC</button>
+	 </div>
+  			<div class="col-sm-2 col-md-2 col-lg-2">
+	  		<button type="button" class="btn btn-block btn-lg " >Cultural places</button>	
+  		 	 </div>
+	  				
+	
+	</div>
+ 
+ <div class="row"  > 
+			<div class="col-sm-12 col-md-12 col col-lg-12"> 
+				<div id= "map"></div>
+			</div>
+	  </div>
+
+  <div class="row"> 
+	  		
+  
+  
+	
+	</div>
+	</div> 
+  
+	
+
+  <script>
+	 function initMap() {
+       
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 41.8708, lng: -87.6505},
+          scrollwheel: false,
+          zoom: 14
+        });
+      }
+
+	</script>
+ 
+</body>
+</html>

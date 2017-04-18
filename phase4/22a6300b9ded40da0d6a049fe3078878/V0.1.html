@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Grocery Guide" content="Grocery Places">
+		<meta name="author" content="Chenyu Huang">
+		<title>Grocery Guide at Lafayette, IN</title>
+		<link rel="stylesheet" href="V0.1.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		
+		<script src="http://code.jquery.com/jquery-1.9.1.js" type="text/javascript"></script>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		
+		<script src="js/tutorial.js" type="text/javascript"></script>
+		<script src="js/script.js" type="text/javascript" ></script>
+		<style>
+	div.weatherinfor{
+		background-color: powderblue;
+		color: black;
+		margin: 20px 0 20px 0;
+		padding: 20px;
+		}
+		
+	div.description {
+		position: absolute;
+		margin-top:10px;
+		margin-left:1200px;
+		width:500px;
+		height:700px;
+		background-color: lightgreen;
+		padding: 10px;
+	}
+	</style>
+	</head>
+	<body>
+	<h1 style = "color:green;">Grocery Guide in Lafayette</h1>
+
+	<div class="weatherinfor">
+		<h2>Weather Today:</h2>
+	</div>
+			
+	<div class="description"> 
+	<h3>Grocery Description</h3>
+	</div>
+						
+						
+					
+			<div class="col-sm-7 col-md-7" id="map_container">
+				<div id="map"></div>
+			</div>
+	
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC4lO1PjOC9xzRaOK86FJoht6VBFYcsB8&callback=initMap"></script>
+	</body>
+</html>

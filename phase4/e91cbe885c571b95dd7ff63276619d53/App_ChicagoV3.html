@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Bootstrap Theme Company</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  .jumbotron {
+      background-color: #4169E1;
+      color: #fff;
+	  padding: 100px 25px;
+  }
+  
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  
+  .container-fluid {
+		padding: 60px 50px;
+  }
+  
+  #map {
+			width: 100%;
+			height: 400px;
+			background-color: grey; 
+		}
+  </style>
+  
+  <script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABJrMhk1R9qT5MPxPnbdi7Lb43EoW1TNo&callback=initMap">
+	</script>
+	
+	<script type="text/javascript">
+	function initMap(){
+		var mapDiv = document.getElementById('map'); //Line 1: Save reference to div element where map would be shown
+		var map = new google.maps.Map(mapDiv, {//Line 2: Create Map object passing element reference, center and zoom as parameters
+			center: {lat: 41.8708, lng: -87.6505}, //This is Department of Computer Science – University of Illinois, Chicago Location
+			zoom: 12});
+	}
+	</script>
+	
+	<script type="text/javascript">
+	function initMap(){
+		var mapDiv = document.getElementById('map');
+		var map = new google.maps.Map(mapDiv, {
+			center: {lat: 41.8708, lng: -87.6505},
+			zoom: 12});
+		var marker = new google.maps.Marker({ //Line 1
+			position: {lat: 41.8708, lng: -87.6505}, //Line2: Location to be highlighted
+			map: map,//Line 3: Reference to map object
+			title: 'Department of Computer Science – University of Illinois, Chicago' //Line 4: Title to be given
+		})
+	}
+	</script>
+  
+</head>
+<body>
+
+<div class="jumbotron text-center">
+	<h1>MyCloseHome</h1> 
+	<p>Welcome to our website: "MyCloset Home," which will allow you to find a safe and comfortable place to rent a home near the Department of Computer Science at the University of Illinois, Chicago.</p> 
+	<form class="form-inline">
+    <div class="input-group">
+      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">Subscribe</button>
+      </div>
+    </div>
+	</form>
+</div>
+
+<!-- Container (About Section) -->
+<div class="container-fluid">
+  <h2>About Website</h2>
+  <h4>For illinois University students in Chicago who have no knowledge about the community and neighborhoods of the city and wish to live or lease near the educational institution</h4>      
+  <!--<p>Lorem ipsum..</p>-->
+  <button class="btn btn-default btn-lg">Get in Touch</button>
+</div>
+
+<div class="container-fluid bg-grey">
+  <h2>Our Values</h2>
+  <h4><strong>MISSION:</strong> Our mission is to provide the students of the university of illions with information on more comfortable and economic places to rent rooms or houses near the department of computer science, besides showing safe sites, that benefit the stability of the student in the city while they study their Professional careers.</h4>      
+  <p><strong>VISION:</strong> Our vision is to be an entity that benefits and provides students from different universities with the information necessary to be located in the city of Chicago and find a safe, economical and comfortable place for your accommodation.
+</div>	
+
+<div id="map"></div>
+
+</body>
+
+</html>

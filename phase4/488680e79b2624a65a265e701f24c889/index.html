@@ -1,0 +1,147 @@
+	<!--Made by Juan David García Niño-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Best rent place in Chicago </title>
+  <meta charset = "utf-8">
+  <meta  name = "author" content = "Juan David Garcia Niño"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+      html, body { height: 100%; margin: 0; padding: 0; }
+      #map { height: 100%; }
+    </style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <script src="JavaScript/Rent.js"></script>
+    <script src="JavaScript/Crimes.js"></script>
+	<script src="JavaScript/CrimesHeatMap.js"></script>
+  <script src="JavaScript/Weather.js"></script>
+  <script src="JavaScript/Police.js"></script>
+  <script src="JavaScript/ConnectLocations.js"></script>
+  <script src="JavaScript/Libraries.js"></script>
+  <link rel="stylesheet" type="text/css" href="Css/Styles.css" media="screen" />
+  </head>
+ 
+   <body>
+<div class="page-header text-center">
+     <h1>Best rent place in Chicago</h1>
+</div>
+<div> <p>Clicking on a rent marker will show the nearest (500 meteres) crimes, libraries, connect locations and police stations <br> The connect locations are places where internet and computer access, digital skills training, and online learning resources are available for free. </p></div>
+
+  <div class="container-fluid">
+      <div class="row content">
+        <div class="col-sm-2 sidenav">
+          <ul class="nav nav-pills nav-stacked">
+            <li id = "weather"></li>
+            <li><a href="#" onclick="toogleRentMarkers()"> Toogle all rent places</a></li>
+            <li><a href="#" onclick="toogleCrimeMarkers()">Toogle all crimes</a></li>
+            <li><a href="#" onclick="tooglePoliceMarkers()">Toogle all police stations</a></li>
+            <li><a href="#" onclick="toogleLibraryMarkers()">Toogle all library locations</a></li> 
+            <li><a href="#" onclick="toogleConnectMarkers()">Toogle all connect locations</a></li> 
+            <li><a href="#" onclick="toggleHeatmap(map)"> Toogle Security Heat map</a></li>
+          </ul>
+        </div>
+       <div class = "col-sm-10  mapa" id="map">
+       </div>
+     </div>
+  </div>
+  <br><br>
+    <div class="container-fluid">
+		<div class = "row content ">
+			<div class = "col-sm-4">
+        <h4>Last marker clicked</h4>
+				<ul style="list-style-type:none">
+					<li id = "1"></li>
+					<li id = "2"></li>
+					<li id = "3"></li>
+					<li id = "4"></li>
+					<li id = "5"></li>
+					<li id = "6"></li>
+					<li id = "7"></li>
+					<li id = "8"></li>
+					<li id = "9"></li>
+          <li id = "10"></li>
+          <li id = "11"></li>
+          <li id = "12"></li>
+          <li id = "13"></li>
+          <li id = "14"></li>
+				</ul>
+			</div>
+			<div class = "col-sm-4">
+        <h4> Last rent clicked or selected in the history</h4>
+				<ul style="list-style-type:none">
+					<li id = "mem1"></li>
+					<li id = "mem2"></li>
+					<li id = "mem3"></li>
+					<li id = "mem4"></li>
+					<li id = "mem5"></li>
+					<li id = "mem6"></li>
+					<li id = "mem7"></li>
+					<li id = "mem8"></li>
+					<li id = "mem9"></li>
+          <li id = "mem10"></li>
+          <li id = "mem11"></li>
+          <li id = "mem12"></li>
+          <li id = "mem13"></li>
+				</ul>
+			</div>
+      <div class = "col-sm-4">
+        <h4> History</h4>
+        <div class="list-group-striped scrollList" id = "history">
+            
+        </div>
+      </div>
+		</div>
+   </div>
+
+
+
+    <script type="text/javascript">
+    	var map, heatmap;
+      var markers = [];
+      
+      function initMap() {
+	      map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 41.8708, lng: -87.6505},
+          zoom: 17
+        });
+		  heatmap = new google.maps.visualization.HeatmapLayer({
+    	data: dataHeatMap,
+    	map: map
+ 		 });
+		  var marker = new google.maps.Marker({
+	      position: new google.maps.LatLng(41.8708,-87.6505),
+	      map: map,
+	      title: "University of Illinois, Chicago" ,
+	      icon: "Images/universityIcon.png"
+	   	});
+      initialConfig();
+      console.log(markers.length);
+
+    }
+
+function initialConfig() {
+
+     getPoints();
+     changeRadius();
+     toggleHeatmapOff();
+     getWeather(map);
+     getRent(map);
+     getCrimes(map);
+     getStations(map);
+     getConnect(map);
+     getLibraries(map);
+
+
+}
+    </script>
+     <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJqxRfLj0aU8MeHKTuXQI8_-r01CE_Oq8&callback=initMap&libraries=visualization,geometry">
+    </script>
+
+
+  </body>
+</html>

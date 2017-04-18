@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="for rent">
+	
+
+	<title>Home</title>
+	<link REL="stylesheet" TYPE="text/css" href="CSS/FirstLook.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="JS/script.js"></script>
+	<script type="text/javascript" src="JS/dataRent.js"></script>
+	
+
+</head>
+<body>
+	<h1>Pathfinder</h>		
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Find a place to rent</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="Home.html">Home</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Order by
+							<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li onclick="myMap()"><a href="#">Safer</a></li>
+								<li><a href="#">Cheapest</a></li>
+								<li onclick="rent()"><a href="#">Closest</a></li>
+							</ul>
+						</li>
+						<button class="btn btn-danger navbar-btn" onclick="#">Find</button>
+					</ul>
+				</div>
+			</nav>
+			<div id="map">	</div>
+			<div class="coo"><p></p></div>
+			<div id="crimes"> <p> </p></div>
+			<div class="container" > 
+				<div class="table-responsive">  <table class="table table-bordered" id="rent"> </table>
+				</div>
+			</div>
+			<script  async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqicoc4HA-fvTg-VR3BCWCLGLnLv2Aag4&callback=myMap"></script>
+		</body>
+		</html>

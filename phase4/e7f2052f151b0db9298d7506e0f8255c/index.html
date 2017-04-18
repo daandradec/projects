@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+  	<title>LFH University of illinois</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./scripts/map_init.js"></script>
+    <script src="./scripts/handler.js"></script>
+    <script src="./scripts/search.js"></script>
+    <script async defer
+    	 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLfoGhJhDrHSI-3fXp99dqSNBkMUAoAnY&callback=initMap">
+    </script>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="homepage">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<div class="container">
+
+						<!-- Header -->
+							<header id="header">
+								<div class="inner">
+
+									<!-- Logo -->
+										<h1><a href="index.html" id="logo">LFH!</a></h1>
+
+									<!-- Nav -->
+										<nav id="nav">
+											<ul>
+												<li class="current_page_item"><a href="index.html">Home</a></li>
+												<li><a href="about_us.html">about us</a></li>
+											</ul>
+										</nav>
+
+								</div>
+							</header>
+
+						<!-- Banner -->
+							<div id="banner">
+								<h2><strong>LFH! </strong></h2><h3 font color="white">Looking for Home, University of illinois
+								<br />
+								A useful site to help new students at University of Illinois, Chicago to find a good home</h3>
+								Let the map load a few seconds please.
+							</div>
+
+					</div>
+				</div>
+
+				<div id="main-wrapper">
+						<div class="inner">
+							<div class="container">
+								<div class="row">
+									<div class="8u 12u(mobile)">
+										<div id="content">
+
+											<!-- Content -->
+
+												<article>
+													<div  id="map" class="map"></div>
+								          <div class="mini_form">
+								            <br>
+								            <fieldset>
+								            <legend>Choose whatever you want too see on the map! you can click any marker to see aditional information!</legend>
+								            <label><input type="checkbox" id="police_check">Show police station</label>
+								            <label><input type="checkbox" id="fire_check">Show fire station</label>
+								            <label><input type="checkbox" id="librarie_check">Show libraries</label>
+								            <label><input type="checkbox" id="clinic_check">Show clinic</label><br>
+								            <label><input type="checkbox" id="house_check">Show Renting houses</label><br>
+								          </fieldset>
+								            <!--<button type="button" id="boton">Click Me!</button>-->
+								          </div>
+								          <div id="info_div"></div>
+												</article>
+
+										</div>
+									</div>
+									<div class="4u 12u(mobile)">
+										<div id="sidebar">
+											<!--form container-->
+										        <div class="last">
+										        <form class="well form-horizontal" action=" " method="post"  id="filter_form" onsubmit="return false">
+										          <fieldset>
+
+										          <!-- Form Name -->
+										          <legend>Filter by whatever you want, to find your perfect, secure and affordable house!</legend>
+										          <legend>It will be filtered by the fields you fill or select, the only field obligatory is the "maximum budget"</legend>
+										          <legend>It will be filtered by budget and distance principally the other filters are secondary.</legend>
+										          <br>
+										          <!-- Text input Budget-->
+
+										          <div class="form-group">
+										            <label class="col-md-4 control-label">Maximum budget</label>
+										            <div class="col-md-4 inputGroupContainer">
+										              <div class="input-group">
+										                <span class="input-group-addon"></span>
+										                <input  id="budget" placeholder="Maximum budget" class="form-control" min="0" type="number" required>
+										              </div>
+										            </div>
+										          </div>
+										          <br>
+
+										          <!-- Text input Maximum distance-->
+
+										          <div class="form-group">
+										            <label class="col-md-4 control-label" >Maximum Distance from the University</label>
+										              <div class="col-md-4 inputGroupContainer">
+										                <div class="input-group">
+										                  <span class="input-group-addon"></span>
+										                  <input id="max_dist_home" placeholder="Maximum distance" class="form-control" min="0" type="number" step="0.001"> (mi)
+										                </div>
+										            </div>
+										          </div>
+										          <br>
+										          <legend>Press the button to search for the best places for you!</legend>
+
+										          <!-- Button -->
+										          <div class="form-group">
+										            <input type="submit" id="search" value="Submit">
+										          </div>
+
+										          </fieldset>
+										          </form>
+
+										          <div id="options_div"></div>
+										      </div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+					</div>
+				</div>
+
+								<div id="copyright">
+									<ul class="menu">
+										<li>&copy; LFH. All rights reserved</li>
+									</ul>
+								</div>
+
+		<!-- Scripts -->
+		  <script src="./scripts/listener.js"></script>
+
+	</body>
+</html>

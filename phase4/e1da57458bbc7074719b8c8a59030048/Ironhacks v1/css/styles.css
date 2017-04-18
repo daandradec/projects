@@ -1,0 +1,26 @@
+/* Custom Styles */
+
+body, #header {
+  background-color: #4679b2;
+}
+#menu {
+    background: white;
+}
+#header {
+  font-family: 'Lobster', cursive;
+  font-size: 4em;
+  padding: 30px;
+}
+#content {
+  padding: 30px;
+}
+#menu .button {
+  margin-right: 10px;
+}
+#map {
+  padding: 20px;
+  min-height: 500px;
+}
+.info {
+  /*height: 100%;*/
+}

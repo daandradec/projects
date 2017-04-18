@@ -1,0 +1,59 @@
+
+body {
+  font-family: 'roboto', sans-serif;
+  margin: 0;
+ 
+}
+header{
+	background-color:#405580;
+}
+.logo{
+	padding: 20px;
+	float: left;
+}
+.t{
+	text-align: center;
+	padding: 20px;
+	font-weight: bold;
+	font-size: 28px;
+	color: white;
+}
+.panel{
+	margin: 80px auto;
+	padding: 20px;
+	height: 300px;
+	width: 60%;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+form{
+	text-align: center;
+}
+.passl{
+	text-align: left;
+}
+.getback{
+	padding-top: -20px;
+	text-align: center;
+	color:#666666;
+}
+footer{
+	background-color: #333333;
+	padding: 20px;
+}
+.footnote{
+	text-align: center;
+	color: white;
+}
+#footlogo{
+	text-align: center;
+}
+.social{
+	text-align: center;
+	color: white;
+	list-style-type: none;
+}
+.medias{
+	padding: 3px;
+	display: inline-block;
+}

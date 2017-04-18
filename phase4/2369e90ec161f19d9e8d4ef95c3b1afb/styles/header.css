@@ -1,0 +1,130 @@
+
+nav.acceder #login{
+	display: inline-block;
+	font-size 16px;
+	padding: 1px 10px;
+	text-decoration: none;
+	color: #fff;
+	font-weight: #fff;
+	border: 1px solid #fff;
+}
+#mysignUp {
+	display: inline-block;
+	position:  absolute;
+	right: 200px;
+	z-index: 999;
+	background-color: : #fff;
+	padding: 15px;
+	background-color:#fff;
+	width:  250px;
+	border:1px solid #fff;
+	border-radius: 10px 0 10px 10px;
+	float: left;
+	display: none;
+}
+#myLogin {
+	display: inline-block;
+	position:  absolute;
+	right: 200px;
+	z-index: 999;
+	background-color: : #fff;
+	padding: 15px;
+	background-color:#fff;
+	width:  250px;
+	border:1px solid #fff;
+	border-radius: 10px 0 10px 10px;
+	float: left;
+	display: none;
+}
+input#user, input#pass,input#userS, input#passS, input#passC  {
+background:  #f1f1f1;
+padding:  6px 5px
+margin-bottom: 10px;
+width: 220px;
+border: 1px solid #ccc;
+border-radius: 5px;
+
+}
+#submit, #submitS {
+	background-color: #359AC2		;
+	border: 1px solid #044E6B;
+	float: left;
+	margin-top: 3px;
+	height:  28px;
+	width:  100px;
+	padding:  0;
+	font: bold 14px arial;
+	color: #fff;
+	border-radius: 3px;	
+	text-shadow: 0 1px 0 rgba(0,0,0,1);
+	cursor: pointer;
+	-moz-transition:background-color 1 ;
+	-webkit-transition: background-color   1s;
+}
+#submit:hover{
+	background-color: #044E6B; 
+}
+label{
+	float:right;
+	line-height:  28px;
+	font-size:  14px;
+	color: #666;
+
+}
+
+nav.acceder #login{
+	display: inline-block;
+	font-size 16px;
+	padding: 1px 10px;
+	text-decoration: none;
+	color: #fff;
+	font-weight: #fff;
+	border: 1px solid #fff;
+}
+#mysignUp {
+	display: inline-block;
+	position:  absolute;
+	right: 200px;
+	z-index: 999;
+	background-color: : #fff;
+	padding: 15px;
+	background-color:#fff;
+	width:  250px;
+	border:1px solid #fff;
+	border-radius: 10px 0 10px 10px;
+	float: left;
+	display: none;
+}
+#myLogin {
+	display: inline-block;
+	position:  absolute;
+	right: 200px;
+	z-index: 999;
+	background-color: : #fff;
+	padding: 15px;
+	background-color:#fff;
+	width:  250px;
+	border:1px solid #fff;
+	border-radius: 10px 0 10px 10px;
+	float: left;
+	display: none;
+}
+#submit, #submitS {
+	background-color: #359AC2		;
+	border: 1px solid #044E6B;
+	float: left;
+	margin-top: 3px;
+	height:  28px;
+	width:  100px;
+	padding:  0;
+	font: bold 14px arial;
+	color: #fff;
+	border-radius: 3px;	
+	text-shadow: 0 1px 0 rgba(0,0,0,1);
+	cursor: pointer;
+	-moz-transition:background-color 1 ;
+	-webkit-transition: background-color   1s;
+}
+#submit:hover{
+	background-color: #044E6B; 
+}

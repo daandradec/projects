@@ -1,0 +1,31 @@
+<!-- The home site itself -->
+<div id="side-menu">
+    <h2>Select the checkbox of your interest and if you wanna see more information about anything click it on the map!</h2>
+    <form id="form-one">
+        <div id="masterdiv">
+          <div id = "name"></div>
+          <div id = "onedata"></div>
+          <div id = "twodata"></div>
+          <div id = "threedata"></div>
+          <div id = "fourdata"></div>
+          <div id = "fivedata"></div>
+          <div id = "sixdata"></div>
+          <div id = "sevendata"></div>
+          <div id = "distance"></div>
+          <div id = "duration"></div>
+        </div>
+        <h2>Show me</h2>
+        <p><input type="checkbox" id="houses" onclick="toggleGroup('houses')"/>
+        <label>Houses</label><input type="checkbox" id="librarie" onclick="toggleGroup('libraries')"/>
+        <label>Libraries </label> <input type="checkbox" id="parkart" onclick="toggleGroup('parkarts')"/>
+        <label>Park ArtWorks </label> <input type="checkbox" id="policestation" onclick="toggleGroup('policestations')"/>
+        <label>Police Stations </label> <input type="checkbox" id="firestation" onclick="toggleGroup('firestations')"/>
+        <label>Fire Stations </label> <input type="checkbox" id="condoms" onclick="toggleGroup('condoms')"/>
+        <label>Condom Dist Sites </label></p>
+    </form>
+</div>
+<div id="container">
+     <div id="map"></div>
+</div>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC4lO1PjOC9xzRaOK86FJoht6VBFYcsB8&callback=initMap">
+</script>

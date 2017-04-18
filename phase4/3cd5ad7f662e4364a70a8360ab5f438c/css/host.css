@@ -1,0 +1,106 @@
+body {
+  font-family: 'roboto', sans-serif;
+ 
+}
+header{
+	background-color:#405580;
+}
+.logo{
+	padding: 20px;
+	float: left;
+}
+.navbar{
+	padding: 20px;
+	float: right;
+	list-style-type: none;
+
+}
+.nav-item{
+	display: inline-block;
+	margin-left: 15px;
+}
+a{
+	color: white;
+}
+a:hover{
+	color: white;
+}
+#ttd{
+	text-align: center;
+}
+.activities{
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+}
+.activity{
+	border: 1px solid #ccc;
+	padding-top:20px; 
+	font-size: 20px;
+}
+#link2{
+	text-align: center;
+}
+#link1{
+	color:blue;
+	text-decoration: underline;
+}
+footer{
+	background-color: #333333;
+	padding: 20px;
+}
+.footnote{
+	text-align: center;
+	color: white;
+}
+#footlogo{
+	text-align: center;
+}
+.social{
+	text-align: center;
+	color: white;
+	list-style-type: none;
+}
+.medias{
+	padding: 3px;
+	display: inline-block;
+}
+
+/*
+Pop up css
+ */
+ .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

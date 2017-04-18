@@ -1,0 +1,39 @@
+html, body {
+height: 100%;
+margin: 0;
+padding: 0;
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+#map{
+		margin-top: 10px;
+		position: absolute;
+    height: 500px;
+    width: 100%;
+    padding: 2px;
+    display: block;
+}
+.row {
+	background-color: green;
+}
+
+#chart{
+}
+
+# {
+	height: 3000;
+}
+
+#side-menu{
+	margin-top: 10px;
+	display: block;
+	height: 20%;
+
+}
+
+footer {
+	background-color: black;
+}

@@ -1,0 +1,55 @@
+*{margin: 0px;padding: 0px; font-family: helvetica;}
+
+html, body { height: 100%; margin: 0; padding: 0; }
+
+#contenedor {height: 100%; width: 100%; background-color: white; position: absolute;display: block;}
+
+.climateHead { height: 5%; width: 100%; background-color: #2e2f30; color: white; font-family: sans-serif;font-size: 30px;padding-top: 1%;position: relative; z-index: 10;display: inline-block;float: left;}
+
+.climate{float: right;margin-right: 10%; color: #707070;display: inline-block; position: relative;}
+
+#top{display: inline-block; margin-left: 3%;}
+
+#map { height: 100%; width: 100%; absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 0;}
+
+#wet{ color:white; float: right;}
+
+#mitad{ height: 100%; width: 40%;position: fixed; background-color: rgba(115, 115, 115, .8); z-index: 2; border-right: 5px; border-color: #363738 ;}
+
+div.menu{height: 15%; width: 25%;float: right;}
+
+div#home{background-color: rgb(208,101,3);}
+div#study{background-color: rgb(233,147,26);}
+div#fun{background-color: rgb(22,107,162);}
+div#food{background-color: rgb(27,54,71);}
+
+p.text{ font-size: 1.3em;text-align: center; color: white; padding-top: 4.5em;opacity: 0.5;}
+
+div.menu:hover{height: 17%; transition: 1s;}
+
+div.menu:hover p.text{ padding-top: 6em; transition: 1s; opacity: 1;}
+
+div.Informacion{margin-left: 10%;margin-top: 25%;background-color: rgba(16, 16, 17,.5);height: 70%; width: 80%;position: absolute;color: white;}
+
+p.inf{display: block;margin-top:3%;margin-left: 3%; font-family: sans-serif;}
+
+
+
+svg {
+	width: 80%;
+	height: 80%;
+  float: center;
+  margin-top: 10%;
+  margin-left: 10%
+}
+
+path.slice{
+	stroke-width:2px;
+}
+
+polyline{
+	opacity: .3;
+	stroke: black;
+	stroke-width: 2px;
+	fill: none;
+}

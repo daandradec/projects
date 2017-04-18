@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Landi Zhao">
+	<title>Gold IronHacks 2017</title>
+	 <style>
+   
+	 #map{
+    height: 600pxx;
+    width: 50%;
+  background-color:grey;
+   float:right;
+   display:block;
+}
+	  #side-menu{
+
+	height:0px
+}
+	  #menu1{
+	width:20%;
+	background-color:pink;
+	height:600px;
+	float:left;
+	
+}
+	  #menu2{
+	width:30%;
+	background-color:pink;
+	height:600px;
+	float:left;
+}
+html, body { 
+height: 100%; 
+margin: 0; 
+padding: 0; 
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+    </style>
+<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+  	<div class="container">
+  		<div class="row">
+  				<img src="veg.jpg" alt="veg" height="60%" width="100%">
+  		</div>
+  		<div class="row">			
+			<div id="side-menu"  >
+		
+				<div class="jumbotron">
+		
+					<div id="menu1">
+                     
+				<h1>Freshness→Bar Chart</h1>
+					<br><b>List of Market:
+					<br>1.Meijer WL
+					<br>2.Walmart Wl
+					<br>3.ALDI WL
+					<br>4.Payless Wl
+					<br>5.Marsh WL
+					<br>6.Fresh City Market
+					<br>7.C&T Market
+					<br>8.Better Wordl Market
+					<br>9.Frendly Market
+					<br>10.Marsh L
+					<br>11.ALDI L
+					<br>12.Fresh Thyme Farmers
+					<br>13.Walmart L
+					<br>14.Meijer L
+					<br>
+					
+					
+					</br>
+					<br>
+					 <h1>Weather</h1>		
+						</div>
+						
+						<div id="position-info">
+							
+						</div>
+						<div id="chart">
+						</div>
+						<div id="scores"></div>
+					</div>
+					<div id="menu2"> 
+					
+					
+			<script type="text/javascript">
+
+			//Width and height
+			var w = 700;
+			var h =300;
+			var barPadding = 0.5;
+			
+			var dataset = [ 10, 9, 9, 15, 10, 16, 8, 10, 12, 13,
+							9,13,9,10 ];
+			
+			//Create SVG element
+			var svg = d3.select("#menu2")
+						.append("svg")
+						.attr("width", w)
+						.attr("height", h);
+
+			svg.selectAll("rect")
+			   .data(dataset)
+			   .enter()
+			   .append("rect")
+			   .attr("x", function(d, i) {
+			   		return i * (w / dataset.length);
+			   })
+			   .attr("y", function(d) {
+			   		return h - (d * 15);
+			   })
+			   .attr("width", w / dataset.length - barPadding*4)
+			   .attr("height", function(d) {
+			   		return d * 115;
+			   })
+			   .attr("fill", function(d) {
+					return "rgb(20, " + (d * 5) + ", " + (d * 10) + ")";
+			   });
+
+			svg.selectAll("text")
+			   .data(dataset)
+			   .enter()
+			   .append("text")
+			   .text(function(d) {
+			   		return "rate "+d;
+			   })
+			   .attr("text-anchor", "middle")
+			   .attr("x", function(d, i) {
+			   		return i * (w / dataset.length) + (w / dataset.length - barPadding) / 2;
+			   })
+			   .attr("y", function(d) {
+			   		return h - (d * 15) + 14;
+			   })
+			   .attr("font-family", "sans-serif")
+			   .attr("font-size", "11px")
+			   .attr("fill", "white");
+
+
+			
+		</script>
+</div>
+				</div>
+			</div>
+			<div class="col-sm-7 col-md-7" id="map_container">
+				<div id="map">	<iframe src="https://www.google.com/maps/d/embed?mid=1NY1QvgXCCA36kLvP5jxhNc0SSfI" width="100%" height="600"></iframe>
+</div>
+			</div>
+			
+			
+		</div>
+	
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+			$.ajax({
+				url: "https://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=ZIP:47906&startdate=2017-04-15&enddate=2017-04-15",
+				headers: {token: 'asWyCdsAIEbXHoJWiEclgQsuMcOmdOcw'},
+				success: function(result) {
+					show(result);
+				}
+			});
+		});
+
+
+	
+	
+
+		function show(result) {
+			var p = $("<p>The date is <b>" + result.results[1].date + "</b>" + " Max and MIN Temperature is: <b>" + result.results[7 ].datatype +"  <b>"+result.results[7].value/4 + "  "+result.results[8 ].datatype +"  "+result.results[8].value/4 +"</b></p>");
+			$('#menu1').append(p);
+		};
+
+</script>
+</div>	
+  </body>
+</html>

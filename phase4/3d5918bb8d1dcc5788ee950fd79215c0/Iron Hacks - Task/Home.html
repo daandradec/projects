@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <style type="text/css">
+      html, body { height: 100%; margin: 0; padding: 0; }
+      #map { height: 100%; }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	  <link rel="stylesheet" href="css/tutorial.css" type="text/css"/>
+	  <script src="http://code.jquery.com/jquery-1.9.1.js" type="text/javascript"></script>
+	  <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script type="text/javascript" src="Js/Weather.js"></script>
+  </head>
+
+  <body>
+    <div class="row">
+  			<div id="col-md-12">
+  				<h3>Purdue-UNAL Gold IronHacks 2017 Challenge</h3>
+  			</div>
+  		</div>
+
+    <div id="weather"></div>
+
+    <div id="map" style="width:50%; height:65%; float:right;"></div>
+    <script type="text/javascript" src="Js/Map.js">
+      initMap();
+      document.getElementById("map").innerHTML = map;
+    </script>
+    <div id="market-name"></div>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRsI0ZuWrj5Hr0KaRLc3pwwZibEP6w7T0&callback=initMap">
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>Rent An Apartment</title>
+	<meta name = "viewport" content = "width=device-width,initial-scale=1.0"/>
+	<meta charset="utf-8"/>
+	<meta description = "The easiest way to rent an apartment close to the Illinois university"/>
+	<meta keywords = "rent,apartment,Illinois,university,college,cheap"/>
+
+	<!-- Style to the first Page -->
+
+
+	<!-- Scripts needed -->
+		<!-- Jquery for the google's official Repositories -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"> -->
+
+	<link href="Resources/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+
+	<link rel="stylesheet" href="Resources/font-awesome/animation/font-awesome-animation.min.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<link rel = "stylesheet" href = "Css/mapViewStyle.css"/>
+
+		<!-- %%%%% -->
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse" >
+  		<div class="container-fluid" id = "navContainer">
+    		<div class="navbar-header" >
+      			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" >
+        			<span class="icon-bar"></span>
+		        	<span class="icon-bar"></span>
+		        	<span class="icon-bar"></span>                        
+      			</button>
+      			<a class="navbar-brand" href="#">Chicago Rentals</a>
+    		</div>
+    		<div class="collapse navbar-collapse" id="myNavbar">
+      			<ul class="nav navbar-nav">
+			        <li class="active" ><a href="#" >Map View</a></li>
+      			</ul>
+	      			<ul class="nav navbar-nav navbar-right">
+	        		<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      			</ul>
+    		</div>
+  		</div>
+	</nav>
+
+	<div class = "container-fluid text-center">
+		<div class = "row content">
+			<div class="col-sm-2 sidenav" style = " padding:0;">
+
+				<!-- Range selector of the distance of search -->
+				<div class = "panel title-box" >
+						<h2>Radio Distance</h2>
+				</div>
+				<div class = "container-fluid" id = "rangeContainer">
+					<input id="rangeDistance" data-slider-id='ex1Slider' type="range" data-slider-min="0" data-slider-max="50" data-slider-step="1" step = "10" data-slider-value="14" onchange="calcRange();"/>
+					<p class = "text-center"> 0 </p>
+				</div>
+				
+				
+				<!-- Selector of views checkboxes -->
+				<div class = "panel title-box text-center">
+					<h2>Views</h2>
+				</div>
+
+				<div class="list-group form-block">
+
+					<div class="checkbox">
+          				<label for ="checkPolice" class = "label label-default"> Police Stations </label>
+            				<input type="checkbox" value="" id = "checkPolice">
+            				<span class="cr"></span>
+        			</div>
+
+        			<div class="checkbox">
+          				<label for ="checkLibrary" class = "label label-default"> Libraries </label>
+            				<input type="checkbox" value="" id = "checkLibrary">
+            				<span class="cr"></i></span>
+        			</div>
+
+        			<div class="checkbox">
+          				<label for ="checkGrocery" class = "label label-default"> Groceries Stores </label>
+            				<input type="checkbox" value="" id = "checkGrocery">
+            				<span class="cr"></i></span>
+        			</div>
+
+	            </div>
+
+	            <!-- Filter criteria-->
+	            <div class = "panel title-box text-center">
+					<h2>Filters</h2>
+				</div>
+				<ol class="list-group simple-drop" id = "criteriaSelection">
+
+					<li  data-toggle="tooltip" title="Closest distance to the department of C.S." class = "list-group-item" data-placement="right"> <i class="fa fa-arrows pull-left" aria-hidden="true"></i>  Nearness
+					</li>	
+	  			</ol>
+
+	  			 <!-- Selection of type of filters -->
+	  			<div class = "panel title-box text-center">
+					<h2>Type of filters</h2>
+				</div>
+	  			<ol class="list-group simple-drop"  id = "criteriaTypes">
+	  				<li  id = "priceSel" data-toggle="tooltip" title="Closest distance to the department of C.S." class = "list-group-item" data-placement="right">
+						<i class="fa fa-arrows pull-left" aria-hidden="true"></i> Price
+						<i class="fa fa-plus pull-right" onclick = "addCriteria('priceSel');" aria-hidden="true"></i>
+						<i class="fa fa-times pull-right" onclick = "removeCriteria('priceSel');" aria-hidden="true"></i>
+
+					</li>
+					<li  id = "safetySel" data-toggle="tooltip" title="Neighborhood with the smallest crime statistics" class = "list-group-item" data-placement="right">
+						<i class="fa fa-arrows pull-left" aria-hidden="true"></i> Safety
+						<i class="fa fa-plus pull-right" onclick = "addCriteria('safetySel');" aria-hidden="true"></i>
+						<i class="fa fa-times pull-right" onclick = "removeCriteria('safetySel');" aria-hidden="true"></i>
+					</li>
+					<li  id = "healthSel" data-toggle="tooltip" title="Neighborhood with the highest health statistics" class = "list-group-item" data-placement="right">
+						<i class="fa fa-arrows pull-left" aria-hidden="true"></i> Healthiness
+						<i class="fa fa-plus pull-right" onclick = "addCriteria('healthSel');" aria-hidden="true"></i>
+						<i class="fa fa-times pull-right" onclick = "removeCriteria('healthSel');" aria-hidden="true"></i>
+					</li>
+	  			</ol>
+
+	  			 <!-- Sort Button -->
+	  			<div class = "container-fluid" data-toggle="tooltip" title="Working on it ..." >
+	  				<button class = "btn btn-default btn-block disabled"> Get Houses  </button>
+	  			</div>
+
+
+    		</div>
+
+    		<!-- Map Container -->
+    		<div id = "mapContainer" class = "col-sm-7">
+    			<div id = "mainMap">
+    			</div>
+    		</div>
+
+    		<div id = "housesContainer" class = "col-sm-3">
+    			<!-- visualization of the sorted houses -->
+	    		<div class = "panel title-box text-center">
+					<h2>Best Places to Rent</h2>
+				</div>
+
+				<div class = "list-group" id= "list-houses">
+
+					<div class="media list-group-item" onclick = "openHouseInfo(0)";>
+						<a href = "#myModal" data-toggle="modal">
+							<div class="media-left">
+				    			<img src="Resources/Icons/houseAvatar.jpeg" class="media-object" style="width:5em">
+				  			</div>
+				  			<div class="media-body">
+				    			<h4 class="media-heading">House 1</h4>
+				    			<p>Here is an incredibly detailed information about the house ...</p>
+				  			</div>
+						</a>
+					</div>
+
+					<div class="media list-group-item" onclick = "openHouseInfo(1)";>
+						<a href = "#myModal" data-toggle="modal">
+							<div class="media-left">
+				    			<img src="Resources/Icons/houseAvatar.jpeg" class="media-object" style="width:5em">
+				  			</div>
+				  			<div class="media-body">
+				    			<h4 class="media-heading">House 2</h4>
+				    			<p>Here is an incredibly detailed information about the house ...</p>
+				  			</div>
+						</a>
+					</div>
+
+					<div class="media list-group-item" onclick = "openHouseInfo(2)";>
+						<a href = "#myModal" data-toggle="modal">
+							<div class="media-left">
+				    			<img src="Resources/Icons/houseAvatar.jpeg" class="media-object" style="width:5em">
+				  			</div>
+				  			<div class="media-body">
+				    			<h4 class="media-heading">House 3</h4>
+				    			<p>Here is an incredibly detailed information about the house ...</p>
+				  			</div>
+						</a>
+					</div>
+
+					<div class="media list-group-item" onclick = "openHouseInfo(3)";>
+						<a href = "#myModal" data-toggle="modal">
+							<div class="media-left">
+				    			<img src="Resources/Icons/houseAvatar.jpeg" class="media-object" style="width:5em">
+				  			</div>
+				  			<div class="media-body">
+				    			<h4 class="media-heading">House 4</h4>
+				    			<p>Here is an incredibly detailed information about the house ...</p>
+				  			</div>
+						</a>
+					</div>
+
+					<div class="media list-group-item" onclick = "openHouseInfo(4)";>
+						<a href = "#myModal" data-toggle="modal">
+							<div class="media-left">
+				    			<img src="Resources/Icons/houseAvatar.jpeg" class="media-object" style="width:5em">
+				  			</div>
+				  			<div class="media-body">
+				    			<h4 class="media-heading">House 5</h4>
+				    			<p>Here is an incredibly detailed information about the house ...</p>
+				  			</div>
+						</a>
+					</div>
+				</div>
+
+				<!-- pop-up window for data visualization -->
+				<div id="myModal" class="modal fade" role="dialog">
+				  <div class="modal-dialog">
+				    <!-- Modal content-->
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal">&times;</button>
+				        <h4 class="modal-title">House Rental Info</h4>
+				      </div>
+				      <div class="modal-body">
+				        <p>The visualization of the information is under development, we apologize for the inconvenience.</p>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				      </div>
+				    </div>
+
+				  </div>
+				</div>
+
+    		</div>
+		</div>
+	</div>
+
+
+	<!-- Scripts needed -->
+	<script src = "Js/Api/interface.js"></script> 
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity=
+  	"sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-checkbox/1.4.0/bootstrap-checkbox.js"></script>
+	<script src="Js/Api/jquery-sorteable.js"></script>
+	<script src = "Js/mapFunctions.js"></script> 
+  	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiXHk65dTMrprsV_9P3sd-7TH3fzRCfck&libraries=geometry&callback=MainMap.wrapperInit" type="text/javascript" async defer></script>
+  	
+
+  	<script src="Js/mapViewAnim.js"></script>
+  	
+</body>
+
+
+</html>

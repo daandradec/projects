@@ -1,0 +1,21 @@
+html, body { 
+height: 100%; 
+margin: 0; 
+padding: 0; 
+background-image: url("http://cdn.dailypainters.com/paintings/farm_fresh_vegetables_food_and_drink__still_life__689966dacfbf366f03e0898b25fd9761.jpg");
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+#map{
+	margin-top: 10px;
+    border:1px solid #021a40;
+	position: absolute;
+    height: 500px;
+    width: 50%;
+    padding: 2px;
+    display: block;
+}
+

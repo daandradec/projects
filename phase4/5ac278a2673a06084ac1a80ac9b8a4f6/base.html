@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/freelancer.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/c3.css" type="text/css">
+
+
+    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/freelancer.min.js"></script>
+    <script src="js/jquerydata.js"></script>
+
+
+    <title> Student Well Rent </title>
+    <link rel="icon" type="image" href="images/coin.png" />
+  </head>
+  <body>>
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#page-top">Student Well Rent</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#home">Home</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid" id="maincontent" >
+        <div class="row  text-center  nicecolor">
+          <div class="col-md-12" id="first">
+            <h1>Welcome to your best Rent solution in Chicago</h1>
+          </div>
+        </div>
+        <div class="row" id="center-row">
+          <div class=" col-md-4 niceblue">
+            <h3>You are a special guest at Illinois University</h2>
+              <div id="weather"></div>
+              <div id="place-name"></div>
+              <div id="community-a"></div>
+              <div id="p-type"></div>
+              <div id="address"></div>
+              <div id="p-number"></div>
+              <div id="m-comp"></div>
+              <div id="units"></div>
+              <div id="distance"></div>
+              <div id="price"></div>
+              <div id="wbyzip"></div>
+              <div id="crimes"></div>
+              <div id="libraries"></div>
+              <div id="clinics"></div>
+              <div id="police"></div>
+
+          </div>
+          <div class=" iframe-container col-md-6"  id="map"></div>
+          <div class="col-md-2">
+            <button onclick="showplaces()" class="btn btn-primary">> Show me Places</button>
+            <button onclick="shoWheather()"class="btn btn-warning">> Show me the Weather</button>
+            <button onclick="parkfacilities()"class="btn btn-success">> Show me Parks</button>
+          </div>
+        </div>
+        <div class="row">
+             <div class="col-md-8">
+              <div class="w3-panel w3-card-4">
+                <div id="statistics"></div>
+                <div id="chart"></div>
+              </div>
+             </div>
+             <div class="col-md-4">
+                 <div class="w3-panel w3-card-4">
+                   <div id="tpoints"></div>
+                   <div id="chart2"></div>
+                 </div>
+             </div>
+        </div>
+
+        <div class="row" id="helper" >
+
+        </div>
+        <div  class="footer navbar-fixed-bottom niceblue">
+            <div class="col-md-4">
+              <img id="git" src="images/github.png" alt="github">
+            </div>
+            <div class="col-md-4">
+              <img id="purdue" src="images/purdue.png" alt="github">
+            </div>
+            <div class="col-md-4">
+              <img id="unal" src="images/logo_unal.png" alt="github">
+            </div>
+        </div>
+
+
+
+  </body>
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="js/c3.min.js"></script>
+  <script src="js/scrypt.js" language="javascript" type="text/javascript"></script>
+  <script async defer
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_EME4XtUVfx0p4qhtLJujPci1QzY20qs&callback=initMap&libraries=geometry">
+  </script>
+</html>

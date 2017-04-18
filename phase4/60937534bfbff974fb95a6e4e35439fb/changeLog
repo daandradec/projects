@@ -1,0 +1,59 @@
+Hello!, I use this file to have a 'master record' of what I have done. Is just a list of taks, you can read it if you want, but I
+recomend you to read the readme.md file instead.
+
+Change log 28/03/2017
+
+- Added macOS gitignore file ('macOS.gitignore') in root path
+- Added a simple web template:
+	an index.html file with basic files links: main.css, main.js, jquery link, d3.js link.
+- Added a simple Google Map implementation with a marker in Department of Computer Science – University of Illinois, Chicago (41.8708° N, 87.6505° W)
+- Added a very simple infoWindow to the university marker.
+
+Change log 30/03/2017
+
+- Now we can request a libraries dataset from https://catalog.data.gov/dataset/libraries-locations-hours-and-contact-information-f3c61
+- Now we can draw all the markers of those libraries on map
+
+Change log 31/03/2017
+
+- Now the default zoom parameter to the map is 12
+
+Change log 01/04/2017
+
+- added a GOOD name to the app: Traveler Student Helper Tools (TSHT).
+- re-build the folder tree on the project.
+- implemented node.js (local).
+- implemented broserify (local).
+- implemented babel (bundle.js).
+- Now I use babel to add ES6 support.
+- Now the boostrap.css file is local.
+- Now the app can run without third party online requirements.
+- The design of the app was re maked.
+- The readme file was rebuilded to meet the requirements.
+
+Change log 05/04/2017
+
+- Now the title of the web is Traveler Student Helper Tools
+- Added a general function to draw and.. erase (?) a list of markers on the map
+- Added new dataset support "Affordable Rental Housing Developments"
+- Added new npm module to handle de xml response of zillow api: "xml-parser"
+- Now we can use de zillow API to get information about a house (rent price)
+
+Change log 10/04/2017
+
+- Added a new marker icon for the university
+- Added a new marker icon for the libraries
+- Fixed bug: The json request an init of all dataSet could happen before the map was ready, causing undesirable behavior.
+- Added New DataSet - Police stations
+- Added New Dataset - Fire stations
+
+change log 13/04/2017 - 17/04/2017
+
+- Now we can display correctly the infoWindow of the houses markers
+- Now the dataSetLibrary only perform functions in order to handle the dataset info
+- New mapLibrary.js file, to do all the google Map functions
+- Now we only show libraries, polices station and fire stations 6 km. around the university
+- Now the user can select 2km, 3km, or 4km around the university to display the available houses
+- Now we ask automatically to Zillow for the rent prices and delete the markers that doesnt have rent price
+- Implemented new color theme.
+- New mapLibrary.js file. This file handle all the map functions.

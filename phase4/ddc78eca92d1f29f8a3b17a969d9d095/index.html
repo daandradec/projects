@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+
+
+
+
+
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="js/weather.js"></script>
+	<script src="css/mycss.css"></script>
+
+
+	<link href="node_modules/bootswatch/flatly/bootstrap.min.css" type="text/css" rel="stylesheet" />
+	<link href="assets/css/styles.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+
+	<div class="container">
+
+		<h1>Hi Illinois University Student</h1>
+
+			<script src="http://www.yr.no/place/United_States/Illinois/Chicago/external_box_stripe.js"></script>
+
+
+
+		<form id="geocoding_form" class="form-horizontal">
+			<div class="form-group">
+				<div class="col-xs-12 col-md-6 col-md-offset-3">
+					<div class="input-group">
+						<input type="text" class="form-control" id="address" placeholder="What place you look for...">
+						<span class="input-group-btn">
+							<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+						</span>
+					</div>
+				</div>
+			</div>
+		</form>
+
+		<div class="map-overlay">
+			<p>Loading...</p>
+			<div id="map"></div>
+		</div>
+		<div class="col-xs-12 col-md-6 col-md-offset-3 save-container">
+			<h4 id="save-location"></h4><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+		</div>
+
+
+	</div>
+
+
+	<!-- The jQuery library -->
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+	<!-- The Moment.js library -->
+	<script src="node_modules/moment/moment.js"></script>
+
+	<div id="basic-info">
+							<div id="weather"></div>
+						</div>
+
+	<script type="text/javascript">
+	function initMap(){
+		var mapDiv = document.getElementById('map');
+		var map = new google.maps.Map(mapDiv, {
+			center: {lat: 41.8708, lng: -87.6505},
+			zoom: 12});
+		var marker = new google.maps.Marker({ //Line 1
+			position: {lat: 41.8708, lng: -87.6505}, //Line2: Location to be highlighted
+			map: map,//Line 3: Reference to map object
+			title: 'Illinois University' //Line 4: Title to be given
+		})
+	}
+</script>
+
+	<!-- Including the Google Maps API and the GMaps library -->
+	<script async defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbY1DysPMBwlWGQXGDcRx24X1HYxUq6BA&callback=initMap">
+
+	</script>
+	<script src="node_modules/gmaps/gmaps.js"></script>
+
+	<!-- Including 	our own JavaScript file -->
+	<script src="assets/js/script.js"></script>
+<div class="container">
+<button type="button" class="btn btn-warning btn-lg">I'm safe here?</button>
+<button type="button" class="btn btn-default btn-lg">Renting Compare</button>
+<button type="button" class="btn btn-primary btn-lg">Safest Renting</button>
+<button type="button" class="btn btn-success btn-lg">Show Me Places</button>
+</div>
+<div class="container">
+<button type="button" class="btn btn-info btn-lg">Cheapest Renting</button>
+<button type="button" class="btn btn-danger btn-lg">Renting Options</button>
+<div class="card-block">
+
+
+								<div class="jumbotron m-b-0">
+										<h1 aling="center">¿Why IllinoiStudent?</h1>
+										<p align="justify">If you are a new Student of the Illinois University, and you are new around, this app will elp you to find the best and safest places for you and your wallet, plus some of te best plans in city.</p>
+										</p>
+								</div>
+					</div>
+</body>
+</html>

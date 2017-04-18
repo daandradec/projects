@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is the first sketch of the IronHacks mashup">
+    <meta name="author" content="fffeelipe">
+
+    <title>IronHacks</title>    
+      <script src="javascripts/d3.v3.min.js" charset="utf-8"></script>
+      <script src="javascripts/c3.min.js"></script>
+
+      <!-- Load papaparse.js -->
+      <script src="javascripts/papaparse.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>	
+        <script src="js.js"> </script>
+      <script src="map.js"> </script>
+      <script src="init_data.js"> </script>
+      <script src="markers.js"> </script>
+      <script src="pie_Chart.js"> </script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1x5zGxKCTmnHtc16yD0F3vYEYT_Pznm8&callback=initMap&libraries=geometry">
+</script>
+
+   
+    <link href="css.css" rel="stylesheet">
+
+      <link REL="SHORTCUT ICON" HREF="icon.png">
+      
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Find a cool, affordable, and healty place to live!</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="README.md">Help</a></li>
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-3 sidebar">
+          <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading form" id="myform"><h3>Main Criteria choosing</h3> </div>
+            
+                <!-- List group -->
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        Max price per month (USD)
+                        <div class="material-switch pull-right">
+                            <input id="maxprice" class="check"  name="someSwitchOption001" type="checkbox"/>
+                            <label for="maxprice" class="label-primary"></label>
+                        </div>
+                        
+                        <input type="text" name="" id="input1" class="form-control hidden" rows="1" required="required">
+                    </li>
+                    <li class="list-group-item">
+                        Max distance(Km) from College
+                        <div class="material-switch pull-right">
+                            <input id="DisFromCollege" class="check" name="someSwitchOption001" type="checkbox"/>
+                            <label for="DisFromCollege" class="label-primary"></label>
+                        </div>
+                        <input type="text" name="" id="input2" class="form-control hidden" rows="1" required="required">
+                    </li>
+                    
+                    </ul>
+            </div>
+            
+            <div class="panel-heading form" id="myform"><h3>How close (in Km) do you want to be from :</h3> </div>
+              <ul class="list-group">
+                  
+                    <li class="list-group-item">
+                        A park
+                        <div class="material-switch pull-right">
+                            <input id="parkDistance" class="check Condom"  name="someSwitchOption001" type="checkbox"/>
+                            <label for="parkDistance" class="label-success"></label>
+                        </div>
+                        
+                        <input type="text" name="" id="input3" class="form-control hidden" rows="1" required="required">
+                    </li>
+                    <li class="list-group-item">
+                        A Police station
+                        <div class="material-switch pull-right">
+                            <input id="policeDistance" class="check police"  name="someSwitchOption001" type="checkbox"/>
+                            <label for="policeDistance" class="label-info"></label>
+                        </div>
+                        
+                        <input type="text" name="" id="input4" class="form-control hidden" rows="1" required="required">
+                    </li>
+                    <li class="list-group-item">
+                        A Divvy Bicycle Stations
+                        <div class="material-switch pull-right">
+                            <input id="BicycleDistance"  class="check" name="someSwitchOption001" type="checkbox"/>
+                            <label for="BicycleDistance" class="label-warning"></label>
+                        </div>
+                        <input type="text" name="" id="input5" class="form-control hidden" rows="1" required="required">
+                    </li>
+                    <li class="list-group-item">
+                        A Condom Distribution Site
+                        <div class="material-switch pull-right">
+                            <input id="CondomDistance"  class="check , park" name="someSwitchOption001" type="checkbox"/>
+                            <label for="CondomDistance" class="label-danger"></label>
+                        </div>
+                        <input type="text" name="" id="input6" class="form-control hidden" rows="1" required="required">
+                    </li>
+                </ul>
+              <div class="material-switch pull-right pull-down">
+                            <button type="button" id="go" class="btn btn-success ">Go!</button>
+                  <button type="button" id="see" class="btn btn-success hidden ">See results</button>
+                  
+          </div>
+            <a title="Zillow" href="https://www.zillow.com"><img src="http://www.zillow.com/widgets/GetVersionedResource.htm?path=/static/logos/Zillowlogo_200x50.gif">  <span class="notification-badge-placeholder"></span> </a>
+          </div>     
+        <div class="col-sm-9 col-sm-offset-3 col-md-8 col-md-offset-3 main">
+          <h1 class="page-header" id="testing">Let's see what we find for you</h1>
+          <div id="map">    
+<!--      google maps key      AIzaSyD1x5zGxKCTmnHtc16yD0F3vYEYT_Pznm8-->
+              <div class="sub-header hidden" id="rsth">Resoults</div>
+            </div>  
+            <div id="chart"></div>
+            <div id="addResults"></div>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="Styles/styles.css">
+  <title>Chicago apartment finder</title>
+  <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBK7j2clYJpBcAkZcaA-d461js1D44DdbM&callback=initMap">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script type="text/javascript" src="Scripts/script.js"></script>
+
+</head>
+<body>
+  <header>
+    <nav>
+       <span id="openbtn" onclick="openNav()" >&#10095;</span>
+    </nav>
+  </header>
+  <div id="map"></div>
+  <div id="mySidenav" class="sidenav">
+   <span class="closebtn"onclick="closeNav()" onclick="closeNav()">&#10095;</span>
+   <h1>Menu</h1>
+   <br><br>
+   <p>Show the closest house</p>
+   <div class="input"><input id="minchk"type="checkbox"></div> <br>
+   <p>Filter by closeness</p><br>
+   <div class="input"><input id="myRange" type="range" min="0" max="1" value="0" step="0.000000000000001"></div> <br>
+   <p>Display police stations  </p>
+   <div class="input"><input id="pchk"type="checkbox"></div> <br>
+   <p>Display fire stations  </p>
+   <div class="input"><input id="fchk" type="checkbox"></div> <br><br><br>
+   <div class="input"><button onclick="initMap()">Submit</div>
+  </div>
+  
+</body>
+</html> 

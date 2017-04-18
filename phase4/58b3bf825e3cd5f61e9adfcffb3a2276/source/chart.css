@@ -1,0 +1,68 @@
+.axis path, .axis line {
+  fill: none;
+  stroke:  #EEE8AA;
+  box-shadow: 1em 1em;
+}
+
+.axis text {
+  font-size: 1em;
+  box-shadow: 1em 1em;
+}
+.bar {
+  fill: #DAA520;
+}
+.bar:hover {
+  fill: #FFD700 ;
+}
+svg text.label {
+  fill:black;
+  font-size: 0.8em;
+  text-anchor: middle;
+  font-weight: 0.9em;
+}
+#avgCal{
+  text-align: center;
+  font-family: Arial,sans-serif;
+  text-transform: full-width;
+  font-size: 0.9em;
+  margin-top: 0.1em;
+  background-color: #F0E68C;
+
+}
+.table{
+  width:98.4%;
+  border-width: thick;
+  border-style: groove;
+  border-color: #F0E68C;
+  float: left;
+  margin-bottom: 1em;
+  margin-left: 0.5em;
+  box-shadow: 0.1em 0.1em 0.1em 0.1em;
+}
+th{
+  font-weight:bold;
+ border:0.1em solid black;
+padding-left: 0.1em;
+}
+td{
+font-weight: bold;
+/*  border-top:0.1em solid black;*/
+border-bottom:0.1em solid black;
+text-align: center;
+}
+tr.row-odd, .row-odd{
+background:  #F0E68C;
+}
+tr.row-even, .row-even{
+background: #DAA520;
+}
+#table1, #table2{
+  padding: 1em;
+  float: left;
+  max-width: 98%
+}
+#table1{
+    margin-left: 1em;
+}
+
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<head>
+  <meta charset ="utf-8" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <meta name="author" content="Cesar Ochoa">
+</head>
+
+<body >
+  <div id='Home'>
+    <div id='animated'>
+      <div id=text-it>Texto</div>
+    </div>
+    <div id="home_container">
+      <div id="home_content">
+        aPlace2me
+      </div>
+      <div id="developer">
+        By Cesar Ochoa
+      </div>
+      <div id="features">
+        Features
+        <ul class="features">
+          <li>
+            Closest places to rent near the department of computer science.
+          </li>
+          <li>
+            Nearby Places such as parks, restaurants and shops
+          </li>
+          <li>
+            Light Traffic
+          </li>
+          <li>
+            Map visualization with distance and crime information
+          </li>
+          <li>
+            And many many more...
+          </li>
+        </ul>
+
+      </div>
+      <div class="startButton"> Loading Data...
+      </div>
+    </div>
+
+  </div>
+
+  <div class="html-header">
+    <h1 class="header-text">aPlace2me</h1>
+  </div>
+
+  <div class="descriptionContainer">
+    You have choosen
+    <ul class="optionsList">
+      <li class="optionsListli" id='op1'>
+        Default
+      </li>
+      <pa id='opDef'> The Default option provides you with the 100 Chicago University nearest affordable places to rent. Tip: With this option
+        there are no place filtering, so you can look around.
+      </pa>
+      <li class="optionsListli" id='op2'>
+        Low Crimes
+      </li>
+      <pa id='opLc' > With this option, the places are filtered
+        to show you only places that has the lowest crime rates of the city.
+      </pa>
+      <li id='op3' class="optionsListli">
+        Healthy and Safety
+      </li>
+      <pa id='opCl' > With this option, the places are filtered
+        to show you only places with good coverage of health and safety places such as hospitals(we consider a variety of clinics), police stations and fire stations.
+      </pa>
+      <li id='op4' class="optionsListli">
+        Good Traffic
+      </li>
+      <pa id='opTr'> With this option, the places are filtered
+        to show you only places that feature  good traffic performance.
+      </pa>
+      <li id='op5' class="optionsListli">
+        Near Places
+      </li>
+      <pa id='opPl'> This option provides you with the Chicago University nearest affordable places to rent. Also, these places are filtered
+        to show you only places with possibly social interest places nearby, such as parks, food, libraries and bici Stations,
+        to save you time and provide you with life quality.
+      </pa>
+    </ul>
+    <pa id='final-paragraph'> You can click one place or another in the map below, just
+      for more information. ¡Best wishes finding the best place to you!</pa>
+    </div>
+    <div class="buttonContainer">
+      <div class="optionsButton">
+        options </div>
+        <div class="main-menu">
+          <div class="menu-items" >
+            <div class = "o1" >
+              Default
+            </div>
+            <div class="o2">
+              By Low Crimes
+            </div>
+            <div class="o3">
+              Healthy and Safety
+            </div>
+            <div class="o4">
+              By Good Traffic
+            </div>
+            <div class="o5">
+              By Near Places
+            </div>
+          </div>
+        </div>
+        <div class="goButton">
+          go! </div>
+          <div class="routeButton">
+            fastest route
+          </div>
+          <div class="viewButton">
+            View Data
+          </div>
+        </div>
+        <div id="leyend">
+          <h1 id=mapTitle > Locations Overview </h1>
+          <h1 class="theIconsText">Crime: </h1>
+          <img class="theIconsLeyend" src="icons/crime.png" width=30em; height=30em; >
+          <h1 class="theIconsText">Fire Station: </h1>
+          <img class="theIconsLeyend" src="icons/fsicon.png">
+          <h1 class="theIconsText">Police: </h1>
+          <img class="theIconsLeyend" src="icons/police.png">
+          <h1 class="theIconsText">Bike: </h1>
+          <img class="theIconsLeyend" src="icons/bike.png" >
+          <h1 class="theIconsText">Clinic: </h1>
+          <img class="theIconsLeyend" src="icons/clinic.png">
+          <h1 class="theIconsText">Produce Cart: </h1>
+          <img class="theIconsLeyend" src="icons/food.png">
+          <h1 class="theIconsText">Library: </h1>
+          <img class="theIconsLeyend" src="icons/library.png">
+          <h1 class="theIconsText">Park: </h1>
+          <img class="theIconsLeyend" src="icons/park.png" >
+          <h1 class="theIconsText">Rental House: </h1>
+          <img class="theIconsLeyend" src="icons/casa.png">
+          <h1 class="theIconsText">University: </h1>
+          <img class="theIconsLeyend" src="icons/mainmarker.png">
+        </div>
+        <div class="mapContainer">
+          <div id="map">
+          </div>
+        </div>
+        <div class="infoContainer">
+          <div class="table">
+            <h1 class="infoTitle"> House Information</h1>
+          <table id="table1">
+          </table>
+          <h1 class="infoTitle" id="infoTable"> </h1>
+          <table id="table2">
+          </table>
+        </div>
+          <div id="infoHeaders">
+            <h1 class="infoTitle"> General Information</h1>
+            <h1 class="infoTitle"> Single Place Information</h1>
+            <h1 class="infoTitle"> Place Score</h1>
+            <div class="dataContainer" id="dc1">
+              <ul id="dataList">
+              </ul>
+            </div>
+            <div class="dataContainer">
+              <div class="buttonData" id="b1">
+              </div>
+              <div class="buttonData" id="b2">
+              </div>
+                <div class="buttonData" id="b3">
+                </div>
+                <div class="buttonData" id="b4">
+                </div>
+                <div class="buttonData" id="b5">
+                </div>
+                <div class="buttonData" id="b6">
+                </div>
+                <div class="buttonData" id="b7">
+                </div>
+                <div class="buttonData" id="b8">
+                </div>
+            </div>
+            <div class="dataContainer" id="dc3">
+              <h2 id="avgCal"></h2>
+            </div>
+
+          </div>
+
+        </div>
+
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAceL3iw6QPVBzNHfnnd69E2CchCFx4M1E&callback=initMap">
+      </script>
+      <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+      <script src='main.js'></script>
+      <script src='2part.js'></script>
+      <link href='main.css' type='text/css' rel='stylesheet' >
+      <link href='chart.css' type='text/css' rel='stylesheet' >
+    </body>

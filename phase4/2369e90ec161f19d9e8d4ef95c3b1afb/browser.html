@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Chicago browser</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/mapControl.js"></script>
+  <script src="js/weather.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Share:700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles/stylesLoginf.css">
+  <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+  <link rel="stylesheet" type="text/css" href="styles/buttons.css">
+  <link rel="stylesheet" type="text/css" href="styles/leftColumn.css">
+  
+  <link rel="stylesheet" href="styles/iconWeather/pe-icon-set-weather/css/helper.css">
+  <link rel="stylesheet" href="styles/iconWeather/pe-icon-set-weather/css/pe-icon-set-weather.css">
+
+  <style> 
+    .carousel-inner > .item > img,
+    .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Chicago browser</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="main.html">Home</a></li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">options<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+    </div>
+  </nav>
+
+
+  <div class = "container-fluid text-center">
+    <div class ="row content">
+      <div class="col-sm-2 sidenav">
+      <label for="sel1">Select the distance from university (km).<br>
+          please, click hide and show.</label>  
+
+
+          <button id ="rentButton" class="button buttonMarker" onclick="buttonRentF();"></button>
+
+
+          <form class="form-group form-group-sm">
+
+            <select class="form-control " id="sel1">
+
+              <option>5</option>
+              <option>10</option>
+              <option>15</option>
+              <option>20</option>
+              <option>25</option>
+              <option>30</option>
+            </select> 
+          </form>
+          <button id ="libraryButton" class="button buttonMarker" onclick="buttonLibraries()">
+            <dd>Show libraries</dd></button>
+            <form class="form-group form-group-sm">
+              <select class="form-control" id="sel2">
+                <option>5</option>
+                <option>10</option>
+                <option>15</option>
+                <option>20</option>
+                <option>25</option>
+                <option>30</option>
+
+              </select> 
+            </form>
+            <button id ="ParkButton" class="button buttonMarker" onclick="buttonPark()">
+              <dd>Show parks</dd></button>
+              <form class="form-group form-group-sm">
+                <select class="form-control" id="sel3">
+
+                  <option>5</option>
+                  <option>10</option>
+                  <option>15</option>
+                  <option>20</option>
+                  <option>25</option>
+                  <option>30</option>
+
+                </select> 
+              </form>
+
+               <button id ="PoliceButton" class="button buttonMarker" onclick="buttonPolice()"> 
+                  <dd>Show Police stations</dd> </button>
+              <form class="form-group form-group-sm">
+               
+                </button> 
+                <select class="form-control" id="sel4">
+
+                  <<option>5</option>
+                  <option>10</option>
+                  <option>15</option>
+                  <option>20</option>
+                  <option>25</option>
+                  <option>30</option>
+                </select> 
+              </form>
+
+
+
+            </form>
+
+
+
+
+            
+
+
+            </div>
+
+            <div class ="col-sm-8 text-left">
+
+
+              <div class="container">
+                <div id="map_container">
+                  <div id="googleMap" ></div>    
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-2 sidenav text-left">
+              <ul class = "list-group" style="padding-top: 0px; padding-left:  10px" >
+              <li class= "list-group-item">
+                <dd id = "textClime"> weather </dd>
+              </li>
+              <li class = "list-group-item"> 
+
+                <div class = "container-fluid" >
+                  <dd id ="text_weather"></dd>
+                  <p><i id= "imgWeather" class = "pe-is-w-rain-1" ></i></p>
+
+                </li>
+              </ul>
+
+
+             <dd class ><b>Select some rent. <br></b></dd>
+             <dd class ="textS" ><b>Distance, time, and routes <br></b></dd>
+             <ul class ="list-group textS">
+              <li class ="list-group-item">
+
+               <dd class ="textS text-center" style="background: #0088FF"><b>Driving</b><input type="checkbox" id ="checkDriving" class="checkDisplay" style="float: right;" value = "0"></dd>
+               <dd id = "textDriving"></dd>
+
+
+             </li>
+             <li class ="list-group-item">
+
+              <dd class ="textS text-center"  style="background: #FFCD38"><b>Bicycling</b><input type="checkbox"  id ="checkBycicling"  class="checkDisplay" style="float: right;" value = "1" > </dd>
+              <dd id = "textBicycling"></dd>
+
+            </li>
+            <li class ="list-group-item">
+              <dd class ="textS text-center" style="background: #EC625F" ><b>Walking</b> <input type="checkbox" id ="checkWalking"   class="checkDisplay" style="float: right;"  value = "2" ></dd>
+              <dd id = "textWalking"></dd>
+
+            </li>
+            <li class ="list-group-item">
+              <dd class ="textS text-center"  style="background: #2F1B41; color: white"><b> Transit </b> <input type="checkbox"  id ="checkTransint"  class="checkDisplay" style="float: right;" value = "3" ></dd>
+              <dd id = "textTransit"></dd>
+
+            </li>
+
+
+          </ul>
+
+
+
+
+        </div>
+
+
+      </div>
+    </div>
+
+    <script type="text/javascript"  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDO3BlysYt5W2YxWN6ohNE0ep5XKjnuWnU&callback=myMap&libraries=places&libraries=geometry&v=3"></script>
+    <script>
+
+
+    </script>
+
+    <div style ="text-align: center;"> 
+
+      <button type="button" class="button button2"  >Click to find!</button>
+
+    </div>
+    <div class="row">
+      <div class="col-2"> 
+        <div class="ContentCheckBox">
+          <p>Graphic</p>        
+        </div>
+
+      </div> 
+      <div  class = "col-6">
+        <div class = "ContentCheckBox">
+          <p><b>Select options.</b></p>
+          <input type="checkbox" name="parkings" value="parking"  > Show parkings  <br>
+          <input type="checkbox" id="test_id" name="rents" value="rent" checked ="true" > Show rents  <br>
+          <input type="checkbox" name="parks" value="park"> Show parks  <br>
+          <input type="checkbox" name="parks" value="park"> Show parks  <br>
+
+        </div>
+
+
+
+      </div>
+      <div class = "col-4">
+        <div class= "ContentCheckBox" style= " text-align: left;  padding: 10px" >
+          <p id ="textAddress">Address: </p>
+          <p id ="textPhone">Phone:</p>
+          <p id ="textProperty">Property name:</p>
+          <p id ="textCompañy">compañy:</p>
+          <p id ="textType">property type: </p>
+          <p id ="textDistance">Distance:</p>
+          <p id ="textWalkTime">Walking time:</p>
+          <p id ="textDriveTime">Driving time:</p>
+        </div>
+
+
+      </div>
+
+    </div> 
+    <p id = 'demo'> </p>
+
+    <div style ="text-align: center; color:  #B9DBE6"> 
+
+      <h1>we can help to  find the house that you need</h1>
+
+    </div>
+
+    <div class="flex-container">
+      <p style="text-align: center; color:  #B9DBE6 ">you can find some house of rent according to your needs</p>
+    </div>
+    <div class="flex-container ">
+      <p style="text-align: center; color:  #B9DBE6">
+        free service</p>
+      </div>
+
+      <div class ="myfooter">
+       <p> 2017 </p>  
+
+     </div>
+
+   </body>
+   </html>
+
+
+

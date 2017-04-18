@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet"  type="text/css" href="style.css">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script src="https://d3js.org/d3.v4.js"></script>
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script src="init.js"></script>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+    <h2 id="title" >      PickNeighbors   </h2>  
+    </nav>
+
+  <div class="row con" id = "left_panel">
+      <div class=" col-md-3  fixed">
+          <b>Insert your data</b>
+          <br/><br/>
+          <form>
+              <div class="form-group">
+                <label>Latitude</label>
+                <input type="text">
+              </div>
+              <div class="form-group">
+                <label>Longitude</label>
+                <input type="text">
+              </div>
+              <div class="form-group">
+                <label>Budget</label>
+                <input type="text">
+              </div>
+          </form>
+          <button type="button" class ="btn btn-primary">load</button>
+          
+      </div>
+    <div class="col-md-9" >
+        <b>Gooble maps</b>
+        
+        <div id ="map"></div>
+              <script>  
+              
+              
+          function initMap(){
+            
+              var mapDiv = document.getElementById('map');
+              var map = new google.maps.Map(mapDiv, {
+                center: {lat: 41.8748397, lng: -87.6580882},
+                zoom: 14});
+              var marker = new google.maps.Marker({ 
+                position: {lat: 41.8748397, lng: -87.6580882}, 
+                map: map,
+                title: 'University of Chicago IL' 
+              })
+               marker.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png');
+        
+              loadJSOND3(mapDiv,map);
+            }
+
+          function loadJSOND3(mapDiv,map){
+            
+            var URL= 'https://data.cityofchicago.org/resource/c4ep-ee5m.json';
+            d3.json(URL, function(data) {
+                  
+                  data.forEach(function(element){
+                    //console.log(element.longitude);
+                    var marker = new google.maps.Marker({
+                      position:{lat :Number(element.latitude), lng: Number(element.longitude)},
+                      map: map
+                    });
+                  marker.setIcon('http://maps.google.com/mapfiles/ms/icons/red-dot.png');
+                  });
+            //visualizeit();
+              });
+          }
+            </script>
+
+
+         <script async defer
+	        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB361NO_9d5sIrd0jBz5bB3X48AQyi-UlI&callback=initMap">
+        </script>
+        
+ 
+    </div>
+
+
+
+</div>
+</body>
+</html>

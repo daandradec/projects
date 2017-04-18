@@ -1,0 +1,73 @@
+<!--a web page for users to choose the best vegetable market by comparing several different attribtues Ex. freshness scale, price, list of vendors, integration with Google Maps,distance, comparison of prices etc-->
+</!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Great Lafayette market evaluation</title>
+	<style>
+		html { 
+		  background: url(back.jpg) no-repeat center center fixed; 
+		  -webkit-background-size: cover;
+		  -moz-background-size: cover;
+		  -o-background-size: cover;
+		  background-size: cover;
+		}
+		h1{
+			display: block;
+			text-align:center;
+		}
+      
+      #content{
+      	width:400px;
+      	height: 300px;
+      	position: absolute;
+	    top:0;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	    margin: auto;
+	    text-align: center;
+	    line-height: 40px;
+      }
+      #content label{
+      	font-size: 20px;
+      }
+      #error{
+      	color:red;
+      }
+    </style>
+</head>
+
+<body>
+	<div id="content">
+		<h1>Great Lafayette Markets</h1>
+		<form action="market.html" method="get" onsubmit="return validation()">
+			<label for="zipcode">Enter your zipcode here: </label><br />
+			<input type="text" id='zipcode' name="zipcode" required/>
+			<button type="submit" id="button">get your markets</button><br />
+			<span id="error"></span>
+		</form>
+	</div>
+<script type="text/javascript">
+	function validation() {
+		var x, text;
+
+	    // Get the value of the input field with id="zipcode"
+	    x = document.getElementById("zipcode").value;
+	    var regex = /^[4][7][9][0][0-9]{1}/g;
+	    var res = regex.test(x);
+	    if(isNaN(x)) {
+	    	text = 'Please enter a zip code';
+	    }
+	    else if (!res) {
+	        text = "Please enter a valid lafayette area zip code";
+	    } else {
+	        text = "Input OK";
+	    }
+	    document.getElementById("error").innerHTML = text;
+	    return res;
+	}
+</script>
+	 
+</body>
+</html>

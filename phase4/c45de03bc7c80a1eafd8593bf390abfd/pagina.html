@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8" />
+        <title>EnjoyChicago</title>
+        <link rel="stylesheet"  type="text/css" href="estilo" />
+</head>
+<body>
+
+<h1 id="titulo">EnjoyChicago</h1>
+
+<div id="map"></div>
+
+
+<div id="marco1">
+<h2>Choose between 0 and 10, being 0 never and 10 always</h2>
+
+	
+	Running, football, basketball, bicycle riding :<input type="range" name="range7" min="0" max="10" onchange="updateTextInput(this.value,this.name);">
+	<input type="text" id="range7" value="">
+	<br>
+
+	<br>	
+	Eat in restaurant :<input  type="range" name="range6" min="0" max="10" onchange="updateTextInput(this.value,this.name);">
+	<input type="text" id="range6" value="">
+	<br>
+
+	
+	<br>
+	Pray church:<input type="range" name="range5" min="0" max="10" onchange="updateTextInput(this.value,this.name);">
+	<input type="text" id="range5" value="">
+	<br>
+
+
+	<br>
+	Use the Car:<input type="range" name="range4" min="0" max="10" onchange="updateTextInput(this.value,this.name);">
+	<input type="text" id="range4" value="">
+	<br>
+
+	<br>	
+	Gym - Crossfit:<input type="range" name="range3" min="0" max="10" onchange="updateTextInput(this.value,this.name);">
+	<input type="text" id="range3" value="">
+	<br>
+
+	<br>	
+	Buy in Supermarket:<input type="range" name="range2" min="0" max="10" onchange="updateTextInput(this.value,this.name);">
+	<input type="text" id="range2" value="">
+	<br>
+
+	<br>	
+	Bar discoteca :<input  type="range" name="range1" min="0" max="10" onchange="updateTextInput(this.value,this.name);">
+	<input type="text" id="range1" value="">
+	<br>
+
+	<button type="button" onclick="hiddenDiv()">Send </button>
+
+	
+
+</div>
+
+<div class="footer">	
+	<p id="Rents">
+		Here in this section I will show data about the recommended area
+	</p>
+	<p id="Rents1">
+		Here in this section I will show data about the recommended area
+	</p>
+	<p id="Rents2">
+		Here in this section I will show data about the recommended area
+	</p>
+			
+</div>
+
+
+<input type="button" value="New search" onclick="javascript:window.location.reload();"/>
+
+<script>
+function hiddenDiv() {
+    document.getElementById("marco1").style.visibility = "hidden";    
+    document.getElementById("marco1").style.height = "1px";
+
+    document.getElementById("map").style.width = "95%";
+    document.getElementById("map").style.height = "500px";    
+    document.getElementById("map").style.padding = "0px";
+
+    myMap(12)
+}
+</script>
+
+
+
+
+<script >
+		function updateTextInput(val,id) {
+          document.getElementById(id).value=val; 
+        }
+</script>
+
+<script>
+	function myMap(zoomTool) {
+		if (zoomTool!=12) {
+			zoomTool = 10;
+		}
+		
+  var mapCanvas = document.getElementById("map");
+  var myCenter = new google.maps.LatLng(41.8708,-87.6505); 
+  var mapOptions = {center: myCenter, zoom: zoomTool};
+  var map = new google.maps.Map(mapCanvas,mapOptions);
+
+  //circles
+  var myCity1 = new google.maps.Circle({
+    center: new google.maps.LatLng(41.9682242321,-87.7397474866),
+    radius: 600,
+    strokeColor: "#007f00",
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: "#007f00",
+    fillOpacity: 0.4
+  });
+  myCity1.setMap(map);
+
+  //circles2
+  var myCity2 = new google.maps.Circle({
+    center: new google.maps.LatLng(41.9613586525,-87.6985441744),
+    radius: 600,
+    strokeColor: "#00e500",
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: "#00e500",
+    fillOpacity: 0.4
+  });
+  myCity2.setMap(map);
+
+    //circles3
+  var myCity2 = new google.maps.Circle({
+    center: new google.maps.LatLng(41.9689350644, -87.7086378257),
+    radius: 600,
+    strokeColor: "#00e500",
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: "#FFFFFF",
+    fillOpacity: 0.4
+  });
+  myCity2.setMap(map);
+
+
+
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+    animation: google.maps.Animation.BOUNCE
+  });
+  marker.setMap(map);
+
+
+  var infowindow = new google.maps.InfoWindow({
+                            content: ""
+                        });
+    
+    //create a new httprequest for this session
+    var xmlhttp = new XMLHttpRequest();
+    //json format data resource url 
+    var url = "https://data.cityofchicago.org/api/views/s6ha-ppgi/rows.json?accessType=DOWNLOAD";
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+
+    //once the request is accepted, process the fowllowing function to get data and complete the app information
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            //get the text content from the page response
+            var myArr = xmlhttp.responseText;
+            var text = myArr;
+            json = JSON.parse(text);
+
+            //This a test
+            document.getElementById("Rents").innerHTML = "1. " + json.data[0][11] + ". address " + json.data[0][12];
+            document.getElementById("Rents1").innerHTML = "2. " + json.data[1][11] + ". address " + json.data[1][12];;
+            document.getElementById("Rents2").innerHTML = "3. " + json.data[2][11] + ". address " + json.data[2][12];;            
+            
+            //get value rent
+            for (var i = 0; i<263; i++) {
+                var dataLine = [];
+                //Community Area Name - 0
+                dataLine.push(json.data[i][8]);
+                //area number - 1
+                dataLine.push(json.data[i][9]);
+                //Property Type - 2
+                dataLine.push(json.data[i][10]);
+                //property name - 3
+                dataLine.push(json.data[i][11]);
+                //address  - 4
+                dataLine.push(json.data[i][12]);
+                //zip code - 5
+                dataLine.push(json.data[i][13]);
+                //phone Number - 6
+                dataLine.push(json.data[i][14]);
+                //management company -7
+                dataLine.push(json.data[i][15]);
+                //units - 8
+                dataLine.push(json.data[i][16]);
+                //Location - 9
+                dataLine.push(json.data[i][21]);                
+            };
+
+   }
+  }
+
+
+  //a new xml data for Parks 
+   var xmlhttpParks = new XMLHttpRequest();
+    //json format data resource url 
+    var url = "https://data.cityofchicago.org/api/views/wwy2-k7b3/rows.json?accessType=DOWNLOAD";
+    xmlhttpParks.open("GET", url, true);
+    xmlhttpParks.send();
+
+    //once the request is accepted, process the fowllowing function to get data and complete the app information
+    xmlhttpParks.onreadystatechange = function() {
+        if (xmlhttpParks.readyState == 4 && xmlhttpParks.status == 200) {
+            //get the text content from the page response
+            var myArrParks = xmlhttpParks.responseText;
+            var textParks = myArrParks;
+            jsonParks = JSON.parse(textParks);
+
+            //This a test
+            document.getElementById("Parks").innerHTML = jsonParks.data[12][9];            
+            
+            //get value rent
+            for (var i = 0; i<263; i++) {
+                var dataLineParks = [];
+                //Community Area Name - 0
+                dataLineParks.push(jsonParks.data[i][8]);
+                //area number - 1
+                dataLineParks.push(jsonParks.data[i][9]);
+                //Property Type - 2
+                dataLineParks.push(jsonParks.data[i][10]);
+                //property name - 3
+                dataLineParks.push(jsonParks.data[i][11]);
+                //address  - 4
+                dataLineParks.push(jsonParks.data[i][12]);
+                //zip code - 5
+                dataLineParks.push(jsonParks.data[i][13]);
+                //phone Number - 6
+                dataLineParks.push(jsonParks.data[i][14]);
+                //management company -7
+                dataLineParks.push(jsonParks.data[i][15]);
+                //units - 8
+                dataLineParks.push(jsonParks.data[i][16]);
+                //Location - 9
+                dataLineParks.push(jsonParks.data[i][21]);                
+            };
+
+   }
+  }
+
+
+
+
+ //a new xml data for Grocery 
+   var xmlhttpGrocery = new XMLHttpRequest();
+    //json format data resource url 
+    var url = "https://data.cityofchicago.org/api/views/53t8-wyrc/rows.json?accessType=DOWNLOAD";
+    xmlhttpGrocery.open("GET", url, true);
+    xmlhttpGrocery.send();
+
+    //once the request is accepted, process the fowllowing function to get data and complete the app information
+    xmlhttpGrocery.onreadystatechange = function() {
+        if (xmlhttpGrocery.readyState == 4 && xmlhttpGrocery.status == 200) {
+            //get the text content from the page response
+            var myArrGrocery = xmlhttpGrocery.responseText;
+            var textGrocery = myArrGrocery;
+            jsonGrocery = JSON.parse(textGrocery);
+
+            //This a test
+            document.getElementById("Grocery").innerHTML = jsonGrocery.data[5][8];            
+            
+            //get value rent
+            for (var i = 0; i<263; i++) {
+                var dataLineGrocery = [];
+                //Community Area Name - 0
+                dataLineGrocery.push(jsonGrocery.data[i][8]);
+                //area number - 1
+                dataLineGrocery.push(jsonGrocery.data[i][9]);
+                //Property Type - 2
+                dataLineGrocery.push(jsonGrocery.data[i][10]);
+                //property name - 3
+                dataLineGrocery.push(jsonGrocery.data[i][11]);
+                //address  - 4
+                dataLineGrocery.push(jsonGrocery.data[i][12]);
+                //zip code - 5
+                dataLineGrocery.push(jsonGrocery.data[i][13]);
+                //phone Number - 6
+                dataLineGrocery.push(jsonGrocery.data[i][14]);
+                //management company -7
+                dataLineGrocery.push(jsonGrocery.data[i][15]);
+                //units - 8
+                dataLineGrocery.push(jsonGrocery.data[i][16]);
+                //Location - 9
+                dataLineGrocery.push(jsonGrocery.data[i][21]);                
+            };
+
+   }
+  }
+
+
+
+
+
+ //a new xml data for traffic  
+   var xmlhttpTraffic = new XMLHttpRequest();
+    //json format data resource url 
+    var url = "https://data.cityofchicago.org/api/views/pfsx-4n4m/rows.json?accessType=DOWNLOAD";
+    xmlhttpTraffic.open("GET", url, true);
+    xmlhttpTraffic.send();
+
+    //once the request is accepted, process the fowllowing function to get data and complete the app information
+    xmlhttpTraffic.onreadystatechange = function() {
+        if (xmlhttpTraffic.readyState == 4 && xmlhttpTraffic.status == 200) {
+            //get the text content from the page response
+            var myArrTraffic = xmlhttpTraffic.responseText;
+            var textTraffic = myArrTraffic;
+            jsonTraffic = JSON.parse(textTraffic);
+
+            //This a test
+            document.getElementById("Traffic").innerHTML = jsonTraffic.data[5][10];            
+            
+            //get value rent
+            for (var i = 0; i<263; i++) {
+                var dataLineTraffic = [];
+                //Community Area Name - 0
+                dataLineTraffic.push(jsonTraffic.data[i][8]);
+                //area number - 1
+                dataLineTraffic.push(jsonTraffic.data[i][9]);
+                //Property Type - 2
+                dataLineTraffic.push(jsonTraffic.data[i][10]);
+                //property name - 3
+                dataLineTraffic.push(jsonTraffic.data[i][11]);
+                //address  - 4
+                dataLineTraffic.push(jsonTraffic.data[i][12]);
+                //zip code - 5
+                dataLineTraffic.push(jsonTraffic.data[i][13]);
+                //phone Number - 6
+                dataLineTraffic.push(jsonTraffic.data[i][14]);
+                //management company -7
+                dataLineTraffic.push(jsonTraffic.data[i][15]);
+                //units - 8
+                dataLineTraffic.push(jsonTraffic.data[i][16]);
+                //Location - 9
+                dataLineTraffic.push(jsonTraffic.data[i][21]);                
+            };
+
+   }
+  }
+
+
+
+
+
+}
+</script>
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDomb6EimWqdLB1hJEOFZ3LHbmbpQB7zKg&callback=myMap"></script>
+
+</body>
+</html>

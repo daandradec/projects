@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="js/weather.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/chart.css"></link>
+  </head>
+  <body>
+    <script src="js/draw.js" ></script>
+    <script type="text/javascript" src="https://mbostock.github.com/d3/d3.js?2.4.5"></script>
+    <div id="side-menu">
+      <h2>Weather in the near zone!</h2>
+        <form id="form-one">
+          <h2>Here you can see the information about weather and a beatiful chart.</h2>
+          <div id="name"></div>
+          <div id="temp"></div>
+          <div id="weat"></div>
+          <div id="dewpoint"></div>
+          <div id="relahum"></div>
+          <div id="windspeed"></div>
+          <div id="visibility"></div>
+          <div id="slp"></div>
+        </form>
+        <div class="table-title">
+          <h3>More Information</h3>
+          </div>
+          <table class="table-fill">
+          <thead>
+          <tr>
+            <th class="text-left">Day</th>
+            <th class="text-left">Weather</th>
+            <th class="text-left">Description</th>
+          </tr>
+          </thead>
+          <tbody class="table-hover">
+          <tr>
+            <td class="text-left" id="today"></td>
+            <td class="text-left" id="todayweat"></td>
+            <td class="text-left" id="todaydesc"></td>
+          </tr>
+          <tr>
+            <td class="text-left" id="day2"></td>
+            <td class="text-left" id="day2weat"></td>
+            <td class="text-left" id="day2desc"></td>
+          </tr>
+          <tr>
+            <td class="text-left" id="day3"></td>
+            <td class="text-left" id="day3weat"></td>
+            <td class="text-left" id="day3desc"></td>
+          </tr>
+          <tr>
+            <td class="text-left" id="day4"></td>
+            <td class="text-left" id="day4weat"></td>
+            <td class="text-left" id="day4desc"></td>
+          </tr>
+          <tr>
+            <td class="text-left" id="day5"></td>
+            <td class="text-left" id="day5weat"></td>
+            <td class="text-left" id="day5desc"></td>
+          </tr>
+          <tr>
+            <td class="text-left" id="day6"></td>
+            <td class="text-left" id="day6weat"></td>
+            <td class="text-left" id="day6desc"></td>
+          </tr>
+          <tr>
+            <td class="text-left" id="day7"></td>
+            <td class="text-left" id="day7weat"></td>
+            <td class="text-left" id="day7desc"></td>
+          </tr>
+          <tr>
+            <td class="text-left" id="day8"></td>
+            <td class="text-left" id="day8weat"></td>
+            <td class="text-left" id="day8desc"></td>
+          </tr>
+          <tr>
+            <td class="text-left" id="day9"></td>
+            <td class="text-left" id="day9weat"></td>
+            <td class="text-left" id="day9desc"></td>
+          </tr>
+          <tr>
+            <td class="text-left" id="day10"></td>
+            <td class="text-left" id="day10weat"></td>
+            <td class="text-left" id="day10desc"></td>
+          </tr>
+          <tr>
+            <td class="text-left" id="day11"></td>
+            <td class="text-left" id="day11weat"></td>
+            <td class="text-left" id="day11desc"></td>
+          </tr>
+          <tr>
+            <td class="text-left" id="day12"></td>
+            <td class="text-left" id="day12weat"></td>
+            <td class="text-left" id="day12desc"></td>
+          </tr>
+          <tr>
+            <td class="text-left" id="day13"></td>
+            <td class="text-left" id="day13weat"></td>
+            <td class="text-left" id="day13desc"></td>
+          </tr>
+          <tr>
+            <td class="text-left" id="day14"></td>
+            <td class="text-left" id="day14weat"></td>
+            <td class="text-left" id="day14desc"></td>
+          </tr>
+          </tbody>
+          </table>
+    </div>
+    <div id="chart">
+      <h2></h2>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+/* index style */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        
+        }
+        h1{
+            text-align: center;
+          
+        }
+        p{
+            
+        }
+        
+        [class*="btn"] {
+            margin-left : 2%;
+            margin-top:  0.25%;
+        }
+        #panelcalc{
+            margin-left: 9.5%;
+            margin-right: 55%;
+           
+        }
+        #panelOptions{
+            margin-left: 9.5%;
+            margin-right: 9.5%;
+            
+        }
+       
+        #map {
+            height: 45%;
+            width: 45%;
+            margin-left: 9.5%;
+            margin-right: 9.5%;
+            float:right;
+        }
+        #divfooter {
+            text-align: center;
+            float: end;
+        }

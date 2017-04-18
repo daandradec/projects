@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <title>UIC Housing</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="js/jsInitMap.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-3 sidenav">
+            <h2 class="text-center" style="color:#337AB7;font-family:Arial Black">UIC Housing</h2>
+            <p>Looking for the best place to live in Chicago? Here you'll find a set of tools that will help you make an informed decision about your soon to be home</p>
+            <hr id="line1">
+            <ul class="nav nav-pills nav-stacked">
+                <li id="housesButton" title="Show the avaliable houses near UIC"><a>Houses</a></li>
+                <li id="climateButton" title="Get a comparative diagram of your local weather vs Chicago"><a>Climate</a></li>
+            </ul>
+            <hr id="line1">
+            <div id="H" style="display:none">
+                <p>Now you can see in the map all the houses avaliable for rent near UIC. You can click on the blue icons and find more information about each house.</p>
+                <p>To help you decide whether a zone suits you, check out these features:</p>
+                <div class="checkbox">
+                  <label><input type="checkbox" value="" onchange="chicagoParks()" id="parks">Parks</label>
+                </div>
+                <div class="checkbox">
+                  <label><input type="checkbox" value="" onchange="chicagoBikeR()" id="bikeR">Bike racks</label>
+                </div>
+                <div class="checkbox">
+                  <label><input type="checkbox" value="" onchange="chicagoPolice()" id="police">Police Stations</label>
+                </div>
+            </div>
+            <div id="C" style="display:none">
+                <p>This tool let you compare the weather of your current home (or any other place in the US) to the weather in Chicago, so now you can prepare for it in advance!</p>
+                <p>Zip code:</p>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="60607">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            
+            
+        </div>
+
+        <div class="col-sm-9">
+
+            <hr>
+            <div id="map"></div>
+            
+        </div>
+    </div>
+</div>
+    
+
+<footer class="container-fluid">
+    <div>
+        <span style="color:#F39C26"><p style="float:left;background-color:#4a4343"><font size="6">Purdue – UNAL Gold IronHacks 2017</p></span>
+        <span><a href="https://www.zillow.com/" style="float:right"><img src="http://www.zillow.com/widgets/GetVersionedResource.htm?path=/static/logos/Zillowlogo_200x50.gif" width="200" height="50" alt="Zillow Real Estate Search" /></a></span>
+    </div>
+</footer>
+
+</body>
+    
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDc9A62-Uv1jmMKWNxTta0TrHFiOnIE9xo&callback=initMap">
+</script>
+    
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+</script>
+    
+</html>

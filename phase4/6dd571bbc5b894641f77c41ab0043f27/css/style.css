@@ -1,0 +1,166 @@
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+@import url(//fonts.googleapis.com/css?family=Roboto:400,300,100,700,900);
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+#Rentoo{
+    font-family: monospace;
+    color: #ff5369;
+    font-size: 40px;
+}
+
+#map {
+    height: 100%;
+  }
+
+.testingA{
+    margin: 0 auto;
+}
+
+.testingTop{
+    background: #4a4a4a;
+    margin: 5px;
+    padding: 55px;
+}
+
+.Mapdiv{
+    height: 800px;
+    width: 50%;
+}
+
+.imagecontainer{
+    width:auto; 
+    height:217px; 
+    background-image: url(Carousel.png);
+}
+
+body {
+  background: #FFFFFF;
+  color: #86dbfa;
+  font: 300 18px/35px "Roboto", sans-serif;
+  margin: 50px;
+  -webkit-text-size-adjust: none;
+}
+
+h1 {
+  font-size: 80px;
+  line-height: 90px;
+  font-weight: 900;
+  letter-spacing: -0.3px;
+}
+@media (max-width: 479px) {
+  h1 {
+    font-size: 50px;
+    line-height: 63px;
+  }
+}
+
+h2 {
+  font-size: 72px;
+  line-height: 60px;
+  font-weight: 100;
+}
+@media (max-width: 479px) {
+  h2 {
+    font-size: 49px;
+    line-height: 48px;
+  }
+}
+
+h3 {
+  font-size: 55px;
+  line-height: 60px;
+}
+@media (max-width: 479px) {
+  h3 {
+    font-size: 49px;
+    line-height: 55px;
+  }
+}
+
+h4 {
+  font-size: 44px;
+  line-height: 43px;
+  font-weight: 100;
+  color: #6a6a6a;
+}
+
+h5 {
+  font-size: 40px;
+  line-height: 50px;
+  color: #383838;
+  font-weight: 100;
+}
+
+h6 {
+  font-size: 36px;
+  line-height: 43px;
+}
+
+strong {
+  font-weight: 400;
+}
+
+/*=====    Buttons   ===*/
+.btn {
+  font-size: 21px;
+  line-height: 24px;
+  color: #ffffff;
+  background: #38c7c7;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  font-weight: 400;
+  padding: 21px 42px 20px 43px;
+  margin-top: 51px;
+  display: inline-block;
+}
+.btn:hover {
+  background: #FF5369;
+  color: #fff;
+}
+.btn:active {
+  background: #FF5369;
+}
+
+.carousel-inner {
+    width: 100%;
+    margin: auto;
+}
+
+.carousel-indicators {
+    bottom: 0px;
+}
+
+.labelform {
+    color: black
+}
+
+.checkform {
+    color: #606060;
+    font-size: 85%
+}
+
+.checkFormContainer {
+    width: 100%
+    
+}
+
+.leftForm {
+	margin-top: 15px;
+	background-color: aqua
+}
+
+.leftDivisionMap {
+	width: 40%;
+	height: 800px
+}
+
+.labelLeft {
+	width: 70%;
+	color: black;
+	font-family: inherit;
+	font-size: 28px
+}

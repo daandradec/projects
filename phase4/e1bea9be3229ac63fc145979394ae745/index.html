@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Miguel Angel Borja Acevedo">
+	<title>2017-Purdue-UNAL-IronHack-miaborjaac</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/main_modifier.css">
+	<link rel="stylesheet" type="text/css" href="css/specific_modifier.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="http://d3js.org/d3.v2.js"></script>
+  	<script src="js/map.js"></script>
+  	<script src="js/search.js"></script>
+  	<script src="js/readingData.js"></script>
+  	<script src="js/welcomePage.js"></script>
+  	<script src="js/dictionaries.js"></script>
+  	<script src="js/bar.js"></script>
+  	<script src="js/updateBarChart.js"></script>
+
+</head>
+<body>
+
+	<div id="welcome">
+		<div id="textWelcome">WELCOME TO <br> <b>Knowing Chicago<b></div>
+		<button id="startBtn">
+			<p id="pStartBtn">START!</p>
+		</button>	
+	</div>
+	
+	<div id="all">
+		<div id="title">
+			<h1>KNOWING CHICAGO</h1>
+		</div>
+		
+		<div id="content">
+			
+			<div id="map"></div>
+			
+			<div id="content_user">
+				<div id="up">
+					<div id="search_description">
+						<div id="search">
+							<div id="title_select_option">
+								<b>SELECT AN OPTION</b>
+								<div id="iSelectOption">i
+									<span class="tooltiptext">Select an option in the following drop-down for information and place the corresponding markers on the map.</span>
+								</div> 
+							</div>
+							<div id="dropdown">
+								<select class="dropbtn"  onchange="select()" name="selector">
+									<option value="hide" style="display: none;">-- Option --</option>
+									<option value="a">Libraries</option>
+									<option value="b">Police Stations</option>
+									<option value="c">Affordable Rental</option>
+									<option value="d">Public Art</option>
+									<option value="e">Fire Stations</option>
+									<option value="f">Farmers Markets</option>
+									<option value="g">Public Schools</option>
+									<option value="h">Parks</option>
+								</select>
+							</div>
+						</div>
+
+						<div id="description">
+							<div id="title_description">
+								<b>DESCRIPTION</b>
+								<div id="iDescription">i
+									<span class="tooltiptext">Here you can read a brief description of the option chosen and the actions you can perform in that option.</span>
+								</div> 
+							</div>
+							<div id="content_description">
+								<p></p>
+							</div>
+						</div>
+						
+					</div>
+
+					<div id="information">
+						<div id="title_information">
+							<b>INFORMATION</b>
+							<div id="iInformation">i
+								<span class="tooltiptext">In this section you can see details when you click on any of the markers placed on the map when you select an option in the dropdown.</span>
+							</div> 
+						</div>
+						<div id="content_information">
+							<p id="pInformation"></p>
+							<form id="form" method="get" action="http://images.google.com/images" target="_blank">
+								<input id="formText" type="hidden" name="q" />
+								<input id="button" type="submit" value="Search in Google Images" />
+							</form>
+						</div>
+					</div>		
+				
+
+				</div>
+
+				<div id="down">
+					<div id="display">
+						<div id="title_display">
+							<b>DISPLAY</b>  
+							<div id="iDisplay">i
+								<span class="tooltiptext">This section is only available when you click on a house for rent. It shows the percentage assessment (%) of each house with respect to the accesses that have 6 different items, they are: proximity to the university, proximity to a library, proximity to a police station, proximity to a station Firefighters, access to a farmer market and access to a park.</span>
+							</div> 
+						</div>
+						<div id="content_display">
+							<p id="pDisplay">Available when you click on a house for rent.</p>
+							<div class="chart">
+								<p>--- Closeness ---</p>
+  								<div></div>
+  								<p>--- Access to library ---</p>
+  								<div></div>
+  								<p>--- Security ---</p>
+  								<div></div>
+  								<p>--- Closeness to fire station ---</p>
+  								<div></div>
+  								<p>--- Closeness to farmer market ---</p>
+  								<div></div>
+  								<p>--- Access to park ---</p>
+  								<div></div>
+							</div>
+						</div>
+					</div>
+
+
+					<div id="conventions">
+						<div id="title_conventions">
+							<b>CONVENTIONS</b>
+							<div id="iConventions">i
+								<span class="tooltiptext">Each image will help you know the meaning of each marker placed on the map.</span>
+							</div> 
+						</div>
+						<div id="content_conventions">
+							<img src="images/marker university.png"> 
+							<p style="font-size: 2vh; display: inline-block;">University</p>
+							<br>
+							<img src="images/zone.png"> 
+							<p id="zone" style="font-size: 2vh; display: inline-block;"> --- </p>
+							<br>
+							<img src="images/marker police.png"> 
+							<p style="font-size: 2vh; display: inline-block;">Police Station</p>
+							<br>
+							<img src="images/marker fire.png"> 
+							<p style="font-size: 2vh; display: inline-block;">Fire Station</p>
+							<br>
+							<img src="images/marker library.png"> 
+							<p style="font-size: 2vh; display: inline-block;">Library</p>
+							<br>
+							<img src="images/marker rental.png"> 
+							<p style="font-size: 2vh; display: inline-block;">Affordable Rental Housing</p>
+							<br>
+							<img src="images/marker art.png"> 
+							<p style="font-size: 2vh; display: inline-block;">Public Art</p>
+							<br>
+							<img src="images/marker market.png"> 
+							<p style="font-size: 2vh; display: inline-block;">Farmers Market</p>
+							<br>
+							<img src="images/marker school.png"> 
+							<p style="font-size: 2vh; display: inline-block;">School</p>
+							<br>
+							<img src="images/marker park.png"> 
+							<p style="font-size: 2vh; display: inline-block;">Park</p>
+						</div>
+					</div>	
+				</div>
+		
+			</div>
+		</div>
+
+		<div id="credits">
+			<p>Created by Miguel Angel Borja Acevedo. Systems engineering and computing. National University of Colombia.</p>
+		</div>
+
+	</div>
+
+	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJCMNYLXT-TdFkQfZYnBEYGmvGinkGkps&callback=initMap">
+  	</script>
+  	<script src="js/jquery.js"></script>
+  	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+ <!-- Token : nRpmYzhkcrweuVXxRmEMMGcfkVUvXgTi //Token CDO  --> 
+ <!-- key : AIzaSyBmOLIj7g82PSVjg2jui5vx6fjjgFhYlJo // Google Maps Api Key -->
+<html>
+
+<head>
+    <link rel="stylesheet" type ="text/css" href="CSS/style.css"> <!-- comment me-->
+    <meta charset="UTF-8">
+    <title>Index </title>
+    <!-- Script Sources-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>  <!-- //jquery -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmOLIj7g82PSVjg2jui5vx6fjjgFhYlJo&callback=initMap" async defer></script>
+    <script id="ConnectCDO">//Climate Data Online
+        $(document).ready(function () {
+            $("#button1").click(function () {
+                $.ajax({
+                    beforeSend: function (request) {
+                        request.setRequestHeader("token", "nRpmYzhkcrweuVXxRmEMMGcfkVUvXgTi");
+                    },
+                    url: "https://www.ncdc.noaa.gov/cdo-web/api/v2/datasets",
+                    method: "GET",
+                    data: "datatypeid=TOBS",
+                    datatype: "json",
+                    success: function (result) {
+                        var collectedData = result;
+                        //Metadata
+                        var metaData = collectedData.metadata;
+                        var mdResultSet = metaData.resultset;
+                        var mdOffSet = mdResultSet.offset;
+                        var mdCount = mdResultSet.count;
+                        var mdLimit = mdResultSet.limit;
+                        //Results
+                       var dataResults = collectedData.results; // object array (data)
+                       $("#p1").html(mdLimit+ " (connected)");
+                       
+                    }});
+            });
+        });
+    </script> 
+  
+    <script id ="GoogleMap" >
+        var map;
+        function initMap() {
+            
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 41.8708, lng: -87.6505},
+                zoom: 15
+                
+            });
+            var marker = new google.maps.Marker({
+            position: {lat: 41.8708, lng: -87.6505},
+            map: map,
+            title: 'Department of Computer Science – University of Illinois, Chicago'
+  });
+
+        }
+    </script>
+    
+    <script id="connectARHD">  // Affordable Rental Housing Developments
+        $(document).ready(function(){
+            $(button2).click(function () {
+                $.ajax({
+                    url: "https://data.cityofchicago.org/api/views/s6ha-ppgi/rows.json",
+                    method: "GET",
+                    data:"accessType=DOWNLOAD",
+                    datatype: "json",
+                    success: function(result){
+                        var collectedData = result;
+                        //Metadata
+                        var metaData = collectedData.meta.view;
+                        var mdID = metaData.id;
+                        $("#p2").html(mdID + " (connected)");
+                }});
+            });
+        });
+    </script>
+	
+</head>
+<body>
+    
+        
+    
+
+    
+    <h1>ZK RentApp</h1>
+    
+    <div id="map"></div>
+    <button id="button2">Connect ARHD</button>
+    <button id="button1">Connect CDO</button>
+    <p id="p1">CDO Test Connection</p>
+    <p id = "p2">ARHD Test Connection</p>
+
+</body>
+</html>

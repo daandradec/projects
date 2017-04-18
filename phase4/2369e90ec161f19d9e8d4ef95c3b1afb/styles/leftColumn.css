@@ -1,0 +1,24 @@
+  .navbar {
+      margin-bottom: 0;
+      border-radius: 4px;
+    }
+.row.content {height: 615px}
+ .sidenav {
+     padding-top: 20px;
+      background-color: #F5EBEB;
+      height: 100%;
+      align-content: center;
+
+  
+    }
+
+ /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding:0;
+      }
+      .row.content {height:auto;} 
+    }
+    /* Set gray background color and 100% height */
+ 

@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="keywords" content="html5, css3, mashup">
+	<meta name="description" content="Mashup App">
+	<title>Find the Best Place to Live</title>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?3"></script>
+	<link rel="stylesheet" type="text/css" href="estilos/estilos.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+
+<body>
+	<section id="cont">
+		<section id="header">			
+		</section>
+		
+		<section id="main">
+			<article id="he1">
+				<p>Home</p>
+			</article>
+			
+			<article id="he2">
+				<p>Tools</p>
+			</article>	
+
+			<article id="he3">
+				<p>Tutorial</p>
+			</article>
+				
+			<article id="he4">
+				<p>FAQs</p>
+			</article>
+				
+			<article id="he5">
+				<p>Contact</p>
+			</article>
+			
+			<article id="he6">
+				<script type="text/javascript">
+					var c_date = new Date();
+					
+					var d = c_date.getDate();
+					var day = (d<10) ? '0' + d : d;
+					
+					var m = c_date.getMonth() + 1;
+					var month = (m<10) ? '0' + m : m;
+					
+					var y = c_date.getYear();
+					var year = (y<1000) ? y + 1900 : y;
+					
+					document.write(month + "/" + day + "/" + year + "");
+				</script>
+				
+			</article>				
+		</section>
+		
+		<section id="data">
+			<h1>University of Illinois at Chicago</h1>
+			<h2>Department of Computer Science</h2>	
+		</section>
+				
+		<div id="map" style="width: 1000px; height: 600px;"></div>	 	
+			<script type="text/javascript">
+				var latLon = new google.maps.LatLng(41.8708, -87.6505);
+				var mapOptions = {
+					zoom: 12,
+					center: latLon
+				}
+				var mapa = new google.maps.Map(document.getElementById("map"), mapOptions);
+				
+				var markerOptions = {
+					position: latLon,
+					map: mapa,
+					animation: google.maps.Animation.DROP,
+					title: "Department of Computer Science"	
+				}
+				var marker = new google.maps.Marker(markerOptions);
+				
+				google.maps.event.addListener(marker, "click", showInfo);
+				
+				function showInfo() {
+					mapa.setZoom(16);
+					mapa.setCenter(marker.getPosition());
+					var infowindow = new google.maps.InfoWindow({
+						content: "851 S Morgan St, Chicago, IL 60607, EE. UU."
+					});
+					infowindow.open(mapa, marker);
+				}
+
+			</script>		
+		
+		<section id="n">
+			<article id="n1">
+			
+			</article>
+			
+			<article id="n2">
+			
+			</article>	
+
+			<article id="n3">
+			
+			</article>
+		</section>
+		
+		<section id="info">
+				<a class="twitter-timeline" data-lang="en" data-width="330" data-height="320" href="https://twitter.com/thisisUIC">Tweets by thisisUIC</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> 
+				<script>
+					!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+				</script>
+				
+				<a class="twitter-timeline" data-lang="en" data-width="330" data-height="320" href="https://twitter.com/Suntimes">Tweets by Suntimes</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+				<script>
+					!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+				</script>
+				
+				<a class="twitter-timeline" data-lang="en" data-width="330" data-height="320" href="https://twitter.com/NWSChicago">Tweets by NWSChicago</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+				<script>
+					!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+				</script>
+		</section>
+		
+		<section id="others">
+			
+		</section>
+		
+		<footer>
+		</footer>
+		
+	</section>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <title> Mashup</title>
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="buttons.css">
+    <script src="script.js" type="javascript" ></script>
+  <head>
+    <style type="text/css">
+     /*html, body { height: 100%; margin: 0; padding: 0; }*/
+      #map { height: 700px;  width: 650px; }
+    </style>
+  </head>
+  <body>
+      <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+        <span class="w3-bar-item">Find a rent location</span>
+      </div>
+      <nav class="w3-sidebar w3-collapse w3-gray w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+          <div class="w3-container w3-row">
+          <span><h2>Welcome, please select an option</h2></span><br>
+          </div>
+          <div class="container">
+              <a href="#" class="button"><span>✓</span>Complete search</a>
+              <a href="#" class="button orange"><span>✓</span>search by stores</a>
+              <a href="#" class="button purple"><span>✓</span>hotspots</a>
+              <a href="#" class="button turquoise"><span>✓</span>parks</a>
+              <a href="#" class="button red"><span>✓</span>nearest</a>
+          </div>
+      </nav>
+     <div class="w3-row-panedding" style="margin 0-20px" >
+      <div class="w3-right" id="map"></div>
+    <script type="text/javascript">
+        var map;
+        var mark;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 40.4237, lng: -86.9212},
+            zoom: 16
+            });
+            mark= new google.maps.Marker({
+                position:  {lat: 40.4237, lng: -86.9212}, map: map
+            })
+        }
+
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuTMpFpLay_LWcZuFSc6UmmmtARlDVo_w&callback=initMap">
+    </script>
+
+      </div>
+
+  </body>
+</html>

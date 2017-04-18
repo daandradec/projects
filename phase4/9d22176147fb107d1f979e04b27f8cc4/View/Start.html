@@ -1,0 +1,109 @@
+<div class="col-sm-12" id="loading">
+  <div class="text-loading">
+    <p>We are searching the best place for you.</p>
+    <p><i class="fa fa-spinner fa-spin" style="font-size:70px"></i></p>
+  </div>
+</div>
+<div class="row col-sm-12" id="StartView">
+  <div class="col-sm-12 col-md-7">
+    <div class="col-sm-12 radius" id="Settings-Div">
+      <div class="col-sm-12 title-text">
+        <p>You have 300 points, the more points you use the aspect will have more importance in search.</p>
+      </div>
+      <div class="col-sm-6 col-md-2 aspect">
+        <p>Affordable</p>
+        <input type="text" name="Affordable" id="Affordable">
+        <br /> <br />
+        <div class="progress progress-bar-vertical">
+          <div class="progress-bar progress-bar-warning  progress-bar-striped active" id="AffordableBar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-2 aspect">
+        <p>Secure</p>
+        <input type="text" name="Secure" id="Secure">
+        <br /> <br />
+        <div class="progress progress-bar-vertical">
+          <div class="progress-bar progress-bar-info  progress-bar-striped active" id="SecureBar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-2 aspect">
+        <p>Entertainment</p>
+        <input type="text" name="Entertainment" id="Entertainment">
+        <br /> <br />
+        <div class="progress progress-bar-vertical">
+          <div class="progress-bar progress-bar-success progress-bar-striped active" id="EntertainmentBar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-2 aspect">
+        <p>Culture</p>
+        <input type="text" name="Culture" id="Culture">
+        <br /> <br />
+        <div class="progress progress-bar-vertical">
+          <div class="progress-bar progress-bar-danger progress-bar-striped active" id="CultureBar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-2 aspect">
+        <p>Price</p>
+        <input type="text" name="Price" id="Price">
+        <br /> <br />
+        <div class="progress progress-bar-vertical">
+          <div class="progress-bar progress-bar-striped active" id="PriceBar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-2 aspect">
+        <button class="btn btn-success" onclick="searchHome();"style="margin-top:170%"><i class="fa fa-search"></i> Search</button>
+      </div>
+    </div>
+    <div class="col-sm-12 radius" id="Review-Div">
+
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-5 ">
+    <div id="map" class="col-sm-12 radius" >
+    </div>
+  </div>
+</div>
+<script>
+  $("#Affordable").change(function(){
+    $("#AffordableBar").css("height", $("#Affordable").val());
+  })
+  $("#Secure").change(function(){
+    $("#SecureBar").css("height", $("#Secure").val());
+  })
+  $("#Entertainment").change(function(){
+    $("#EntertainmentBar").css("height", $("#Entertainment").val());
+  })
+  $("#Culture").change(function(){
+    $("#CultureBar").css("height", $("#Culture").val());
+  })
+  $("#Price").change(function(){
+    $("#PriceBar").css("height", $("#Price").val());
+  })
+  iniStartView();
+  function iniStartView(){
+    $("#Price").val(60);
+    $("#Price").change();
+    $("#Affordable").val(60);
+    $("#Affordable").change();
+    $("#Secure").val(60);
+    $("#Secure").change();
+    $("#Entertainment").val(60);
+    $("#Entertainment").change();
+    $("#Culture").val(60);
+    $("#Culture").change();
+  }
+  function searchHome() {
+    $("#loading").show();
+    if(searchHomeWithParameters($("#Affordable").val(), $("#Secure").val(), $("#Entertainment").val(), $("#Culture").val(),$("#Price").val()){
+      $("#loading").hide();
+    }else{
+      alert("We have some problems, try again.");
+      $("#loading").hide();
+    }
+  }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC4lO1PjOC9xzRaOK86FJoht6VBFYcsB8&callback=initMap"></script>

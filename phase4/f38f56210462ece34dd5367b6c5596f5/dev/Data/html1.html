@@ -1,0 +1,126 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	  <head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Freshies">
+		<meta name="author" content="Niveah Tefillah Abraham">
+		<title>Freshies API</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  
+	<link rel="stylesheet" href="css/demo.css">
+	<link rel="stylesheet" href="css/footer-distributed-with-contact-form.css">
+
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+	    <style>
+	       #map {
+	        height: 400px;
+	        width: 100%;
+	       }
+	.wrapper {
+	    text-align: center;
+	}
+
+	.button {
+	    position: absolute;
+	    top: 50%;
+	}
+
+	    </style>
+	  </head>
+	  <body>
+
+
+	 <div class="jumbotron text-center" style="background-color:#6B8E23">
+	  <h1 align="center">Welcome to Freshies!</h1>
+	  <p>Your friend when you need Fresh and frugal veggies during Indiana's crappy weather!</p> 
+	</div>
+	<div class="container">
+	<!--GOOGLE API-->
+	<div id="map">
+	    <script>
+	      function initMap() {
+	        var uluru = {lat: 40.4237054, lng: -86.92119459999998};
+	        var map = new google.maps.Map(document.getElementById('map'), {
+	          zoom: 11,
+	          center: uluru
+	        });
+	        var marker = new google.maps.Marker({
+	          position: uluru,
+	          map: map
+	        });
+	      }
+	    </script>
+	    <script async defer
+	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4eNbFHAiekTjDtXwu2PA0OpAJPX6gSlc&callback=initMap">
+	    </script>
+	</div>
+
+
+
+	  <h2 align="center">Types of Veggies</h2>
+	  <!--FORM-->
+	  <form method ="get" action= html2.html>
+	    <div class="wrapper">
+	    <button type="submit" class="btn btn-default" align = "center">Click to make an order</button>
+	    </div>
+	  </form>
+	</div>	
+
+
+	<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3>Freshies <span>By Niveah</span></h3>
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					·
+					<a href="#">Blog</a>
+					·
+					<a href="#">Pricing</a>
+					·
+					<a href="#">About</a>
+					·
+					<a href="#">Faq</a>
+					·
+					<a href="#">Contact</a>
+				</p>
+
+				<p class="footer-company-name">Freshies &copy; 2017</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p>Contact Us</p>
+
+				<form action="#" method="post">
+
+					<input type="text" name="email" placeholder="Email" />
+					<textarea name="message" placeholder="Message"></textarea>
+					<button>Send</button>
+
+				</form>
+
+			</div>
+
+		</footer>
+
+
+	  </body>
+	 
+	</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>..::HOME::..</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/c3.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/balloon.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.range.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+    <script src="https://d3js.org/d3.v3.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCTSN0E8WkgDKCMSnySX9w0psxkJB4aFE&libraries=geometry,visualization&callback=initMap"></script>
+    <script src="js/c3.js" type="text/javascript"></script>
+    <script src="js/jquery.range.js" type="text/javascript"></script>
+    <script src="js/slick.js" type="text/javascript"></script>
+    <script src="js/globalVariables.js" type="text/javascript"></script>
+    <script src="js/mapController.js" type="text/javascript"></script>
+    <script src="js/searchController.js" type="text/javascript"></script>
+    <script src="js/popUpController.js" type="text/javascript"></script>
+    <script src="js/markerController.js" type="text/javascript"></script>
+    <script src="js/openWeaterController.js" type="text/javascript"></script>
+    <script src="js/rentServicesController.js" type="text/javascript"></script>
+    <script src="js/crimeServicesController.js" type="text/javascript"></script>
+    <script src="js/policeServicesController.js" type="text/javascript"></script>
+    <script src="js/fireServicesController.js" type="text/javascript"></script>
+    <script src="js/clinicServicesController.js" type="text/javascript"></script>
+    <script src="js/parksServicesController.js" type="text/javascript"></script>
+    <script src="js/foodServicesController.js" type="text/javascript"></script>
+    <script src="js/schoolServicesController.js" type="text/javascript"></script>
+    <script src="js/libraryServicesController.js" type="text/javascript"></script>
+    <script src="js/summaryController.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="closeBtnL active" onclick="closeSideBarLBtn()" id="btnCloseSidebarL">
+        <div class="barL top"></div>
+        <div class="barL middle"></div>
+        <div class="barL bottom"></div>
+    </div>
+    <div id="searchSideBar" class="sideNavL" onmouseover="openSideBarL()">
+        <div onclick="alert('Application developed by oeroaq for Purdue – UNAL Gold IronHacks 2017')" style="position: absolute; right: 5%; margin: 0%; font-family: cursive; cursor: pointer;">
+            <h3 style="padding: 0; margin-top: 1%;margin-bottom: 0%; font-size: 25pt;">
+                ..::HOME::..
+            </h3>
+            <h6 style="font-size: 8pt;margin: 0; text-align:center;">
+                find your home...
+            </h6>
+            <h6 style="font-size: 7pt;margin-top: 0;margin-right: 10%; text-align:end;">
+                by oeroaq
+            </h6>
+        </div>
+        <div class="divSideNavL">
+            <div class="row">
+                <div class="col-xs-4">
+                    <h4>Distance:</h4>
+                </div>
+                <div class="col-xs-10">
+                    <input id="sliderDistance" type="range" min="0.1" max="10" step="0.1" data-balloon="Search by distance from your position"
+                        data-balloon-pos="up" onchange="sliderDistanceOnChange()" />
+                </div>
+                <div id="distanceKm" class="col-xs-2 divDistanceText" data-balloon="Distance from your position" data-balloon-pos="left">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">
+                    <h4>Price:</h4>
+                </div>
+                <div class="col-xs-10">
+                    <input id="sliderPrice" type="range" min="0" max="100000" step="1" data-balloon="Search by maximum price" data-balloon-pos="up"
+                        onchange="sliderPriceOnChange()" />
+                </div>
+                <div id="maxPriceSlider" class="col-xs-2 divDistanceText" data-balloon="Maximum price" data-balloon-pos="left"> </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3">
+                    <h4>Security:</h4>
+                </div>
+                <div class="col-xs-1 checkSecurity">
+                    <input type="checkbox" id="checkCrime" data-balloon="Crime layer toggle" data-balloon-pos="right" onclick="crimeCheckClick()"
+                    />
+                </div>
+                <div class="row" id="sliderCrimeDiv" style="display: none;">
+                    <div style="padding: 4%;width: 90%;margin-left: 5%;">
+                        <input id="sliderCrime" type="range" min="0.001" max="100" step="1" data-balloon="Search by oeroaq formula for safety" data-balloon-pos="down"
+                            onchange="sliderCrimeOnChange()" />
+                    </div>
+                    <div class="col-xs-1">
+                        <img src="images/safety.png" width="20px">
+                    </div>
+                    <div class="col-xs-9 crimeDeg">
+                    </div>
+                    <div class="col-xs-1">
+                        <img src="images/unsafety.png" width="20px">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12" style="padding: 4%; font-size: 8pt" id="searchResult"></div>
+                <input type="button" value="Search" onclick="searchClick()" class="buttom">
+            </div>
+
+        </div>
+    </div>
+    <div id="mapDiv" class="map"></div>
+    <div class="tabInfoSideBar" id="tabInfoSideBar">
+        <div id="streetViewTabBtn" onmouseout="tabInfoOver('streetViewTab')" onmouseover="tabInfoOver('streetViewTab')" onclick="tabInfoClick('streetViewTab')"
+            data-balloon="Neighborhood" data-balloon-pos="left" class="tabInfo">
+            <img src="images/streetView.png" width="100%">
+        </div>
+        <div id="summaryTabBtn" onmouseout="tabInfoOver('summaryTab')" onmouseover="tabInfoOver('summaryTab')" onclick="tabInfoClick('summaryTab')"
+            data-balloon="General info" data-balloon-pos="left" class="tabInfo">
+            <img src="images/summary.png" width="100%">
+        </div>
+        <div id="policeTabBtn" onmouseout="tabInfoOver('policeTab')" onmouseover="tabInfoOver('policeTab')" onclick="tabInfoClick('policeTab')"
+            data-balloon="Police stations" data-balloon-pos="left" class="tabInfo">
+            <img src="images/police.png" width="100%">
+        </div>
+        <div id="fireTabBtn" onmouseout="tabInfoOver('fireTab')" onmouseover="tabInfoOver('fireTab')" onclick="tabInfoClick('fireTab')"
+            data-balloon="Fire stations" data-balloon-pos="left" class="tabInfo">
+            <img src="images/fireman.png" width="100%">
+        </div>
+        <div id="clinicTabBtn" onmouseout="tabInfoOver('clinicTab')" onmouseover="tabInfoOver('clinicTab')" onclick="tabInfoClick('clinicTab')"
+            data-balloon="Public Health Clinic" data-balloon-pos="left" class="tabInfo">
+            <img src="images/clinic.png" width="100%">
+        </div>
+        <div id="parkTabBtn" onmouseout="tabInfoOver('parkTab')" onmouseover="tabInfoOver('parkTab')" onclick="tabInfoClick('parkTab')"
+            data-balloon="Parks" data-balloon-pos="left" class="tabInfo">
+            <img src="images/park.png" width="100%">
+        </div>
+        <div id="foodTabBtn" onmouseout="tabInfoOver('foodTab')" onmouseover="tabInfoOver('foodTab')" onclick="tabInfoClick('foodTab')"
+            data-balloon="Food..." data-balloon-pos="left" class="tabInfo">
+            <img src="images/food.png" width="100%">
+        </div>
+        <div id="schoolTabBtn" onmouseout="tabInfoOver('schoolTab')" onmouseover="tabInfoOver('schoolTab')" onclick="tabInfoClick('schoolTab')"
+            data-balloon="Public School" data-balloon-pos="left" class="tabInfo">
+            <img src="images/school.png" width="100%">
+        </div>
+        <div id="libraryTabBtn" onmouseout="tabInfoOver('libraryTab')" onmouseover="tabInfoOver('libraryTab')" onclick="tabInfoClick('libraryTab')"
+            data-balloon="Libraries" data-balloon-pos="left" class="tabInfo">
+            <img src="images/library.png" width="100%">
+        </div>
+        <div id="weatherTabBtn" onmouseout="tabInfoOver('weatherTab')" onmouseover="tabInfoOver('weatherTab')" onclick="tabInfoClick('weatherTab')"
+            data-balloon="Local time" data-balloon-pos="left" class="tabInfo">
+            <img src="images/weather.png" width="100%">
+        </div>
+    </div>
+    <div id="informationSideBar" class="sideNavR">
+        <div class="closeBtnR" onclick="closeSideBarRBtn()" id="btnCloseSidebarR">
+            <div class="bar top"></div>
+            <div class="bar middle"></div>
+            <div class="bar bottom"></div>
+        </div>
+        <div class="divSideNavR">
+            <div class="tabContent" id="streetViewTabContent">
+                <div style="font-size: 20pt">..:: NEIGHBORHOOD ::..</div>
+                <div id="panoramaCanvas" class="divPanorama"></div>
+            </div>
+            <div class="tabContent" id="weatherTabContent">
+                <div style="font-size: 20pt">..:: WEATHER ::..</div>
+                <div class="weatherToday" id="weatherToday">
+                    <div id="weatherDay" data-balloon-pos="up">
+                    </div>
+                    <img src="#" width="40%" id="weatherDayIcon" data-balloon="" data-balloon-pos="up">
+                    <div id="weatherDayMaxMin" style="font-size: 10pt" data-balloon="Max | Min">
+                    </div>
+                </div>
+                <div class="weatherToday weatherPrev" id="weatherPrevSvg">
+                </div>
+                <div id="weatherPrev" onclick="setGraphWeatherPrev()" class="weatherPrev"></div>
+            </div>
+            <div class="tabContent" id="policeTabContent">
+                <div style="font-size: 20pt">..:: POLICE STATIONS ::..</div>
+                <div id="policeDiv" class="locationDiv"></div>
+                <div id="policeMapCanvas" class="divMapInfo"></div>
+            </div>
+
+            <div class="tabContent" id="summaryTabContent">
+                <div style="font-size: 20pt">..:: SUMMARY ::..</div>
+                <div id="summaryDiv" class="locationDiv"></div>
+                <div id="tabBarRoutes" class="row tabRoutes">
+                    <div class=" tabRoutesItem" id="walkTabBtn" onmouseout="tabInfoOver('walkTab')" onmouseover="tabInfoOver('walkTab')" onclick="tabRouteClick('walkTab')"
+                        data-balloon="Walk" data-balloon-pos="up">
+                        <img src="images/walk.png" width="15px">
+                    </div>
+                    <div class="tabRoutesItem" id="transitTabBtn" onmouseout="tabInfoOver('transitTab')" onmouseover="tabInfoOver('transitTab')"
+                        onclick="tabRouteClick('transitTab')" data-balloon="Public transport" data-balloon-pos="up">
+                        <img src="images/transit.png" width="15px">
+                    </div>
+                    <div class="tabRoutesItem" id="bicycleTabBtn" onmouseout="tabInfoOver('bicycleTab')" onmouseover="tabInfoOver('bicycleTab')"
+                        onclick="tabRouteClick('bicycleTab')" data-balloon="Bicycle" data-balloon-pos="up">
+                        <img src="images/bike.png" width="15px">
+                    </div>
+                    <div class=" tabRoutesItem" id="driveTabBtn" onmouseout="tabInfoOver('driveTab')" onmouseover="tabInfoOver('driveTab')" onclick="tabRouteClick('driveTab')"
+                        data-balloon="Drive" data-balloon-pos="up">
+                        <img src="images/drive.png" width="15px">
+                    </div>
+                </div>
+                <div id="summaryMapCanvas" class="divMapInfo"></div>
+            </div>
+            <div class="tabContent" id="fireTabContent">
+                <div style="font-size: 20pt">..:: FIRE STATIONS ::..</div>
+                <div id="fireDiv" class="locationDiv"></div>
+                <div id="fireMapCanvas" class="divMapInfo"></div>
+            </div>
+            <div class="tabContent" id="clinicTabContent">
+                <div style="font-size: 20pt">..:: CLINICS ::..</div>
+                <div id="clinicDiv" class="locationDiv"></div>
+                <div id="clinicMapCanvas" class="divMapInfo"></div>
+            </div>
+            <div class="tabContent" id="parkTabContent">
+                <div style="font-size: 20pt">..:: PARKS ::..</div>
+                <div id="parkDiv" class="locationDiv"></div>
+                <div id="parkMapCanvas" class="divMapInfo"></div>
+            </div>
+            <div class="tabContent" id="foodTabContent">
+                <div style="font-size: 20pt">..:: STORES ::..</div>
+                <div id="foodDiv" class="locationDiv"></div>
+                <div id="foodMapCanvas" class="divMapInfo"></div>
+            </div>
+            <div class="tabContent" id="schoolTabContent">
+                <div style="font-size: 20pt">..:: PUBLIC SHOOLS ::..</div>
+                <div id="schoolDiv" class="locationDiv"></div>
+                <div id="schoolMapCanvas" class="divMapInfo"></div>
+            </div>
+            <div class="tabContent" id="libraryTabContent">
+                <div style="font-size: 20pt">..:: LIBRARIES ::..</div>
+                <div id="libraryDiv" class="locationDiv"></div>
+                <div id="libraryMapCanvas" class="divMapInfo"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="contextMenu" class="contextMenu">
+        <div class="contextMenuContent">
+            This is a right click menu<br/>
+            <a href="javascript:void(0)" onclick="">Element 1</a><br/>
+            <a href="javascript:void(0)" onclick="">Element 2</a><br/>
+            <a href="javascript:void(0)" onclick="">Element 3</a>
+        </div>
+    </div>
+    <div class="infoPopUp" id="infoPopUp">
+        <div class="row">
+            <div class="col-xs-5">
+                <strong>Propery name:</strong>
+            </div>
+            <div id="infoPopUpProperyName" class="col-xs-7">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-5">
+                <strong>Propery type:</strong>
+            </div>
+            <div id="infoPopUpProperyType" class="col-xs-7">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-5">
+                <strong>Adress:</strong>
+            </div>
+            <div id="infoPopUpAdress" class="col-xs-7">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-5">
+                <strong>Phone:</strong>
+            </div>
+            <div id="infoPopUpPhoneNumber" class="col-xs-7">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-5">
+                <strong>Value: </strong>
+            </div>
+            <div id="infoPopUpValue" class="col-xs-7">
+
+            </div>
+        </div>
+        <div class="closeBtnIP" onclick="closeInfoPopUp()" id="btnCloseIP">
+            <div class="bar top"></div>
+            <div class="bar bottom"></div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

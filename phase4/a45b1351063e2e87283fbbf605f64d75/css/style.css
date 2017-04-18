@@ -1,0 +1,73 @@
+body {
+height: 100%;
+margin: 10px;
+background-color: #e2e2e2;
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+#header {
+width: 100%;
+position: relative;
+height: 600px;
+}
+
+
+#map{
+	position: relative;
+    height: 500px;
+    width: 100%;
+    display: block;
+		border: 10px;
+		border-color: black;
+}
+
+#chart{
+}
+
+#all-menu{
+	background-color: rgba(26, 26, 26, 0.24);
+}
+#side-menu{
+	margin-top: 10px;
+	width: 450px;
+	margin: 30px;
+	display: inline-grid;
+	font-family: 'Proxima Nova', Georgia, sans-serif;
+}
+#side-menu2{
+	margin-top: 10px;
+	width: 450px;
+	padding: 30px;
+	display: inline-grid;
+	font-family: 'Proxima Nova', Georgia, sans-serif;
+}
+#side-menu3{
+	margin-top: 10px;
+	width: 450px;
+	padding: 30px;
+	display: inline-grid;
+	font-family: 'Proxima Nova', Georgia, sans-serif;
+}
+
+#side-menu4{
+	margin-top: 10px;
+	width: 400px;
+	padding: 30px;
+	display: inline-grid;
+	font-family: 'Proxima Nova', Georgia, sans-serif;
+}
+
+
+#head{
+	background-color: rgb(48, 48, 48);
+	color: white;
+	height: 120px;
+	font-style: italic;
+	text-align: center;
+	text-underline-position: auto;
+
+}

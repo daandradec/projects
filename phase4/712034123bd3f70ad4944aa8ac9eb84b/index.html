@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Spirax" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <title>Home Finder</title>
+    
+  </head>
+
+  <body>
+   <nav class="navbar navbar-default bc-color">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand coolest-font" href="#">Home Finder</a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search Place">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact Us <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li>To give any feedback or report bugs contact:</li>
+                <li><i>lemartinp@unal.edu.co</i></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container">
+      <div class="page-header">
+        <h6 class="cool-font">
+          Here you can find the best place to stay 
+          close to the university of chicago, just fill up your preferences down below
+        </h6>
+      </div>
+      
+    </div>
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-sm-4" id="map_container">
+  				<ul class="nav nav-stacked">
+            <li role="presentation" id="parks" onclick="parks()"><a href="#">Parks and Recreation</a></li>
+            <li role="presentation" id="services" onclick="services()"><a href="#">location of Services</a></li>
+            <li role="presentation" id="schools" onclick="schools()"><a href="#">Schools</a></li>
+            <li role="presentation" id="police" onclick="police()"><a href="#">police/fire stations</a></li>
+            <li role="presentation" id="crime" onclick="crime()"><a href="#">crime rates </a></li>
+          </ul>
+  			</div>
+  			
+        <div class="col-sm-8">
+            <div id="map"></div>
+        </div>
+      </div>
+      <div class="row"></div>
+        
+        <div id = "schools info" class="hidden">
+        <h6 class="cool-font">
+          Schools nearby
+        </h6>
+        <script>dataDispSchools("https://data.cityofchicago.org/api/views/75e5-35kf/rows.json?accessType=DOWNLOAD",'#tSchools')</script>
+    
+        <table class="table" id="tSchools">
+          <tr>
+            <th>Name</th>
+            <th>Address</th> 
+            <th>Phone</th>
+          </tr>
+        </table>
+        </div>
+        <div id="services info" class="hidden">
+        <h6 class="cool-font">
+          Libraries nearby
+        </h6>
+        <script>dataDispLibraries("https://data.cityofchicago.org/api/views/x8fc-8rcq/rows.json?accessType=DOWNLOAD",'#libraries')</script>
+        <table class="table" id="libraries">
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Schedule</th>
+          </tr>
+        </table>
+        <h6 class="cool-font">
+          Hospitals nearby
+        </h6>
+        <script>dataDispHospitals("https://data.cityofchicago.org/api/views/kcki-hnch/rows.json?accessType=DOWNLOAD",'#hospital')</script>
+        <table class="table" id="hospital">
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Schedule</th>
+          </tr>
+        </table>
+        </div>
+        <div id="police info" class="hidden">
+        <h6 class="cool-font">
+          Fire stations nearby
+        </h6>
+        <script>dataDispFire("https://data.cityofchicago.org/api/views/28km-gtjn/rows.json?accessType=DOWNLOAD",'#fire')</script>
+        <table class="table" id="fire">
+          <tr>
+            <th>Address</th>
+            <th>Zip Code</th>
+          </tr>
+        </table>
+        </div>
+    </div>
+    
+    
+  
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC4lO1PjOC9xzRaOK86FJoht6VBFYcsB8&callback=initMap"></script>
+ 
+  </body>
+   
+</html>

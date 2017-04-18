@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Get a place in Chicago</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script type="text/javascript">
+	function initMap(){
+		var mapDiv = document.getElementById('map');
+		var map = new google.maps.Map(mapDiv, {
+			center: {lat :41.8708, lng: -87.6505},
+			zoom: 12});  
+		var marker = new google.maps.Marker({ 
+			position: {lat :41.8708, lng: -87.6505},
+			map: map,
+			title: 'University of Illinois'
+		});
+	}
+	</script>
+  </head>
+  <body>
+    <header>
+   <h3>Get an a Apartment close to the University of Illinois</h3>
+    </header>
+     <div style="width:100%; background-color:rgb(100, 176, 157); height:150px; overflow:auto;">
+     <div>
+     <a><img src="Img/youth-groups.jpg" width="160" height="90" alt="Parks and recreation" style = padding:20px  /> </a>
+      <a><img src="Img/gps-location.png" width="160" height="90" alt="Location of services" style = padding:20px /></a>
+      <a><img src="Img/school.jpg" width="160" height="90" alt="Schools" style = padding:20px />
+      <a><img src="Img/Transportation.png" width="160" height="90" alt="Location of services" style = padding:20px /></a>
+      <a><img src="Img/st.jpg" width="160" height="90" alt="Location of services" style = padding:20px /></a>
+      <a><img src="Img/descarga.jpg" width="160" height="90" alt="Location of services" style = padding:20px /></a>
+      </div>
+
+  </div>
+    <div id="map"></div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC4lO1PjOC9xzRaOK86FJoht6VBFYcsB8&callback=initMap">
+    </script>
+    
+    <footer>Copyright &copy; Illinois</footer>
+  </body>
+
+</html>

@@ -1,0 +1,165 @@
+/* Reset style for all the document */
+
+@font-family{
+        font-family: titleFont;
+        src : url("Resources/Fonts/URSE____.TTF");
+         src : url("Resources/Fonts/URSE____.eot");
+         src : url("Resources/Fonts/URSE____.svg");
+}       
+
+
+@font-family{
+        font-family: bodyFont;
+        src : url("Resources/Fonts/Ghostlight-Regular.TTF");
+         src : url("Resources/Fonts/Ghostlight-Regular.eot");
+         src : url("Resources/Fonts/Ghostlight-Regular.svg");
+}      
+
+
+body,html{
+	height:100%;
+	width: 100%;
+	margin:0;
+	padding: 0;
+}
+
+#mainMap{
+	/*min-height:800px;*/
+	height: 800px;
+}
+
+body.dragging, body.dragging * {
+  cursor: move !important;
+}
+
+.dragged {
+  position: absolute;
+  opacity: 0.5;
+  z-index: 2000;
+}
+
+.no-container {
+    margin-left: 0 !important;
+    margin-right: 0 !important; 
+}
+
+.row.content {height: 100%;}
+
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {height:auto;} 
+}
+
+/* Nav Bar styles  */ 
+
+.navbar {
+  margin-bottom: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -ms-border-radius: 0;
+}
+
+
+/* Set black background color, white text and some padding */
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+
+/* Left list of Items */
+div.title-box{
+	/* background-color: rgb(145, 246, 44);*/
+	background-color: #6631F6;
+	 font-family: titleFont;
+	 color:white;
+	 border-radius: 0;
+
+	 -webkit-box-shadow:rgb(50,50,50) 2px 4px 5px;
+	 -moz-box-shadow:rgb(50,50,50) 2px 4px 5px;
+	 -ms-box-shadow:rgb(50,50,50) 2px 4px 5px;
+}
+
+div.title-box h2{
+	font-size:20px;
+}
+
+label.label {
+	font-size:1em;
+	display:block;
+	background-color: #BCBDC1;
+	color:#3A3B3E;
+
+
+}
+
+.sidenav {
+  padding-top: 20px;
+  background-color: rgb(255,255,255);
+  height: 100%;
+
+  border-style: solid rgb(0,0,0);
+}
+
+div#rangeContainer p{
+	font-size: 3em;
+
+	text-shadow:rgb(0,0,0) 1px 1px 5px;
+}
+	 
+div.simple-drop a.placeholder {
+  position: relative;
+  /** More li styles **/
+}
+
+div.simple-drop li.placeholder:before {
+  position: absolute;
+  /** Define arrowhead **/
+}
+
+#criteriaSelection li:hover{
+	cursor:grab;
+}
+
+.fa-times:hover, .fa-plus:hover{
+	cursor:pointer;	
+}
+
+/* ******************************* */
+
+/* map styles */
+#mapContainer{
+	padding:0;
+	padding-right:0;
+}
+
+/* Right List of Houses */
+
+#housesContainer{
+	padding:0;
+}
+
+#list-houses .media:hover{
+	border-left-color: rgb(233,52,52);
+	border-left-width: 4px;
+	cursor:pointer;
+	right:10px;
+}
+
+
+.title-box{ /* style of the title boxes */
+	background-color: rgb(189,195,199);
+
+}
+
+
+
+
+
+
+

@@ -1,0 +1,320 @@
+@charset="UTF-8";
+/*Importación de fuentes */
+@font-face {
+  font-family: 'nunitor';
+  src: url('../fonts/Nunito-Regular.ttf');
+}
+@font-face {
+  font-family: 'nunitol';
+  src: url('../fonts/Nunito-Light.ttf');
+}
+@font-face {
+  font-family: 'nunitoxl';
+  src: url('../fonts/Nunito-ExtraLight.ttf');
+}
+
+/*Personalización del body y del cursor.*/
+
+a {
+	color: #155075;
+  }
+html {
+	background-color: #EAEAEA:;
+	font-family: 'nunitor';
+}
+/*Estilo para titulo en caja superior*/
+h1 {
+	font-family: 'nunitor';
+	font-size: 70px;
+    color: #155075;
+    text-shadow: 1px 1px #396682;
+    text-align: center;
+}
+/*Estilo para subtitulos en general*/
+h2 {
+	font-family: 'nunitor';
+	font-size: 45px;
+	color: #EAEAEA;
+	text-shadow: 2px 2px #396682;
+	text-align: center;
+}
+h3 {
+	font-family: 'nunitor';
+	font-size: 35px;
+	color: #EAEAEA;
+	text-shadow: 2px 2px #396682;
+	text-align: CENTER;
+}
+/*Personalización del estilo de texto en un párrafo */
+p {
+	font-family: 'nunitor';
+	font-size: 30px;
+	color: #000;
+	padding: 10px;
+}
+/*Configuración del tipo de viñetas incluidas en una lista */
+li {
+	list-style-type: none;
+}
+/*Contenedor de texto*/
+.textBoxContainer{
+	margin: auto;
+	border-style: inset;
+	border-color: white;
+	width: 95%;
+	background-color: #e0e0d1;
+	background-size: cover;
+	text-align: justify;
+	border-radius: 40px 40px 40px 40px;
+}
+/*Contenedor para botones de navegacion*/
+.navBox {
+	min-width: 200px;
+    max-width: 100%;
+    margin: auto;
+    
+}
+/*Configuracion de la caja superior de todas las paginas*/
+.logo {
+	border-color: #FFF;
+	border-style: solid;
+	border-radius: 50px;
+	/*background-image: url('../images/banner1.jpg');*/
+	background-color: #e0e0d1;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    width: 80%;
+    height: 150px;
+    text-align: center;
+    border-radius: 50px 50px 50px 50px;
+}
+/*Configuracion de texto en el pie de página*/
+.text {
+	color: #FFF;
+	font-family: 'nunitoxl';
+    font-size: 15px;
+    margin: auto;
+}
+/*Configuracion del estilo de los botones*/
+.buttons{
+	color: #ff8533;
+	font-family: 'raleway';
+	font-size: 30px;
+	border-style: solid;    
+    font-weight: bold;
+    text-align: center;
+    /*background-image: url(../images/icon2.jpg);*/
+	background-color: #c2c2a3;
+	border-color: black;
+    background-position: left;
+    height: 55px;
+    padding:5px 10px 6px 8px;
+    border-radius: 50px;
+    min-width: 200px;
+    transition-duration: 0.5s;
+}
+/*Cambio de color, cambio del fondo y mantenimiento del mismo puntero al pasar sobre un botón */
+.buttons:hover{
+	color: #754D00;
+	/*background-image: url(../images/icon1.jpg);*/
+	/*cursor: url(../images/YaoMing.cur), pointer;*/
+}
+/*Configuración del estilo del pie de página*/
+.footNote {
+	
+	border-style: solid;
+	border-color: white;
+	background-color: black;
+	/*background-image: url(../images/headImage.gif);*/
+    background-position: right;
+    background-size: 150px 100px;
+    background-repeat: repeat-x;
+	width: 99%;
+	height: 100px;
+	bottom:0;
+	left:0;
+}
+/*Recuadro para presentación de imágenes */
+.polaroid {
+	font-family: 'nunitol';
+	margin: auto;
+	width: 50%;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin-bottom: 25px;
+}
+.container {
+  text-align: center;
+  padding: 10px 20px;
+}
+/*Sincronización de varias imágenes en un mismo renglón*/
+.polaroid.nextTo {
+	display: inline-block;
+}
+/*Ajuste tamaño de letra para recuadros de presentación de imágenes*/
+.note {
+	font-size: 18px;
+}
+/*Ajuste de tamañano para pantallas de un tamaño dado*/
+@media only screen and (max-width: 835px) {
+	 h1 {
+        font-size: 90px;
+    }
+    p { 
+    	font-size: 40px;
+    }
+    .buttons {
+    	font-size: 30px;
+    }
+}
+@media only screen and (max-width: 720px) {
+    p { 
+    	font-size: 20px;
+    }
+    .text {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 440px) {
+    h1 {
+        font-size: 50px;
+    }
+    p {
+    	font-size: 15px;	
+    }
+    .text {
+    	font-size: 15px;
+    }
+    .buttons {
+    	font-size: 20px;
+    	height: 35px;	
+    }
+    .note {
+    	font-size: 11px;
+    }
+    .footNote {
+    	height: 100px;
+    }
+}
+
+#map {
+  width: 80%;
+  height: 600px;
+  background-color: grey;
+  margin: auto;
+}
+
+form {
+  max-width: 300px;
+  margin: auto;
+  padding: 10px 20px;
+  background: #155075;
+  border-radius: 15px;
+}
+
+/* I used a form template as a temporary tool from: http://codepen.io */
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 15px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  transform:  scale(1.4);
+  margin: 2px 0 4px 35px;
+}
+
+select {
+  padding: 6px;
+  height: 32px;
+  border-radius: 2px;
+}
+
+button {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #172A35;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #28485B;
+  border-width: 1px 1px 1px 1px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 10px;
+}
+
+button:hover{
+  background-color: #28485B;  
+  border: 1px solid #172A35;
+}
+
+fieldset {
+  margin-bottom: 15px;
+  border: none;
+}
+
+clegend {
+  font-size: 1.4em;
+  //margin-bottom: 10px;
+}
+
+clabel {
+  display: inline-block;
+  font-size: 1.1em;
+  margin-left: 25px;
+  margin-bottom: 8px;
+}
+
+clabel.light {
+  font-size: 1em;
+  margin-left: 8px;
+  font-weight: 300;
+  display: inline;
+}
+
+.number {
+  background-color: #EAEAEA;
+  color: #155075;
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 6px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(21,80,117,0.2);
+  border-radius: 100%;
+}
+
+@media screen and (min-width: 400px) {
+
+  form {
+    max-width: 380px;
+    color: #EAEAEA
+  }
+
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rent it!</title>
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<link rel="icon" href="assets/icon.png">
+	<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"/>-->
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&libraries=geometry"></script>
+	<script src="code.js"></script>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<div class="row blue-box">
+		<h2 class="banner">Welcome to Rent It!</h2>
+		<h4 style="padding-left: 60px; color: white">Let's find a house for you...</h4>
+	</div>
+    
+    <div class="great-container">
+    
+	<div class="row">
+		<div class="col-md-2 left-nav op" style="background-color: #1E2261;">
+			<h4 class="text-center" style="margin-top: 10px;">Options</h4>
+		</div>
+		<div class="col-md-6 left-nav" style="color: white; background-color: #288F33">
+			<h5 class="text-center">Interactive Google Map</h5>
+		</div>
+		<div class="col-md-3 left-nav" style="background-color: #F7B02D; margin-left: 30px;">
+			<h4 class="text-center" style="margin-top: 10px; color: #3C2700; font-weight: bold">Click a house to display info!</h4>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-2 left-nav" style="margin-top: 5px; min-height: 
+		    470px;margin-right: 20px; padding-left:10px; padding-right:10px;">
+		    
+		    <div class="row" style="margin-top: 5px;">
+		        <div style="margin-top: 10px; font-size: 15px; margin-left: 10px;" class="text-center col-md-8">
+		            Department of Computer Science is at
+		        </div>
+		        <img class="center-block" style="margin-top: 20px; margin-right: 25px;" 
+		            src="assets/icon.png" alt="Smiley face" height="42" width="42">
+		    </div>
+		    
+			<div style="margin-top: 0px;">
+				<label>Budget</label><br>
+				<input type="number" min="0" style="color: black">
+			</div>
+			<div style="margin-top: 5px; max-height: 270px;" class="viewers-container">
+			    <div class="op text-center center-block" style="background-color: #60c65a; max-width: 170px;">
+			        <span style="color: #092400; font-weight: bold;">Toggle views!</span>
+			    </div>
+			<div style="overflow: auto; max-height: 220px; margin-top: 10px;">
+			    <form class="" style="margin-left: 10px; margin-top: 10px;">
+
+				    <div style="margin-top: 0px;">
+				        <input type="checkbox" name="parkCheckbox" id="parkCheckbox" class="css-checkbox"
+				            onclick="toggleMarkers( 1 )"/>
+				        <label for="parkCheckbox" class="css-label">Parks</label>
+	                    <i class="material-icons vcenter" style="color: #9AFF58; margin-left: 77px;">local_florist</i><br>
+	                </div>    
+
+	                <div style="margin-top: 5px;">
+						<input type="checkbox" name="psCheckbox" id="psCheckbox" class="css-checkbox"
+				            onclick="toggleMarkers( 2 )"/>
+				        <label for="psCheckbox" class="css-label">Police Stations</label>
+				        <i class="material-icons vcenter" style="color: #ff5252; margin-left: 15px;">local_taxi</i><br>
+				    </div>
+			        
+			        <div style="margin-top: 5px;">
+						<input type="checkbox" name="fireCheckbox" id="fireCheckbox" class="css-checkbox"
+				            onclick="toggleMarkers( 3 )"/>
+				        <label for="fireCheckbox" class="css-label">Fire Stations</label>
+				        <i class="material-icons vcenter" style="color: #FFA92E; margin-left: 29px;">whatshot</i><br>
+			        </div>
+			        
+			        <div style="margin-top: 5px;">
+						<input type="checkbox" name="libCheckbox" id="libCheckbox" class="css-checkbox"
+				            onclick="toggleMarkers( 4 )"/>
+				        <label for="libCheckbox" class="css-label">Libraries</label>
+				        <i class="material-icons vcenter" style="color: #B17F42; margin-left: 55px;">local_library</i><br>
+			        </div>
+					    
+					<div style="margin-top: 5px;">    
+						<input type="checkbox" name="bikeCheckbox" id="bikeCheckbox" class="css-checkbox"
+				            onclick="toggleMarkers( 5 )"/>
+				        <label for="bikeCheckbox" class="css-label">Bike Racks</label>
+				        <i class="material-icons vcenter" style="color: white; margin-left: 42px;">directions_bike</i><br>
+			        </div>
+			        
+			        <div style="margin-top: 5px;">
+				        <input type="checkbox" name="warmCheckbox" id="warmCheckbox" class="css-checkbox"
+				            onclick="toggleMarkers( 6 )"/>
+				        <label for="warmCheckbox" class="css-label">Warm centers</label>
+				        <i class="material-icons vcenter" style="color: #FFDA00; margin-left: 22px;">wb_sunny</i><br>
+			        </div>
+			        
+			        <div style="margin-top: 5px;">
+				        <input type="checkbox" name="condomCheckbox" id="condomCheckbox" class="css-checkbox"
+				            onclick="toggleMarkers( 7 )"/>
+				        <label for="condomCheckbox" class="css-label">Condoms</label>
+				        <i class="material-icons vcenter" style="color: #D16FB2; margin-left: 50px;">pregnant_woman</i><br>
+			        </div>
+			        
+			        <div style="margin-top: 5px;">
+				        <input type="checkbox" name="coolCheckbox" id="coolCheckbox" class="css-checkbox"
+				            onclick="toggleMarkers( 8 )"/>
+				        <label for="coolCheckbox" class="css-label">Cooling Centers</label>
+				        <i class="material-icons vcenter" style="color: #9FBEFF; margin-left: 8px;">ac_unit</i><br>
+			        </div>
+					
+					<div style="margin-top: 5px;">			        
+				        <input type="checkbox" name="clinicCheckbox" id="clinicCheckbox" class="css-checkbox"
+				            onclick="toggleMarkers( 9 )"/>
+				        <label for="clinicCheckbox" class="css-label">Hospital</label>
+				        <i class="material-icons vcenter" style="color: red; margin-left: 58px;">local_hospital</i><br>
+			        </div>
+			        
+			        <div style="margin-top: 5px;">
+				        <input type="checkbox" name="groceryCheckbox" id="groceryCheckbox" class="css-checkbox"
+				            onclick="toggleMarkers( 10 )"/>
+				        <label for="groceryCheckbox" class="css-label">Grocery</label>
+				        <i class="material-icons vcenter" style="color: #FFFD67; margin-left: 62px;">local_pizza</i><br>
+			        </div>
+				</form>
+			</div>
+			</div>
+			<div class="text-center" style="margin-top: 7px;" id="weather"></div>
+		</div>
+		
+		<div id="map" class="col-md-6" style=""></div>
+		
+		<div class="col-md-3 right-nav">
+		    <div class="house-container">
+    		    <h4 class="text-center op" style="background-color: #60c65a; 
+    		        color: #092400; font-weight: bold; border-radius: 5px;" id="yourMom">
+    		        Affordable House Info
+    		    </h4>
+    		    
+		        <label style="color: #05061B"><b>House name:</b></label>
+		        <span id="houseName" style="margin-left: 26px;"></span><br>
+
+		        <label style="color: #05061B"><b>Distance:</b></label>
+		        <span id="distance" style="margin-left: 50px;"></span><br>
+
+		        <div class="row">
+			        <div class="col-md-6">
+				        <label style="color: #05061B"><b>Parks: </b></label>
+				        <span id="data1" style="margin-left: 68px;"></span><br>
+
+				        <label style="color: #05061B"><b>Police stations: </b></label>
+				        <span id="data2" style="margin-left: 15px;"></span><br>
+
+				        <label style="color: #05061B"><b>Fire stations: </b></label>
+				        <span id="data3" style="margin-left: 29px;"></span><br>
+
+				        <label style="color: #05061B"><b>Libraries: </b></label>
+				        <span id="data4" style="margin-left: 50px;"></span><br>
+
+				        <label style="color: #05061B"><b>Bike racks: </b></label>
+				        <span id="data5" style="margin-left: 41px;"></span><br>
+			        </div>
+
+			        <div class="col-md-6">
+				        <label style="color: #05061B"><b>Warm centers: </b></label>
+				        <span id="data6" style="margin-left: 22px;"></span><br>
+
+				        <label style="color: #05061B"><b>Condom centers: </b></label>
+				        <span id="data7" style="margin-left: 6px;"></span><br>
+
+				        <label style="color: #05061B"><b>Cooling centers: </b></label>
+				        <span id="data8" style="margin-left: 12px;"></span><br>
+
+				        <label style="color: #05061B"><b>Clinic centers: </b></label>
+				        <span id="data9" style="margin-left: 25px;"></span><br>
+
+				        <label style="color: #05061B"><b>Grocery: </b></label>
+				        <span id="data10" style="margin-left: 57px;"></span><br>
+			        </div>
+		        </div>
+		  </div>
+    </div>
+	</div>
+</div>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key= AIzaSyB9J6sGsoWtPN3oFD4-x6-QJmgCoVxm1qE&callback=myMap"></script>
+    
+    </div>
+
+</body>
+</html>

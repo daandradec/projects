@@ -1,0 +1,103 @@
+body{
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+#topBar{
+	height:70px;
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	background-color: #760F80;
+	z-index:10;
+}
+#googleMap{
+	width:100%;
+	position:fixed;
+	top:70px;
+	left:0;
+}
+#heroHeader{
+	color:white;
+	position:fixed;
+	top:-10px;
+	left:75px;
+	font-size:35px;
+}
+#hamburger{
+	height:70px;
+	}
+#grocerySearch{
+	color:white;
+	position:fixed;
+	top:-10px;
+	left:66%;
+	cursor:pointer;
+}
+#currentWeather{
+	color:white;
+	position:fixed;
+	top:-10px;
+	left:56%;
+	cursor:pointer;
+}
+#foodSearchBar{
+	position:fixed;
+	left:66%;
+	top:80px;
+	width:400px;
+	height:400px;
+	background-color: #AFFF6A;	
+	display:none;
+}
+#foodSearch{
+	width:380px;
+	padding:0px 10px;
+	border:none;
+	background-color:#F0F0F0;
+	border-bottom: 2px solid #760F80;
+	font-size: 15px;
+}
+#storeInfo{
+	position:fixed;
+	top:100px;
+	left:5%;	
+	width:400px;
+	height:300px;
+	background-color: #C040CD;
+	display:none; 
+	border-radius: 25px;
+}
+#storeInfoHeader, #storeAdd, #storeAddTwo{
+	color:white;
+	padding-left:10px;
+}
+#closeStore{
+	position:fixed;
+	top:90px;
+	font-size:20px;
+	left:calc(5% + 380px);
+	color:red;
+	cursor:pointer;
+}
+@media (max-device-width:480px) {
+	#topBar{
+		height:140px;
+	}
+	#heroHeader{
+		font-size: 6.9vw;
+	}
+	#foodSearchBar{
+		position:fixed;
+		top:66%;
+		left:0px;
+		width:100%;
+		height:34%;
+	}
+	#grocerySearch{
+		
+	}
+	#foodSearch{
+		width:100%;
+		font-size:5vw;
+	}
+}

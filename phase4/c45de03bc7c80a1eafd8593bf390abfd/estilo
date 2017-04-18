@@ -1,0 +1,53 @@
+body {
+    background-image: url("fondo.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+
+}
+
+
+h1{
+	color:black;	
+}
+
+#titulo{
+	color:white;		
+	font: oblique bold 270% cursive;
+}
+
+#map{
+	margin-top: 1px;	
+    height: 380px;
+    width: 50%;
+    padding: 2px;
+    border-style: solid;
+    border-width: 5px;
+    float: left;
+}
+
+#marco{
+	float: right;
+	background-color: rgba(255,255,255,0.6);
+}
+
+#marco1{
+	float: right;
+	color: white;
+	background-color: rgba(0,0,0,0.55);
+}
+
+.footer { 		
+    background-color: rgba(0,0,0,0.55);
+    color: white;
+    padding: 12px;
+    clear:both;
+	height: 10%; 
+	border: solid ; 
+	bottom: 0; 
+	right: 0;  
+	left: 0;
+}
+

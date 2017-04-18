@@ -1,0 +1,31 @@
+@import "https://fonts.googleapis.com/css?family=Spirax";
+
+h1 {
+    padding: 50px 0;
+   font-size: 80px;
+   font-family: "Spirax";
+   font-style: normal;
+   font-weight: 400;
+   color : rgb(255, 255, 255);
+}
+
+/*
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    transition: 1s opacity;
+}*/
+
+#form_content {
+  background: rgb(0, 0, 0,0.8);
+  color: #fff;
+  border-radius: 25px;
+}

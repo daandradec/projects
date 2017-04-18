@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IronHacks</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <meta name="viewport" content="width = device-width, initial-scale = 1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="text/javascript" src="/js/js1.js"></script>
+  <script type="text/javascript" src="/js/js2.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+
+<body>
+  <div class = "container">
+      <div class = "page-header">
+        <h1>Good, nice and cheap rent for Students</h1>
+      </div>
+
+      <div class="row">
+        
+        <div class= "col-md-6">
+        <div id="map"></div>
+      </div>
+ 
+      <div class= "col-md-1">
+        
+      <div id="lib">
+        <button type="submit" class = "btn btn-default btn-lg" title="Close Libraries">
+          <span class = "glyphicon glyphicon-book" aria-hidden = "true"></span>
+        </button>
+      </div>
+        
+      <div id="bar">
+        <button type="submit" class = "btn btn-default btn-lg" title="Close Bars">
+          <span class = "glyphicon glyphicon-glass" aria-hidden = "true"></span>
+        </button>
+      </div>
+        
+      <div id="park">
+        <button type="submit" class = "btn btn-default btn-lg" title="Close Parks">
+          <span class = "glyphicon glyphicon-tree-conifer" aria-hidden = "true"></span>
+        </button>
+      </div>
+        
+      <div id="hospital">
+        <button type="submit" class = "btn btn-default btn-lg" title="Close Hospitals">
+          <span class = "glyphicon glyphicon-plus" aria-hidden = "true"></span>
+        </button>
+      </div>
+        
+      <div id="currency">
+        <button type="submit" class = "btn btn-default btn-lg" title="Close Currency Exchange">
+          <span class = "glyphicon glyphicon-usd" aria-hidden = "true"></span>
+        </button>
+      </div>
+        
+
+      </div>
+
+      <div class="col-md-5">
+        
+        <div id="weather"> In this section I will show the information of the data climate change dataset</div>
+
+      </div>
+    </div>
+     
+  <div class="row">
+    <div class="panel panel-default">
+        <h2 align="center">Here are some places near you</h2>
+
+        <div id="flickrembed"></div><small style="display: block; text-align: center; margin: 0 auto;">Powered by <a href="https://flickrembed.com">flickr embed</a>.</small>
+    </div>
+    
+    <div class="panel-footer" align="right">
+      <p>Created by Anni Piragauta<br>
+      Student of Universidad Nacional de Colombia <br>
+      Github <a href="https://github.com/annipi"> @annipi</a> 
+      Email: <a href="mailto:aapiragautau@unal.edu.co">@aapiragautau</a></p>
+    </div>
+  </div>
+
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC4lO1PjOC9xzRaOK86FJoht6VBFYcsB8&callback=initMap"></script>
+  <script src="//flickrembed.com/embed_v2.js.php?source=flickr&layout=responsive&input='University of Illinois'&sort=0&by=keywords&theme=default&scale=fill&skin=default&id=58e5b36e55cec"></script>
+  <script>
+    $("#lib").click(function() {
+      alert( "Handler for LIB .click() called." );
+    });
+  </script>
+
+</body>
+
+</html>

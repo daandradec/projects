@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Map Demo</title>
+    <script src = "jquery-3.2.0.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <style>
+    .header{
+      height: 50px;
+      background-color: rgb(255, 234, 213);
+    }
+    .container{
+      width: 40%;
+      float: left;
+      background-color: lightgrey;
+    }
+    .main{
+      width: 50%;
+      float: right;
+      background-color: lightgrey;
+    }
+      #map {
+        width: 100%;
+        height: 800px;
+        background color: grey;
+      }
+    </style>
+    <script type = "text/javascript">
+      function initMap(){
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv,{
+          center: {lat: 40.4237, lng: -86.9212},
+          zoom: 1
+        });
+        var marker = new google.maps.Marker({
+          position: {lat: 40.4237, lng: -86.9212},
+          map:map,
+          title: 'Purdue University'
+        
+        })
+      }
+    </script>
+  </head>
+  <body>
+    <div class = "header">
+       <span><h1>Vegitable Provider Lookup Ver 4.0</h1><span>
+    </div>
+    <div class = "container">
+        <!-- <div class="col-md-4"> -->
+    <div id = "weather">
+      <h3>Weather Today is</h3>
+      <p>This is for the Weather Dataset from NOAA and sloar data from NSRDB</p>
+  </div>
+  <div class="col-md-4"><div id = "form">
+      <h3>Vegetables Avaliable</h3>
+      <p>This row will show information about vegetables</p>
+        <form action = " ">
+            <input type = "checkbox" id = "veg" value = 'Flowers'>Flowers
+            <input type = "checkbox" id = "veg" value = 'Egg'>Egg
+            <input type = "checkbox" id = "veg" value = 'Seafood'>Seafood
+            <input type = "checkbox" id = "veg" value = 'Herbs'>Herbs<br>
+            <input type = "checkbox" id = "veg" value = 'Vegetable'>Vegetable
+            <input type = "checkbox" id = "veg" value = 'Honery'>Honey
+            <input type = "checkbox" id = "veg" value = 'Meat'>Meat
+            <input type = "checkbox" id = "veg" value = 'Poultry'>Poultry<br>
+        </form>
+        <button type="button" id="myBtn" onclick="clickFunction()">Submit</button>
+    </div></div>
+    <div id = "disp">
+        <p>Customer Intention</p>
+    </div>
+    <div class = "col-md-4">
+      <h3>Travel Information</h3>        
+      <select id = "mode">
+        <option value="DRIVING">Driving</option>
+        <option value = "WALKING">Walking</option>
+        <option value = "BICYCLING">Bicyclig</option>
+    </select>
+    </div>
+
+
+
+
+    </div>
+    <div class = "main">
+      <div id = "map">
+      </div>
+    </div>
+    <script>
+    function clickFunction(){
+        var veg = document.forms[0];
+        var txt = " ";
+        var i;
+        for (i = 0; i< veg.length; i++){
+            if (veg[i].checked){
+                txt = txt + veg[i].value+" ";
+            }
+        }
+        dispval = "You would like to buy: "+txt;
+        document.getElementById("disp").innerHTML = dispval;
+
+    }
+        $.ajax({
+        data: "jsonp",
+        url :'https://www.ncdc.noaa.gov/cdo-web/api/v2/locations/FIPS:18',
+        jsonCallback: 'jsonp',
+        type:'post',
+        cache: false,
+        //dataType:{q: city},
+        headers: {token:vIbBxdNrmcirXgqXgHqzZufjtdCfeDSq}
+    })
+
+
+    document.getElementById("weather").innerHTML = weather0;
+    var map;
+    var image = 'store1.png';
+   // var infowindow = new google.maps.InfoWindow();
+    function initMap(){
+        // var directionsDisplay = new google.maps.DirectionsRenderer;
+        // var directionsService = new google.maps.DirectionsService;
+        var mapProp = new google.maps.Map(document.getElementById('map'),{
+        zoom: 12,
+        center: new google.maps.LatLng(40.4237,-86.9212),
+        mapTypeID: 'terrian'
+      })
+        map = new google.maps.Map(document.getElementById("map"),mapProp);
+      // directionsDisplay.setMap(map);
+
+      // calculateAndDisplayRoute(directionsService,directionsDisplay);
+      // document.getElementById('mode').addEventListener('change',function(){
+      //   calculateAndDisplayRoute(directionsService,directionsDisplay)
+      // })
+
+      //can't cross ref json file so put it in the same html file
+      var json1 = {
+        "Markets" : [
+  {
+    "FMID": 1011203,
+    "MarketName": "3.6 West Lafayette Farmers Market",
+    "Website": "http://wlfarmersmarket.com",
+    "Facebook": "www.facebook.com/westlafayettefarmersmarket",
+    "Twitter": "@WLFarmersMkt",
+    "Youtube": "",
+    "OtherMedia": "Instagram: wlfarmersmarket",
+    "street": "3065 N Salisbury St",
+    "city": "West Lafayette",
+    "County": "Tippecanoe",
+    "State": "Indiana",
+    "zip": 47906,
+    "Season1Date": "05/06/2015 to 10/28/2015",
+    "Season1Time": "Wed: 3:30 PM-7:00 PM;",
+    "Season2Date": "",
+    "Season2Time": "",
+    "Season3Date": "",
+    "Season3Time": "",
+    "Season4Date": "",
+    "Season4Time": "",
+    "lng": -86.915836,
+    "lat": 40.461469,
+    "Location": "",
+    "Credit": "Y",
+    "WIC": "Y",
+    "WICcash": "N",
+    "SFMNP": "N",
+    "SNAP": "N",
+    "Organic": "-",
+    "Bakedgoods": "Y",
+    "Cheese": "Y",
+    "Crafts": "Y",
+    "Flowers": "Y",
+    "Eggs": "Y",
+    "Seafood": "N",
+    "Herbs": "Y",
+    "Vegetables": "Y",
+    "Honey": "Y",
+    "Jams": "Y",
+    "Maple": "Y",
+    "Meat": "Y",
+    "Nursery": "N",
+    "Nuts": "N",
+    "Plants": "Y",
+    "Poultry": "N",
+    "Prepared": "Y",
+    "Soap": "Y",
+    "Trees": "N",
+    "Wine": "N",
+    "Coffee": "N",
+    "Beans": "N",
+    "Fruits": "Y",
+    "Grains": "N",
+    "Juices": "N",
+    "Mushrooms": "N",
+    "PetFood": "N",
+    "Tofu": "N",
+    "WildHarvested": "N",
+    "updateTime": "6/4/2015 11:31"
+  },
+  {
+    "FMID": 1001811,
+    "MarketName": "4.5 Sagamore West Farmers Market",
+    "Website": "http://www.westlafayette.in.gov/farmersmarket",
+    "Facebook": "",
+    "Twitter": "",
+    "Youtube": "",
+    "OtherMedia": "",
+    "street": "Cumberland Park",
+    "city": "West Lafayette",
+    "County": "Tippecanoe",
+    "State": "Indiana",
+    "zip": 47906,
+    "Season1Date": "May to October",
+    "Season1Time": "Wed:3:00 pm - 6:30 pm;",
+    "Season2Date": "",
+    "Season2Time": "",
+    "Season3Date": "",
+    "Season3Time": "",
+    "Season4Date": "",
+    "Season4Time": "",
+    "lng": -86.9136,
+    "lat": 40.4445,
+    "Location": "Private business parking lot",
+    "Credit": "N",
+    "WIC": "Y",
+    "WICcash": "Y",
+    "SFMNP": "Y",
+    "SNAP": "N",
+    "Organic": "-",
+    "Bakedgoods": "Y",
+    "Cheese": "Y",
+    "Crafts": "Y",
+    "Flowers": "Y",
+    "Eggs": "N",
+    "Seafood": "N",
+    "Herbs": "Y",
+    "Vegetables": "Y",
+    "Honey": "Y",
+    "Jams": "Y",
+    "Maple": "Y",
+    "Meat": "Y",
+    "Nursery": "N",
+    "Nuts": "N",
+    "Plants": "Y",
+    "Poultry": "N",
+    "Prepared": "Y",
+    "Soap": "Y",
+    "Trees": "N",
+    "Wine": "N",
+    "Coffee": "N",
+    "Beans": "N",
+    "Fruits": "N",
+    "Grains": "N",
+    "Juices": "N",
+    "Mushrooms": "N",
+    "PetFood": "N",
+    "Tofu": "N",
+    "WildHarvested": "N",
+    "updateTime": "5/26/2011 18:36"
+  },
+  {
+    "FMID": 1010384,
+    "MarketName": "5.6 Purdue Farmers Market",
+    "Website": "http://www.purdue.edu/sustainability/initiatives/food/farmersmarket.html",
+    "Facebook": "https://www.facebook.com/PurdueSustainability",
+    "Twitter": "https://twitter.com/SustainPurdue",
+    "Youtube": "",
+    "OtherMedia": "",
+    "street": "Oval Dr",
+    "city": "West Lafayette",
+    "County": "Tippecanoe",
+    "State": "Indiana",
+    "zip": 47907,
+    "Season1Date": "05/01/2014 to 10/30/2014",
+    "Season1Time": "Thu: 11:00 AM-3:00 PM;",
+    "Season2Date": "",
+    "Season2Time": "",
+    "Season3Date": "",
+    "Season3Time": "",
+    "Season4Date": "",
+    "Season4Time": "",
+    "lng": -86.914239,
+    "lat": 40.42583,
+    "Location": "Educational institution",
+    "Credit": "Y",
+    "WIC": "N",
+    "WICcash": "N",
+    "SFMNP": "N",
+    "SNAP": "N",
+    "Organic": "-",
+    "Bakedgoods": "Y",
+    "Cheese": "Y",
+    "Crafts": "Y",
+    "Flowers": "Y",
+    "Eggs": "Y",
+    "Seafood": "N",
+    "Herbs": "Y",
+    "Vegetables": "Y",
+    "Honey": "Y",
+    "Jams": "Y",
+    "Maple": "Y",
+    "Meat": "Y",
+    "Nursery": "N",
+    "Nuts": "N",
+    "Plants": "Y",
+    "Poultry": "Y",
+    "Prepared": "Y",
+    "Soap": "Y",
+    "Trees": "N",
+    "Wine": "N",
+    "Coffee": "Y",
+    "Beans": "Y",
+    "Fruits": "Y",
+    "Grains": "Y",
+    "Juices": "Y",
+    "Mushrooms": "Y",
+    "PetFood": "N",
+    "Tofu": "Y",
+    "WildHarvested": "Y",
+    "updateTime": "8/4/2014 12:33"
+  },
+  {
+    "FMID": 1010421,
+    "MarketName": "6.7 Historic Lafayette Farmers Market",
+    "Website": "http://www.lafayettefarmersmarket.com",
+    "Facebook": "https://www.facebook.com/LafayetteFarmersMarket",
+    "Twitter": "",
+    "Youtube": "",
+    "OtherMedia": "",
+    "street": "",
+    "city": "Lafayette",
+    "County": "Tippecanoe",
+    "State": "Indiana",
+    "zip": 47902,
+    "Season1Date": "05/03/2014 to 10/25/2014",
+    "Season1Time": "Sat: 7:30 AM-12:30 PM;",
+    "Season2Date": "",
+    "Season2Time": "",
+    "Season3Date": "",
+    "Season3Time": "",
+    "Season4Date": "",
+    "Season4Time": "",
+    "lng": -86.891895,
+    "lat": 40.417715,
+    "Location": "Closed-off public street",
+    "Credit": "Y",
+    "WIC": "N",
+    "WICcash": "Y",
+    "SFMNP": "N",
+    "SNAP": "N",
+    "Organic": "-",
+    "Bakedgoods": "Y",
+    "Cheese": "Y",
+    "Crafts": "Y",
+    "Flowers": "Y",
+    "Eggs": "Y",
+    "Seafood": "N",
+    "Herbs": "Y",
+    "Vegetables": "Y",
+    "Honey": "Y",
+    "Jams": "Y",
+    "Maple": "N",
+    "Meat": "N",
+    "Nursery": "N",
+    "Nuts": "N",
+    "Plants": "Y",
+    "Poultry": "Y",
+    "Prepared": "Y",
+    "Soap": "N",
+    "Trees": "N",
+    "Wine": "N",
+    "Coffee": "Y",
+    "Beans": "N",
+    "Fruits": "Y",
+    "Grains": "N",
+    "Juices": "Y",
+    "Mushrooms": "N",
+    "PetFood": "N",
+    "Tofu": "N",
+    "WildHarvested": "N",
+    "updateTime": "8/5/2014 13:00"
+  },
+  {
+    "FMID": 1011900,
+    "MarketName": "20.3 Monticello Farmer's Market",
+    "Website": "http://www.monticellofarmersmarket.weebly.com",
+    "Facebook": "https://www.facebook.com/monticellofarmermarket/",
+    "Twitter": "",
+    "Youtube": "",
+    "OtherMedia": "",
+    "street": "110 N. Main St",
+    "city": "Monticello",
+    "County": "White",
+    "State": "Indiana",
+    "zip": 47960,
+    "Season1Date": "05/03/2016 to 10/25/2016",
+    "Season1Time": "Tue: 4:00 PM-7:00 PM;",
+    "Season2Date": "",
+    "Season2Time": "",
+    "Season3Date": "",
+    "Season3Time": "",
+    "Season4Date": "",
+    "Season4Time": "",
+    "lng": -86.7625086,
+    "lat": 40.7452318,
+    "Location": "",
+    "Credit": "Y",
+    "WIC": "Y",
+    "WICcash": "Y",
+    "SFMNP": "Y",
+    "SNAP": "Y",
+    "Organic": "Y",
+    "Bakedgoods": "Y",
+    "Cheese": "Y",
+    "Crafts": "N",
+    "Flowers": "Y",
+    "Eggs": "Y",
+    "Seafood": "N",
+    "Herbs": "N",
+    "Vegetables": "Y",
+    "Honey": "Y",
+    "Jams": "N",
+    "Maple": "Y",
+    "Meat": "Y",
+    "Nursery": "N",
+    "Nuts": "N",
+    "Plants": "Y",
+    "Poultry": "N",
+    "Prepared": "N",
+    "Soap": "Y",
+    "Trees": "N",
+    "Wine": "N",
+    "Coffee": "N",
+    "Beans": "N",
+    "Fruits": "Y",
+    "Grains": "N",
+    "Juices": "N",
+    "Mushrooms": "N",
+    "PetFood": "Y",
+    "Tofu": "N",
+    "WildHarvested": "N",
+    "updateTime": "4/27/2016 10:34"
+  },
+  {
+    "FMID": 1005925,
+    "MarketName": "20.7 Remington Farmers Market",
+    "Website": "http://www.remingtonindiana.com",
+    "Facebook": "",
+    "Twitter": "",
+    "Youtube": "",
+    "OtherMedia": "",
+    "street": "36 S. Ohio St.",
+    "city": "Remington",
+    "County": "Jasper",
+    "State": "Indiana",
+    "zip": 47977,
+    "Season1Date": "June to October",
+    "Season1Time": "Sat:7:30 am - 11:30 am;",
+    "Season2Date": "",
+    "Season2Time": "",
+    "Season3Date": "",
+    "Season3Time": "",
+    "Season4Date": "",
+    "Season4Time": "",
+    "lng": -87.1514,
+    "lat": 40.76,
+    "Location": "Closed-off public street",
+    "Credit": "N",
+    "WIC": "N",
+    "WICcash": "N",
+    "SFMNP": "N",
+    "SNAP": "N",
+    "Organic": "-",
+    "Bakedgoods": "Y",
+    "Cheese": "N",
+    "Crafts": "Y",
+    "Flowers": "N",
+    "Eggs": "N",
+    "Seafood": "N",
+    "Herbs": "N",
+    "Vegetables": "Y",
+    "Honey": "N",
+    "Jams": "N",
+    "Maple": "N",
+    "Meat": "N",
+    "Nursery": "N",
+    "Nuts": "N",
+    "Plants": "Y",
+    "Poultry": "N",
+    "Prepared": "N",
+    "Soap": "N",
+    "Trees": "N",
+    "Wine": "N",
+    "Coffee": "N",
+    "Beans": "N",
+    "Fruits": "N",
+    "Grains": "N",
+    "Juices": "N",
+    "Mushrooms": "N",
+    "PetFood": "N",
+    "Tofu": "N",
+    "WildHarvested": "N",
+    "updateTime": "6/1/2011 15:17"
+  },
+  {
+    "FMID": 1007247,
+    "MarketName": "28.2 Frankfort Farmers Market",
+    "Website": "",
+    "Facebook": "https://www.facebook.com/FrankfortFarmersMarket",
+    "Twitter": "",
+    "Youtube": "",
+    "OtherMedia": "",
+    "street": "Courthouse Square",
+    "city": "Frankfort",
+    "County": "Clinton",
+    "State": "Indiana",
+    "zip": 46041,
+    "Season1Date": "06/07/2014 to 10/25/2014",
+    "Season1Time": "Sat: 8:00 AM-12:00 PM;",
+    "Season2Date": "",
+    "Season2Time": "",
+    "Season3Date": "",
+    "Season3Time": "",
+    "Season4Date": "",
+    "Season4Time": "",
+    "lng": -86.511368,
+    "lat": 40.280691,
+    "Location": "Local government building grounds",
+    "Credit": "N",
+    "WIC": "Y",
+    "WICcash": "N",
+    "SFMNP": "Y",
+    "SNAP": "N",
+    "Organic": "N",
+    "Bakedgoods": "Y",
+    "Cheese": "N",
+    "Crafts": "Y",
+    "Flowers": "N",
+    "Eggs": "Y",
+    "Seafood": "N",
+    "Herbs": "N",
+    "Vegetables": "Y",
+    "Honey": "Y",
+    "Jams": "Y",
+    "Maple": "N",
+    "Meat": "Y",
+    "Nursery": "N",
+    "Nuts": "N",
+    "Plants": "Y",
+    "Poultry": "Y",
+    "Prepared": "Y",
+    "Soap": "Y",
+    "Trees": "N",
+    "Wine": "N",
+    "Coffee": "N",
+    "Beans": "N",
+    "Fruits": "Y",
+    "Grains": "Y",
+    "Juices": "N",
+    "Mushrooms": "N",
+    "PetFood": "N",
+    "Tofu": "N",
+    "WildHarvested": "N",
+    "updateTime": "3/14/2014 13:09"
+  },
+  {
+    "FMID": 1005007,
+    "MarketName": "31.6 Crawfordsville Farmers Market",
+    "Website": "",
+    "Facebook": "https://www.facebook.com/crawfordsvillefarmersmarket",
+    "Twitter": "",
+    "Youtube": "",
+    "OtherMedia": "",
+    "street": "Pike ST. between Washington St. & Walnut St.",
+    "city": "Crawfordsville",
+    "County": "Montgomery",
+    "State": "Indiana",
+    "zip": 47933,
+    "Season1Date": "04/18/2015 to 10/31/2015",
+    "Season1Time": "Sat: 8:00 AM-2:00 PM;",
+    "Season2Date": "",
+    "Season2Time": "",
+    "Season3Date": "",
+    "Season3Time": "",
+    "Season4Date": "",
+    "Season4Time": "",
+    "lng": -86.901777,
+    "lat": 40.040589,
+    "Location": "",
+    "Credit": "Y",
+    "WIC": "N",
+    "WICcash": "N",
+    "SFMNP": "Y",
+    "SNAP": "Y",
+    "Organic": "-",
+    "Bakedgoods": "Y",
+    "Cheese": "Y",
+    "Crafts": "Y",
+    "Flowers": "Y",
+    "Eggs": "Y",
+    "Seafood": "N",
+    "Herbs": "Y",
+    "Vegetables": "Y",
+    "Honey": "Y",
+    "Jams": "N",
+    "Maple": "N",
+    "Meat": "Y",
+    "Nursery": "N",
+    "Nuts": "N",
+    "Plants": "Y",
+    "Poultry": "N",
+    "Prepared": "Y",
+    "Soap": "Y",
+    "Trees": "N",
+    "Wine": "N",
+    "Coffee": "N",
+    "Beans": "N",
+    "Fruits": "Y",
+    "Grains": "N",
+    "Juices": "N",
+    "Mushrooms": "N",
+    "PetFood": "N",
+    "Tofu": "N",
+    "WildHarvested": "N",
+    "updateTime": "3/20/2015 12:45"
+  },
+  {
+    "FMID": 1009020,
+    "MarketName": "31.9 Rensselaer Farmers Market",
+    "Website": "",
+    "Facebook": "https://www.facebook.com/pages/Rensselaer-Farmers-Market/120400308005878",
+    "Twitter": "",
+    "Youtube": "",
+    "OtherMedia": "",
+    "street": "110 W Harrison St.",
+    "city": "Rensselaer",
+    "County": "Jasper",
+    "State": "Indiana",
+    "zip": 47978,
+    "Season1Date": "05/03/2014 to 10/25/2014",
+    "Season1Time": "Sat: 7:30 AM-11:30 AM;",
+    "Season2Date": "07/01/2014 to 09/01/2014",
+    "Season2Time": "Tue: 4:00 PM-6:00 PM;",
+    "Season3Date": "",
+    "Season3Time": "",
+    "Season4Date": "",
+    "Season4Time": "",
+    "lng": -87.1501069,
+    "lat": 40.9356403,
+    "Location": "Local government building grounds",
+    "Credit": "N",
+    "WIC": "N",
+    "WICcash": "N",
+    "SFMNP": "N",
+    "SNAP": "N",
+    "Organic": "N",
+    "Bakedgoods": "Y",
+    "Cheese": "N",
+    "Crafts": "Y",
+    "Flowers": "N",
+    "Eggs": "Y",
+    "Seafood": "N",
+    "Herbs": "Y",
+    "Vegetables": "Y",
+    "Honey": "N",
+    "Jams": "N",
+    "Maple": "N",
+    "Meat": "Y",
+    "Nursery": "N",
+    "Nuts": "N",
+    "Plants": "Y",
+    "Poultry": "N",
+    "Prepared": "Y",
+    "Soap": "N",
+    "Trees": "N",
+    "Wine": "N",
+    "Coffee": "N",
+    "Beans": "N",
+    "Fruits": "Y",
+    "Grains": "N",
+    "Juices": "N",
+    "Mushrooms": "N",
+    "PetFood": "N",
+    "Tofu": "N",
+    "WildHarvested": "N",
+    "updateTime": "3/15/2014 1:04"
+  },
+  {
+    "FMID": 1001148,
+    "MarketName": "36.2 Logansport Farmers Market",
+    "Website": "",
+    "Facebook": "",
+    "Twitter": "",
+    "Youtube": "",
+    "OtherMedia": "",
+    "street": "4th and Market Street",
+    "city": "Logansport",
+    "County": "Cass",
+    "State": "Indiana",
+    "zip": 46947,
+    "Season1Date": "06/01/2014 to 10/29/2014",
+    "Season1Time": "Wed: 3:00 PM-6:00 PM;Sat: 8:00 AM-1:00 PM;",
+    "Season2Date": "",
+    "Season2Time": "Wed: 3:00 PM-6:00 PM;Sat: 8:00 AM-1:00 PM;",
+    "Season3Date": "",
+    "Season3Time": "",
+    "Season4Date": "",
+    "Season4Time": "",
+    "lng": -86.365328,
+    "lat": 40.752621,
+    "Location": "Other",
+    "Credit": "N",
+    "WIC": "N",
+    "WICcash": "Y",
+    "SFMNP": "Y",
+    "SNAP": "N",
+    "Organic": "N",
+    "Bakedgoods": "Y",
+    "Cheese": "N",
+    "Crafts": "N",
+    "Flowers": "N",
+    "Eggs": "Y",
+    "Seafood": "N",
+    "Herbs": "Y",
+    "Vegetables": "Y",
+    "Honey": "Y",
+    "Jams": "N",
+    "Maple": "Y",
+    "Meat": "N",
+    "Nursery": "N",
+    "Nuts": "N",
+    "Plants": "Y",
+    "Poultry": "Y",
+    "Prepared": "N",
+    "Soap": "Y",
+    "Trees": "N",
+    "Wine": "N",
+    "Coffee": "N",
+    "Beans": "N",
+    "Fruits": "Y",
+    "Grains": "N",
+    "Juices": "N",
+    "Mushrooms": "N",
+    "PetFood": "N",
+    "Tofu": "N",
+    "WildHarvested": "N",
+    "updateTime": "4/6/2014 14:11"
+  },
+  {
+    "FMID": 1016810,
+    "MarketName": "40.6 Lebanon City Market",
+    "Website": "",
+    "Facebook": "www.facebook.com/lebanoncitymarket",
+    "Twitter": "https://twitter.com/lebanoncitymkt",
+    "Youtube": "",
+    "OtherMedia": "",
+    "street": "Main Street and Meridian Street",
+    "city": "Lebanon",
+    "County": "Boone",
+    "State": "Indiana",
+    "zip": 46052,
+    "Season1Date": "04/07/2017 to 09/01/2017",
+    "Season1Time": "Fri: 4:00 PM-8:00 PM;",
+    "Season2Date": "",
+    "Season2Time": "",
+    "Season3Date": "",
+    "Season3Time": "",
+    "Season4Date": "",
+    "Season4Time": "",
+    "lng": -86.4680447,
+    "lat": 40.0475885,
+    "Location": "",
+    "Credit": "Y",
+    "WIC": "Y",
+    "WICcash": "N",
+    "SFMNP": "Y",
+    "SNAP": "Y",
+    "Organic": "-",
+    "Bakedgoods": "Y",
+    "Cheese": "Y",
+    "Crafts": "Y",
+    "Flowers": "Y",
+    "Eggs": "Y",
+    "Seafood": "N",
+    "Herbs": "Y",
+    "Vegetables": "Y",
+    "Honey": "Y",
+    "Jams": "Y",
+    "Maple": "Y",
+    "Meat": "N",
+    "Nursery": "N",
+    "Nuts": "N",
+    "Plants": "Y",
+    "Poultry": "Y",
+    "Prepared": "Y",
+    "Soap": "Y",
+    "Trees": "N",
+    "Wine": "Y",
+    "Coffee": "Y",
+    "Beans": "N",
+    "Fruits": "Y",
+    "Grains": "N",
+    "Juices": "N",
+    "Mushrooms": "Y",
+    "PetFood": "N",
+    "Tofu": "N",
+    "WildHarvested": "N",
+    "updateTime": "1/24/2017 14:13"
+  },
+  {
+    "FMID": 1010874,
+    "MarketName": "43.8 Kokomo Downtown Farmers' Market",
+    "Website": "http://www.kokomofarmersmarket.com",
+    "Facebook": "www.facebook.com/kokomofarmersmarket",
+    "Twitter": "",
+    "Youtube": "",
+    "OtherMedia": "www.instagram.com/kokomofarmersmarket",
+    "street": "Intersection of Mulberry and Washington Streets",
+    "city": "Kokomo",
+    "County": "Howard",
+    "State": "Indiana",
+    "zip": 46901,
+    "Season1Date": "04/25/2015 to 10/10/2015",
+    "Season1Time": "Sat: 9:00 AM-1:00 PM;",
+    "Season2Date": "",
+    "Season2Time": "",
+    "Season3Date": "",
+    "Season3Time": "",
+    "Season4Date": "",
+    "Season4Time": "",
+    "lng": -86.133519,
+    "lat": 40.488463,
+    "Location": "",
+    "Credit": "Y",
+    "WIC": "Y",
+    "WICcash": "Y",
+    "SFMNP": "Y",
+    "SNAP": "Y",
+    "Organic": "N",
+    "Bakedgoods": "Y",
+    "Cheese": "Y",
+    "Crafts": "Y",
+    "Flowers": "Y",
+    "Eggs": "Y",
+    "Seafood": "N",
+    "Herbs": "Y",
+    "Vegetables": "Y",
+    "Honey": "Y",
+    "Jams": "Y",
+    "Maple": "Y",
+    "Meat": "Y",
+    "Nursery": "N",
+    "Nuts": "N",
+    "Plants": "Y",
+    "Poultry": "Y",
+    "Prepared": "Y",
+    "Soap": "Y",
+    "Trees": "N",
+    "Wine": "N",
+    "Coffee": "Y",
+    "Beans": "N",
+    "Fruits": "Y",
+    "Grains": "N",
+    "Juices": "Y",
+    "Mushrooms": "Y",
+    "PetFood": "N",
+    "Tofu": "N",
+    "WildHarvested": "N",
+    "updateTime": "3/2/2015 14:29"
+  },
+  {
+    "FMID": 1007545,
+    "MarketName": "48.1 Rockville Produce Auction LLC",
+    "Website": "",
+    "Facebook": "",
+    "Twitter": "",
+    "Youtube": "",
+    "OtherMedia": "",
+    "street": "3300 North 400E",
+    "city": "Rockville 47872",
+    "County": "Parke County",
+    "State": "Indiana",
+    "zip": "",
+    "Season1Date": "",
+    "Season1Time": "",
+    "Season2Date": "",
+    "Season2Time": "",
+    "Season3Date": "",
+    "Season3Time": "",
+    "Season4Date": "",
+    "Season4Time": "",
+    "lng": -87.1625,
+    "lat": 39.8155,
+    "Location": "",
+    "Credit": "N",
+    "WIC": "N",
+    "WICcash": "N",
+    "SFMNP": "N",
+    "SNAP": "N",
+    "Organic": "-",
+    "Bakedgoods": "",
+    "Cheese": "",
+    "Crafts": "",
+    "Flowers": "",
+    "Eggs": "",
+    "Seafood": "",
+    "Herbs": "",
+    "Vegetables": "",
+    "Honey": "",
+    "Jams": "",
+    "Maple": "",
+    "Meat": "",
+    "Nursery": "",
+    "Nuts": "",
+    "Plants": "",
+    "Poultry": "",
+    "Prepared": "",
+    "Soap": "",
+    "Trees": "",
+    "Wine": "",
+    "Coffee": "",
+    "Beans": "",
+    "Fruits": "",
+    "Grains": "",
+    "Juices": "",
+    "Mushrooms": "",
+    "PetFood": "",
+    "Tofu": "",
+    "WildHarvested": "",
+    "updateTime": 2011
+  }
+]
+      }
+          var infowindow = new google.maps.InfoWindow();
+      $.each(json1.Markets,function(key,data){
+        var latLng = new google.maps.LatLng(data.lat,data.lng);
+        var marker = new google.maps.Marker({
+          position: latLng,
+          map: map,
+          title: data.MarketName,
+          icon: 'store1.png'
+        });
+        var details = data.city + ","+data.MarketName;
+        bindInfoWindow(marker,map,infowindow,details);
+        $('#MarketName').html(data.MarketName)
+      })
+
+
+    function bindInfoWindow(marker, map, infowindow, strDescription) {
+    google.maps.event.addListener(marker, 'click', function () {
+        infowindow.setContent(strDescription);
+        infowindow.open(map, marker);
+
+    });
+  }
+
+
+
+
+}
+
+      // function calculateAndDisplayRoute(directionsService,directionsDisplay){
+      //   var selectedMode = document.getElementById('mode').value;
+      //   directionsService.route({
+      //       origin:{lat: 40.4237, lng: -86.9212},
+      //       destination:{lat: 40.461469, lng: -86.915836},//from clicker
+      //       travelMode: google.maps.TravelMode[selectedMode]
+      //   },function(response, status{
+      //       if (status == 'OK'){
+      //           directionsDisplay.setDirections(response);
+      //       } else{
+      //           window.alert('Directions request failed due to' + status);
+      //       }
+      //   })
+      // }
+
+    </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoPBJidWuK6Ws-yC9pzTn17c_IKHxMvIo&callback=initMap"></script>
+  <script src="weather.js"> </script>
+
+  </body>
+</html>
+

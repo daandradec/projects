@@ -1,0 +1,19 @@
+html,body{
+    height: 100%;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+body{ 
+    background-image: url('../background_image/congruent_pentagon.png') !important;
+}
+#map{
+    position:absolute;
+    width: 100%; 
+}
+#markInfo{
+    background-color: #D2CECE;
+}
+#img1,#img2,#img3{
+    width:3%;
+    height:3%;
+}

@@ -1,0 +1,623 @@
+{
+   "info": "This data was collected from Zillow and prices manually aproximated - April 10th 2017",
+  "CommunityArea": {
+    "Areas": [
+      {
+        "name": "Rogers Park",
+        "latitude": 42.01,
+        "longitude": -87.67,
+        "minRentPrice": 795,
+        "maxRentPrice": 3200,
+        "avgRentPrice": 1450
+      },
+      {
+        "name": "West Ridge",
+        "latitude": 42,
+        "longitude": -87.69,
+        "minRentPrice": 800,
+        "maxRentPrice": 2900,
+        "avgRentPrice": 1400
+      },
+      {
+        "name": "Uptown",
+        "latitude": 41.97,
+        "longitude": -87.66,
+        "minRentPrice": 900,
+        "maxRentPrice": 3375,
+        "avgRentPrice": 1650
+      },
+      {
+        "name": "Lincoln Square",
+        "latitude": 41.97,
+        "longitude": -87.69,
+        "minRentPrice": 1145,
+        "maxRentPrice": 3000,
+        "avgRentPrice": 1900
+      },
+      {
+        "name": "North Center",
+        "latitude": 42.01,
+        "longitude": -87.67,
+        "minRentPrice": 1145,
+        "maxRentPrice": 3000,
+        "avgRentPrice": 1900
+      },
+      {
+        "name": "Lake View",
+        "latitude": 41.94352,
+        "longitude": -87.654102,
+        "minRentPrice": 1150,
+        "maxRentPrice": 6000,
+        "avgRentPrice": 2350
+      },
+      {
+        "name": "Lincoln Park",
+        "latitude": 41.92,
+        "longitude": -87.65,
+        "minRentPrice": 1300,
+        "maxRentPrice": 6000,
+        "avgRentPrice": 2000
+      },
+      {
+        "name": "Near North Side",
+        "latitude": 41.9,
+        "longitude": -87.63,
+        "minRentPrice": 1500,
+        "maxRentPrice": 10000,
+        "avgRentPrice": 2500
+      },
+      {
+        "name": "Edison Park",
+        "latitude": 42.01,
+        "longitude": -87.81,
+        "minRentPrice": 1000,
+        "maxRentPrice": 2500,
+        "avgRentPrice": 1500
+      },
+      {
+        "name": "Norwood Park",
+        "latitude": 41.98,
+        "longitude": -87.8,
+        "minRentPrice": 1350,
+        "maxRentPrice": 2500,
+        "avgRentPrice": 1650
+      },
+      {
+        "name": "Jefferson Park",
+        "latitude": 41.98,
+        "longitude": -87.77,
+        "minRentPrice": 900,
+        "maxRentPrice": 2500,
+        "avgRentPrice": 1500
+      },
+      {
+        "name": "Forest Glen",
+        "latitude": 41.983333,
+        "longitude": -87.75,
+        "minRentPrice": 2200,
+        "maxRentPrice": 2400,
+        "avgRentPrice": 2395
+      },
+      {
+        "name": "North Park",
+        "latitude": 41.9843203,
+        "longitude": -87.725986299,
+        "minRentPrice": 900,
+        "maxRentPrice": 2000,
+        "avgRentPrice": 1400
+      },
+      {
+        "name": "Albany Park",
+        "latitude": 41.97,
+        "longitude": -87.72,
+        "minRentPrice": 900,
+        "maxRentPrice": 3200,
+        "avgRentPrice": 1450
+      },
+      {
+        "name": "Portage Park",
+        "latitude": 41.95,
+        "longitude": -87.76,
+        "minRentPrice": 900,
+        "maxRentPrice": 2200,
+        "avgRentPrice": 1500
+      },
+      {
+        "name": "Irving Park",
+        "latitude": 41.95,
+        "longitude": -87.73,
+        "minRentPrice": 825,
+        "maxRentPrice": 2800,
+        "avgRentPrice": 1475
+      },
+      {
+        "name": "Dunning",
+        "latitude": 41.95,
+        "longitude": -87.81,
+        "minRentPrice": 1100,
+        "maxRentPrice": 2200,
+        "avgRentPrice": 1700
+      },
+      {
+        "name": "Montclare",
+        "latitude": 41.93,
+        "longitude": -87.8,
+        "minRentPrice": 800,
+        "maxRentPrice": 2500,
+        "avgRentPrice": 1600
+      },
+      {
+        "name": "Belmont Cragin",
+        "latitude": 41.93,
+        "longitude": -87.76,
+        "minRentPrice": 725,
+        "maxRentPrice": 4500,
+        "avgRentPrice": 1500
+      },
+      {
+        "name": "Hermosa",
+        "latitude": 41.92,
+        "longitude": -87.73,
+        "minRentPrice": 900,
+        "maxRentPrice": 2000,
+        "avgRentPrice": 1500
+      },
+      {
+        "name": "Avondale",
+        "latitude": 41.94,
+        "longitude": -87.71,
+        "minRentPrice": 1050,
+        "maxRentPrice": 4000,
+        "avgRentPrice": 1800
+      },
+      {
+        "name": "Logan Square",
+        "latitude": 41.928333,
+        "longitude": -87.706667,
+        "minRentPrice": 900,
+        "maxRentPrice": 4500,
+        "avgRentPrice": 1700
+      },
+      {
+        "name": "Humboldt Park",
+        "latitude": 41.902840,
+        "longitude": -87.707062,
+        "minRentPrice": 800,
+        "maxRentPrice": 4000,
+        "avgRentPrice": 1500
+      },
+      {
+        "name": "West Town",
+        "latitude": 41.9,
+        "longitude": -87.68,
+        "minRentPrice": 1125,
+        "maxRentPrice": 5000,
+        "avgRentPrice": 2100
+      },
+      {
+        "name": "Austin",
+        "latitude": 41.9,
+        "longitude": -87.76,
+        "minRentPrice": 700,
+        "maxRentPrice": 2200,
+        "avgRentPrice": 1500
+      },
+      {
+        "name": "West Garfield Park",
+        "latitude": 41.88,
+        "longitude": -87.73,
+        "minRentPrice": 800,
+        "maxRentPrice": 1450,
+        "avgRentPrice": 1200
+      },
+      {
+        "name": "East Garfield Park",
+        "latitude": 41.88,
+        "longitude": -87.7,
+        "minRentPrice": 700,
+        "maxRentPrice": 2000,
+        "avgRentPrice": 1380
+      },
+      {
+        "name": "Near West Side",
+        "latitude": 41.87,
+        "longitude": -87.67,
+        "minRentPrice": 700,
+        "maxRentPrice": 5250,
+        "avgRentPrice": 2250
+      },
+      {
+        "name": "North Lawndale",
+        "latitude": 41.86,
+        "longitude": -87.71,
+        "minRentPrice": 700,
+        "maxRentPrice": 3000,
+        "avgRentPrice": 1300
+      },
+      {
+        "name": "South Lawndale",
+        "latitude": 41.85,
+        "longitude": -87.71,
+        "minRentPrice": 750,
+        "maxRentPrice": 3000,
+        "avgRentPrice": 1250
+      },
+      {
+        "name": "Lower West Side",
+        "latitude": 41.85,
+        "longitude": -87.66,
+        "minRentPrice": 700,
+        "maxRentPrice": 3500,
+        "avgRentPrice": 1500
+      },
+      {
+        "name": "Loop",
+        "latitude": 41.883333,
+        "longitude": -87.633333,
+        "minRentPrice": 1450,
+        "maxRentPrice": 7500,
+        "avgRentPrice": 2250
+      },
+      {
+        "name": "Near South Side",
+        "latitude": 41.85,
+        "longitude": -87.62,
+        "minRentPrice": 900,
+        "maxRentPrice": 6500,
+        "avgRentPrice": 1950
+      },
+      {
+        "name": "Armour Square",
+        "latitude": 41.833333,
+        "longitude": -87.633333,
+        "minRentPrice": 880,
+        "maxRentPrice": 7000,
+        "avgRentPrice": 1800
+      },
+      {
+        "name": "Douglas",
+        "latitude": 41.83,
+        "longitude": -87.62,
+        "minRentPrice": 1000,
+        "maxRentPrice": 4000,
+        "avgRentPrice": 1800
+      },
+      {
+        "name": "Oakland",
+        "latitude": 41.82,
+        "longitude": -87.6,
+        "minRentPrice": 1350,
+        "maxRentPrice": 2400,
+        "avgRentPrice": 1500
+      },
+      {
+        "name": "Fuller Park",
+        "latitude": 41.8091142,
+        "longitude": -87.63235609,
+        "minRentPrice": 600,
+        "maxRentPrice": 2000,
+        "avgRentPrice": 1400
+      },
+      {
+        "name": "Grand Boulevard",
+        "latitude": 41.81,
+        "longitude": -87.62,
+        "minRentPrice": 800,
+        "maxRentPrice": 3500,
+        "avgRentPrice": 1450
+      },
+      {
+        "name": "Kenwood",
+        "latitude": 41.81,
+        "longitude": -87.6,
+        "minRentPrice": 900,
+        "maxRentPrice": 2440,
+        "avgRentPrice": 1500
+      },
+      {
+        "name": "Washington Park",
+        "latitude": 41.79,
+        "longitude": -87.62,
+        "minRentPrice": 750,
+        "maxRentPrice": 2500,
+        "avgRentPrice": 1300
+      },
+      {
+        "name": "Hyde Park",
+        "latitude": 41.8,
+        "longitude": -87.59,
+        "minRentPrice": 900,
+        "maxRentPrice": 4350,
+        "avgRentPrice": 1900
+      },
+      {
+        "name": "Woodlawn",
+        "latitude": 41.78,
+        "longitude": -87.6,
+        "minRentPrice": 750,
+        "maxRentPrice": 2500,
+        "avgRentPrice": 1300
+      },
+      {
+        "name": "South Shore",
+        "latitude": 41.76,
+        "longitude": -87.58,
+        "minRentPrice": 650,
+        "maxRentPrice": 1800,
+        "avgRentPrice": 1050
+      },
+      {
+        "name": "Chatham",
+        "latitude": 41.74,
+        "longitude": -87.611667,
+        "minRentPrice": 625,
+        "maxRentPrice": 1650,
+        "avgRentPrice": 1100
+      },
+      {
+        "name": "Avalon Park",
+        "latitude": 41.75,
+        "longitude": -87.59,
+        "minRentPrice": 700,
+        "maxRentPrice": 1700,
+        "avgRentPrice": 1450
+      },
+      {
+        "name": "South Chicago",
+        "latitude": 41.74,
+        "longitude": -87.55,
+        "minRentPrice": 750,
+        "maxRentPrice": 1700,
+        "avgRentPrice": 1100
+      },
+      {
+        "name": "Burnside",
+        "latitude": 41.73,
+        "longitude": -87.6,
+        "minRentPrice": 600,
+        "maxRentPrice": 1690,
+        "avgRentPrice": 1350
+      },
+      {
+        "name": "Calumet Heights",
+        "latitude": 41.728333,
+        "longitude": -87.579722,
+        "minRentPrice": 600,
+        "maxRentPrice": 1700,
+        "avgRentPrice": 1500
+      },
+      {
+        "name": "Roseland",
+        "latitude": 41.71,
+        "longitude": -87.62,
+        "minRentPrice": 700,
+        "maxRentPrice": 1945,
+        "avgRentPrice": 1200
+      },
+      {
+        "name": "Pullman",
+        "latitude": 41.689521,
+        "longitude": -87.60608059,
+        "minRentPrice": 700,
+        "maxRentPrice": 1300,
+        "avgRentPrice": 950
+      },
+      {
+        "name": "South Deering",
+        "latitude": 41.71,
+        "longitude": -87.56,
+        "minRentPrice": 1250,
+        "maxRentPrice": 1500,
+        "avgRentPrice": 1350
+      },
+      {
+        "name": "East Side",
+        "latitude": 41.708035,
+        "longitude": -87.535194699,
+        "minRentPrice": 950,
+        "maxRentPrice": 1500,
+        "avgRentPrice": 1300
+      },
+      {
+        "name": "West Pullman",
+        "latitude": 41.68,
+        "longitude": -87.63,
+        "minRentPrice": 950,
+        "maxRentPrice": 1500,
+        "avgRentPrice": 1400
+      },
+      {
+        "name": "Riverdale",
+        "latitude": 41.66,
+        "longitude": -87.61,
+        "minRentPrice": 1200,
+        "maxRentPrice": 1500,
+        "avgRentPrice": 1400
+      },
+      {
+        "name": "Hegewisch",
+        "latitude": 41.66,
+        "longitude": -87.55,
+        "minRentPrice": 850,
+        "maxRentPrice": 1700,
+        "avgRentPrice": 1300
+      },
+      {
+        "name": "Garfield Ridge",
+        "latitude": 41.7941486,
+        "longitude": -87.770607199,
+        "minRentPrice": 775,
+        "maxRentPrice": 1800,
+        "avgRentPrice": 2300
+      },
+      {
+        "name": "Archer Heights",
+        "latitude": 41.81,
+        "longitude": -87.73,
+        "minRentPrice": 900,
+        "maxRentPrice": 2000,
+        "avgRentPrice": 1650
+      },
+      {
+        "name": "Brighton Park",
+        "latitude": 41.82,
+        "longitude": -87.7,
+        "minRentPrice": 750,
+        "maxRentPrice": 1800,
+        "avgRentPrice": 1450
+      },
+      {
+        "name": "McKinley Park",
+        "latitude": 41.83,
+        "longitude": -87.67,
+        "minRentPrice": 800,
+        "maxRentPrice": 1800,
+        "avgRentPrice": 1400
+      },
+      {
+        "name": "Bridgeport",
+        "latitude": 41.84,
+        "longitude": -87.65,
+        "minRentPrice": 780,
+        "maxRentPrice": 3000,
+        "avgRentPrice": 1600
+      },
+      {
+        "name": "New City",
+        "latitude": 41.81,
+        "longitude": -87.66,
+        "minRentPrice": 900,
+        "maxRentPrice": 2400,
+        "avgRentPrice": 1300
+      },
+      {
+        "name": "West Elsdon",
+        "latitude": 41.79,
+        "longitude": -87.72,
+        "minRentPrice": 700,
+        "maxRentPrice": 200,
+        "avgRentPrice": 1600
+      },
+      {
+        "name": "Gage Park",
+        "latitude": 41.79,
+        "longitude": -87.69,
+        "minRentPrice": 850,
+        "maxRentPrice": 1500,
+        "avgRentPrice": 1350
+      },
+      {
+        "name": "Clearing",
+        "latitude": 41.78,
+        "longitude": -87.76,
+        "minRentPrice": 1500,
+        "maxRentPrice": 1800,
+        "avgRentPrice": 1600
+      },
+      {
+        "name": "West Lawn",
+        "latitude": 41.77,
+        "longitude": -87.72,
+        "minRentPrice": 800,
+        "maxRentPrice": 2000,
+        "avgRentPrice": 1550
+      },
+      {
+        "name": "Chicago Lawn",
+        "latitude": 41.77,
+        "longitude": -87.69,
+        "minRentPrice": 700,
+        "maxRentPrice": 1550,
+        "avgRentPrice": 1350
+      },
+      {
+        "name": "West Englewood",
+        "latitude": 41.78,
+        "longitude": -87.67,
+        "minRentPrice": 650,
+        "maxRentPrice": 1600,
+        "avgRentPrice": 1300
+      },
+      {
+        "name": "Englewood",
+        "latitude": 41.779786,
+        "longitude": -87.644778,
+        "minRentPrice": 625,
+        "maxRentPrice": 2800,
+        "avgRentPrice": 1350
+      },
+      {
+        "name": "Greater Grand Crossing",
+        "latitude": 41.76,
+        "longitude": -87.61,
+        "minRentPrice": 650,
+        "maxRentPrice": 1450,
+        "avgRentPrice": 1700
+      },
+      {
+        "name": "Ashburn",
+        "latitude": 41.75,
+        "longitude": -87.71,
+        "minRentPrice": 900,
+        "maxRentPrice": 2100,
+        "avgRentPrice": 1500
+      },
+      {
+        "name": "Auburn Gresham",
+        "latitude": 41.74,
+        "longitude": -87.66,
+        "minRentPrice": 625,
+        "maxRentPrice": 2100,
+        "avgRentPrice": 1400
+      },
+      {
+        "name": "Beverly",
+        "latitude": 41.71,
+        "longitude": -87.68,
+        "minRentPrice": 1600,
+        "maxRentPrice": 3500,
+        "avgRentPrice": 2300
+      },
+      {
+        "name": "Washington Heights",
+        "latitude": 41.72,
+        "longitude": -87.65,
+        "minRentPrice": 1100,
+        "maxRentPrice": 1700,
+        "avgRentPrice": 1450
+      },
+      {
+        "name": "Mount Greenwood",
+        "latitude": 41.7,
+        "longitude": -87.71,
+        "minRentPrice": 1400,
+        "maxRentPrice": 2300,
+        "avgRentPrice": 1700
+      },
+      {
+        "name": "Morgan Park",
+        "latitude": 41.69,
+        "longitude": -87.67,
+        "minRentPrice": 865,
+        "maxRentPrice": 2400,
+        "avgRentPrice": 1800
+      },
+      {
+        "name": "O'Hare",
+        "latitude": 41.9772281,
+        "longitude": -87.836720899,
+        "minRentPrice": 1100,
+        "maxRentPrice": 1400,
+        "avgRentPrice": 2100
+      },
+      {
+        "name": "Edgewater",
+        "latitude": 41.99,
+        "longitude": -87.66,
+        "minRentPrice": 850,
+        "maxRentPrice": 2700,
+        "avgRentPrice": 1550
+      }
+    ]
+  }
+}

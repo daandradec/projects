@@ -1,0 +1,27 @@
+﻿      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+                text-align: center;        
+        margin: 20px auto 0px auto;
+      }
+      #right-panel {
+        top:20%;
+        width: 34%;
+        height: 30%;
+        position: absolute !important; 
+        z-index: 100;      
+      }
+      #map {  
+        width: 80%;
+        height: 55%;  
+        position: absolute !important;   
+        z-index: 110;
+      }
+      #container {  
+        width: 80%;
+        height: 55%;  
+        position: absolute;   
+        z-index: 111;
+      }
+       

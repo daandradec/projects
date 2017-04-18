@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Just here </title>
+	<link rel="shortcut icon" type='image/x-icon' href='css/images/favicon.ico'>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<script src="js/jquery-3.2.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script> 
+	<script src="js/application.js"></script>
+	
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+<div class="container-fluid">
+	<div class="row">
+		<!-- MENU -->
+		<div class="sidebar col-sm-2 sidenav hidden-xs menu">
+			<h2 id="t_menu">JUST HERE</h2>
+			<img src="images/logo.png" alt="Logo" width="100" height="100" >
+			<ul class="nav nav-pills">				 
+				<li id="opt_home" class="active"><a href="#section1">HOME</a></li>
+				<li id="opt_cri"><a href="#section2">Independent criterion </a></li>
+				<li id="opt_pre"><a href="#section3">Preference search</a></li>
+				<li id="opt_wea"><a href="#section4">Weather</a></li>
+			</ul><br>
+		</div>
+		<!-- CONTENT -->
+		<div class="col-sm-10 content">
+			<div class="title">
+				<h3 id="t_con">JUST HERE</h3>
+			</div>
+			<div class="window section1 home">
+				<h3> The house icon represents the rental option </h3>
+			</div>
+			<div class="section2 ind_cri">
+					<button id="btn_pri" type="button" class="btn btn-primary">Price</button>
+					<button id="btn_dis" type="button" class="btn btn-primary">Distance</button>
+					<button id="btn_health" type="button" class="btn btn-primary">Health</button>
+					<button id="btn_saf" type="button" class="btn btn-primary">Safe</button>
+					<button id="btn_ent" type="button" class="btn btn-primary">Entertaiment</button>
+					<button id="btn_edu" type="button" class="btn btn-primary">Education</button>
+			</div>
+			<div class="section3 pre">
+			</div>
+			<div class="window section4 wea">
+				<ul class="nav nav-tabs">
+					<li id="opt_spr"><a href="#">Spring</a></li>
+					<li id="opt_sum"><a href="#">Summer</a></li>
+					<li id="opt_fal"><a href="#">Fall</a></li>
+					<li id="opt_win"><a href="#">Winter</a></li>
+				</ul>
+				<div class="col-sm-6">
+					<div id="preci" class="sta"> Precipitation</div>
+				</div>
+				<div class="col-sm-6">
+					<div id="temp" class="sta"> Average Temperature</div>
+				</div>
+			</div>
+			<div id="map"> </div>
+			<div id="info"></div>
+			<div id="menu_preference" >
+				<p>Parks:<input id='ent_per' class='info_pre' type='text'> </input></p>
+				<p>Police stations:<input id='safe_per' class='info_pre' type='text'> </input> </p> 
+				<p>Clinics: <input id='health_per' class='info_pre' type='text'> </input> </p>
+				<p>Libraries:<input id='edu_per' class='info_pre' type='text'> </input></p>	
+				<b><button id='btn_load' type='button' class='btn btn-primary'>Load</button></b>
+				<b><input id='chb_show' type='checkbox' class='btn btn-primary'>Show</input></b>
+			</div>	
+		</div>
+	</div>
+</div>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbX5SopiTaAxhYj9mvBCJBkv8jPBBnhQA&callback=initMap">
+    </script>
+</body>
+</html>

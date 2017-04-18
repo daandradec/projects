@@ -1,0 +1,60 @@
+.preloader-wrapper {
+position: absolute;
+top :0;
+left: 0;
+right: 0;
+bottom: 0;
+margin: auto;
+}
+.side-nav {
+    transform: translateX(0%) !important;
+}
+p{
+    font-size: 18px;
+}
+.tabs .tab a{
+    color: purple;
+} /*Black color to the text*/
+
+.tabs .tab a.active {
+    background-color: transparent;
+    color:purple;
+} 
+.tabs .tab a:hover {
+    color:#ba68c8;
+}
+.tabs .indicator {
+	background-color: purple;
+}
+.cursive-weather{
+    font-family: 'Satisfy', cursive;
+    font-size: 20px;
+}
+.cursive{
+	font-family: 'Satisfy', cursive;
+}
+#map2{
+    height: 650px;
+    width: 100%;
+}
+#map{
+	height: 650px;
+	width: 100%;
+}
+#logo{
+    padding-left: 55px;
+}
+.main {
+    padding-left: 300px;
+}
+.padding-top{
+    padding-top: 10px;
+}
+.padding{
+    padding-left: 20px;
+}
+
+#face{
+    height: 10;
+    width: 10;
+}     

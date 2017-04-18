@@ -1,0 +1,83 @@
+#map {
+        width: 77.5%;
+        height: 400px;
+        float: left;
+      }
+body{
+
+	background: #0D152E;
+	color: #fff;
+}
+main {
+    -webkit-column-count:4;
+    -moz-column-count:4;
+    column-count:4;
+
+    -moz-column-gap: 3em;
+    -webkit-column-gap: 3em;
+    column-gap: 3em;
+
+    -moz-column-rule: 1px solid #bbb;
+    -webkit-column-rule: 1px solid #bbb;
+    column-rule: 1px solid #bbb;
+
+    -moz-column-width: 140px;
+    -webkit-column-width: 140px;
+    column-width: 140px;
+}
+/*html, body {
+        height: 100%;
+        margin-left:150px;
+        padding: 0;
+      }*/
+#info{
+	width: 300px;
+    height: 100%;
+    float: left; 
+    text-align: center; 
+    margin-top: 150px;  
+}
+
+#footer{
+    width: 100%;    
+    float: left;
+    clear:both; 
+    
+    
+}
+#floating-panel {
+    position: absolute;
+    top: 10px;
+    left: 5%;
+    z-index: 5;
+    color: #0D152E;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+    text-align: center;
+    font-family: 'Roboto','sans-serif';
+    line-height: 30px;
+    padding-left: 10px;
+}
+#phone{
+    color:#0D152E;
+}
+#street-name{
+    color:#0D152E;
+}
+#market-name{
+    color:#0D152E;
+}
+/*#gauge {
+    position: absolute;
+    top: 10px;
+    left: 5%;
+    z-index: 5;
+    color: #0D152E;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+    text-align: center;
+    font-family: 'Roboto','sans-serif';
+    line-height: 30px;
+    padding-left: 10px;*/

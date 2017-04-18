@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<title>UIC-in</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style-home.css" />
+<link rel="stylesheet" href="css/style-search.css" />
+<head>
+  <link rel="shortcut icon" href="img/favicon.jpg" />
+
+  <script src="http://code.jquery.com/jquery-1.9.1.js" type="text/javascript"></script>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="top">
+  <div class="bar white wide padding card-2">  
+    <a href="#home" class="bar-item button"><img src="img/logo.jpg" width="30px"/><b>UIC</b>-in</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="right hide-small">      
+      <a href="#about" class="bar-item button">About-Us</a>
+      <a href="#contact" class="bar-item button">Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="display-container content wide" style="max-width:1500px;" id="home">
+  <img class="image" src="img/university.jpg" alt="Architecture" width="1500" height="800">
+  <div class="display-middle margin-top center">
+    <h1 class="xxlarge text-white"><span class="padding black opacity-min"><b>UIC-in</b></span> <span class="hide-small text-light-grey">Safe and Cheap Rent</span></h1>
+
+    <!--search-->
+<form class="form-wrapper cf" onsubmit="window.location.href='#maps'">
+       <input type="number" min="10" max="10000" step="10" placeholder="Enter rent cap..." required>
+       <button type="submit">Search</button>
+    </form> 
+    <!--search-->
+
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="content padding" style="max-width:1564px">
+
+  
+  <!-- About Section -->
+  <div class="container padding-32" id="about">
+    <h3 class="border-bottom border-light-grey padding-16">About</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+      occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+      laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="container padding-32" id="contact">
+    <h3 class="border-bottom border-light-grey padding-16">Contact</h3>    
+    <form action="/action_page.php" target="_blank">
+      <input class="input" type="text" placeholder="Name" required name="Name">
+      <input class="input section" type="text" placeholder="Email" required name="Email">
+      <input class="input section" type="text" placeholder="Subject" required name="Subject">
+      <input class="input section" type="text" placeholder="Message" required name="Message">
+      <button class="button blue section" type="submit">
+        <i class="fa fa-paper-plane"></i> Submit
+      </button>
+    </form>
+  </div>
+
+  <!-- Google Map Section-->
+<div class="container padding-32" id="maps">
+<h3 class="border-bottom border-light-grey padding-16">Map</h3> 
+<div id="map" style="width:100%;height:450px;">
+	</div>
+
+</div>
+  
+<!-- End page content -->
+</div>
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="center black padding-16">
+  <p>Powered by @jucjimenezmo</p>
+</footer>
+
+<!-- Google Maps -->
+<!---
+    <script>
+      function initMap() {
+        /*Univsersity of Ilinois (41.8748344, 87.6931075) */
+        var uluru = {lat: 41.8748344, lng: -87.6931075};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    -->
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCS0vg62GCA2-7mqfjpIN3IaP3YgWuWeZE&callback=initMap">
+    </script>
+    <script src="js/main.js" type="text/javascript"></script>
+
+
+</body>
+</html>
+
+
+
+
+

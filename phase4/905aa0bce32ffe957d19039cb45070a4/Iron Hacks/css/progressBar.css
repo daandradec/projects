@@ -1,0 +1,99 @@
+/* CSS Document */
+.dpcontent {
+	visibility: hidden;
+}
+
+.loadInfo {
+	font-style: italic;
+	font-family: "raleway-bold";
+	padding-top: 5px;
+/*	display: inline-block;*/
+}
+
+.loading {
+	display: inline-block;
+}
+
+.ptext {
+	color:#FFFFFF;
+	font-family: "raleway-bold";
+	float: right;
+	margin-right: 3px;
+}
+
+.xprogress {
+    background-color: #1a1a1a;
+    height: 40px;
+    padding: 3px;
+    width: 303px;
+	margin-bottom: 5px;
+    border-radius: 7px;
+    box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;           
+}
+
+.xprogress .sp {
+/*    display: inline-block;*/
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+    transition: width .4s ease-in-out;    
+}
+
+
+.yprogress {
+    background-color: #1a1a1a;
+    height: 40px;
+    padding: 3px;
+    width: 303px;
+	margin-bottom: 5px;
+    border-radius: 7px;
+    box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;           
+}
+
+.yprogress .sp {
+/*    display: inline-block;*/
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+    transition: width .4s ease-in-out;    
+}
+
+
+
+.stripes .sp {
+    background-size: 30px 30px;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
+                        transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+                        transparent 75%, transparent);            
+    
+    animation: animate-stripes 3s linear infinite;             
+}
+
+@keyframes animate-stripes {
+    0% {background-position: 0 0;} 100% {background-position: 60px 0;}
+}
+
+.blue .sp {
+    background-color: #34c2e3;   
+}
+
+.green .sp {
+      background-color: #2ecc71;
+      background-image: linear-gradient(top, #2da360, #099946);  
+}   
+
+.xgreen .sp {
+      background-color: #a5df41;
+      background-image: linear-gradient(top, #a5df41, #4ca916);  
+}
+
+
+.red .sp {
+      background-color: #c60f0f;
+      background-image: linear-gradient(top, #cc2a2a, #c60f0f);  
+}
+
+.xblue .sp {
+	  background-color: #066899;
+      background-image: linear-gradient(top, #1c6d96, #066899);  
+}

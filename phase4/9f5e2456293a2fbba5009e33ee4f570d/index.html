@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>StudentPlace</title>
+  <!--Styles -->
+  <link rel="stylesheet" type="text/css" href="map-icons-master/dist/css/map-icons.css">
+  <link rel="stylesheet" href="css/ownStyle.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+  <!--API's -->
+  <script type="text/javascript" src="js/mapsManager.js"></script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlLfpgB6nUpuGKYdYQIqEjLGdBoUa8wh8&callback=initMap">
+  </script>
+  <!--javascript -->
+  <script type="text/javascript" src="http://d3js.org/d3.v3.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script type="text/javascript" src="js/dataSetManager.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="map-icons-master/dist/js/map-icons.js"></script>
+
+
+</head>
+<body>
+
+    <div >
+      <div id="title">
+          <h1>StudentPlace </h1>
+      </div>
+      <div id="map" class="map-opt"></div>
+      <div class="form-group right-pane">
+
+        <input class="form-control" id="collegeSearch"
+          type="search" name="search"  value="" placeholder="Your College ...">
+        <ul class="list-group asy-search-list">
+            <!-- place for suggestions-->
+        </ul>
+        <div class="panel panel-primary">
+          <div class="panel-heading">Filters</div>
+          <div class="panel-body">
+            <form class="" >
+              <input type="checkbox" name="parks" value=""> Parks <br>
+              <input type="checkbox" name="stores" value=""> Stores <br>
+              <input type="checkbox" name="sports" value=""> Sports <br>
+              <input type="checkbox" name="parks" value=""> Mall <br><br>
+            </form>
+            <button id="search"class="btn btn-primary">Search</button>
+          </div>
+          <br><br>
+        </div>
+        <div class="panel panel-info">
+          <div class="panel-heading"> Climate Info</div>
+          <div class="panel-body" id="climateText">
+          </div>
+        </div>
+        <div >
+
+        </div>
+      </div>
+    </div>
+
+
+
+  <div class="panel panel-default botton-pnl" >
+    <div class="panel-heading">Places</div>
+    <div class="panel-body" >
+      <ul id="places-list">
+
+      </ul>
+
+    </div>
+  </div>
+
+</body>
+</html>

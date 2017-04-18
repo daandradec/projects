@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Find your new home">
+  <meta name="author" content="Yeliana Torres">
+  <title>Purdue-UNAL Gold IronHacks Project</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  <!-- JavaScripts -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="../semantic/dist/semantic.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/map.js"></script>
+
+</head>
+<body>
+
+<div class="ui segments">
+  <div class="ui inverted segment" id="header">
+    Find Your Home
+  </div>
+
+  <div class="ui clearing segment" id="menu">
+    <div class="ui secondary right floated menu">
+      <div class="ui inverted red labeled icon button active">
+        <i class="protect icon"></i> Security
+      </div>
+      <div class="ui inverted blue labeled icon button">
+        <i class="road icon"></i> Distance
+      </div>
+      <div class="ui inverted green labeled icon button">
+        <i class="dollar icon"></i> Price
+      </div>
+    </div>
+  </div>
+
+  <div class="ui secondary segment" id="content">
+    <div class="ui stackable grid">
+      <div class="nine wide column">
+        <div class="ui segment info">
+          <div class="ui dividing header"> Holi </div>
+          <div class="ui top right attached label dropdown button">
+            <i class="filter icon"></i>
+            <span class="text">Filter</span>
+            <div class="menu">
+              <div class="header">
+                <i class="road icon"></i> Filter by distance
+              </div>
+              <div class="divider"></div>
+              <div class="item">10 Km</div>
+              <div class="item">20 Km</div>
+              <div class="item">30 Km</div>
+            </div>
+          </div>
+
+          <!-- <div class="ui divider"></div> -->
+          <!-- <div id="info"></div> -->
+          <div class="ui three stackable link cards">
+            <div class="card">
+              <div class="image"> <img src="images/map-example.png"> </div>
+              <div class="content">
+                <div class="header"> Mayfair Commons </div>
+                <div class="description"> 4444 W. Lawrence Ave. </div>
+              </div>
+              <div class="ui two button attached buttons">
+                <div class="ui button"> <i class="add icon"></i> Add </div>
+                <div class="ui primary button"> <i class="marker icon"></i> Visit </div>
+              </div>
+            </div>
+            <div class="ui popup">
+              <div class="header">Security Rating</div>
+              <div class="ui star rating" data-rating="3" data-max-rating="5"></div>
+            </div>
+          </div>
+
+        </div>
+        <div class="ui segment info">
+          <div class="ui dividing header"> Place Information </div>
+          <div id="extra-info"></div>
+        </div>
+      </div>
+
+      <div class="seven wide column">
+        <div class="ui segment info" id="map"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC4lO1PjOC9xzRaOK86FJoht6VBFYcsB8&libraries=visualization"></script>
+
+</body>
+</html>

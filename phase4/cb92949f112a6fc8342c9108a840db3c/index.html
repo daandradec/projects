@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+    <head>
+	    <meta charset="utf-8">
+	    <meta name="author" content="David Rico">
+        <meta name="keywords" content="University of Ilinois,safety,budget,near">
+        <link rel="shortcut icon" href="Imagenes/navicon.jpg" />
+	    <title>Chicago Map Demo</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        
+        <script async defer
+	       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1ZdrvLtiN-UqPcrsjB-4C_Ie8UQMeGyw&callback=initMap">
+        </script>
+        
+        <script type="text/javascript">
+	       function initMap(){
+		      var mapDiv = document.getElementById('map');
+		      var map = new google.maps.Map(mapDiv, {
+			     center: {lat: 41.8708, lng: -87.6505},
+			     zoom: 16});
+	       }
+        </script>
+        
+        <script type="text/javascript">
+	       function initMap(){
+		      var mapDiv = document.getElementById('map');
+		      var map = new google.maps.Map(mapDiv, {
+			     center: {lat: 41.8708, lng: -87.6505},
+			     zoom: 16});
+		      var marker = new google.maps.Marker({
+			     position: {lat: 41.8708, lng: -87.6505},
+			     map: map,
+			     title: 'Department of Computer Science – University of Illinois, Chicago'
+		      })
+	       }
+        </script>
+        
+    </head>
+
+    <body class="body">
+        
+        <h1 class="title">Find A place whith Chicago Maps</h1>
+        
+        <header>
+            <div class="menu_bar">
+                <a href="#" class="bt-menu">Menu</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="HTML/dev.html">Home</a></li>
+                    <li><a href="">Map</a></li>
+                    <li><a href="HTML/dev.html">About app</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="options">
+            <a href="#"><img class="img" src="Imagenes/coins.jpg"></a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><img class="img" src="Imagenes/bus.jpg"></a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><img id="img-weather" class="img" src="Imagenes/weather.jpg"></a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><img class="img" src="Imagenes/radio.jpg"></a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><img class="img" src="Imagenes/identify.jpg"></a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        
+        <div id="map"></div>
+        
+        <div class="box">
+            <iframe src="https://en.tutiempo.net/s-widget/app/?LocId=28209&sc=0" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true" class="weather"></iframe>
+            
+        </div>
+        
+	    <script src="JS/jquery.js"></script><!--tomado de "http://code.jquery.com/jquery-latest.js"-->
+        <script src="JS/map-options.js"></script>
+    </body>
+</html>

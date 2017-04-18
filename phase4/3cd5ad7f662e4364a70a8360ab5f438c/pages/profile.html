@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<meta name="Profile, rent estate">
+	<link rel="stylesheet" type="text/css" href="../css/profile.css">
+	<link rel="stylesheet" type="text/css" href="../css/float-rid.css">
+</head>
+<body>
+	<header>
+		<div class="row">
+			<div class="col-12">
+				 <img src="../public/home.png" class="logo">
+				 <ul class="navbar">
+				 	<li class="nav-item"><a href="#">Profile</a></li>
+				 	<li class="nav-item"><a href="../index.html">Log out</a></li>
+				 </ul>
+			</div>
+		</div>	
+	</header>
+	<div class="row">
+		<div class="col-6">
+			<!--Google maps -->
+			<h1>Your location</h1>
+			<div id="map"></div>
+			<script>
+			      function initMap() {
+			        var uluru = {lat:41.8708 , lng:-87.6505 };
+			        var map = new google.maps.Map(document.getElementById('map'), {
+			          zoom: 14,
+			          center: uluru
+			        });
+			        var marker = new google.maps.Marker({
+			          position: uluru,
+			          map: map
+			        });
+			      }
+			</script>
+			<script async defer
+    			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmDzUQASE8SCG3VYfx2Jlyzx29gn94XXQ&callback=initMap">
+    		</script>
+		</div>
+		<div class="col-6">
+			<h1 id="ttd">Things to do</h1>
+				<div class="activities">
+					<div class="activity">
+						<h4>Activity 1</h4>
+						<p>description</p>
+					</div>
+					<div class="activity">
+						<h4>Activity 2</h4>
+						<p>description</p>
+					</div>
+					<div class="activity">
+						<h4>Activity 3</h4>
+						<p>description</p>
+					</div>
+					<div class="activity">
+						<h4>Activity 4</h4>
+						<p>description</p>
+					</div>
+				</div>
+		</div>
+	</div>
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+				<div class="row">
+					<div class="col-12">
+					    <span class="close">&times;</span>
+					    	<h1>You're going to rent this estate</h1>
+					    	<h3>Estate 1</h3>
+							<p>Username's property</p> 
+		  			</div>
+
+	  			</div>
+  				<div class="row">
+					<div class="col-12">
+				    	<span class="close">&times;</span>
+				    	<h3>Owner</h3>
+						<p>Username</p>
+						<h3>Location</h3> 
+						<p> Address</p>
+						<button>Rent it</button>
+	  				</div>
+  				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-6">
+				<h1 id="ttd">Rent an estate</h1>
+				<div class="rent">
+					<div class="esatates">
+						<h4>Estate 1</h4>
+						<p>Username's property</p>
+					</div>
+					<div class="estates">
+						<h4>Estate 2</h4>
+						<p>Username's property</p>
+					</div>
+					<div class="estates">
+						<h4>Estate 3</h4>
+						<p>Username's property</p>
+					</div>
+					<div class="estates">
+						<h4>Estate 4</h4>
+						<p>Username's property</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-6">
+				<img src="../public/banner4.jpg" class="images">
+				<button id="myBtn" class=" btn btn-primary" >Rent it</button>
+			</div>
+		</div>
+		<footer>
+		<div class="row">
+			<div class="col-4">
+				<div class="footnote">
+					<h3><b>Rent for students</b></h3>
+					<p><b>University of Illinois</b></p>
+				</div>
+			</div>
+			<div class="col-4">
+				<p id="footlogo"><a href="#" ><img src="../public/logo.png"></a></p>
+			</div>
+			<div class="col-4">
+				<h3 class="social">Connect with us!</h3>
+				<ul class="social">
+					<li class="medias"><a href="https://facebook.com"><img src="../public/facebook.png" alt="facebook image"></a></li>
+					<li class="medias"><a href="https://youtube.com"><img src="../public/youtube.png" alt="youtube image"></a></li>
+					<li class="medias"><a href="https://twitter.com"><img src="../public/twitter.png" alt ="twiiter image"></a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	
+<script type="text/javascript" src="../javascript/profile.js"></script>
+</body>
+</html>

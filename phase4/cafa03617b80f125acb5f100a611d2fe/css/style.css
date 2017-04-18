@@ -1,0 +1,270 @@
+html {
+    background: url("../img/chicagoBackground.jpg") no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+  /*  background-color: #0C5EC2;*/
+    font-family: 'Average Sans', sans-serif;
+    color: #FFFFFF;
+}
+
+h2 {
+    margin: 0px;
+    font-size: 45px;
+}
+
+.header {
+    margin-bottom: 12px;
+    padding: 5px 20px 0px 20px;
+    width: auto;
+    height: 100px;
+    font-family: 'Raleway', sans-serif;
+    background-color: rgba( 0, 58, 130, 0.6);
+    box-shadow: 2.3px 2.3px 5px #FFFFFF;
+    border-radius: 18px; 
+}
+
+.header p {
+    padding: 0px;
+    text-align: right;
+    font-style: italic;
+}
+
+#header_img {
+    width: 60%;
+    height: 100%;
+    float: right;
+}
+
+#options, #results {
+    width: 30%;
+    height: 500px;
+    background-color: rgba( 255, 255, 255, 0.6);
+    float: left;
+    border-radius: 20px;
+}
+
+#results {
+    display: none;
+    overflow: auto;
+}
+
+#menu img {
+    width: 100%;
+}
+
+#container-map {
+    width: 70%;
+    height: auto;
+    float: right;
+}
+
+#map {
+    width: auto;
+    height: 500px;
+    background-color: grey;
+    border-radius: 12px;
+}
+
+label {
+  display: block;
+  margin: .5em 0 0 0;
+}
+
+form {
+    padding: 12px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+    transition: 0.3s;
+    width: 60%;
+    margin: 15px 20px;
+    padding: 2px 5px;
+    border-radius: 5px;
+    color: black;
+}
+
+.button {
+    background-color: #009CE8;
+    border-radius: 30px;
+  /*  border: none;*/
+    color: white;
+    padding: 13px 27px;
+    margin: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0C5EC2;
+    color: black;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #009CE8;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+input[type=submit]:hover {
+    background-color: #0C5EC2;
+}
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #FFF;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav p, a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav p:hover, a:hover, .offcanvas p:focus{
+    color: #111;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style for animation of information in image */
+.container-img
+{
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+    background: #fff;
+    border-radius: 2px;
+}
+
+.container-img .mask,.container-img .content
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0
+}
+
+.container-img img
+{
+    width: 100%;
+    display: block;
+    position: relative;
+    border-radius: 2px;
+    opacity: 0.9;
+}
+
+.container-img h2
+{
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    padding: 10px;
+    background: #333;
+    margin: 20px 
+}
+
+.container-img p
+{
+    position: relative;
+    color: #333;
+    text-align: center
+}
+
+.ani-img img
+{
+    transition: all 0.2s linear;
+}
+.ani-img .mask
+{
+    opacity: 0;
+    background-color: rgba(255,255,255, 0.7);
+    transition: all 0.3s ease-in-out;
+}
+
+.ani-img h2
+{
+    transform: translateX(-200px);/*Move to the left*/
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+}
+
+.ani-img p
+{
+    transform: translateX(200px);/*Move to the right*/
+    opacity: 0;
+    transition: all 0.4s linear;
+}
+
+.ani-img:hover img
+{
+    transform: scale(1.1);/*Zoom image*/
+}
+
+.ani-img:hover .mask
+{
+    opacity: 1;
+}
+
+.ani-img:hover h2,
+.ani-img:hover p
+{
+    opacity: 1;
+    transform: translateX(0px);/*Returns to the original positions*/
+}
+
+.ani-img:hover p
+{
+    transition-delay: 0.1s;
+}

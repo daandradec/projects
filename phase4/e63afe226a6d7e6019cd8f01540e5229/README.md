@@ -1,0 +1,3 @@
+# Welcome come to Ironhacks!
+
+Still working in the integration of the dataset about rents in the city, now the sofware is getting the data about crimen rates in the city and trying to show the data in a heat map. In the last commit a draggable marker was added, this marker get the actual address of the marker and the goal of this marker is to get the nearest information to the marker in the datasets.

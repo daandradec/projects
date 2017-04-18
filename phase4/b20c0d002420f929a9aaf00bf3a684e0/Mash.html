@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Where to live to go</title>
+    <link rel="stylesheet" href="css/Style.css" type="text/css" />
+    <script src=" https://code.jquery.com/jquery-3.2.0.min.js"></script>
+  	<script src="http://d3js.org/d3.v3.min.js"></script>
+    <script  src="js/map.js" type="text/javascript"> </script>
+    <script  src="js/Climate.js" type="text/javascript"> </script>
+  </head>
+
+  <body>
+    <header class="climateHead">
+        <div id="top"> WHERE TO GO TO LIFE  </div>
+       <div class=climate> Today climate could be:
+         <div id="wet">  </div>
+       </div>
+
+    </header>
+    <div id="contenedor">
+      <div id="mitad">
+        <div class="menu" id="home">
+          <p class="text"> Rent</p>
+        </div>
+        <div class="menu"id="study">
+          <p class="text"> Study</p>
+        </div>
+        <div class="menu"id="fun">
+          <p class="text"> Fun </p>
+        </div>
+        <div class="menu"id="food" >
+          <p class="text"> Food </p>
+        </div>
+
+        <div class="Informacion">
+          <p class="inf" id="inf1"></p>
+          <p class="inf" id="inf2"></p>
+          <p class="inf" id="inf3"></p>
+          <p class="inf" id="inf4"></p>
+        </div>
+
+
+
+      </div>
+      <div id="map"></div>
+
+
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIElRlL8dP2ABc7Mx9NTxVtfNMp3tvH9w&callback=initMap">
+    </script>
+
+  </body>
+</html>

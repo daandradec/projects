@@ -1,0 +1,3 @@
+function hospitalb() {
+        alert("Me haz dado un click");
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+		<script src="JS/jquery-3.2.0.js"></script>
+		<script type="text/javascript" src="JS/xml2json.js"></script>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<?php header("Access-Control-Allow-Origin: *");
+ ?>
+
+
+    <style>
+
+			@font-face {
+				font-family: LoveloLight;
+				src: url(font/LoveloLight.otf);
+			}
+			@font-face {
+				font-family: capsuula;
+				src: url(font/Capsuula.ttf);
+			}
+			#mash{
+				height: 80%;
+				width: 98%;
+				margin: 5px;
+			}
+			#info{
+				border: 2px solid #242f3e;
+				float: right;
+				text-align-last: center;;
+				padding-top: 10px;
+				height: 100%;
+				width: 29%;
+				border-radius: 20px;
+
+			}
+      #map {
+				overflow: hidden;
+				border-radius: 20px;
+				float: left;
+        height: 100%;
+				width: 70%;
+				background-color: grey;
+				resize: horizontal;
+				overflow: auto;
+      }
+			#option{
+				height: 20px;
+				margin: 5px;
+				width: 66%;
+				text-align-last: left;
+				font-size: 12px;
+				border-radius: 7px;
+				padding: 20px;
+				border: 2px solid #242f3e;
+			}
+			#Pre {
+				margin: 1%;
+				background-color: #242f3e;
+				color: White;
+				text-align-last: left;
+			}
+      /* Optional: Makes the sample page fill the window. */
+      HTML, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+				background-color: WHITE;
+				color: #242f3e;
+				text-align-last: center;
+				font-family: capsuula;
+				font-weight: bold;
+
+      }
+			.header {
+				padding-top: 1px;
+				padding-bottom: 1px;
+				border-radius: 7px;
+    		height: 50px;
+				font-family: LoveloLight;
+				background-color: #24292e;
+				color: White;
+				text-align: center;;
+				margin: 0%;
+			}
+
+
+    </style>
+
+	<title>Welcome! | Windy Places</title>
+
+</head>
+<body>
+
+
+	<div class="header" role="banner"> <H2>  ¡WINDY PLACES!</H2></div>
+
+
+	<div id="other"></div>
+	<p>Thi website was made for all new stutends moving to chicago, here you can find a good place to rent.</p>
+	<div id="option">
+		<input name="updateButton"
+					 type="image"
+					 src="Images/Apartment-icon-2.png"
+					 value="Update"
+					 onclick="updateData()"
+					  width="30" height="30"
+					 />
+		Apartments
+		<input name="updateButton"
+					 title ="Show/Hide Libraries"
+					 type="image"
+					 src="Images/library.png"
+					 value="Update"
+					 onclick="drawLibraries()"
+					 width="30" height="30"
+					 />
+		Click, Libraries
+	</div>
+<div id="mash">
+	<div id="map">
+		<script type="text/javascript" src="JS/Markers.js"></script>
+		<script type="text/javascript" src="JS/Mapa.js"></script>
+		<script src="JS/DataZillow.js"></script>
+		<script src="JS/DataHouses.js"></script>
+		<script src="JS/Libraries.js"></script>
+		<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaO9nwxq9PpGEB4hkm-XLdZg3CCAI9C3Y&callback=initMap" async defer></script>
+
+	</div>
+	<div id="info">Click on any icon at the map (Aprtment, librarie...) to show its information. </div>
+</div>
+	<div id="Pre">
+				<script src="JS/Data.js"></script>
+	</div>
+
+		<footer>
+	  <p>Posted by: Jimmy Pulido</p>
+	  <p>Contact information: <a href="mailto:jiapulidoar@gmail.com">
+	  jiapulidoar@gmail.com</a>.</p>
+	</footer>
+
+</body>
+</html>

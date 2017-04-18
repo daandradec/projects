@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<!--	Recomended for Bootstrap responsive function.-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--	Linkin Bootstrap JS - CSS and stylesheet.-->
+	<link rel="stylesheet" href="js/bootstrap.js">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/styles.css">
+   	<link rel="stylesheet" href="css/tables.css">
+   	<link rel="stylesheet" href="css/buttons.css">
+   	<link rel="stylesheet" href="css/progressBar.css">
+   	<link rel="stylesheet" href="css/nice-select.css">
+
+	<title> Rent your place </title>
+	
+</head>
+
+<body>
+	<div class="container-fluid">
+		<header>
+	
+		<div class="nav-logo">
+			<a class="logo"><img width="70px" height="70px" src="images/uic_logo_3.png"></a>
+		</div>
+				
+	
+        <nav class="site-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+			
+		
+				
+				<div class="row">
+					<div class="col-md-12">
+						<h1 class="header_title">Find your <span style="color: #D3A881">own</span> <span style="display: block; margin-top: 0.35em">place now </span></h1>
+					</div>
+				</div>
+		
+				<div class="row">
+				  <div class="col-xs-6 col-sm-4  col-sm-offset-4 col-xs-offset-3 col-md-4 col-md-offset-4 col-lg-2 col-lg-offset-5"> 
+					
+						 <a class="btn btn-sm animated-button victoria-three getting-started" href="#start" id="GTS">Getting started</a>
+			
+					</div>
+				</div>	
+			
+		</header>
+		
+			<div class="row top-padding">
+				<div class="col-md-2 col-md-offset-2 col-xs-8 col-xs-offset-2 col-sm-8  header-img-block">
+					<img class="img-responsive header-img" src="images/header_park.png">
+					<h2 class="titles">recreative zones</h2>
+					<p class="description">
+						Find the nearest recreative zones arround your favorite house. You will see the closest choices for Parks, Restaurants, Sport zones, Entertainment zones and Shops, 1KM arround.
+					</p>
+				</div>
+				<div class="col-md-2 col-md-offset-1 col-xs-8 col-xs-offset-2 col-sm-8   header-img-block">
+					<img src="images/header_city.png" alt="" class="header-img">
+					<h2 class="titles">the best places in the city</h2>
+					<p class="description">
+						Here you will find filtred rent options with low crime rate and proximity to points of Interest.
+					</p>
+				</div>
+				<div class="col-md-2 col-md-offset-1 col-xs-8 col-xs-offset-2 col-sm-8   header-img-block">
+					<img src="images/header_traffic.png" alt="" class="header-img">
+					<h2 class="titles">low traffic</h2>
+					<p class="description">
+						Live close to UIC University, avoid traffic. Check proximity of renting options ranked by lowest proximity.
+					</p>
+				</div>
+			</div>
+
+	  <div class="row top-padding">
+				<div class="col-md-6 col-md-offset-3">
+				  <h1 style="display: inline"><a name="start" id="start"></a> find the best options based in what you want</h1>
+				  <ul class="instructions">
+				  	<li>Circles surround 1Km</li>
+				  	<li>Choose a house and toggle points of interest.</li>
+				  	<li>Check all results in table</li>
+				  	<li>Select and click any result in table to display on map</li>
+				  	<li>You can sort results</li>
+				  	<li>Check current weather</li>
+				  </ul>
+				</div>
+				
+
+	  </div>
+		
+		<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+				<a class="anchorMap" href="#anchorMap"></a>
+				<a name="anchorMap" id="anchorMap"></a>
+					<div class="button-group-navigation" target="_blank">
+					  <li><a class="xbtn park" href="#">PARKS</a></li>
+					  <li><a class="xbtn sport" href="#">SPORTS</a></li>
+					  <li><a class="xbtn entertainment" href="#">ENTERTAINMENT</a></li>
+					  <li><a class="xbtn restaurant" href="#">RESTAURANTS</a></li>
+					  <li><a class="xbtn stores" href="#">STORES</a></li>
+					</div>
+				</div>
+		</div>		
+								
+<!--				Test-->
+			<div class="row">
+				<div class="test">
+					
+				</div>
+			</div>
+<!--				Weather -->
+		<div class="row">
+			<div class="col-md-4 col-md-offset-2">
+				<div class="weather">
+					
+				</div>
+			</div>
+		</div>
+		<div class="row">
+<!--				Google Maps-->
+			
+				<div class="col-md-5 col-md-offset-2">
+					<div id="map" class="img-responsive">
+					</div>
+					
+<!--					Progress Bar-->
+			     <div class="loading">
+					 <p class="loadInfo">Loading Data...</p>
+					<div class="xprogress green stripes">
+						<div class="sp"></div>
+					</div>
+			     </div>
+			
+				</div>
+				<div class="col-md-3 info_zone">
+					<h1 style="text-align: center; color: #D3A881">Details</h1>
+					<div class="info_zone_data">
+						<p>Select a house in the map or in the table below to start.</p>
+					</div>
+					
+				<div class="dpcontent">	
+					<div class="distance">
+						<h4>Distance</h4>
+						<div class="yprogress red">
+							<div class="sp">
+
+							</div>
+						</div>
+					</div>
+					
+					<div class="safety">
+						<h4>Safety</h4>
+						<div class="yprogress xblue">
+							<div class="sp">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+
+	  </div>
+	  
+	  <div class="row">
+	  	<div class="col-md-3 col-md-offset-2">
+	  		<div class="sort">
+	  			<h3>Sort results </h3>
+	  			<select name="sorting" id="sorting">
+	  				<option value="0" selected>Choose option</option>
+	  				<option value="1">Property Name [A - Z]</option>
+	  				<option value="2">Management Company [A - Z]</option>
+	  				<option value="3">Safety [highest - lowest]</option>
+	  				<option value="4">Distance [lowest - highest]</option>
+	  			</select>
+	  		</div>
+	  	</div>
+	  </div>
+			
+		
+<!--			Actual table -->
+		<div class="row" style="padding-top: 1em;">
+			<div class="col-md-10 col-md-offset-1">
+				 <table class="table-fill" id="myTable">
+					<thead>
+					<tr>
+						<th class="text-left">Property Name</th>
+						<th class="text-left">Addresss</th>
+						<th class="text-left">Management Company</th>
+						<th class="text-left">Phone number</th>
+						
+						<th class="text-left">Safety</th>
+						<th class="text-left">Distance</th>
+<!--						<th class="text-left"></th>-->
+					</tr>
+					</thead>
+					<tbody id="dataTable">
+
+					</tbody>
+			   </table>
+			</div>
+		</div>
+			
+			
+			
+			<foooter>
+				<div class="row footer">
+					<div class="col-md-2 col-md-offset-5">
+						<img class="unal" src="images/unal.png" alt="">
+						
+					</div>
+					<span class="creator">Created by: Daniel Rodriguez Meza</span>
+				</div>
+			</foooter>
+			
+			
+	</div>
+		
+
+
+
+<!--	JavaScript, D3js and jQuery start up.-->
+	<script src="js/jquery-3.2.0.js"></script>
+	<script src="js/dataSet.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/myEffects.js"></script>
+	<script src="js/jquery.nice-select.js"></script>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+<!--	Google maps script-->
+<script src="js/googleMap.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBFKLEgMvNIBl3ypCtZ2X7KWTP2eFKQrc&libraries=places&callback=initMap" async defer></script>
+<script src="js/manageData.js"></script>
+
+<script src="js/climate.js"></script>
+<script src="js/houseBars.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('select').niceSelect();
+		});
+	</script>
+</body>
+</html>

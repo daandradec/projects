@@ -1,0 +1,24 @@
+#sidebar {
+	height: 600px;
+    width: 15%;
+	float: left;
+	background-color: black;
+}
+#chicagomap {
+	height: 600px;
+    width: 85%;
+	float: right;
+}
+.navbar {
+	margin-bottom: 20px;
+	background-color: black;
+}
+.footer {
+	background-color: black;
+	color: white;
+}
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}

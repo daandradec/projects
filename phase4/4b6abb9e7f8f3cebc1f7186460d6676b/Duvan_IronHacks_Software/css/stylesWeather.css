@@ -1,0 +1,240 @@
+html,body{
+    height: 100%;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+body{ 
+    background-image: url('../background_image/congruent_pentagon.png') !important;
+}
+#divZero{
+    position:absolute;
+    width : 70%;
+    height : 200%;
+    top:20%;
+    left: 15%;
+    background-color: #DCD6D2; 
+    -webkit-border-radius: 5px 10px;
+    -moz-border-radius: 5px 20px;
+}
+#background1{
+    position:absolute;
+    width:100%;
+    height:50%;
+    background:url('../img/background.jpg');
+    -webkit-border-radius: 5px 10px;
+    -moz-border-radius: 5px 20px;
+}
+#background2{
+    position:absolute;
+    width:100%;
+    height:50%;
+    top:50%;
+    background:url('../img/background2.jpg');
+    -webkit-border-radius: 5px 10px;
+    -moz-border-radius: 5px 20px;
+}
+#divOne{
+    position:absolute;
+    width:100%;
+    height:10%;
+    /*background-color: #65A72B;*/
+    -webkit-border-radius: 5px 10px 5px 5px;
+    -moz-border-radius: 5px 10px 5px 5px;
+}
+#divTwo{
+    position:absolute;
+    width: 100%;
+    height:15%;
+    top:10%;
+    background-color: #45444D;
+    opacity: 0.7;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px; 
+}
+#divThree{
+    position:absolute;
+    width:100%;
+    height:25%;
+    top: 25%;
+    -webkit-border-radius: 0px 0px 10px 10px;
+    -moz-border-radius: 0px 0px 10px 10px;
+}
+#divHeader3{
+    position:absolute;
+    width:100%;
+    height: 35%;
+    background-color: #04738E;
+}
+#divFour{
+    position:absolute;
+    top:35%;
+    width:33%;
+    height: 65%;
+    background-color: #58AB31;
+    opacity: 0.8;
+}
+#divFive{
+    position:absolute;
+    width:20%;
+    height: 65%;
+    top:35%;
+    left:33%;
+    background-color: #58AB31;
+    opacity: 0.8;
+}
+#divSix{
+    position:absolute;
+    width:47%;
+    height: 65%;
+    top:35%;
+    left:53%;
+}
+#divSeven{
+    position:absolute;
+    width:100%;
+    height:20%;
+    top: 50%;
+    background-color: #BA2121;
+    opacity: 0.8;
+}
+#divEight{
+    position:absolute;
+    width:30%;
+    height: 100%;
+}
+#divNine{
+    position:absolute;
+    width:70%;
+    height: 100%;
+    left:30%;
+    background-color: #C12161;
+}
+.spacer{
+    position:Absolute;
+    width:100%;
+    height:20%;
+    top:220%;
+}
+#header1{
+    background: -webkit-linear-gradient(#0B2B5E,#8FAFE4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color:white;
+    text-align: center;
+    font-size: 20pt;
+}
+#header2{
+    color: white;
+    text-align: center;
+    font-size: 16pt;
+}
+#header3{
+    color: #E8EDEE;
+    text-align: center;
+    font-size: 12pt;
+}
+#paragraph1{
+    color: white;
+    position:absolute;
+    top:20%;
+    left:20%;
+    font-size: 8pt;
+}
+#paragraph2{
+    color: white;
+    position:absolute;
+    top:55%;
+    left:20%;
+    font-size: 20pt;
+}
+#paragraph3{
+    color: white;
+    position:absolute;
+    top:25%;
+    left:10%;
+    font-size: 20pt;
+}
+#paragraph4{
+    color: white;
+    position:absolute;
+    top:60%;
+    left:40%;
+    font-size: 20pt;
+}
+#paragraphWeather{
+    color: white;
+    position:absolute;
+    top:30%;
+    left:20%;
+    font-size: 20pt;
+}
+#paragraphWeather2{
+    color: white;
+    position:absolute;
+    top:55%;
+    left:20%;
+    font-size: 18pt;
+}
+#imgReport{
+    width:100%;
+    height:100%;
+}
+#hD1{
+    position:absolute;
+    left: 30%;
+}
+#description{
+    position:absolute;
+    top:20%;
+    left: 40%;
+}
+#hD2{
+    position:absolute;
+    top:30%;
+    left: 28%;
+}
+#maxTmp{
+    position:absolute;
+    top:50%;
+    left: 45%;    
+}
+#hD3{
+    position:absolute;
+    top:65%;
+    left: 28%;
+}
+#minTmp{
+    position:absolute;
+    top:85%;
+    left: 45%;    
+}
+svg {
+  position: absolute;
+  top: 55%;
+  width: 70%;
+  left: 15%;
+  height: 15%;
+  background-color:#111;
+  opacity:0.8;
+  -webkit-border-radius: 5px 20px;
+  -moz-border-radius: 5px 20px;
+}
+
+#underlay {
+  -webkit-filter: blur(4px);
+  -moz-filter: blur(4px);
+  -ms-filter: blur(4px);
+  -o-filter: blur(4px);
+  filter: blur(4px);
+}
+#overlay path,
+#overlay circle {
+  fill: #222;
+  stroke: #821;
+  stroke-opacity: 0;
+}
+
+#overlay .lit {
+  fill: #e71;
+  stroke-opacity: 1;
+}

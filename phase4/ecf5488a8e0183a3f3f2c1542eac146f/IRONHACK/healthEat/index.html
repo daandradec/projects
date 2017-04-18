@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>healthEat</title>
+	<script type="text/javascript" src="js/d3.js"></script>
+	<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.color-2.1.2.min.js"></script>	
+<link href="css/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <script>
+   /*   function initMap() {
+        var tippecanoeCo = {lat: 40.40, lng: -86.89};
+		 var snapOne = {lat:40.42321, lng: -86.85836};
+        var map = new google.maps.Map(document.getElementById('googleMap'), {
+          zoom: 12,
+          center: tippecanoeCo
+		
+
+        });
+		  		var markZucc = new google.maps.Marker({position: snapOne,map: map, title:"A vendor that accepts SNAP"});
+      } */
+		
+		
+		$(document).ready(function(){
+		//begin today's weather	
+		weatherNow = d3.json('http://forecast.weather.gov/MapClick.php?lat=40.45&lon=-86.858139&FcstType=json', function(json){
+			
+			
+			var todayTemp = json.currentobservation.Temp + "&#8457;";
+			
+			console.log(todayTemp);
+			
+			$("#currentWeather").html(todayTemp);
+			
+		}); //end today's weather
+			
+			var windowH = $(document).innerHeight() - 70;
+			
+			$("#googleMap").css("height", windowH);
+			
+			//code that shows food Search Bar
+			$("#grocerySearch").click(function(){
+				$("#foodSearchBar").toggle();
+				
+								
+			});//end code that shows food Search Bar
+			
+			//loads data
+ 			d3.text("data/IN_SNAP.csv", function(unparsedData)
+  {
+				var dataSet = d3.csvParseRows(unparsedData);
+			
+				console.log(dataSet);
+				
+				initMap(dataSet);
+
+			}); //end load data
+			
+			//loads price data
+ 			d3.text("data/PRICE.csv", function(unparsedDataTwo)
+  {
+				var dataSetPrice = d3.csvParseRows(unparsedDataTwo);
+			
+				console.log(dataSetPrice);
+				
+				doSearch(dataSetPrice);
+
+			}); //end load data
+			
+			//store info hide
+			$("#closeStore").click(function(){
+				
+				$("#storeInfo").hide();
+			});
+
+			//time to type!
+		
+			
+		
+		}); //end onready
+		//begin map
+		function initMap(dataSet) {
+        var tippecanoeCo = {lat: 40.40, lng: -86.89};			
+		var map = new google.maps.Map(document.getElementById('googleMap'), {
+          zoom: 12,
+          center: tippecanoeCo});		
+			  
+			  
+			for(i=0; i < dataSet.length; i++){
+					
+				var marker = new google.maps.Marker({position: {lat:+dataSet[i][2], lng:+dataSet[i][1]}, map: map, title: dataSet[i][0]});
+				
+				marker.addListener('click', function(){
+					//marker click event
+					map.setCenter(this.getPosition());
+					
+					$("#storeInfo").show();
+					
+					var storeName = this.getTitle();
+					
+					$("#storeInfoHeader").html(storeName);
+					
+					for(var i=0; i!==-200; ){
+						var testName = dataSet[i][0];
+						var doBreak = false;
+						if(testName===storeName){
+							
+							$("#storeAdd").html(dataSet[i][3]);
+							$("#storeAddTwo").html(dataSet[i][5]);
+							doBreak = true;
+						}
+						
+						i++;
+						if(doBreak){
+							i = -200;
+						}
+						
+					}
+					
+				}) //end marker click event
+				
+				}
+				
+			  
+				  
+		
+			  
+		  };
+		
+		function doSearch(dataSetPrice){ $("#foodSearch").keyup(function(){
+				
+				var drawCount = 1;
+				var i = 0;
+				var query = String($("#foodSearch").val());
+				
+				for(var i=0; i < 54; i++){
+					var veggieCompare = String(dataSetPrice[i][3]);
+					if(veggieCompare.includes(query)){
+						var theResult = dataSetPrice[i][3];
+						var thePrice = dataSetPrice[i][9];
+						console.log(theResult);
+						$("#resultOne").html(theResult);
+						$("#resultPrice").html(thePrice);
+					}
+				}
+			
+				
+			}); //end search 
+						   }
+		
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPx-1nL_cljwVGV6Rwz3TT6H9Ml1VGzP8&callback=initMap">
+    </script>
+
+	<div id="topBar">
+	<!--	<img src="img/hamburger.gif" id="hamburger" /> took out hamburger because I don't know what I would need a hamburger for yet -->
+		<h1 id="heroHeader">healthEat</h1>
+		<h1 id="currentWeather">99 &#8457;</h1>
+		<h1 id="grocerySearch">Search for food prices</h1> <!-- to be replaced w/an icon maybe -->
+	</div>
+	<div id="googleMap" style="width:100%;height:500px;"></div>
+	
+	
+	<div id="foodSearchBar">
+		<form>
+			<input type="text" name="foodSearch" id="foodSearch"/>
+		</form>
+		<p id="resultOne"></p>
+		<p id="resultPrice"></p>
+		<p id="resultAmount"></p>
+		<p id="result4"></p>
+		
+	</div>
+	<div id="storeInfo">
+		<h1 id="storeInfoHeader">Dollar General</h1>
+		<p id="storeAdd">1600 Pennsylvania</p>
+		<p id="storeAddTwo">Washington, Columbia</p>
+		<p id="closeStore">X</p>
+	</div>
+	
+</body>
+</html>

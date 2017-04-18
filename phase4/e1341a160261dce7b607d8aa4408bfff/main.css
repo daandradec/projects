@@ -1,0 +1,145 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+    background-color:#EAEAEA!important;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+    color:#000;
+    font-family:Verdana, Geneva, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 auto;
+}
+a:link  {   
+	text-decoration:none;   
+}  
+i:hover{
+	color:#1ABEEE;
+}
+.barra{
+	width:100%;
+	overflow:hidden;
+	display: block;
+	width:auto;
+	color: #000!important;
+    background-color: #fff;
+	font-size: 18px!important;
+}
+.barra-item{
+	padding: 8px 16px;
+    float: left;
+    width: auto;
+    border: none;
+    outline: none;
+    display: block;
+	color: #000!important;
+}
+.barra-item:hover{
+	color: #000!important;
+	background-color:#C5C5C5;
+	text-decoration:none;
+}
+.item-azul{
+    color: #fff!important;
+    background-color:#1ABEEE;
+}
+.contenedorimage{
+	background-image:url(images/icd.jpg);
+	background-position:center;
+	color:#FFF;
+	font-size:100px;
+	text-align:center;
+	max-width:100%;
+	min-height:630px;
+	text-outline:#000;
+	
+	}
+.contenido{
+	max-width:1532px;
+	margin:auto;
+}
+.contenidoob{
+	padding:16px;
+	margin-top:16px!important;
+	background-color:#FFF;
+	height:auto;
+	width:auto;
+	margin: 5px 5px 5px 5px;
+}
+.selectt{
+    display: block;
+    height: 34px;
+    text-size-adjust: 100%;
+    width: 268.984px;
+    border: 1px solid rgb(204, 204, 204);
+    padding: 7px;
+	border-radius:2px;
+	margin: 0 0 0 30px;
+	font-size:14px;
+}
+.labele{
+	color:#333;
+	margin: 0 0 0 20px;
+}
+
+.botonp{
+	width:150px;
+	height:35px;
+	text-align:left;
+	border:none;
+	display:inline-block;
+	outline:0;
+	padding:6px 16px;
+	margin: 20px;
+	vertical-align:middle;
+	overflow:hidden;
+	text-decoration:none;
+	color: #fff!important;
+    background-color:#1ABEEE;
+	text-align:center;
+	cursor:pointer;
+	white-space:nowrap;
+	
+}
+
+.footerd{
+	width:100%;
+	height:100px;
+	background-color:#282828;
+	margin: 20px 0 0 0;
+	padding:16px;
+	color:#FFF;
+	text-align:center;
+}
+
+.btn span.glyphicon {    			
+	opacity: 0;				
+}
+.btn.active span.glyphicon {				
+	opacity: 1;				
+}
+
+#toTop {
+	background:url(images/bou3.png);
+    display: none;
+    text-decoration: none;
+    position: fixed;
+    z-index: 100;
+    bottom: 100px;
+    right: 10px;
+    overflow: hidden;
+    width: 56px;
+    height: 56px;
+    border: none;
+    text-indent: -999px;
+	border-radius: 100%;
+}
+
+.btn.btn-primary{
+	background-color:#1ABEEE; 
+	border:none;
+	border-radius: 0%;
+	
+	}
+	
+
+

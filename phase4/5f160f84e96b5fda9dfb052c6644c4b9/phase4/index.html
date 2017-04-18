@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- My first app in JS :D -->
+
+ <!-- Token : nRpmYzhkcrweuVXxRmEMMGcfkVUvXgTi //Token CDO  --> 
+ <!-- key : AIzaSyBmOLIj7g82PSVjg2jui5vx6fjjgFhYlJo // Google Maps Api Key -->
+ <!-- Zillow Web Services Identification (ZWSID): X1-ZWz1fqksq45r7v_5jgqp -->
+
+<html>
+
+<head>
+    <link rel="stylesheet" type ="text/css" href="CSS/style.css"> <!-- Style-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ZKRentAPP </title>
+    
+    <script id ="GoogleMap">
+        var map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), 
+            {
+                center: {lat: 41.8708, lng: -87.6505},
+                zoom: 12   
+            });
+            var marker = new google.maps.Marker({
+                position: {lat: 41.8708, lng: -87.6505},
+                map: map,
+                title: 'Department of Computer Science – University of Illinois, Chicago',
+                icon: "IMG/university.png"
+            });
+        }
+    </script>
+    
+    
+    
+</head>
+<body>
+    
+    <div class ="container">
+        <div class="jumbotron">
+            <h2>ZK RentApp - Simple is Better</h2>
+            <h3>The Easiest Way to find a place to rent in Chicago,Il</h3>
+        </div>
+    </div>
+    
+    <div class="panel panel-body" id="map"></div>
+       
+    <div id="panelcalc" class="panel panel-primary">
+        <div class="panel-heading">Find a place to rent in Chicago, IL</div>
+        <div class="panel-body">
+            <label for="SelectSearchOption">1) Select a mode to find your place, then press (Search / Find Cheapest / Find Safest):</label>
+            <select class="form-control" id="SelectSearchOption">
+                <option id="Option1">Affordable Rental Housing Developments - Accurate place, estimated price , medium variety</option>
+                <option id="Option2">Community Area - Place by zone, estimated price, high variety</option>
+            </select>
+
+            <button id="btnSearch" class ="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Displays in map ALL options to rent">Search</button>
+            <button id="btnFindCheapest" class ="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Displays in map THE CHEAPEAST Option to rent">Find Cheapest</button>
+            <button id="btnFindSafest" class ="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Displays in map THE SAFEST Option to rent">Find Safest</button>
+            <label class="checkbox-inline"><input type="checkbox" id="checkboxCrimeRadius" value="">Select Crime Radius for Safest Search</label>
+            <br>
+            <br>
+            <select class="form-control " id="SelectCrimeRadius" disabled="disabled">
+                <option id="OptionRadius500">(Default) Crimes within 500 Mts / 0.31 Miles</option>
+                <option id="OptionRadius1000">Crimes within 1000 Mts / 0.62 Miles</option>
+                <option id="OptionRadius1000">Crimes within 2000 Mts / 1,24 Miles</option>
+            </select>
+            <br>
+            <br>
+            <label for="SelectPlaceOption">2) Select a place to rent (Choosing it will draw a public transport route from the selected place to University  ):</label>
+            <select class="form-control " id="SelectPlaceOption" disabled="disabled"></select>
+            
+             <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Information: </label>
+                    <div class="col-sm-10">
+                        <p id="pInformation" class="form-control-static"></p>
+                        <div id="chart"></div>
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+    
+            
+            
+    <div id="panelOptions" class="panel panel-primary">
+        <div class="panel panel-heading">Options</div>
+        <div class="panel panel-body">
+            <div class="btn-group">
+                <button id="btnShowPoliceStations" class="btn btn-primary">Show Police Stations </button>
+                <button id="btnShowCommunityAreas" class ="btn btn-primary">Show Community Areas</button>
+                <button id="btnShowFireStations" class="btn btn-primary">Show Fire Stations</button>
+                <button class="btn btn-primary" id="btnShowWindTemperature">Show Average Wind Temperature</button>
+                <button class="btn btn-primary" id="btnShowGraphics">Show Graphics(TESTING) </button>
+                
+                <button id="btnResetMap" class ="btn btn-danger">Reset Map</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    
+            
+            
+           
+            
+    <div class="well well" id="divfooter">
+        <footer><h3>Created By : Jhonatan Rivera Saumeth</h3></footer>
+    </div>
+    
+    <!-- Script Sources-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>  <!-- //jquery -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmOLIj7g82PSVjg2jui5vx6fjjgFhYlJo&callback=initMap" async defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <script id="ConnectCDO" src="JS/ConnectCDO.js"></script> 
+    <script id="connectARHD" src="JS/connectARHD.js"></script>  
+    <script id="ShowPoliceStations" src="JS/ShowPoliceStations.js"></script>
+    <script id="ResetMap" src="JS/ResetMap.js"></script>
+    <script id="ShowCommunityAreas" src="JS/ShowCommunityAreas.js"></script>
+    <script id="ShowARHD" src="JS/ShowARHD.js"></script>
+    <script id="Search" src="JS/Search.js"></script>
+    <script id="OnChangeSelectPlaceOption" src="JS/ChangeSelectPlace.js"></script>
+    <script id="OnChangeSelectSearchOption" src="JS/ChangeSelectSearch.js"></script>
+    <script id="FindCheapest" src="JS/FindCheapest.js"></script>
+    <script id="FindSafest" src="JS/FindSafest.js"></script>
+    <script id="ToolTips" src="JS/TooltTips.js"></script>
+    <script id="Graphics" src="JS/Graphics.js"></script>
+    <script id="ViewChanges" src="JS/ViewChanges.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--  Credits to : Maps Icons Collection https://mapicons.mapsmarker.com
+Logo available at https://mapicons.mapsmarker.com/wp-content/uploads/2011/03/miclogo-88x31.gif
+Some icons are derived from the project SJJB Map Icons (http://www.sjjb.co.uk/mapicons/) by SJJB Management
+(http://www.sjjb.co.uk/), licensed under Creative Commons Public Domain Dedication 
+(http://creativecommons.org/licenses/publicdomain/)-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta name="description" content="Iron Hack project for the students in Chicago">
+        <meta name="author" content="made by Duvan Alberto Andrade Cuenca">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Map of World</title>
+        <link href="../css/stylesNavbar.css" rel="stylesheet">
+        <link href="../css/stylesFiltersMap.css" rel="stylesheet">
+        <link href="../css/stylesMap.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="../js/resizeManager.js"></script>
+        <script src="../js/controlResizeManager.js" type="text/javascript"></script> 
+        <script src="../js/coordinateCalculator.js" type="text/javascript"></script>
+        <script src="../js/datasets/datasetsManager.js" type="text/javascript"></script>
+        <script src="../js/mapMethods.js" type="text/javascript"></script> 
+        <script src="../js/formManager.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button id="buttn" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">
+                        This Button displays de navigation bar
+                    </span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button> 
+                <a class="navbar-brand" href="../index.html">
+                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                    Home HSRS
+                </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#" class="active">
+                                <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Map</a></li>
+                        <li><a href="weather.html">
+                                <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span> Watch the Weather Report</a></li>
+                        <li><a href="graphics.html">
+                                <span class="glyphicon glyphicon-signal" aria-hidden="true"></span> Graphics</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                            <li><a href="about.html">
+                                    <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> About</a></li>
+                            <li><a href="contact.html">
+                                    <span class="glyphicon glyphicon-phone" aria-hidden="true"></span> Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="filters">
+            <div>
+                <h1 id="header1">What do you want near to housing?</h1>
+                <hr>
+                    <input type="checkbox" id="checkBox1" name="cc" onclick="loadDataset('checkBox1',0)"/>
+                    <label for="checkBox1" style='font-size: 14pt'><span></span>Parks and public sites</label>
+                    <input type="checkbox" id="checkBox2" name="cc" onclick="loadDataset('checkBox2',1)"/>
+                    <label for="checkBox2" style='font-size: 14pt'><span></span>Sports sites</label>
+                    <input type="checkbox" id="checkBox3" name="cc" onclick="loadDataset('checkBox3',2)"/>
+                    <label for="checkBox3" style='font-size: 14pt'><span></span>Supermarkets</label>
+                    <input type="checkbox" id="checkBox4" name="cc" onclick="loadDataset('checkBox4',3)"/>
+                    <label for="checkBox4" style='font-size: 14pt'><span></span>Grocery Store Chains</label>
+                    <input type="checkbox" id="checkBox5" name="cc" onclick="loadDataset('checkBox5',4)"/>
+                    <label for="checkBox5" style='font-size: 14pt'><span></span>Police stations</label>
+                    <input type="checkbox" id="checkBox6" name="cc" onclick="loadDataset('checkBox6',5)"/>
+                    <label for="checkBox6" style='font-size: 14pt'><span></span>Fire stations</label>
+                    <input type="checkbox" id="checkBox7" name="cc" onclick="crime('checkBox7')"/>
+                    <label for="checkBox7" style='font-size: 14pt'><span></span>Crime Points</label>
+                    <input type="checkbox" id="checkBox8" name="cc" onclick="heat('checkBox8')"/>
+                    <label for="checkBox8" style='font-size: 14pt'><span></span>Crime Area</label>
+            </div>
+            <hr>
+            <div id="divZero">
+                <h2>What price range are you looking for?</h2>
+                <div id="divOne">
+                    <h3 id="header2">100 USD</h3>
+                    <h3 id="header3">1000 USD</h3>
+                </div>
+                <input type="range" name="price" min="0" max="10" step="1" value="0" id="slider">
+                <br>
+                <h4 id="headerTwo" style="margin-left: 38%;">Current Search Limit: 10000 </h4>
+                <input type="submit" value="Search" onclick="slider()" style="margin-left: 45%;background-color:gray;color:white;">
+            </div>
+            <br>
+            <br>
+        </div>
+        <button style="width:100%;" id="hideButton" onClick="hideEvent()">Show or Hide House Data <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></button>
+        <div id="houseInformation">
+            <img src="../img/imgNoAvailable.jpg" id="img">
+            <div id="divTwo">
+                <div id="divThree">
+                    <h1>All House Information</h1>
+                    <hr>
+                    <p id="paragraph0">Url HomeDetails: <a id="link" href='#' target="_blank">x</a>  </p>
+                    <p id='paragraph1'>Street: x  ZipCode: x  useCode: x  Bedrooms: x  Bathrooms: x  YearBuilt: x  NumFloor: x</p>
+                    <hr>
+                    <p id='paragraph2'>LotSize in feet: x  views: x  Heating: x  HeatingSystem: x  Appliances: x  Zestimate(price avg) USD: </p>
+                    <hr>
+                    <p id='paragraph3'>Rooms: x  FloorCovering: x  ParkingType: x  neighborhood: x  schoolDistrict: x  ElementarySchool: x</p>
+                    <hr>
+                    <p id='homeDescription'>HomeDescription: x</p>
+                </div>
+            </div>
+        </div>
+        <div id="markInfo">
+            <img  src="../img/house.png" id="img1"> Normal House  
+            <img  src="../img/house2.png" id="img2"> House Closer to College  
+            <img  src="../img/house3.png" id="img3"> Safer House  
+        </div>
+        <div id="flag"></div>
+        <div id="map">
+            <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+            </script>
+            <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAUXJdF-1b-Oc-EC6YxNJ_OxWroRxrM7M&libraries=geometry,visualization&callback=initMap">
+            </script>
+        </div>
+        <script>update();
+            $('input[name=price]').on('change', function () { 
+                document.getElementById("headerTwo").innerHTML = "Current Search Limit: "+this.value+" USD";
+            });
+        </script>
+        <script src="../js/initializeMapManager.js"></script>
+        <script src="../js/Object/Zillow.js"></script>
+        <script src="../jquery/zillowManager.js"></script>
+    </body>
+</html>
